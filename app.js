@@ -912,18 +912,45 @@
   }
   function viewShelf() {
     const root = el("div", "wrap page");
+    const totalItems = ALL.filter((x) => x.slug).length;
     root.innerHTML = `${crumb([["#/", "Home"], [null, "The shelves"]])}
-      <div class="section-head"><p class="eyebrow">Browse like a bookcase</p><h2>The shelves.</h2>
+      <div class="section-head"><p class="eyebrow">Browse like a bookcase</p><h2>The shelves. <span style="font-family:var(--mono);font-size:.6em;font-weight:400;color:var(--muted);letter-spacing:.03em">${totalItems}</span></h2>
       <p>The whole collection as it might sit on a wall — one shelf per Dewey class. Pull any spine to read it.</p></div>
+      <div id="shelfRecent"></div>
       <div id="shelves"></div>`;
     view.append(root);
+
+    // Recently viewed section with clear-history control
+    const recItems = recent.map((s) => ALL.find((x) => x.slug === s)).filter(Boolean).slice(0, 8);
+    const recentSec = $("#shelfRecent", root);
+    if (recItems.length) {
+      const rHead = el("div", "related-head");
+      rHead.style.marginBottom = "1rem";
+      const rTitle = el("h3");
+      rTitle.style.cssText = "font-family:var(--serif);font-weight:600;font-size:1.2rem;margin:0";
+      rTitle.innerHTML = `Recently viewed <span style="font-family:var(--mono);font-size:.72rem;font-weight:400;color:var(--muted);margin-left:.3rem">${recItems.length}</span>`;
+      const clearBtn = el("button", "btn btn-ghost", "Clear history");
+      clearBtn.style.cssText = "font-size:.8rem;padding:.35rem .75rem";
+      clearBtn.addEventListener("click", () => {
+        recent = [];
+        try { localStorage.setItem(RECENT_KEY, "[]"); } catch (e) {}
+        recentSec.innerHTML = "";
+      });
+      rHead.append(rTitle, clearBtn);
+      recentSec.append(rHead);
+      const rGrid = el("div", "grid");
+      rGrid.style.marginBottom = "2.5rem";
+      recItems.forEach((x) => rGrid.append(card(x)));
+      recentSec.append(rGrid);
+    }
+
     const wrap = $("#shelves", root);
     DEWEY.forEach((d, i) => {
       const items = d.items.filter((it) => it.slug);
       if (!items.length) return;
       const sec = el("section", "shelf-sec reveal");
       sec.dataset.d = String((i % 4) + 1);
-      sec.innerHTML = `<div class="shelf-label"><span class="shelf-code">${d.code}</span><span>${esc(d.name)}</span><a href="#/class/${d.code}" class="shelf-all">${d.items.length} →</a></div><div class="shelf"><div class="shelf-row"></div></div>`;
+      sec.innerHTML = `<div class="shelf-label"><span class="shelf-code">${d.code}</span><span>${esc(d.name)}</span><span style="font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:.3rem">${items.length}</span><a href="#/class/${d.code}" class="shelf-all">${d.items.length} →</a></div><div class="shelf"><div class="shelf-row"></div></div>`;
       const row = $(".shelf-row", sec);
       items.forEach((it) => row.append(spine(it, i)));
       wrap.append(sec);
