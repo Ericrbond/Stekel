@@ -68,16 +68,18 @@
   const classMeta = (code) => DEWEY.find((d) => d.code === code) || {};
 
   /* ---- cover art ---- */
-  // Prefer Eric's real local cover (assets/stekel/<file>) when present; fall back to Open Library by id.
+  // Local covers live in assets/covers/ (git-tracked, 182 files).
+  // Page images (assets/stekel/) use CDN_BASE which can point to R2.
+  const COVERS_BASE = "assets/covers/";
   function coverSrc(cov, size) {
-    if (cov && cov.local) return CDN_BASE + cov.local;
+    if (cov && cov.local) return COVERS_BASE + cov.local;
     if (cov && cov.c) return `https://covers.openlibrary.org/b/id/${cov.c}-${size}.jpg`;
     return "";
   }
   function coverHTML(x, size) {
     const cov = x.k === "book" && typeof COVERS !== "undefined" && COVERS[x.t];
     if (cov) {
-      const localSrc = cov.local ? CDN_BASE + cov.local : "";
+      const localSrc = cov.local ? COVERS_BASE + cov.local : "";
       const olSrc = cov.c ? `https://covers.openlibrary.org/b/id/${cov.c}-${size}.jpg` : "";
       const src = localSrc || olSrc;
       const onerr = localSrc && olSrc
@@ -234,7 +236,7 @@
     const covered = ALL.filter((x) => x.k === "book" && typeof COVERS !== "undefined" && COVERS[x.t]);
     const make = () => covered.map((x) => {
       const cov = COVERS[x.t];
-      const localSrc = cov.local ? CDN_BASE + cov.local : "";
+      const localSrc = cov.local ? COVERS_BASE + cov.local : "";
       const olSrc = cov.c ? `https://covers.openlibrary.org/b/id/${cov.c}-M.jpg` : "";
       const src = localSrc || olSrc;
       const onerr = localSrc && olSrc ? `this.onerror=null;this.src='${olSrc}';` : `this.closest('.ribbon-item').style.display='none'`;

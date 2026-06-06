@@ -392,6 +392,12 @@ const DEWEY = [
         "slug": "man-v-markets"
       },
       {
+        "t": "Mania for Subjugation",
+        "a": "Dan Carlin",
+        "k": "book",
+        "slug": "mania-for-subjugation-carlin"
+      },
+      {
         "t": "Masters of War",
         "a": "Michael Handel",
         "k": "book",
@@ -792,6 +798,12 @@ const DEWEY = [
         "slug": "new-mexico-museum-of-natural-history"
       },
       {
+        "t": "Numbers Guide",
+        "a": "The Economist",
+        "k": "book",
+        "slug": "numbers-guide-economist"
+      },
+      {
         "t": "Oceans",
         "a": "Stephen Hutchinson & Lawrence Hawkins",
         "k": "book",
@@ -943,6 +955,12 @@ const DEWEY = [
     "name": "Technology",
     "blurb": "Applied science — and the frontiers it keeps pushing into.",
     "items": [
+      {
+        "t": "A City on Mars",
+        "a": "Kelly & Zach Weinersmith",
+        "k": "book",
+        "slug": "a-city-on-mars-by-weinersmith"
+      },
       {
         "t": "Engineers of Victory",
         "a": "Paul M. Kennedy",
@@ -1404,6 +1422,12 @@ const DEWEY = [
         "slug": "origin"
       },
       {
+        "t": "Paradise Lost",
+        "a": "John Milton",
+        "k": "book",
+        "slug": "paradise-lost-by-milton"
+      },
+      {
         "t": "Reading Lolita In Tehran",
         "a": "Azar Nafisi",
         "k": "book",
@@ -1572,6 +1596,12 @@ const DEWEY = [
         "a": "Dipo Faloyin",
         "k": "book",
         "slug": "africa-is-not-a-country"
+      },
+      {
+        "t": "All the Best",
+        "a": "George W. Bush",
+        "k": "book",
+        "slug": "all-the-best-bush"
       },
       {
         "t": "Anchorage Museum",
