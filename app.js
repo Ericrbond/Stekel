@@ -76,7 +76,15 @@
   }
   function coverHTML(x, size) {
     const cov = x.k === "book" && typeof COVERS !== "undefined" && COVERS[x.t];
-    if (cov) return `<div class="cover"><img loading="lazy" src="${coverSrc(cov, size)}" alt="${esc(x.t)} — cover" onerror="this.parentElement.classList.add('failed')"><span class="cover-fallback">${ICON.book}</span></div>`;
+    if (cov) {
+      const localSrc = cov.local ? CDN_BASE + cov.local : "";
+      const olSrc = cov.c ? `https://covers.openlibrary.org/b/id/${cov.c}-${size}.jpg` : "";
+      const src = localSrc || olSrc;
+      const onerr = localSrc && olSrc
+        ? `this.onerror=null;this.src='${olSrc}';`
+        : `this.parentElement.classList.add('failed')`;
+      return `<div class="cover"><img loading="lazy" src="${src}" alt="${esc(x.t)} — cover" onerror="${onerr}"><span class="cover-fallback">${ICON.book}</span></div>`;
+    }
     return `<div class="cover ph ph-${x.k}"><span class="ph-icon">${ICON[x.k] || ICON.book}</span></div>`;
   }
 
@@ -224,7 +232,14 @@
     // ribbon
     const track = $("#ribbon", root);
     const covered = ALL.filter((x) => x.k === "book" && typeof COVERS !== "undefined" && COVERS[x.t]);
-    const make = () => covered.map((x) => `<a class="ribbon-item" href="#/item/${encodeURIComponent(x.slug)}"><img loading="lazy" src="${coverSrc(COVERS[x.t], "M")}" alt=""></a>`).join("");
+    const make = () => covered.map((x) => {
+      const cov = COVERS[x.t];
+      const localSrc = cov.local ? CDN_BASE + cov.local : "";
+      const olSrc = cov.c ? `https://covers.openlibrary.org/b/id/${cov.c}-M.jpg` : "";
+      const src = localSrc || olSrc;
+      const onerr = localSrc && olSrc ? `this.onerror=null;this.src='${olSrc}';` : `this.closest('.ribbon-item').style.display='none'`;
+      return `<a class="ribbon-item" href="#/item/${encodeURIComponent(x.slug)}" aria-label="${esc(x.t)}"><img loading="lazy" src="${src}" alt="" onerror="${onerr}"></a>`;
+    }).join("");
     track.innerHTML = make() + make();
     // Auto-scrolling ribbon: drifts on load, stays hand-scrollable, seamlessly loops.
     // scrollLeft-driven so auto + manual scroll share one mechanism (no transform conflict).
@@ -955,20 +970,12 @@
   $$("#navLinks a", links).forEach((a) => a.addEventListener("click", () => { links.classList.remove("open"); document.body.classList.remove("nav-open"); }));
 
   // Keyboard shortcuts
-  const kbdHelp = document.getElementById("kbdHelp");
-  function openKbdHelp() { kbdHelp.classList.add("show"); kbdHelp.focus(); }
-  function closeKbdHelp() { kbdHelp.classList.remove("show"); }
-  kbdHelp.addEventListener("click", (e) => { if (e.target === kbdHelp) closeKbdHelp(); });
   document.addEventListener("keydown", (e) => {
     if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
-    if (kbdHelp.classList.contains("show")) { if (e.key === "Escape") { e.preventDefault(); closeKbdHelp(); } return; }
     if (!palette.hidden) return;
     if (e.key === "ArrowLeft" && kbdPrev) { e.preventDefault(); location.hash = "#/item/" + encodeURIComponent(kbdPrev); }
     else if (e.key === "ArrowRight" && kbdNext) { e.preventDefault(); location.hash = "#/item/" + encodeURIComponent(kbdNext); }
-    else if (e.key === "?" && !e.metaKey && !e.ctrlKey) { e.preventDefault(); openKbdHelp(); }
-    else if (e.key === "r" && !e.metaKey && !e.ctrlKey) { e.preventDefault(); goRandom(); }
-    else if (e.key === "t" && !e.metaKey && !e.ctrlKey) { e.preventDefault(); themeBtn && themeBtn.click(); }
-    else if (e.key === "Escape") { closeKbdHelp(); }
+    else if (e.key === "r" && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); goRandom(); }
   });
 
   const themeBtn = $("#themeBtn"), THEMES = ["system", "light", "dark"];
