@@ -755,7 +755,7 @@
       <div class="grid" id="researchGrid"></div>`;
     view.append(root);
     const grid = $("#researchGrid", root);
-    RESEARCH.forEach((r) => {
+    if (typeof RESEARCH !== "undefined") RESEARCH.forEach((r) => {
       const card = el("a", "card reveal"); card.href = "#/item/" + encodeURIComponent(r.slug);
       card.innerHTML = `<div class="card-body"><p class="eyebrow">${esc(r.topic)} · ${esc(r.year)}</p><h3>${esc(r.title)}</h3><p class="card-blurb">${esc(r.blurb)}</p></div>`;
       grid.append(card);
