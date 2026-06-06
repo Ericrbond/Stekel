@@ -793,3 +793,147 @@ a.iv-person { text-decoration: none; color: var(--ink-soft); }
 .pg-fig-inline { margin: 0; background: var(--card); border: 1px solid var(--hair); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); max-width: min(340px, 100%); }
 .pg-fig-inline img { width: 100%; height: auto; display: block; }
 .pg-fig-inline figcaption { font-size: .75rem; color: var(--muted); padding: .4rem .6rem; border-top: 1px solid var(--hair-2); line-height: 1.3; }
+
+/* ── Accessibility & UX improvements ──────────────────────────────────── */
+
+/* Skip-to-content link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 1rem;
+  z-index: 9999;
+  background: var(--clay);
+  color: #fff;
+  padding: .6rem 1.2rem;
+  border-radius: var(--r);
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: left 0s;
+}
+.skip-link:focus { left: 1rem; }
+
+/* Better focus states on all interactive elements */
+.ribbon-item:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; border-radius: 10px; }
+.hub-card:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+.distro-row:focus-visible { outline: 2px solid var(--clay); outline-offset: 2px; border-radius: 8px; }
+.spine:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--clay); outline-offset: 2px; border-radius: 3px; }
+button:focus-visible { outline: 2px solid var(--clay); outline-offset: 2px; }
+
+/* Saved item persists outline even when not hovered */
+.card:has(.star.on) { outline: 2px solid color-mix(in srgb, var(--gold) 60%, transparent); outline-offset: 1px; }
+
+/* Card hover: add subtle border in addition to lift */
+.card:hover { outline: 1.5px solid var(--clay); outline-offset: 0px; }
+
+/* Breadcrumb improvements */
+.crumb { font-size: .9rem; }
+.crumb-sep { color: var(--muted); }
+.crumb [aria-current="page"] { color: var(--ink); font-weight: 500; }
+
+/* Timeline: vertical line + dots for visual clarity */
+.timeline { position: relative; padding-left: 1.2rem; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--clay), var(--hair));
+  border-radius: 2px;
+}
+.tl-row::before {
+  content: "";
+  position: absolute;
+  left: -1.55rem;
+  top: 1.8rem;
+  width: 10px;
+  height: 10px;
+  background: var(--clay);
+  border-radius: 50%;
+  border: 2px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--clay);
+}
+
+/* Reading progress badge on detail pages */
+.reading-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .8rem;
+  color: var(--clay);
+  background: color-mix(in srgb, var(--clay) 10%, var(--paper));
+  padding: .15rem .55rem;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-left: .5rem;
+  vertical-align: middle;
+}
+
+/* Keyboard shortcut help modal */
+.kbd-help-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(28,27,24,.55);
+  backdrop-filter: blur(4px);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s var(--ease);
+}
+.kbd-help-modal.show { opacity: 1; pointer-events: auto; }
+.kbd-help-card {
+  background: var(--card);
+  border: 1px solid var(--hair);
+  border-radius: var(--r-lg);
+  padding: 2rem 2.5rem;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: var(--shadow-lift);
+}
+.kbd-help-card h3 { margin: 0 0 1.5rem; font-family: var(--serif); font-size: 1.4rem; }
+.kbd-row { display: flex; justify-content: space-between; align-items: center; padding: .55rem 0; border-bottom: 1px solid var(--hair); font-size: .92rem; }
+.kbd-row:last-child { border-bottom: none; }
+.kbd-row span { color: var(--muted); }
+.kbd { background: var(--paper); border: 1px solid var(--hair); border-radius: 5px; padding: .1rem .45rem; font-family: var(--mono); font-size: .8rem; color: var(--ink-soft); }
+
+/* Web speech button on language pages */
+.lang-listen {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--clay);
+  padding: .2rem;
+  border-radius: 4px;
+  font-size: .9rem;
+  opacity: .7;
+  transition: opacity .2s;
+}
+.lang-listen:hover { opacity: 1; }
+
+/* Image gallery captions always visible on desktop */
+@media (min-width: 640px) {
+  .pg-fig figcaption { opacity: 1; }
+}
+
+/* Sharing button on detail pages */
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background: var(--paper);
+  border: 1px solid var(--hair);
+  border-radius: 8px;
+  padding: .35rem .75rem;
+  font-size: .82rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+  text-decoration: none;
+}
+.share-btn:hover { background: var(--card); border-color: var(--clay); color: var(--clay); }

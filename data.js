@@ -2238,7 +2238,7 @@ const DOCUMENTS = [
     "y": "Antiquity",
     "p": "India",
     "d": "The dharma traditions of duty, righteousness and right conduct that have guided Indian civilization for millennia.",
-    "slug": null
+    "slug": "ancient-hindu-rules-of-humanity"
   },
   {
     "t": "The Rules of Nature",

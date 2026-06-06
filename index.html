@@ -23,7 +23,22 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<a href="#view" class="skip-link">Skip to main content</a>
 <div id="progress"></div>
+
+<!-- Keyboard shortcut help modal -->
+<div class="kbd-help-modal" id="kbdHelp" role="dialog" aria-label="Keyboard shortcuts" aria-modal="true">
+  <div class="kbd-help-card">
+    <h3>Keyboard shortcuts</h3>
+    <div class="kbd-row"><span>Open search</span><span><kbd class="kbd">⌘K</kbd> or <kbd class="kbd">/</kbd></span></div>
+    <div class="kbd-row"><span>Cross-reference term</span><span><kbd class="kbd">Enter</kbd> on search row</span></div>
+    <div class="kbd-row"><span>Previous / Next item</span><span><kbd class="kbd">←</kbd> <kbd class="kbd">→</kbd></span></div>
+    <div class="kbd-row"><span>Random item</span><span><kbd class="kbd">R</kbd></span></div>
+    <div class="kbd-row"><span>Toggle theme</span><span><kbd class="kbd">T</kbd></span></div>
+    <div class="kbd-row"><span>This help screen</span><span><kbd class="kbd">?</kbd></span></div>
+    <div class="kbd-row"><span>Close / Dismiss</span><span><kbd class="kbd">Esc</kbd></span></div>
+  </div>
+</div>
 
 <header class="nav" id="nav">
   <a class="brand" href="#/">
@@ -102,6 +117,8 @@
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
 </button>
 
+<!-- CDN_URL: set this to your Cloudflare R2 public URL to serve images from CDN -->
+<!-- <script>window.STEKEL_CDN = "https://YOUR-R2-URL.r2.dev/";</script> -->
 <script src="data.js"></script>
 <script src="content.js"></script>
 <script src="app.js"></script>

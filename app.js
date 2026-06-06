@@ -4,6 +4,8 @@
    ============================================================================ */
 (function () {
   "use strict";
+  // CDN base URL for all images — update this to your Cloudflare R2 public URL once set up
+  const CDN_BASE = window.STEKEL_CDN || "assets/stekel/";
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const el = (tag, cls, html) => { const n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
@@ -68,7 +70,7 @@
   /* ---- cover art ---- */
   // Prefer Eric's real local cover (assets/stekel/<file>) when present; fall back to Open Library by id.
   function coverSrc(cov, size) {
-    if (cov && cov.local) return "assets/stekel/" + cov.local;
+    if (cov && cov.local) return CDN_BASE + cov.local;
     if (cov && cov.c) return `https://covers.openlibrary.org/b/id/${cov.c}-${size}.jpg`;
     return "";
   }
@@ -88,7 +90,7 @@
     const cap = prettyCaption(f);
     const cls = inline ? "pg-fig-inline" : "pg-fig";
     const err = inline ? "this.closest('.pg-fig-inline').remove()" : "this.closest('.pg-fig').remove()";
-    return `<figure class="${cls}"><img loading="lazy" src="assets/stekel/${f}" alt="${esc(cap)}" onerror="${err}"><figcaption>${esc(cap)}</figcaption></figure>`;
+    return `<figure class="${cls}"><img loading="lazy" src="${CDN_BASE}${f}" alt="${esc(cap)}" onerror="${err}"><figcaption>${esc(cap)}</figcaption></figure>`;
   }
   // Returns the image list for a slug, optionally excluding the cover image.
   function pageImages(slug, skipCover) {
@@ -415,7 +417,10 @@
           <span class="kind ${x.k}">${kindLabel[x.k] || x.k}${full ? ` · ${readingTime(full)}` : ""}</span>
           <h1>${esc(x.t)}</h1>
           ${x.a ? `<p class="detail-by">${esc(x.a)}</p>` : ""}
-          <div class="detail-actions">${x.slug ? starBtn(x.slug, true) : ""}</div>
+          <div class="detail-actions">
+            ${x.slug ? starBtn(x.slug, true) : ""}
+            <button class="share-btn" onclick="(() => { const url = location.href; const txt = '${esc(x.t)}${x.a ? ' by ' + esc(x.a) : ''}'; if (navigator.share) { navigator.share({title: txt, url}); } else { navigator.clipboard.writeText(url).then(() => { this.textContent = '✓ Copied'; setTimeout(() => this.textContent = '⤴ Share', 1500); }); } })()" title="Share this page">⤴ Share</button>
+          </div>
           ${full ? "" : (known ? `<p class="m-desc">${esc(known)}</p>` : (willFetch ? `<p class="m-desc m-desc-loading" id="mDesc"></p>` : ""))}
           <a class="m-class" href="#/class/${x.code}">
             <div class="m-class-code">${x.code}</div>
@@ -718,7 +723,8 @@
       const has = content(l.slug);
       const n = has ? el("a", "lang clickable") : el("span", "lang");
       if (has) n.href = "#/item/" + encodeURIComponent(l.slug);
-      n.innerHTML = `<span class="glyph">${esc(l.hello)}</span><span class="lname">${esc(l.name)}</span>`;
+      const speakBtn = `<button class="lang-listen" aria-label="Listen to ${esc(l.name)}" onclick="event.preventDefault();event.stopPropagation();const u=new SpeechSynthesisUtterance('${esc(l.hello).replace(/'/g,"\\'")}');speechSynthesis.speak(u);" title="Hear pronunciation">🔊</button>`;
+      n.innerHTML = `<span class="glyph">${esc(l.hello)}</span><span class="lname">${esc(l.name)}</span>${speakBtn}`;
       atlas.append(n);
     });
   }
@@ -948,11 +954,21 @@
   toggle.addEventListener("click", () => { links.classList.toggle("open"); document.body.classList.toggle("nav-open"); });
   $$("#navLinks a", links).forEach((a) => a.addEventListener("click", () => { links.classList.remove("open"); document.body.classList.remove("nav-open"); }));
 
-  // keyboard ← / → to flip between items on a detail page
+  // Keyboard shortcuts
+  const kbdHelp = document.getElementById("kbdHelp");
+  function openKbdHelp() { kbdHelp.classList.add("show"); kbdHelp.focus(); }
+  function closeKbdHelp() { kbdHelp.classList.remove("show"); }
+  kbdHelp.addEventListener("click", (e) => { if (e.target === kbdHelp) closeKbdHelp(); });
   document.addEventListener("keydown", (e) => {
-    if (!palette.hidden || /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
+    if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
+    if (kbdHelp.classList.contains("show")) { if (e.key === "Escape") { e.preventDefault(); closeKbdHelp(); } return; }
+    if (!palette.hidden) return;
     if (e.key === "ArrowLeft" && kbdPrev) { e.preventDefault(); location.hash = "#/item/" + encodeURIComponent(kbdPrev); }
     else if (e.key === "ArrowRight" && kbdNext) { e.preventDefault(); location.hash = "#/item/" + encodeURIComponent(kbdNext); }
+    else if (e.key === "?" && !e.metaKey && !e.ctrlKey) { e.preventDefault(); openKbdHelp(); }
+    else if (e.key === "r" && !e.metaKey && !e.ctrlKey) { e.preventDefault(); goRandom(); }
+    else if (e.key === "t" && !e.metaKey && !e.ctrlKey) { e.preventDefault(); themeBtn && themeBtn.click(); }
+    else if (e.key === "Escape") { closeKbdHelp(); }
   });
 
   const themeBtn = $("#themeBtn"), THEMES = ["system", "light", "dark"];
