@@ -1,0 +1,25 @@
+# Development and build tooling — not needed on Vercel
+node_modules
+package-lock.json
+crawl.mjs
+build-data.mjs
+resolve-all.mjs
+resolve-covers.mjs
+resolve-desc.mjs
+shoot.mjs
+test.mjs
+server.mjs
+_harvest
+catalog-raw.json
+covers.json
+buckets.json
+desc.json
+slugs.txt
+
+# Large image folder — served from Cloudflare R2
+assets/stekel
+
+# Docs and dev notes
+*.md
+SETUP.md
+WEBSITE_HANDOFF.md

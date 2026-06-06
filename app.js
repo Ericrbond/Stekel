@@ -302,6 +302,7 @@
       { h: "#/documents", t: "Documents", d: "The charters and declarations that drew the lines." },
       { h: "#/study", t: "Study programs", d: "Structured coursework, for going deeper." },
       { h: "#/voices", t: "Voices", d: "Interviews and quotes — the people behind the pages." },
+      { h: "#/research", t: "Research", d: "Original scholarly articles on climate, water, and the natural world." },
       { h: "#/catalog", t: "The full catalog", d: `Every one of ${ALL.length} entries, searchable.` },
       { h: "#/shelf", t: "The shelves", d: "Browse the collection as a wall of book spines." },
       { h: "#/saved", t: "★ Saved", d: saved.size ? `${saved.size} item${saved.size === 1 ? "" : "s"} you've starred.` : "Star items to build your own shelf." },
@@ -437,7 +438,7 @@
       const rel = el("section", "related");
       rel.innerHTML = `<div class="related-head"><h3>More in ${esc(dw.name)}</h3><a href="#/class/${x.code}">See all ${dw.items.length} →</a></div><div class="grid related-grid"></div>`;
       const g = $(".related-grid", rel);
-      pick.forEach((r) => { const full = ALL.find((a) => a.slug === r.slug); if (full) g.append(card(full)); });
+      pick.forEach((r) => { const fullItem = ALL.find((a) => a.slug === r.slug); if (fullItem) g.append(card(fullItem)); });
       root.append(rel);
     }
     view.append(root);
@@ -747,6 +748,20 @@
       prog.append(c);
     });
   }
+  function viewResearch() {
+    const root = el("div", "wrap page");
+    root.innerHTML = `${crumb([["#/", "Home"], [null, "Research"]])}
+      <div class="section-head"><p class="eyebrow">Scholarship</p><h2>Research &amp; Writing.</h2><p>Original scholarly articles and literature reviews by Eric Bond — covering climate adaptation, water resources, marine biology, and earth science.</p></div>
+      <div class="grid" id="researchGrid"></div>`;
+    view.append(root);
+    const grid = $("#researchGrid", root);
+    RESEARCH.forEach((r) => {
+      const card = el("a", "card reveal"); card.href = "#/item/" + encodeURIComponent(r.slug);
+      card.innerHTML = `<div class="card-body"><p class="eyebrow">${esc(r.topic)} · ${esc(r.year)}</p><h3>${esc(r.title)}</h3><p class="card-blurb">${esc(r.blurb)}</p></div>`;
+      grid.append(card);
+    });
+  }
+
   function viewVoices() {
     const root = el("div", "wrap page");
     root.innerHTML = `${crumb([["#/", "Home"], [null, "Voices"]])}
@@ -857,9 +872,10 @@
     const s = [`${p.toLowerCase()}-interview-${r.year}`, `${p.toLowerCase()}-${r.year}-interview`].find((x) => content(x));
     if (s) reg(s, { title: p, sub: `Interview · ${r.year}`, kind: "interview", render: () => viewContentPage({ label: `Interview · ${r.year}`, kind: "guide", title: p, sub: `Interview, ${r.year}`, slug: s, backHref: "#/voices", backLabel: "Voices" }) });
   }));
+  if (typeof RESEARCH !== "undefined") RESEARCH.forEach((r) => reg(r.slug, { title: r.title, sub: `Research · ${r.year}`, kind: "research", render: () => viewContentPage({ label: "Research", kind: "guide", title: r.title, sub: `${esc(r.topic)} · ${r.year}`, slug: r.slug, backHref: "#/research", backLabel: "Research", fallback: r.blurb }) }));
 
   /* ===================== ROUTER ===================== */
-  const navOf = { catalog: "catalog", class: "catalog", shelf: "shelf", timelines: "timelines", languages: "languages", documents: "documents", study: "study", voices: "voices", saved: "saved" };
+  const navOf = { catalog: "catalog", class: "catalog", shelf: "shelf", timelines: "timelines", languages: "languages", documents: "documents", study: "study", voices: "voices", research: "research", saved: "saved" };
   function setActiveNav(seg) {
     $$("#navLinks a").forEach((a) => a.classList.toggle("active", a.dataset.nav === navOf[seg]));
   }
@@ -869,6 +885,7 @@
     view.innerHTML = "";
     closePalette();
     const fp = document.getElementById("fnPop"); if (fp) { fp.hidden = true; fp.classList.remove("show"); }
+    links.classList.remove("open"); document.body.classList.remove("nav-open");
     kbdPrev = kbdNext = null;
     const seg = parts[0] || "home";
     if (seg === "random") { goRandom(); return; }
@@ -884,6 +901,7 @@
     else if (seg === "documents") viewDocuments();
     else if (seg === "study") viewStudy();
     else if (seg === "voices") viewVoices();
+    else if (seg === "research") viewResearch();
     else viewHome();
     setActiveNav(seg);
     revealIn(view);

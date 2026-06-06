@@ -3,9 +3,9 @@
    Pre-built cache entries are bundled at deploy time (read-only).
    New synthesis results are cached in-memory per instance.
 */
-import { readFileSync, readdirSync, existsSync } from "fs";
-import { join } from "path";
-import { createHash } from "crypto";
+const { readFileSync, readdirSync, existsSync } = require("fs");
+const { join } = require("path");
+const { createHash } = require("crypto");
 
 const MODEL = process.env.STEKEL_MODEL || "claude-sonnet-4-5";
 const API_KEY = process.env.ANTHROPIC_API_KEY || "";
@@ -78,7 +78,7 @@ async function callAnthropic(prompt) {
   }
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");

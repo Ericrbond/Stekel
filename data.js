@@ -2206,6 +2206,13 @@ const DOCUMENTS = [
     "slug": "france-rights-of-man"
   },
   {
+    "t": "The United States Constitution",
+    "y": "1787",
+    "p": "United States",
+    "d": "The supreme law of the United States, establishing the framework of government — the three branches, separation of powers, and the checks and balances that have held the republic together for over two centuries.",
+    "slug": "the-us-constitution-1787"
+  },
+  {
     "t": "The Bill of Rights",
     "y": "1791",
     "p": "United States",
@@ -2268,6 +2275,22 @@ const PROGRAMS = [
       "WWII — The Pacific Theater"
     ]
   }
+];
+
+const RESEARCH = [
+  { slug: "research-air-travel-carbon", title: "Air Travel & Carbon Offsets", year: "2020", topic: "Climate Science", blurb: "A literature review examining the carbon cost of commercial aviation and the effectiveness of voluntary offset programs in reaching net-zero targets." },
+  { slug: "research-air-water-generators", title: "Air Water Generators", year: "2020", topic: "Water Technology", blurb: "An investigation into atmospheric water generation as a decentralized freshwater source, evaluating efficiency, feasibility, and applicability in arid regions." },
+  { slug: "research-borneo-climate", title: "Climate Change on Borneo", year: "2021", topic: "Climate Adaptation", blurb: "Assessing climate change vulnerability and adaptation strategies across Brunei and Indonesia on one of the world's oldest tropical islands." },
+  { slug: "research-norway-djibouti", title: "Norway & Djibouti — A Climate Adaptation Comparison", year: "2021", topic: "Climate Adaptation", blurb: "A comparative study of two nations at opposite ends of the climate spectrum — how a wealthy Nordic state and a water-scarce East African country each face a warming world." },
+  { slug: "research-mauna-loa", title: "Mauna Loa", year: "2021", topic: "Earth Science", blurb: "A study of Mauna Loa — the world's largest active volcano — as a lens on the interplay between volcanic systems, atmospheric CO₂ monitoring, and the science of climate baselines." },
+  { slug: "research-pulse-flows", title: "Pulse Flows", year: "2021", topic: "Hydrology", blurb: "Examining the use of controlled pulse flows — engineered releases of water — to restore ecological function in degraded river deltas and dryland systems." },
+  { slug: "research-holothurians", title: "Ryukyu Island Holothurians", year: "2021", topic: "Marine Biology", blurb: "A field-informed study of sea cucumbers (Holothuroidea) in the Ryukyu Island chain, exploring their role in reef ecosystems and their vulnerability to harvesting pressure." },
+  { slug: "research-colorado-river", title: "The Colorado River", year: "2021", topic: "Water Resources", blurb: "The story of the most over-allocated river in the American West — the law, the dams, the politics, and the century of decisions that have pushed it to the edge." },
+  { slug: "research-hawaii-future", title: "The Future of the Hawaiian Islands", year: "2021", topic: "Climate & Geography", blurb: "Looking ahead at how sea-level rise, intensifying storms, and shifting ocean chemistry will reshape the Hawaiian archipelago over the coming century." },
+  { slug: "research-lake-tana", title: "The Lake Tana Watershed", year: "2021", topic: "Hydrology", blurb: "An analysis of the Lake Tana watershed in Ethiopia — source of the Blue Nile — exploring the pressures of agriculture, population growth, and climate change on this critical water system." },
+  { slug: "research-marsh-arabs", title: "The Marsh Arabs", year: "2021", topic: "Environmental History", blurb: "The story of the Ma'dan people of Iraq's southern marshes — one of the world's oldest civilizations — and the systematic draining of their homeland, its partial restoration, and what it means for cultural and ecological survival." },
+  { slug: "research-ogallala-aquifer", title: "The Ogallala Aquifer", year: "2021", topic: "Water Resources", blurb: "A deep look at the High Plains Aquifer that irrigates the American breadbasket — how it formed, how fast it is disappearing, and what happens when it runs dry." },
+  { slug: "research-walker-lake", title: "Walker Lake Drying", year: "2021", topic: "Hydrology", blurb: "Documenting the slow disappearance of Walker Lake, Nevada — a terminal lake whose decline mirrors the fate of dozens of water bodies across the arid American West." }
 ];
 
 const INTERVIEWS = {
