@@ -7,7 +7,7 @@ const { readFileSync, readdirSync, existsSync } = require("fs");
 const { join } = require("path");
 const { createHash } = require("crypto");
 
-const MODEL = process.env.STEKEL_MODEL || "claude-sonnet-4-5";
+const MODEL = process.env.STEKEL_MODEL || "claude-sonnet-4-6";
 const API_KEY = process.env.ANTHROPIC_API_KEY || "";
 
 // Load all pre-built cache files at cold-start (they live in /cache/*.json in the deployment)
@@ -48,7 +48,7 @@ ${corpus}`;
 async function callAnthropic(prompt) {
   if (!API_KEY) throw new Error("ANTHROPIC_API_KEY not configured");
   const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 90000);
+  const timer = setTimeout(() => ctrl.abort(), 30000);
   try {
     const r = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",

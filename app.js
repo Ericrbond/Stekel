@@ -382,7 +382,18 @@
       if (cat.code) { const p = el("a", "filter-pill", `Class ${cat.code} · ${classMeta(cat.code).name} <span class="x">✕</span>`); p.href = "#/catalog"; meta.append(p); }
       grid.innerHTML = "";
       const azEl = $("#az", root);
-      if (!list.length) { grid.append(el("div", "empty", "Nothing here yet — try another search.")); azEl.hidden = true; return; }
+      if (!list.length) {
+        const emptyEl = el("div", "empty catalog-empty");
+        const termDisplay = term ? `"${cat.q.trim()}"` : null;
+        const kindDisplay = cat.kind !== "all" ? kindLabel[cat.kind] + "s" : null;
+        const classDisplay = cat.code ? `class ${cat.code}` : null;
+        const filterParts = [termDisplay, kindDisplay, classDisplay].filter(Boolean);
+        const filterDesc = filterParts.length ? filterParts.join(" · ") : null;
+        emptyEl.innerHTML = filterDesc
+          ? `<p class="empty-msg">No results for <em>${esc(filterDesc)}</em>.</p><p class="empty-hint">Try a broader search or <a href="#/catalog">browse the full catalog</a>.</p>`
+          : `<p class="empty-msg">Nothing here yet.</p><p class="empty-hint"><a href="#/catalog">Browse the full catalog</a>.</p>`;
+        grid.append(emptyEl); azEl.hidden = true; return;
+      }
       const cardEls = list.map((x) => { const c = card(x); grid.append(c); return c; });
       revealIn(grid);
       // A–Z jump rail (only meaningful when sorted by title)
@@ -450,23 +461,42 @@
         ${prev ? `<a class="pn pn-prev" href="#/item/${encodeURIComponent(prev.slug)}"><span class="pn-dir">← Previous</span><span class="pn-t">${esc(prev.t)}</span></a>` : "<span></span>"}
         ${next ? `<a class="pn pn-next" href="#/item/${encodeURIComponent(next.slug)}"><span class="pn-dir">Next →</span><span class="pn-t">${esc(next.t)}</span></a>` : "<span></span>"}
       </nav>`;
-    // "more in this shelf" — related siblings
-    const related = (dw.items || []).filter((i) => i.slug && i.slug !== x.slug).slice(0, 12);
-    const pick = [];
-    if (related.length) {
-      const startIdx = sibs.findIndex((s) => s.slug === x.slug);
-      const ring = related.slice(Math.max(0, startIdx - 3));
-      (ring.length >= 6 ? ring : related).slice(0, 6).forEach((r) => pick.push(r));
-      const rel = el("section", "related");
-      rel.innerHTML = `<div class="related-head"><h3>More in ${esc(dw.name)}</h3><a href="#/class/${x.code}">See all ${dw.items.length} →</a></div><div class="grid related-grid"></div>`;
-      const g = $(".related-grid", rel);
-      pick.forEach((r) => { const fullItem = ALL.find((a) => a.slug === r.slug); if (fullItem) g.append(card(fullItem)); });
-      root.append(rel);
-    }
+    // related items — scored by Dewey class match, author match, keyword overlap
+    (function buildRelated() {
+      const xWords = new Set((x.t + " " + (x.a || "") + " " + x.section).toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length > 3));
+      const candidates = ALL.filter((r) => r.slug && r.slug !== x.slug);
+      const scored = candidates.map((r) => {
+        let score = 0;
+        // Dewey class match — heavily weighted
+        if (r.code === x.code) score += 10;
+        else if (r.code && x.code && r.code.slice(0, 2) === x.code.slice(0, 2)) score += 4;
+        else if (r.code && x.code && r.code.slice(0, 1) === x.code.slice(0, 1)) score += 1;
+        // Author match
+        if (x.a && r.a && x.a.toLowerCase() === r.a.toLowerCase()) score += 6;
+        else if (x.a && r.a) {
+          const xLast = x.a.split(/\s+/).pop().toLowerCase(), rLast = r.a.split(/\s+/).pop().toLowerCase();
+          if (xLast.length > 2 && xLast === rLast) score += 3;
+        }
+        // Keyword overlap in title/section
+        const rWords = (r.t + " " + (r.a || "") + " " + r.section).toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length > 3);
+        rWords.forEach((w) => { if (xWords.has(w)) score += 1; });
+        return { r, score };
+      });
+      scored.sort((a, b) => b.score - a.score || a.r.t.localeCompare(b.r.t));
+      const pick = scored.filter((s) => s.score > 0).slice(0, 6).map((s) => s.r);
+      if (pick.length) {
+        const rel = el("section", "related");
+        rel.innerHTML = `<div class="related-head"><h3>More in ${esc(dw.name)}</h3><a href="#/class/${x.code}">See all ${dw.items.length} →</a></div><div class="grid related-grid"></div>`;
+        const g = $(".related-grid", rel);
+        pick.forEach((r) => g.append(card(r)));
+        root.append(rel);
+      }
+    })();
     view.append(root);
     kbdPrev = prev ? prev.slug : null; kbdNext = next ? next.slug : null;
     recordView(x.slug);
     if (willFetch) fetchDesc(x).then((d) => { const n = $("#mDesc", root); if (!n) return; if (d) { n.textContent = d; n.classList.remove("m-desc-loading"); } else n.remove(); });
+    showProgress();
   }
 
   /* --- generic content page (language / document / era / interview) --- */
@@ -684,7 +714,7 @@
   }
   function renderFallback(mount, corpusSources, term) {
     const paras = corpusSources.map((s) => `<p class="xref-ov-p">${s.passages.map((p) => markTerm(p, term)).join(" ")} <a class="xref-cite" href="#/item/${encodeURIComponent(s.slug)}" title="${esc(s.title)}">[${s.n}]</a></p>`).join("");
-    mount.innerHTML = `<div class="synth-note">Live synthesis isn't reachable right now (start the server with <code>node server.mjs</code> for AI prose). Here's a compiled overview drawn straight from the sources.</div>
+    mount.innerHTML = `<div class="synth-note">Live synthesis isn't available right now. Here's a compiled overview drawn straight from the sources.</div>
       <article class="xref-ov-body">${paras}</article>${refList(corpusSources)}`;
   }
   function fnCard(s, term) {
@@ -764,10 +794,40 @@
     root.innerHTML = `${crumb([["#/", "Home"], [null, "Study"]])}
       <div class="section-head"><p class="eyebrow">Go deeper</p><h2>Study programs.</h2></div><div id="programs"></div>`;
     view.append(root);
+    // Try to find catalog items matching a course/book name (case-insensitive prefix/substring)
+    function matchCatalogItem(name) {
+      const n = name.toLowerCase();
+      return ALL.find((x) => x.t.toLowerCase() === n) || ALL.find((x) => x.t.toLowerCase().includes(n) || n.includes(x.t.toLowerCase()));
+    }
+    // Estimate reading time: use real reading time if item has content, otherwise assume ~8 hours per course
+    const HRS_PER_COURSE = 8;
+    function courseTimeLabel(name) {
+      const match = matchCatalogItem(name);
+      if (match && match.slug) {
+        const fc = content(match.slug);
+        if (fc) { const words = plainFromHTML(fc).split(" ").filter(Boolean).length; const mins = Math.max(1, Math.round(words / 200)); return mins < 60 ? `${mins} min` : `~${Math.round(mins / 60)} hr`; }
+      }
+      return `~${HRS_PER_COURSE} hr`;
+    }
     const prog = $("#programs", root);
     PROGRAMS.forEach((p) => {
       const c = el("div", "prog");
-      c.innerHTML = `<div class="prog-head"><h3>${esc(p.org)}</h3><span class="tag">${esc(p.tag)}</span></div><div class="course-list">${p.courses.map((c) => `<span class="course">${esc(c)}</span>`).join("")}</div>`;
+      const useOrder = p.courses.length >= 3;
+      let coursesHTML;
+      if (useOrder) {
+        const totalHrs = p.courses.length * HRS_PER_COURSE;
+        const itemsHTML = p.courses.map((name, i) => {
+          const match = matchCatalogItem(name);
+          const href = match && match.slug ? `#/item/${encodeURIComponent(match.slug)}` : null;
+          const timeLabel = courseTimeLabel(name);
+          const inner = `<span class="ro-num">${i + 1}</span><span class="ro-title">${esc(name)}</span><span class="ro-time">${esc(timeLabel)}</span>`;
+          return href ? `<a class="ro-item" href="${href}">${inner}</a>` : `<div class="ro-item">${inner}</div>`;
+        }).join("");
+        coursesHTML = `<ol class="reading-order">${itemsHTML}</ol><div class="ro-total">Total estimated time: <strong>~${totalHrs} hours</strong></div>`;
+      } else {
+        coursesHTML = `<div class="course-list">${p.courses.map((name) => `<span class="course">${esc(name)}</span>`).join("")}</div>`;
+      }
+      c.innerHTML = `<div class="prog-head"><h3>${esc(p.org)}</h3><span class="tag">${esc(p.tag)}</span></div>${coursesHTML}`;
       prog.append(c);
     });
   }
@@ -903,38 +963,66 @@
     $$("#navLinks a").forEach((a) => a.classList.toggle("active", a.dataset.nav === navOf[seg]));
   }
   function route() {
-    const h = location.hash.replace(/^#\/?/, "");
-    const parts = h.split("/").filter(Boolean).map(decodeURIComponent);
-    view.innerHTML = "";
+    const h = location.hash.replace(/^#\/?/, “”);
+    const parts = h.split(“/”).filter(Boolean).map(decodeURIComponent);
+    view.innerHTML = “”;
     closePalette();
-    const fp = document.getElementById("fnPop"); if (fp) { fp.hidden = true; fp.classList.remove("show"); }
-    links.classList.remove("open"); document.body.classList.remove("nav-open");
+    hideProgress();
+    const fp = document.getElementById(“fnPop”); if (fp) { fp.hidden = true; fp.classList.remove(“show”); }
+    links.classList.remove(“open”); document.body.classList.remove(“nav-open”);
     kbdPrev = kbdNext = null;
-    const seg = parts[0] || "home";
-    if (seg === "random") { goRandom(); return; }
-    if (seg === "xref") { viewXref(parts.slice(1).join("/")); setActiveNav(seg); revealIn(view); requestAnimationFrame(() => window.scrollTo(0, 0)); onScroll(); return; }
+    const seg = parts[0] || “home”;
+    if (seg === “random”) { goRandom(); return; }
+    if (seg === “xref”) { viewXref(parts.slice(1).join(“/”)); setActiveNav(seg); revealIn(view); requestAnimationFrame(() => window.scrollTo(0, 0)); onScroll(); return; }
     if (!parts.length) viewHome();
-    else if (seg === "catalog") viewCatalog(null);
-    else if (seg === "class") viewCatalog(parts[1]);
-    else if (seg === "item") { const e = REGISTRY.get(parts[1]); if (e) e.render(); else notFound(parts[1]); }
-    else if (seg === "saved") viewSaved();
-    else if (seg === "shelf") viewShelf();
-    else if (seg === "timelines") viewTimelines();
-    else if (seg === "languages") viewLanguages();
-    else if (seg === "documents") viewDocuments();
-    else if (seg === "study") viewStudy();
-    else if (seg === "voices") viewVoices();
-    else if (seg === "research") viewResearch();
+    else if (seg === “catalog”) viewCatalog(null);
+    else if (seg === “class”) viewCatalog(parts[1]);
+    else if (seg === “item”) { const e = REGISTRY.get(parts[1]); if (e) e.render(); else notFound(parts[1]); }
+    else if (seg === “saved”) viewSaved();
+    else if (seg === “shelf”) viewShelf();
+    else if (seg === “timelines”) viewTimelines();
+    else if (seg === “languages”) viewLanguages();
+    else if (seg === “documents”) viewDocuments();
+    else if (seg === “study”) viewStudy();
+    else if (seg === “voices”) viewVoices();
+    else if (seg === “research”) viewResearch();
     else viewHome();
     setActiveNav(seg);
     revealIn(view);
     requestAnimationFrame(() => window.scrollTo(0, 0));
     onScroll();
-    const wsHome = $("#homeSearch"); if (wsHome) wsHome.addEventListener("click", openPalette);
-    const rndHome = $("#homeRandom"); if (rndHome) rndHome.addEventListener("click", goRandom);
+    const wsHome = $(“#homeSearch”); if (wsHome) wsHome.addEventListener(“click”, openPalette);
+    const rndHome = $(“#homeRandom”); if (rndHome) rndHome.addEventListener(“click”, goRandom);
   }
   function notFound(slug) {
-    view.append(el("div", "wrap page", `<div class="section-head" style="padding-top:4rem"><p class="eyebrow">Not found</p><h2>That page isn’t here.</h2><p>No entry for “${esc(slug || "")}”.</p></div><a class="btn btn-primary" href="#/catalog">Back to the catalog →</a>`));
+    const safeslug = esc(slug || “unknown”);
+    const root = el(“div”, “wrap page”);
+    root.innerHTML = `
+      ${crumb([[“#/”, “Home”], [null, “Page not found”]])}
+      <div class=”section-head” style=”padding-top:4rem”>
+        <p class=”eyebrow”>404 · Not found</p>
+        <h2>That page isn’t here.</h2>
+        <p>No entry found for <code style=”font-family:var(--mono);background:var(--paper);padding:.1em .4em;border-radius:5px”>${safeslug}</code>. It may have been moved or the link is incorrect.</p>
+      </div>
+      <div style=”display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem”>
+        <a class=”btn btn-primary” href=”#/”>Go home →</a>
+        <a class=”btn btn-ghost” href=”#/catalog”>Browse the catalog</a>
+      </div>
+      <div style=”margin-top:3rem;max-width:480px”>
+        <p style=”font-size:.9rem;color:var(--muted);margin-bottom:.75rem”>Or search for something:</p>
+        <form id=”nf404Form” style=”display:flex;gap:.5rem”>
+          <label class=”search” style=”flex:1”>
+            <svg width=”18” height=”18” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2” stroke-linecap=”round”><circle cx=”11” cy=”11” r=”7”/><path d=”m21 21-4.3-4.3”/></svg>
+            <input id=”nf404Input” type=”search” placeholder=”Search the collection…” autocomplete=”off” />
+          </label>
+          <button type=”submit” class=”btn btn-primary” style=”padding:.6rem 1rem”>Go</button>
+        </form>
+      </div>`;
+    view.append(root);
+    const f = $(“#nf404Form”, root);
+    if (f) f.addEventListener(“submit”, (e) => { e.preventDefault(); const v = $(“#nf404Input”, root).value.trim(); if (v) { location.hash = “#/catalog”; } });
+    const inp = $(“#nf404Input”, root);
+    if (inp) inp.addEventListener(“keydown”, (e) => { if (e.key === “Enter”) { e.preventDefault(); const v = inp.value.trim(); if (v) { closePalette(); location.hash = “#/catalog”; setTimeout(() => openPalette(), 120); } } });
   }
   function navigateTo(slug) { if (slug && REGISTRY.has(slug)) location.hash = "#/item/" + encodeURIComponent(slug); }
   window.addEventListener("hashchange", route);
@@ -948,13 +1036,18 @@
 
   /* ===================== NAV / PROGRESS / THEME ===================== */
   const nav = $("#nav"), toTop = $("#toTop"), progress = $("#progress");
+  let onReadingPage = false;
   function onScroll() {
     const y = window.scrollY;
     nav.classList.toggle("scrolled", y > 12);
     toTop.classList.toggle("show", y > 600);
-    const hgt = document.documentElement.scrollHeight - window.innerHeight;
-    progress.style.width = (hgt > 0 ? (y / hgt) * 100 : 0) + "%";
+    if (onReadingPage) {
+      const hgt = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (hgt > 0 ? (y / hgt) * 100 : 0) + "%";
+    }
   }
+  function showProgress() { onReadingPage = true; progress.classList.add("visible"); progress.style.width = "0"; }
+  function hideProgress() { onReadingPage = false; progress.classList.remove("visible"); progress.style.width = "0"; }
   window.addEventListener("scroll", onScroll, { passive: true });
   toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
@@ -968,8 +1061,14 @@
     $$(".hub-card[href='#/saved'] p").forEach((p) => { p.textContent = saved.size ? `${saved.size} item${saved.size === 1 ? "" : "s"} you've starred.` : "Star items to build your own shelf."; });
   }
   updateSavedNav();
-  toggle.addEventListener("click", () => { links.classList.toggle("open"); document.body.classList.toggle("nav-open"); });
+  toggle.addEventListener("click", (e) => { e.stopPropagation(); links.classList.toggle("open"); document.body.classList.toggle("nav-open"); });
   $$("#navLinks a", links).forEach((a) => a.addEventListener("click", () => { links.classList.remove("open"); document.body.classList.remove("nav-open"); }));
+  document.addEventListener("click", (e) => {
+    if (!links.classList.contains("open")) return;
+    if (!links.contains(e.target) && !toggle.contains(e.target)) {
+      links.classList.remove("open"); document.body.classList.remove("nav-open");
+    }
+  });
 
   // Keyboard shortcuts
   document.addEventListener("keydown", (e) => {
