@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "functions": {
-    "api/overview.js": {
-      "maxDuration": 120
-    }
-  },
   "headers": [
     {
       "source": "/assets/(.*)",
