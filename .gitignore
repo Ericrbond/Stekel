@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Large image folder — hosted on Cloudflare R2, not GitHub (1.4GB)
+assets/stekel/
+
+# Dev tooling artifacts & build output JSON
+_harvest/
+crawl-output/
+slugs.txt
+catalog-raw.json
+buckets.json
+covers.json
+desc.json
+README copy.md
+
+# Build output
+.next/
+out/
+dist/
+build/
+.vercel
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
