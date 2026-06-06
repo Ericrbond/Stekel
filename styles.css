@@ -480,6 +480,10 @@ footer.foot::before {
 }
 .foot-base a { color: var(--muted); transition: color .2s; }
 .foot-base a:hover { color: var(--clay); }
+.foot-status { display: flex; align-items: center; gap: .55rem; color: var(--muted); font-size: .8rem; margin-bottom: 1.75rem; }
+.foot-status-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 6px #4ade8088; flex-shrink: 0; }
+.foot-status a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; transition: color .2s; }
+.foot-status a:hover { color: var(--clay); }
 
 /* ── command palette ─────────────────────────────────────────────────── */
 .palette { position: fixed; inset: 0; z-index: 400; display: flex; justify-content: center; align-items: flex-start; padding: 12vh 1rem 1rem; }

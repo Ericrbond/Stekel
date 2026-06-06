@@ -195,21 +195,34 @@
 
   /* --- HOME (hub) --- */
   function viewHome() {
-    const counts = { books: ALL.filter((x) => x.k === "book").length, museums: ALL.filter((x) => x.k === "museum").length };
+    const counts = {
+      total: ALL.length,
+      books: ALL.filter((x) => x.k === "book").length,
+      museums: ALL.filter((x) => x.k === "museum").length,
+      languages: ALL.filter((x) => x.k === "language").length,
+      sections: new Set(ALL.map((x) => x.code).filter(Boolean)).size,
+    };
     const root = el("div");
     root.innerHTML = `
       <section class="hero hero-home">
         <div class="hero-bg"></div>
         <div class="wrap">
-          <p class="eyebrow reveal">Knowledge, kept in order</p>
-          <h1 class="reveal" data-d="1">A library of <em>everything</em>, arranged so you can wander.</h1>
-          <p class="lede reveal" data-d="2">${counts.books}+ books, ${counts.museums} museums, 22 language guides, timelines and the
-            documents that shaped us — each one its own page, all organized the old, good way: 000 to 999.</p>
+          <p class="eyebrow reveal">Every subject the world has ever cared about</p>
+          <h1 class="reveal" data-d="1">A library for <em>the curious mind.</em></h1>
+          <p class="lede reveal" data-d="2">The Dewey Decimal System is a map of human knowledge — ten classes, a thousand numbered rooms, everything from philosophy to zoology. Wander in. There is no wrong door.</p>
           <div class="hero-cta reveal" data-d="3">
             <a class="btn btn-primary" href="#/catalog">Browse the catalog <span class="arr">→</span></a>
             <button class="btn btn-ghost" id="homeSearch">Search everything ⌘K</button>
             <button class="btn btn-ghost" id="homeRandom">Surprise me 🎲</button>
           </div>
+        </div>
+      </section>
+      <section class="wrap" style="padding-top:3rem;padding-bottom:0">
+        <div class="stats reveal">
+          <div class="stat"><div class="n">${counts.total}</div><div class="l">Total items</div></div>
+          <div class="stat"><div class="n">${counts.books}</div><div class="l">Books</div></div>
+          <div class="stat"><div class="n">${counts.sections}</div><div class="l">Dewey sections</div></div>
+          <div class="stat"><div class="n">${counts.languages}</div><div class="l">Language guides</div></div>
         </div>
       </section>
       <section class="ribbon-sec" aria-hidden="true"><div class="ribbon"><div class="ribbon-track" id="ribbon"></div></div></section>
