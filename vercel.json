@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "",
-  "outputDirectory": ".",
   "functions": {
     "api/overview.js": {
       "maxDuration": 120
