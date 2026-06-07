@@ -548,13 +548,13 @@
   }
   // Split prose into sentences (good enough for compiled overviews).
   function splitSentences(text) {
-    return text.split(/(?<=[.!?])\s+(?=["'“(]?[A-Z0-9])/).map((s) => s.trim()).filter(Boolean);
+    return text.split(/(?<=[.!?])\s+(?=["'"(]?[A-Z0-9])/).map((s) => s.trim()).filter(Boolean);
   }
   // Pull the most substantive on-topic sentences from one source, ranked.
   function topicSentences(slug, term, max) {
     const raw = PLAINRAW[slug] || "";
     const re = new RegExp(reEsc(term), "i");
-    const startRe = new RegExp("^[\\s\"'“(]*" + reEsc(term), "i");
+    const startRe = new RegExp("^[\\s\"‘’(]*" + reEsc(term), "i");
     const out = [];
     for (let s of splitSentences(raw)) {
       if (s.length < 35 || s.length > 320) continue;
@@ -612,7 +612,7 @@
 
     if (!direct.length && !sources.length) {
       root.innerHTML = crumb([["#/", "Home"], ["#/xref", "Cross-reference"], [null, rawTerm]]) +
-        `<div class="section-head"><p class="eyebrow">Cross-reference</p><h2>Nothing mentions “${esc(rawTerm)}”.</h2><p>No title, author, or page in the library refers to that term. Try another spelling or a broader word.</p></div>${searchBox}`;
+        `<div class="section-head"><p class="eyebrow">Cross-reference</p><h2>Nothing mentions "${esc(rawTerm)}".</h2><p>No title, author, or page in the library refers to that term. Try another spelling or a broader word.</p></div>${searchBox}`;
       view.append(root); wireXrefForm(root); return;
     }
 
@@ -622,15 +622,15 @@
     const srcTotal = sources.length;
     let lead;
     if (totalMentions) {
-      lead = `One narrative on <strong>“${esc(rawTerm)}”</strong>, synthesized from <strong>${srcTotal}</strong> ${srcTotal === 1 ? "source" : "sources"}` +
+      lead = `One narrative on <strong>"${esc(rawTerm)}"</strong>, synthesized from <strong>${srcTotal}</strong> ${srcTotal === 1 ? "source" : "sources"}` +
         (parts.length ? ` (${parts.join(", ")})` : "") +
         ` that mention it <strong>${totalMentions}</strong> time${totalMentions === 1 ? "" : "s"} — grounded in the library and cited line-by-line. Hover any number to see where it came from.`;
     } else {
-      lead = `<strong>“${esc(rawTerm)}”</strong> isn't discussed in the page text, but it names ${direct.length} ${direct.length === 1 ? "entry" : "entries"} in the catalog.`;
+      lead = `<strong>"${esc(rawTerm)}"</strong> isn't discussed in the page text, but it names ${direct.length} ${direct.length === 1 ? "entry" : "entries"} in the catalog.`;
     }
 
     let html = crumb([["#/", "Home"], ["#/xref", "Cross-reference"], [null, rawTerm]]);
-    html += `<header class="xref-head"><p class="eyebrow">Topic overview · synthesized &amp; cited</p><h1>What the library says about “${esc(rawTerm)}”</h1><p class="xref-lead">${lead}</p>${searchBox}</header>`;
+    html += `<header class="xref-head"><p class="eyebrow">Topic overview · synthesized &amp; cited</p><h1>What the library says about "${esc(rawTerm)}"</h1><p class="xref-lead">${lead}</p>${searchBox}</header>`;
 
     // ---- build the corpus for synthesis: best passages from the top sources ----
     const seenSent = new Set();
@@ -732,7 +732,7 @@
   }
   function fnCard(s, term) {
     return `<div class="fn-card-head"><span class="fn-card-n">${s.n}</span>${coverMini(s.e)}<span class="fn-card-meta"><span class="fn-card-t">${esc(s.title)}</span><span class="fn-card-k">${kindLabel[s.kind] || s.kind}${s.author ? ` · ${esc(s.author)}` : ""}${s.count ? ` · ${s.count} mention${s.count === 1 ? "" : "s"}` : ""}</span></span></div>
-      <div class="fn-card-pass">${s.passages.slice(0, 2).map((p) => `<p>“${markTerm(p, term)}”</p>`).join("")}</div>
+      <div class="fn-card-pass">${s.passages.slice(0, 2).map((p) => `<p>"${markTerm(p, term)}"</p>`).join("")}</div>
       <a class="fn-card-link" href="#/item/${encodeURIComponent(s.slug)}">Open this source →</a>`;
   }
   function wireFootnotes(scope, srcByN, term) {
@@ -983,7 +983,7 @@
   const REGISTRY = new Map();
   function reg(slug, e) { if (slug && !REGISTRY.has(slug)) REGISTRY.set(slug, e); }
   ALL.forEach((x) => reg(x.slug, { title: x.t, sub: x.a || x.section, kind: x.k, cover: (x.k === "book" && typeof COVERS !== "undefined" && COVERS[x.t]) || null, render: () => viewItem(x) }));
-  LANGUAGES.forEach((l) => content(l.slug) && reg(l.slug, { title: l.name, sub: "Language guide", kind: "language", render: () => viewContentPage({ label: "Language", kind: "guide", title: l.name, sub: `“${esc(l.hello)}” — hello`, slug: l.slug, backHref: "#/languages", backLabel: "Languages" }) }));
+  LANGUAGES.forEach((l) => content(l.slug) && reg(l.slug, { title: l.name, sub: "Language guide", kind: "language", render: () => viewContentPage({ label: "Language", kind: "guide", title: l.name, sub: `"${esc(l.hello)}" — hello`, slug: l.slug, backHref: "#/languages", backLabel: "Languages" }) }));
   DOCUMENTS.forEach((d) => d.slug && reg(d.slug, { title: d.t, sub: `Document · ${d.y}`, kind: "document", render: () => viewContentPage({ label: "Document", kind: "document", title: d.t, sub: `${esc(d.p)} · ${d.y}`, slug: d.slug, backHref: "#/documents", backLabel: "Documents", fallback: d.d }) }));
   TIMELINES.forEach((t) => t.slug && reg(t.slug, {
     title: t.era, sub: `Timeline · ${t.span}`, kind: "timeline", render: () => viewContentPage({
@@ -1003,66 +1003,66 @@
     $$("#navLinks a").forEach((a) => a.classList.toggle("active", a.dataset.nav === navOf[seg]));
   }
   function route() {
-    const h = location.hash.replace(/^#\/?/, “”);
-    const parts = h.split(“/”).filter(Boolean).map(decodeURIComponent);
-    view.innerHTML = “”;
+    const h = location.hash.replace(/^#\/?/, "");
+    const parts = h.split("/").filter(Boolean).map(decodeURIComponent);
+    view.innerHTML = "";
     closePalette();
     hideProgress();
-    const fp = document.getElementById(“fnPop”); if (fp) { fp.hidden = true; fp.classList.remove(“show”); }
-    links.classList.remove(“open”); document.body.classList.remove(“nav-open”);
+    const fp = document.getElementById("fnPop"); if (fp) { fp.hidden = true; fp.classList.remove("show"); }
+    links.classList.remove("open"); document.body.classList.remove("nav-open");
     kbdPrev = kbdNext = null;
-    const seg = parts[0] || “home”;
-    if (seg === “random”) { goRandom(); return; }
-    if (seg === “xref”) { viewXref(parts.slice(1).join(“/”)); setActiveNav(seg); revealIn(view); requestAnimationFrame(() => window.scrollTo(0, 0)); onScroll(); return; }
+    const seg = parts[0] || "home";
+    if (seg === "random") { goRandom(); return; }
+    if (seg === "xref") { viewXref(parts.slice(1).join("/")); setActiveNav(seg); revealIn(view); requestAnimationFrame(() => window.scrollTo(0, 0)); onScroll(); return; }
     if (!parts.length) viewHome();
-    else if (seg === “catalog”) viewCatalog(null);
-    else if (seg === “class”) viewCatalog(parts[1]);
-    else if (seg === “item”) { const e = REGISTRY.get(parts[1]); if (e) e.render(); else notFound(parts[1]); }
-    else if (seg === “saved”) viewSaved();
-    else if (seg === “shelf”) viewShelf();
-    else if (seg === “timelines”) viewTimelines();
-    else if (seg === “languages”) viewLanguages();
-    else if (seg === “documents”) viewDocuments();
-    else if (seg === “study”) viewStudy();
-    else if (seg === “voices”) viewVoices();
-    else if (seg === “research”) viewResearch();
+    else if (seg === "catalog") viewCatalog(null);
+    else if (seg === "class") viewCatalog(parts[1]);
+    else if (seg === "item") { const e = REGISTRY.get(parts[1]); if (e) e.render(); else notFound(parts[1]); }
+    else if (seg === "saved") viewSaved();
+    else if (seg === "shelf") viewShelf();
+    else if (seg === "timelines") viewTimelines();
+    else if (seg === "languages") viewLanguages();
+    else if (seg === "documents") viewDocuments();
+    else if (seg === "study") viewStudy();
+    else if (seg === "voices") viewVoices();
+    else if (seg === "research") viewResearch();
     else viewHome();
     setActiveNav(seg);
     revealIn(view);
     requestAnimationFrame(() => window.scrollTo(0, 0));
     onScroll();
-    const wsHome = $(“#homeSearch”); if (wsHome) wsHome.addEventListener(“click”, openPalette);
-    const rndHome = $(“#homeRandom”); if (rndHome) rndHome.addEventListener(“click”, goRandom);
+    const wsHome = $("#homeSearch"); if (wsHome) wsHome.addEventListener("click", openPalette);
+    const rndHome = $("#homeRandom"); if (rndHome) rndHome.addEventListener("click", goRandom);
   }
   function notFound(slug) {
-    const safeslug = esc(slug || “unknown”);
-    const root = el(“div”, “wrap page”);
+    const safeslug = esc(slug || "unknown");
+    const root = el("div", "wrap page");
     root.innerHTML = `
-      ${crumb([[“#/”, “Home”], [null, “Page not found”]])}
-      <div class=”section-head” style=”padding-top:4rem”>
-        <p class=”eyebrow”>404 · Not found</p>
-        <h2>That page isn’t here.</h2>
-        <p>No entry found for <code style=”font-family:var(--mono);background:var(--paper);padding:.1em .4em;border-radius:5px”>${safeslug}</code>. It may have been moved or the link is incorrect.</p>
+      ${crumb([["#/", "Home"], [null, "Page not found"]])}
+      <div class="section-head" style="padding-top:4rem">
+        <p class="eyebrow">404 · Not found</p>
+        <h2>That page isn't here.</h2>
+        <p>No entry found for <code style="font-family:var(--mono);background:var(--paper);padding:.1em .4em;border-radius:5px">${safeslug}</code>. It may have been moved or the link is incorrect.</p>
       </div>
-      <div style=”display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem”>
-        <a class=”btn btn-primary” href=”#/”>Go home →</a>
-        <a class=”btn btn-ghost” href=”#/catalog”>Browse the catalog</a>
+      <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem">
+        <a class="btn btn-primary" href="#/">Go home →</a>
+        <a class="btn btn-ghost" href="#/catalog">Browse the catalog</a>
       </div>
-      <div style=”margin-top:3rem;max-width:480px”>
-        <p style=”font-size:.9rem;color:var(--muted);margin-bottom:.75rem”>Or search for something:</p>
-        <form id=”nf404Form” style=”display:flex;gap:.5rem”>
-          <label class=”search” style=”flex:1”>
-            <svg width=”18” height=”18” viewBox=”0 0 24 24” fill=”none” stroke=”currentColor” stroke-width=”2” stroke-linecap=”round”><circle cx=”11” cy=”11” r=”7”/><path d=”m21 21-4.3-4.3”/></svg>
-            <input id=”nf404Input” type=”search” placeholder=”Search the collection…” autocomplete=”off” />
+      <div style="margin-top:3rem;max-width:480px">
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:.75rem">Or search for something:</p>
+        <form id="nf404Form" style="display:flex;gap:.5rem">
+          <label class="search" style="flex:1">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="nf404Input" type="search" placeholder="Search the collection…" autocomplete="off" />
           </label>
-          <button type=”submit” class=”btn btn-primary” style=”padding:.6rem 1rem”>Go</button>
+          <button type="submit" class="btn btn-primary" style="padding:.6rem 1rem">Go</button>
         </form>
       </div>`;
     view.append(root);
-    const f = $(“#nf404Form”, root);
-    if (f) f.addEventListener(“submit”, (e) => { e.preventDefault(); const v = $(“#nf404Input”, root).value.trim(); if (v) { location.hash = “#/catalog”; } });
-    const inp = $(“#nf404Input”, root);
-    if (inp) inp.addEventListener(“keydown”, (e) => { if (e.key === “Enter”) { e.preventDefault(); const v = inp.value.trim(); if (v) { closePalette(); location.hash = “#/catalog”; setTimeout(() => openPalette(), 120); } } });
+    const f = $("#nf404Form", root);
+    if (f) f.addEventListener("submit", (e) => { e.preventDefault(); const v = $("#nf404Input", root).value.trim(); if (v) { location.hash = "#/catalog"; } });
+    const inp = $("#nf404Input", root);
+    if (inp) inp.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); const v = inp.value.trim(); if (v) { closePalette(); location.hash = "#/catalog"; setTimeout(() => openPalette(), 120); } } });
   }
   function navigateTo(slug) { if (slug && REGISTRY.has(slug)) location.hash = "#/item/" + encodeURIComponent(slug); }
   window.addEventListener("hashchange", route);
@@ -1182,14 +1182,14 @@
     pSel = 0; renderResults(meta, text, term);
   }
   function xrefRow(term) {
-    return `<div class="p-result p-xref" data-i="0"><span class="p-cover p-xref-ico">⌖</span><div class="p-main"><div class="p-title">Cross-reference “${esc(term)}” across the whole library</div><div class="p-sub">Gather every mention into one dossier page</div></div><span class="p-kind">↵</span></div>`;
+    return `<div class="p-result p-xref" data-i="0"><span class="p-cover p-xref-ico">⌖</span><div class="p-main"><div class="p-title">Cross-reference "${esc(term)}" across the whole library</div><div class="p-sub">Gather every mention into one dossier page</div></div><span class="p-kind">↵</span></div>`;
   }
   function renderResults(meta, text, term) {
     let html = "";
     const hasX = term.length >= 2;
     const off = hasX ? 1 : 0;
     if (hasX) html += xrefRow(term);
-    if (!meta.length && !text.length && !hasX) html = `<div class="palette-empty">No matches for “${esc(term)}”.</div>`;
+    if (!meta.length && !text.length && !hasX) html = `<div class="palette-empty">No matches for "${esc(term)}".</div>`;
     if (meta.length) { html += `<div class="palette-group-label">${term ? "Best matches" : "Jump to"}</div>` + meta.map((m, i) => resultRow(m, off + i)).join(""); }
     if (text.length) { html += `<div class="palette-group-label">In the text</div>` + text.map((m, i) => resultRow(m, off + meta.length + i, m.snip)).join(""); }
     pResults.innerHTML = html;
