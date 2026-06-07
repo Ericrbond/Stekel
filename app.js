@@ -202,7 +202,7 @@
       total: ALL.length,
       books: ALL.filter((x) => x.k === "book").length,
       museums: ALL.filter((x) => x.k === "museum").length,
-      languages: ALL.filter((x) => x.k === "language").length,
+      languages: typeof LANGUAGES !== "undefined" ? LANGUAGES.length : 0,
       sections: new Set(ALL.map((x) => x.code).filter(Boolean)).size,
     };
     const root = el("div");
@@ -1066,9 +1066,8 @@
       </div>`;
     view.append(root);
     const f = $("#nf404Form", root);
-    if (f) f.addEventListener("submit", (e) => { e.preventDefault(); const v = $("#nf404Input", root).value.trim(); if (v) { location.hash = "#/catalog"; } });
     const inp = $("#nf404Input", root);
-    if (inp) inp.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); const v = inp.value.trim(); if (v) { closePalette(); location.hash = "#/catalog"; setTimeout(() => openPalette(), 120); } } });
+    if (f) f.addEventListener("submit", (e) => { e.preventDefault(); const v = (inp && inp.value.trim()) || ""; if (v) { openPalette(); setTimeout(() => { pInput.value = v; runSearch(v); }, 80); } });
   }
   function navigateTo(slug) { if (slug && REGISTRY.has(slug)) location.hash = "#/item/" + encodeURIComponent(slug); }
   window.addEventListener("hashchange", route);
@@ -1221,6 +1220,18 @@
   document.addEventListener("keydown", (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); palette.hidden ? openPalette() : closePalette(); }
     else if (e.key === "/" && palette.hidden && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) { e.preventDefault(); openPalette(); }
+  });
+
+  /* ===================== KEYBOARD HELP MODAL ===================== */
+  const kbdHelp = document.getElementById("kbdHelp");
+  function openKbdHelp() { if (kbdHelp) kbdHelp.classList.add("show"); }
+  function closeKbdHelp() { if (kbdHelp) kbdHelp.classList.remove("show"); }
+  if (kbdHelp) kbdHelp.addEventListener("click", (e) => { if (!e.target.closest(".kbd-help-card")) closeKbdHelp(); });
+  document.addEventListener("keydown", (e) => {
+    if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
+    if (palette && !palette.hidden) return;
+    if (e.key === "Escape" && kbdHelp && kbdHelp.classList.contains("show")) { e.preventDefault(); closeKbdHelp(); }
+    else if (e.key === "?" && !e.metaKey && !e.ctrlKey && !(kbdHelp && kbdHelp.classList.contains("show"))) { e.preventDefault(); openKbdHelp(); }
   });
 
   /* ===================== INIT ===================== */
