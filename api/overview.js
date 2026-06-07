@@ -6,6 +6,7 @@
 const { readFileSync, readdirSync, existsSync } = require("fs");
 const { join } = require("path");
 const { createHash } = require("crypto");
+const fetch = globalThis.fetch || require("node-fetch");
 
 const MODEL = process.env.STEKEL_MODEL || "claude-sonnet-4-6";
 const API_KEY = process.env.ANTHROPIC_API_KEY || "";
