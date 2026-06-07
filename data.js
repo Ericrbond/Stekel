@@ -461,7 +461,7 @@ const DEWEY = [
         "t": "Real Estate — The Basics",
         "a": "Study guide",
         "k": "guide",
-        "slug": "basics-real-estate"
+        "slug": "guide-real-estate-basics"
       },
       {
         "t": "Real Estate Advantages",
@@ -497,7 +497,7 @@ const DEWEY = [
         "t": "Stock Market Investing — The Basics",
         "a": "Study guide",
         "k": "guide",
-        "slug": "basics-stock-market-investing"
+        "slug": "guide-stock-market-basics"
       },
       {
         "t": "Superforecasting",
