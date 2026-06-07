@@ -27,7 +27,7 @@
   /* ---- favorites (localStorage) ---- */
   const SAVE_KEY = "stekel-saved";
   let saved = new Set();
-  try { saved = new Set(JSON.parse(localStorage.getItem(SAVE_KEY) || "[]")); } catch (e) {}
+  try { const _sv = JSON.parse(localStorage.getItem(SAVE_KEY) || "[]"); saved = new Set(Array.isArray(_sv) ? _sv : []); } catch (e) {}
   const isSaved = (slug) => saved.has(slug);
   function persistSaved() { try { localStorage.setItem(SAVE_KEY, JSON.stringify([...saved])); } catch (e) {} updateSavedNav(); }
   function toggleSave(slug) { if (!slug) return; saved.has(slug) ? saved.delete(slug) : saved.add(slug); persistSaved(); }
@@ -50,6 +50,7 @@
   const RECENT_KEY = "stekel-recent";
   let recent = [];
   try { recent = JSON.parse(localStorage.getItem(RECENT_KEY) || "[]"); } catch (e) {}
+  if (!Array.isArray(recent)) recent = [];
   function recordView(slug) {
     if (!slug) return;
     recent = [slug, ...recent.filter((s) => s !== slug)].slice(0, 12);
@@ -698,7 +699,7 @@
   async function synthesize(term, corpusSources, mount, fresh) {
     const payload = { term, fresh: !!fresh, sources: corpusSources.map((s) => ({ n: s.n, title: s.title, kind: s.kind, author: s.author, passages: s.passages })) };
     try {
-      const r = await fetch("/api/overview", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+      const r = await fetch("/api/overview", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), signal: AbortSignal.timeout(35000) });
       const data = await r.json();
       if (!data || !data.ok || !data.narrative) throw new Error((data && data.error) || "no narrative");
       renderSynth(mount, data, corpusSources, term);
@@ -1004,7 +1005,7 @@
   }
   function route() {
     const h = location.hash.replace(/^#\/?/, "");
-    const parts = h.split("/").filter(Boolean).map(decodeURIComponent);
+    const parts = h.split("/").filter(Boolean).map(s => { try { return decodeURIComponent(s); } catch(e) { return s; } });
     view.innerHTML = "";
     closePalette();
     hideProgress();
@@ -1124,9 +1125,9 @@
   const MOON = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>`;
   const AUTO = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" stroke="none"/></svg>`;
   function applyTheme(t) { if (t === "system") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", t); themeBtn.innerHTML = t === "light" ? SUN : t === "dark" ? MOON : AUTO; themeBtn.title = "Theme: " + t; }
-  let theme = localStorage.getItem("stekel-theme") || "system";
+  let theme; try { theme = localStorage.getItem("stekel-theme") || "system"; } catch(e) { theme = "system"; }
   applyTheme(theme);
-  themeBtn.addEventListener("click", () => { theme = THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length]; localStorage.setItem("stekel-theme", theme); applyTheme(theme); });
+  themeBtn.addEventListener("click", () => { theme = THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length]; try { localStorage.setItem("stekel-theme", theme); } catch(e) {} applyTheme(theme); });
 
   /* ===================== COMMAND PALETTE ===================== */
   const palette = $("#palette"), pInput = $("#paletteInput"), pResults = $("#paletteResults"), pHint = $("#paletteHint");
@@ -1157,7 +1158,7 @@
     buildPlain(() => { if (!palette.hidden && pInput.value.trim().length >= 3) runSearch(pInput.value); });
   }
   function closePalette() { if (palette.hidden) return; palette.classList.remove("show"); document.body.style.overflow = ""; setTimeout(() => { palette.hidden = true; }, 220); if (pLastFocus) pLastFocus.focus(); }
-  function coverMini(e) { return e.cover ? `<span class="p-cover"><img loading="lazy" src="${coverSrc(e.cover, "S")}" alt=""></span>` : `<span class="p-cover">${ICON[e.kind === "museum" ? "museum" : e.kind === "book" ? "book" : "guide"] || ICON.book}</span>`; }
+  function coverMini(e) { return e.cover ? `<span class="p-cover"><img loading="lazy" src="${coverSrc(e.cover, "S")}" alt="" onerror="this.style.display='none'"></span>` : `<span class="p-cover">${ICON[e.kind === "museum" ? "museum" : e.kind === "book" ? "book" : "guide"] || ICON.book}</span>`; }
   function runSearch(q) {
     const term = q.trim().toLowerCase(), entries = [...REGISTRY.entries()];
     let meta = [];
@@ -1203,7 +1204,7 @@
   function openSelected() { const it = pItems[pSel]; if (!it) return; closePalette(); if (it.type === "xref") location.hash = "#/xref/" + encodeURIComponent(it.term); else navigateTo(it.slug); }
   pInput.addEventListener("input", (e) => runSearch(e.target.value));
   pInput.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowDown") { e.preventDefault(); pSel = Math.min(pItems.length - 1, pSel + 1); highlight(); }
+    if (e.key === "ArrowDown") { e.preventDefault(); pSel = Math.max(0, Math.min(Math.max(0, pItems.length - 1), pSel + 1)); highlight(); }
     else if (e.key === "ArrowUp") { e.preventDefault(); pSel = Math.max(0, pSel - 1); highlight(); }
     else if (e.key === "Enter") { e.preventDefault(); openSelected(); }
     else if (e.key === "Escape") { e.preventDefault(); closePalette(); }

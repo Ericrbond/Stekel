@@ -103,6 +103,7 @@ header.nav.scrolled { border-bottom-color: var(--hair); padding-top: .6rem; padd
 .nav-links a {
   text-decoration: none; color: var(--ink-soft); font-size: .86rem; font-weight: 500;
   padding: .45rem .7rem; border-radius: 999px; transition: background .25s var(--ease), color .25s var(--ease);
+  transition-delay: 0s;
 }
 .nav-links a:hover { background: var(--hair-2); color: var(--ink); }
 .nav-links a.active { color: var(--clay); }
@@ -353,7 +354,7 @@ section:nth-child(even) {
 }
 .kind.book   { background: color-mix(in srgb, var(--clay) 14%, transparent); color: var(--clay-deep); }
 .kind.museum { background: color-mix(in srgb, var(--olive) 18%, transparent); color: var(--olive); }
-.kind.guide  { background: color-mix(in srgb, var(--gold) 20%, transparent); color: #8a6a1e; }
+.kind.guide  { background: color-mix(in srgb, var(--gold) 20%, transparent); color: var(--gold); }
 .card h4 { font-family: var(--serif); font-weight: 600; font-size: 1.12rem; line-height: 1.22; margin: .2rem 0 0; letter-spacing: -.01em; }
 .card .by { font-size: .88rem; color: var(--muted); margin-top: auto; }
 .card .sec { font-size: .74rem; color: var(--muted); font-family: var(--mono); }
@@ -755,7 +756,7 @@ a.iv-person { text-decoration: none; color: var(--ink-soft); }
   opacity: 1; transform: none; font: inherit; font-size: .9rem; font-weight: 600; display: inline-flex; align-items: center; color: var(--ink-soft);
 }
 .star-lg svg { width: 17px; height: 17px; }
-.star-lg.on { color: #9a7a1e; background: color-mix(in srgb, var(--gold) 16%, transparent); }
+.star-lg.on { color: var(--gold); background: color-mix(in srgb, var(--gold) 16%, transparent); }
 .detail-actions { margin: 0 0 1.4rem; }
 
 .nav-saved .nav-count { display: inline-grid; place-items: center; min-width: 1.15em; padding: 0 .35em; margin-left: .15em; border-radius: 999px; background: var(--clay); color: #fff; font-size: .72em; font-weight: 700; }
@@ -996,7 +997,7 @@ button:focus-visible { outline: 2px solid var(--clay); outline-offset: 2px; }
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   width: 100%; height: 100%;
-  background: rgba(28,27,24,.6);
+  background: color-mix(in srgb, var(--ink) 60%, transparent);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   z-index: 9000;
