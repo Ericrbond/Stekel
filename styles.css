@@ -261,8 +261,8 @@ section:nth-child(even) {
 }
 .hero-dark .hero-bg::after { opacity: .18; --hair: #4A4538; }
 .hero-dark .lede { color: var(--ink-soft); }
-.hero-dark .btn-ghost { border-color: var(--hair); color: var(--ink); }
-.hero-dark .btn-ghost:hover { background: color-mix(in srgb, var(--hair) 60%, transparent); }
+.hero-dark .btn-ghost { border-color: rgba(241,236,224,.25); color: var(--ink); }
+.hero-dark .btn-ghost:hover { background: rgba(241,236,224,.1); border-color: rgba(241,236,224,.45); }
 .hero-dark .scroll-hint { color: var(--clay); opacity: .6; }
 .hero-dark .scroll-hint .line { background: linear-gradient(var(--clay), transparent); }
 

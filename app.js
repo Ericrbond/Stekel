@@ -219,8 +219,9 @@
             <button class="btn btn-ghost" id="homeRandom">Surprise me 🎲</button>
           </div>
         </div>
+        <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
       </section>
-      <section class="wrap" style="padding-top:2.5rem;padding-bottom:0">
+      <section class="wrap" style="padding-top:2.5rem;padding-bottom:0;background:transparent">
         <p class="stats-prose reveal">${counts.books}+ books, ${counts.museums} museums, ${counts.languages} language guides, timelines and the documents that shaped us — each one its own page, all organized the old, good way: 000 to 999.</p>
       </section>
       <section class="ribbon-sec" aria-hidden="true"><div class="ribbon"><div class="ribbon-track" id="ribbon"></div></div></section>
