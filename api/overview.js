@@ -26,6 +26,16 @@ try {
 
 const hash = (s) => createHash("sha1").update(s).digest("hex").slice(0, 16);
 
+const RATE = new Map(); // ip -> {count, resetAt}
+function checkRate(ip) {
+  const now = Date.now();
+  const r = RATE.get(ip) || { count: 0, resetAt: now + 60000 };
+  if (now > r.resetAt) { r.count = 0; r.resetAt = now + 60000; }
+  r.count++;
+  RATE.set(ip, r);
+  return r.count <= 10; // 10 synthesis requests per minute per IP
+}
+
 function buildPrompt(term, sources) {
   const corpus = sources.map(s =>
     `[[${s.n}]] "${s.title}"${s.author ? " by " + s.author : ""} (${s.kind}):\n` +
@@ -85,6 +95,11 @@ module.exports = async function handler(req, res) {
   res.setHeader("Content-Type", "application/json; charset=utf-8");
 
   if (req.method === "OPTIONS") return res.status(200).end();
+
+  if (req.method === "POST") {
+    const ip = req.headers["x-forwarded-for"]?.split(",")[0] || req.socket?.remoteAddress || "unknown";
+    if (!checkRate(ip)) return res.status(429).json({ ok: false, error: "rate limited — try again in a minute" });
+  }
 
   // GET ?q=term → check cache only
   if (req.method === "GET") {

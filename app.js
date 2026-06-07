@@ -422,7 +422,8 @@
         $$(".az-l:not(.off)", azEl).forEach((b) => b.addEventListener("click", () => firstEl[b.dataset.l].scrollIntoView({ behavior: "smooth", block: "start" })));
       } else azEl.hidden = true;
     }
-    $("#searchInput", root).addEventListener("input", (e) => { cat.q = e.target.value; draw(); });
+    let drawT;
+    $("#searchInput", root).addEventListener("input", (e) => { cat.q = e.target.value; clearTimeout(drawT); drawT = setTimeout(draw, 120); });
     $$("#kindChips .chip", root).forEach((c) => c.addEventListener("click", () => { cat.kind = c.dataset.kind; $$("#kindChips .chip", root).forEach((z) => z.classList.toggle("active", z === c)); draw(); }));
     $("#sortSel", root).addEventListener("change", (e) => { cat.sort = e.target.value; draw(); });
     draw();
@@ -739,6 +740,8 @@
       <a class="fn-card-link" href="#/item/${encodeURIComponent(s.slug)}">Open this source →</a>`;
   }
   function wireFootnotes(scope, srcByN, term) {
+    const oldPop = document.getElementById("fnPop");
+    if (oldPop) { const fresh = oldPop.cloneNode(false); oldPop.replaceWith(fresh); }
     let pop = $("#fnPop"); if (!pop) { pop = el("div", "fn-pop"); pop.id = "fnPop"; pop.hidden = true; document.body.append(pop); }
     let hideT = null;
     const show = (sup) => {
@@ -1011,6 +1014,7 @@
   function route() {
     const h = location.hash.replace(/^#\/?/, "");
     const parts = h.split("/").filter(Boolean).map(s => { try { return decodeURIComponent(s); } catch(e) { return s; } });
+    if (activeRafId) { cancelAnimationFrame(activeRafId); activeRafId = null; }
     view.innerHTML = "";
     closePalette();
     hideProgress();
@@ -1208,7 +1212,8 @@
   }
   function highlight() { $$(".p-result", pResults).forEach((n, i) => { n.setAttribute("aria-selected", i === pSel ? "true" : "false"); if (i === pSel) n.scrollIntoView({ block: "nearest" }); }); }
   function openSelected() { const it = pItems[pSel]; if (!it) return; closePalette(); if (it.type === "xref") location.hash = "#/xref/" + encodeURIComponent(it.term); else navigateTo(it.slug); }
-  pInput.addEventListener("input", (e) => runSearch(e.target.value));
+  let paletteSearchT;
+  pInput.addEventListener("input", (e) => { clearTimeout(paletteSearchT); paletteSearchT = setTimeout(() => runSearch(e.target.value), 120); });
   pInput.addEventListener("keydown", (e) => {
     if (e.key === "ArrowDown") { e.preventDefault(); pSel = Math.max(0, Math.min(Math.max(0, pItems.length - 1), pSel + 1)); highlight(); }
     else if (e.key === "ArrowUp") { e.preventDefault(); pSel = Math.max(0, pSel - 1); highlight(); }
