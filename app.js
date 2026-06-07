@@ -24,6 +24,8 @@
   const readingTime = (html) => Math.max(1, Math.round(plainFromHTML(html).split(" ").filter(Boolean).length / 200)) + " min read";
   const content = (slug) => (typeof CONTENT !== "undefined" && slug && CONTENT[slug]) || null;
 
+  let activeRafId = null; // ribbon drift loop — hoisted so route() can cancel it
+
   /* ---- favorites (localStorage) ---- */
   const SAVE_KEY = "stekel-saved";
   let saved = new Set();
@@ -261,7 +263,7 @@
     // scrollLeft-driven so auto + manual scroll share one mechanism (no transform conflict).
     const ribbonBox = track.parentElement;
     const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let paused = false, pauseT, rafId, pos = 0; // pos: fractional scroll accumulator
+    let paused = false, pauseT, pos = 0; // pos: fractional scroll accumulator
     // gentle, non-vestibular drift — keep it (slower) even under reduce-motion; it's still hand-scrollable
     const SPEED = reduceMotion ? 0.25 : 0.4; // px per frame
     function pauseDrift() {
@@ -281,9 +283,9 @@
         if (pos >= half) pos -= half;       // seamless loop
         ribbonBox.scrollLeft = pos;          // assign the accumulated float (rounds, but pos keeps the remainder)
       }
-      rafId = requestAnimationFrame(drift);
+      activeRafId = requestAnimationFrame(drift);
     }
-    cancelAnimationFrame(rafId);
+    cancelAnimationFrame(activeRafId);
     // start once covers have laid out (scrollWidth needs real width); retry a few frames if 0
     let tries = 0;
     const startWhenReady = () => {
@@ -754,6 +756,9 @@
       sup.addEventListener("mouseleave", hide);
       sup.addEventListener("focus", () => show(sup));
       sup.addEventListener("blur", hide);
+      sup.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(sup); }
+      });
     });
     pop.addEventListener("mouseenter", () => { if (hideT) { clearTimeout(hideT); hideT = null; } });
     pop.addEventListener("mouseleave", hide);
@@ -1093,6 +1098,7 @@
   toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
   const toggle = $("#navToggle"), links = $("#navLinks");
+  toggle.setAttribute("aria-expanded", "false");
   // dynamic "Saved" nav link
   const savedLink = el("a", "nav-saved"); savedLink.href = "#/saved"; savedLink.dataset.nav = "saved";
   links.append(savedLink);
@@ -1102,7 +1108,7 @@
     $$(".hub-card[href='#/saved'] p").forEach((p) => { p.textContent = saved.size ? `${saved.size} item${saved.size === 1 ? "" : "s"} you've starred.` : "Star items to build your own shelf."; });
   }
   updateSavedNav();
-  toggle.addEventListener("click", (e) => { e.stopPropagation(); links.classList.toggle("open"); document.body.classList.toggle("nav-open"); });
+  toggle.addEventListener("click", (e) => { e.stopPropagation(); links.classList.toggle("open"); document.body.classList.toggle("nav-open"); toggle.setAttribute("aria-expanded", links.classList.contains("open")); });
   $$("#navLinks a", links).forEach((a) => a.addEventListener("click", () => { links.classList.remove("open"); document.body.classList.remove("nav-open"); }));
   document.addEventListener("click", (e) => {
     if (!links.classList.contains("open")) return;
