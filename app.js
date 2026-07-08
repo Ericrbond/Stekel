@@ -80,7 +80,7 @@
     return "";
   }
   function coverHTML(x, size) {
-    const cov = x.k === "book" && typeof COVERS !== "undefined" && COVERS[x.t];
+    const cov = typeof COVERS !== "undefined" && COVERS[x.t];
     if (cov) {
       const localSrc = cov.local ? COVERS_BASE + cov.local : "";
       const olSrc = cov.c ? `https://covers.openlibrary.org/b/id/${cov.c}-${size}.jpg` : "";
@@ -88,7 +88,8 @@
       const onerr = localSrc && olSrc
         ? `this.onerror=null;this.src='${olSrc}';`
         : `this.parentElement.classList.add('failed')`;
-      return `<div class="cover"><img loading="lazy" src="${src}" alt="${esc(x.t)} — cover" onerror="${onerr}"><span class="cover-fallback">${ICON.book}</span></div>`;
+      const fallback = ICON[x.k] || ICON.book;
+      return `<div class="cover"><img loading="lazy" src="${src}" alt="${esc(x.t)}" onerror="${onerr}"><span class="cover-fallback">${fallback}</span></div>`;
     }
     if (x.k === "museum" && typeof PAGE_IMAGES !== "undefined" && PAGE_IMAGES[x.slug] && PAGE_IMAGES[x.slug].length > 0) {
       const src = CDN_BASE + PAGE_IMAGES[x.slug][0];
