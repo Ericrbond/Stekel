@@ -90,6 +90,10 @@
         : `this.parentElement.classList.add('failed')`;
       return `<div class="cover"><img loading="lazy" src="${src}" alt="${esc(x.t)} — cover" onerror="${onerr}"><span class="cover-fallback">${ICON.book}</span></div>`;
     }
+    if (x.k === "museum" && typeof PAGE_IMAGES !== "undefined" && PAGE_IMAGES[x.slug] && PAGE_IMAGES[x.slug].length > 0) {
+      const src = CDN_BASE + PAGE_IMAGES[x.slug][0];
+      return `<div class="cover museum-cover"><img loading="lazy" src="${src}" alt="${esc(x.t)}" onerror="this.parentElement.classList.add('failed')"><span class="cover-fallback">${ICON.museum}</span></div>`;
+    }
     return `<div class="cover ph ph-${x.k}"><span class="ph-icon">${ICON[x.k] || ICON.book}</span></div>`;
   }
 
