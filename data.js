@@ -3003,6 +3003,8 @@ const COVERS = {
   "Robben Island Museum": {"local": "museum_robben-island-museum.png"},
   "Table Mountain National Park": {"local": "museum_table-mountain-national-park.png"},
   "National Portrait Gallery": {"local": "museum_us-national-portrait-gallery.png"}
+,
+  "100 Years of Sea Power": {"local": "100_Years_of_Sea_Power_by_Baer.jpg"}
 };
 
 /* Open Library work keys — used to fetch descriptions on demand. */
