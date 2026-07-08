@@ -2718,6 +2718,8 @@ const COVERS = {
     "c": 11013590, "local": "Origin_by_Brown.jpg" },
   "Peak": {
     "c": 10467082, "local": "Peak_by_Ericsson.jpg" },
+  "Physics of Nuclear Explosives": {
+    "local": "physics-of-nuclear-explosives.jpg" },
   "Physics of the Future": {
     "c": 6712851, "local": "Physics_of_the_Future_by_Kaku.jpg" },
   "Plan Your Estate": {
