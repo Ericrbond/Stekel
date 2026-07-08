@@ -3040,6 +3040,10 @@ const COVERS = {
   "To Subdue America": {"local": "To_Subdue_America_by_Conway.png"},
   "The 2018 Global Risk Report": {"local": "2018_Global_Risk_Report_WEF.png"},
   "Immune": {"c": 10954401}
+,
+  "Aesir With Carlin": {"local": "Twilight_of_the_Aesir_with_Carlin.jpg"},
+  "Natural Intelligence": {"local": "NI_by_Gorissen.jpg"},
+  "Bewac": {"local": "BEWAC_by_Hjellstrom.jpg"}
 };
 
 /* Open Library work keys — used to fetch descriptions on demand. */
