@@ -427,15 +427,17 @@ a.ro-item:hover { border-color: var(--clay); transform: translateX(4px); box-sha
 .tl-note { color: var(--ink-soft); margin: 0; }
 
 /* language atlas */
-.atlas { display: flex; flex-wrap: wrap; gap: .6rem; }
+.atlas { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
 .lang {
-  display: inline-flex; align-items: center; gap: .5rem; background: var(--card); border: 1px solid var(--hair);
-  border-radius: 999px; padding: .55rem 1.05rem; font-weight: 500; font-size: .95rem;
-  transition: all .25s var(--ease); cursor: default;
+  display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--hair);
+  border-radius: var(--r); overflow: hidden; font-weight: 500; font-size: .95rem;
+  transition: all .25s var(--ease); cursor: default; position: relative;
 }
-.lang:hover { transform: translateY(-3px); border-color: var(--clay); box-shadow: var(--shadow); }
-.lang .glyph { font-family: var(--serif); color: var(--clay); font-size: 1.05rem; }
-.lang .lname { color: var(--ink-soft); font-size: .82rem; }
+.lang:hover { transform: translateY(-4px); border-color: var(--clay); box-shadow: var(--shadow-lift); }
+.lang-flag { width: 100%; height: 96px; object-fit: cover; display: block; }
+.lang-body { padding: .65rem .85rem .5rem; display: flex; flex-direction: column; gap: .15rem; }
+.lang .lname { font-weight: 600; font-size: .9rem; color: var(--ink); }
+.lang .glyph { font-family: var(--serif); color: var(--clay); font-size: .95rem; }
 
 /* documents */
 .docs { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 1rem; }
@@ -612,7 +614,7 @@ footer.foot::before {
 .modal-card.text { max-width: 680px; }
 
 .clickable { cursor: pointer; transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease); }
-.lang.clickable:hover { transform: translateY(-3px); border-color: var(--clay); box-shadow: var(--shadow); }
+.lang.clickable:hover { transform: translateY(-4px); border-color: var(--clay); box-shadow: var(--shadow-lift); }
 .iv-person.clickable:hover { border-color: var(--clay); color: var(--clay-deep); }
 .iv-person.clickable:focus-visible, .lang.clickable:focus-visible { outline: 2px solid var(--clay); outline-offset: 2px; }
 
@@ -1108,15 +1110,10 @@ button:focus-visible { outline: 2px solid var(--clay); outline-offset: 2px; }
 
 /* Web speech button on language pages */
 .lang-listen {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--clay);
-  padding: .2rem;
-  border-radius: 4px;
-  font-size: .9rem;
-  opacity: .7;
-  transition: opacity .2s;
+  position: absolute; bottom: .55rem; right: .7rem;
+  background: none; border: none; cursor: pointer;
+  color: var(--clay); padding: .15rem; border-radius: 4px;
+  font-size: .85rem; opacity: .55; transition: opacity .2s;
 }
 .lang-listen:hover { opacity: 1; }
 

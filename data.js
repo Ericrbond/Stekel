@@ -2575,112 +2575,134 @@ const LANGUAGES = [
   {
     "name": "Arabic",
     "hello": "مرحبا",
-    "slug": "arabic"
+    "slug": "arabic",
+    "flag": "Saudia_Arabia_Flag.png"
   },
   {
     "name": "Danish",
     "hello": "Hej",
-    "slug": "danish"
+    "slug": "danish",
+    "flag": "Denmark_Flag.png"
   },
   {
     "name": "Deutsch",
     "hello": "Hallo",
-    "slug": "deutsch"
+    "slug": "deutsch",
+    "flag": "Germany_Flag.png"
   },
   {
     "name": "Dutch",
     "hello": "Hallo",
-    "slug": "dutch"
+    "slug": "dutch",
+    "flag": "Dutch_Flag.png"
   },
   {
     "name": "Finnish",
     "hello": "Hei",
-    "slug": "finnish"
+    "slug": "finnish",
+    "flag": "Finland_Flag.jpeg"
   },
   {
     "name": "French",
     "hello": "Bonjour",
-    "slug": "french"
+    "slug": "french",
+    "flag": "French_Flag.png"
   },
   {
     "name": "Greek",
     "hello": "Γεια",
-    "slug": "greek"
+    "slug": "greek",
+    "flag": "Greek_Flag.png"
   },
   {
     "name": "Hindi",
     "hello": "नमस्ते",
-    "slug": "hindi"
+    "slug": "hindi",
+    "flag": "India_Flag.png"
   },
   {
     "name": "Icelandic",
     "hello": "Halló",
-    "slug": "icelandic"
+    "slug": "icelandic",
+    "flag": "Iceland_Flag.png"
   },
   {
     "name": "Japanese",
     "hello": "こんにちは",
-    "slug": "japanese"
+    "slug": "japanese",
+    "flag": "Japan_Flag.png"
   },
   {
     "name": "Kiswahili",
     "hello": "Jambo",
-    "slug": "kiswahili"
+    "slug": "kiswahili",
+    "flag": "Kenya-Tanzania_Flag.png"
   },
   {
     "name": "Malay",
     "hello": "Helo",
-    "slug": "malay"
+    "slug": "malay",
+    "flag": "Malaysian_Flag.png"
   },
   {
     "name": "Mandarin",
     "hello": "你好",
-    "slug": "mandarin"
+    "slug": "mandarin",
+    "flag": "Chinese_Flag.png"
   },
   {
     "name": "Norse",
     "hello": "Heill",
-    "slug": "norse"
+    "slug": "norse",
+    "flag": "Norway_Flag.png"
   },
   {
     "name": "Portuguese",
     "hello": "Olá",
-    "slug": "portuguese"
+    "slug": "portuguese",
+    "flag": "Portugal_Flag.jpeg"
   },
   {
     "name": "Russian",
     "hello": "Привет",
-    "slug": "russian"
+    "slug": "russian",
+    "flag": "Russia_Flag.png"
   },
   {
     "name": "Somali",
     "hello": "Salaan",
-    "slug": "somali"
+    "slug": "somali",
+    "flag": "Somalia_Flag.png"
   },
   {
     "name": "Spanish",
     "hello": "Hola",
-    "slug": "spanish"
+    "slug": "spanish",
+    "flag": "Spain_Flag.png"
   },
   {
     "name": "Swedish",
     "hello": "Hej",
-    "slug": "swedish"
+    "slug": "swedish",
+    "flag": "Sweden_Flag.png"
   },
   {
     "name": "Tagalog",
     "hello": "Kumusta",
-    "slug": "tagalog"
+    "slug": "tagalog",
+    "flag": "Philippines_Flag.png"
   },
   {
     "name": "Thai",
     "hello": "สวัสดี",
-    "slug": "thai"
+    "slug": "thai",
+    "flag": "Thai_Flag.png"
   },
   {
     "name": "Turkish",
     "hello": "Merhaba",
-    "slug": "turkish"
+    "slug": "turkish",
+    "flag": "Turkiye_Flag.png"
   }
 ];
 

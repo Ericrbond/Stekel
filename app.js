@@ -882,12 +882,16 @@
       <div class="atlas" id="atlas"></div>`;
     view.append(root);
     const atlas = $("#atlas", root);
+    const CDN = window.STEKEL_CDN || "assets/stekel/";
     LANGUAGES.forEach((l) => {
       const has = content(l.slug);
       const n = has ? el("a", "lang clickable") : el("span", "lang");
       if (has) n.href = "#/item/" + encodeURIComponent(l.slug);
-      const speakBtn = `<button class="lang-listen" aria-label="Listen to ${esc(l.name)}" onclick="event.preventDefault();event.stopPropagation();const u=new SpeechSynthesisUtterance('${esc(l.hello).replace(/'/g,"\\'")}');speechSynthesis.speak(u);" title="Hear pronunciation">🔊</button>`;
-      n.innerHTML = `<span class="glyph">${esc(l.hello)}</span><span class="lname">${esc(l.name)}</span>${speakBtn}`;
+      const flagSrc = l.flag ? CDN + l.flag : "";
+      const speakBtn = `<button class="lang-listen" aria-label="Listen to ${esc(l.name)}" onclick="event.preventDefault();event.stopPropagation();const u=new SpeechSynthesisUtterance('${esc(l.hello).replace(/'/g,"\\'")}');speechSynthesis.speak(u);" title="Hear pronunciation">&#128266;</button>`;
+      n.innerHTML = flagSrc
+        ? `<img class="lang-flag" src="${flagSrc}" alt="${esc(l.name)} flag" loading="lazy"><div class="lang-body"><span class="lname">${esc(l.name)}</span><span class="glyph">${esc(l.hello)}</span></div>${speakBtn}`
+        : `<span class="glyph">${esc(l.hello)}</span><span class="lname">${esc(l.name)}</span>${speakBtn}`;
       atlas.append(n);
     });
   }
