@@ -2777,25 +2777,25 @@ const PROGRAMS = [
     "org": "Johns Hopkins University",
     "tag": "Environmental Science & Policy",
     "courses": [
-      { "name": "Climate Change on the Front Lines", "slug": "jhu-climate-change-on-the-front-lines" },
-      { "name": "Drinking Water", "slug": "jhu-drinking-water" },
-      { "name": "Ecology", "slug": "jhu-ecology" },
-      { "name": "Environmental GIS", "slug": "jhu-environmental-gis" },
-      { "name": "Geology & Tropical Ecology", "slug": "jhu-geology-and-tropical-ecology" },
-      { "name": "Hydrology", "slug": "jhu-hydrology" },
-      { "name": "Open-Source GIS", "slug": "jhu-open-source-gis" },
-      { "name": "Sustainability Science", "slug": "jhu-sustainability-science" },
-      { "name": "Water Scarcity", "slug": "jhu-water-scarcity" },
-      { "name": "Watershed Management", "slug": "jhu-watershed-management" }
+      { "name": "Climate Change on the Front Lines", "slug": "jhu-climate-change-on-the-front-lines", "cover": "JHU_Climate_Change_on_the_Frontlines_with_Poudel.png" },
+      { "name": "Drinking Water", "slug": "jhu-drinking-water", "cover": "JHU_Drinking_WaterSanitationHealth_with_Patterson.png" },
+      { "name": "Ecology", "slug": "jhu-ecology", "cover": "JHU_Ecology_with_Blay.png" },
+      { "name": "Environmental GIS", "slug": "jhu-environmental-gis", "cover": "JHU_Environmental_Applications_of_GIS_with_Isaacs.png" },
+      { "name": "Geology & Tropical Ecology", "slug": "jhu-geology-and-tropical-ecology", "cover": "JHU_Geology_and_Tropical_Ecology_of_Hawaii_with_da_Rosa.png" },
+      { "name": "Hydrology", "slug": "jhu-hydrology", "cover": "JHU_Hydrology_with_Runyan.png" },
+      { "name": "Open-Source GIS", "slug": "jhu-open-source-gis", "cover": "JHU_Open_Source_GIS_with_Isaacs.png" },
+      { "name": "Sustainability Science", "slug": "jhu-sustainability-science", "cover": "JHU_Sustainability_Science_with_da_Rosa.png" },
+      { "name": "Water Scarcity", "slug": "jhu-water-scarcity", "cover": "JHU_Water_Scarcity_with_Patterson.png" },
+      { "name": "Watershed Management", "slug": "jhu-watershed-management", "cover": "JHU_Watershed_Management_with_Patterson.png" }
     ]
   },
   {
     "org": "Joint Professional Military Education",
     "tag": "Strategy & History",
     "courses": [
-      { "name": "Strategy & Warfare", "slug": "jpme-strategy-war" },
-      { "name": "The American Revolutionary War", "slug": "jpme-american-revolutionary-war" },
-      { "name": "WWII — The Pacific Theater", "slug": "jpme-wwii-pacific-theater" }
+      { "name": "Strategy & Warfare", "slug": "jpme-strategy-war", "cover": "JPME_Ph_I_Mod_I_Strategy_and_War.png" },
+      { "name": "The American Revolutionary War", "slug": "jpme-american-revolutionary-war", "cover": "JPME_Ph_I_Mod_II_American_Revolutionary_War.png" },
+      { "name": "WWII — The Pacific Theater", "slug": "jpme-wwii-pacific-theater", "cover": "JPME_Ph_I_Mod_III_WWII_Pacific_Theater.png" }
     ]
   }
 ];

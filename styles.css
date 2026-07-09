@@ -402,6 +402,7 @@ section:nth-child(even) {
 .ro-item { display: flex; align-items: center; gap: .85rem; padding: .7rem 1rem; border-radius: var(--r); border: 1px solid var(--hair); background: var(--paper); text-decoration: none; color: inherit; transition: all .2s var(--ease); }
 a.ro-item:hover { border-color: var(--clay); transform: translateX(4px); box-shadow: var(--shadow); }
 .ro-num { font-family: var(--mono); font-size: .78rem; color: var(--clay); font-weight: 700; min-width: 1.6rem; text-align: center; background: color-mix(in srgb, var(--clay) 12%, transparent); border-radius: 4px; padding: .15rem .35rem; }
+.ro-thumb { width: 48px; height: 48px; object-fit: cover; border-radius: 50%; flex-shrink: 0; border: 2px solid var(--hair); }
 .ro-title { flex: 1; font-weight: 500; font-size: .95rem; }
 .ro-time { font-family: var(--mono); font-size: .78rem; color: var(--muted); white-space: nowrap; }
 .ro-total { margin-top: 1rem; font-size: .88rem; color: var(--ink-soft); border-top: 1px solid var(--hair); padding-top: .8rem; }
@@ -671,6 +672,9 @@ footer.foot::before {
 .detail-by { color: var(--muted); font-size: 1.1rem; margin: 0 0 1.4rem; }
 a.m-class { text-decoration: none; color: var(--ink); }
 a.m-class:hover { border-color: var(--clay); transform: translateY(-2px); }
+.m-cover-wrap { max-width: 200px; margin: 0 0 2rem; }
+.m-cover { width: 100%; border-radius: 12px; border: 1px solid var(--hair); box-shadow: var(--shadow); display: block; }
+@media (min-width: 640px) { .m-cover-wrap { float: right; margin: 0 0 1.5rem 2rem; max-width: 220px; } }
 .page-head { max-width: 720px; margin-bottom: 1.5rem; }
 .page-head h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.02em; line-height: 1.06; margin: .7rem 0 .4rem; }
 

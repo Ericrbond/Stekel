@@ -623,6 +623,8 @@
   /* --- generic content page (language / document / era / interview) --- */
   function viewContentPage(opts) {
     const full = content(opts.slug);
+    const CDN = window.STEKEL_CDN || "assets/stekel/";
+    const coverHTML = opts.cover ? `<div class="m-cover-wrap"><img class="m-cover" src="${CDN}${opts.cover}" alt="${esc(opts.title)}"></div>` : "";
     const root = el("div", "wrap page detail narrow");
     root.innerHTML = `
       ${crumb([["#/", "Home"], [opts.backHref || "#/", opts.backLabel || "Back"], [null, opts.title]])}
@@ -631,6 +633,7 @@
         <h1>${esc(opts.title)}</h1>
         ${opts.sub ? `<p class="detail-by">${opts.sub}</p>` : ""}
       </header>
+      ${coverHTML}
       ${opts.extra || ""}
       ${full ? `<article class="mirror reading">${injectImagesInline(full, opts.slug, false)}</article>` : `<p class="m-blurb">${esc(opts.fallback || "No further content recorded.")}</p>${galleryHTML(opts.slug, false)}`}`;
     view.append(root);
@@ -932,6 +935,7 @@
       let coursesHTML;
       if (useOrder) {
         const totalHrs = p.courses.length * HRS_PER_COURSE;
+        const CDN = window.STEKEL_CDN || "assets/stekel/";
         const itemsHTML = p.courses.map((course, i) => {
           const name = course.name || course;
           const slug = course.slug || null;
@@ -940,7 +944,8 @@
           let timeLabel;
           if (fc) { const words = plainFromHTML(fc).split(" ").filter(Boolean).length; const mins = Math.max(1, Math.round(words / 200)); timeLabel = mins < 60 ? `${mins} min` : `~${Math.round(mins / 60)} hr`; }
           else timeLabel = `~${HRS_PER_COURSE} hr`;
-          const inner = `<span class="ro-num">${i + 1}</span><span class="ro-title">${esc(name)}</span><span class="ro-time">${esc(timeLabel)}</span>`;
+          const thumb = course.cover ? `<img class="ro-thumb" src="${CDN}${course.cover}" alt="${esc(name)}" loading="lazy">` : `<span class="ro-num">${i + 1}</span>`;
+          const inner = `${thumb}<span class="ro-title">${esc(name)}</span><span class="ro-time">${esc(timeLabel)}</span>`;
           return href ? `<a class="ro-item" href="${href}">${inner}</a>` : `<div class="ro-item">${inner}</div>`;
         }).join("");
         coursesHTML = `<ol class="reading-order">${itemsHTML}</ol><div class="ro-total">Total estimated time: <strong>~${totalHrs} hours</strong></div>`;
@@ -1104,7 +1109,7 @@
   }));
   if (typeof RESEARCH !== "undefined") RESEARCH.forEach((r) => reg(r.slug, { title: r.title, sub: `Research · ${r.year}`, kind: "research", render: () => viewContentPage({ label: "Research", kind: "guide", title: r.title, sub: `${esc(r.topic)} · ${r.year}`, slug: r.slug, backHref: "#/research", backLabel: "Research", fallback: r.blurb }) }));
   if (typeof PROGRAMS !== "undefined") PROGRAMS.forEach((p) => p.courses.forEach((course) => {
-    if (course.slug) reg(course.slug, { title: course.name, sub: p.tag, kind: "guide", render: () => viewContentPage({ label: p.org, kind: "guide", title: course.name, sub: p.tag, slug: course.slug, backHref: "#/study", backLabel: "Study" }) });
+    if (course.slug) reg(course.slug, { title: course.name, sub: p.tag, kind: "guide", cover: course.cover ? { local: course.cover } : null, render: () => viewContentPage({ label: p.org, kind: "guide", title: course.name, sub: p.tag, slug: course.slug, backHref: "#/study", backLabel: "Study", cover: course.cover }) });
   }));
 
   /* ===================== ROUTER ===================== */
