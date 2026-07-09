@@ -1,5 +1,5 @@
 /* stekel — service worker: network-first (always fresh online) + offline cache */
-const CACHE = "stekel-v42";
+const CACHE = "stekel-v43";
 const SHELL = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.js", "./content.js",
   "./manifest.webmanifest", "./assets/icon-192.png", "./assets/icon-512.png", "./assets/og-image.png",
