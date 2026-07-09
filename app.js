@@ -445,6 +445,96 @@
     } catch (e) { descCache[x.t] = null; }
     return descCache[x.t];
   }
+  /* ── Ratings ── */
+  function initRatings(slug, root) {
+    const w = root.querySelector('#ratingWidget');
+    if (!w) return;
+    const stored = localStorage.getItem('stekel_rating_' + slug);
+    const mine = stored ? parseInt(stored) : 0;
+    w.innerHTML = `<div class="rating-row"><div class="rating-stars" id="ratingStars">${[1,2,3,4,5].map(v =>
+      `<button class="rstar${v <= mine ? ' filled' : ''}" data-v="${v}" aria-label="${v} star">★</button>`).join('')}</div><span class="rating-summary" id="ratingSummary">${mine ? `Your rating: ${mine}/5` : 'Rate this'}</span></div>`;
+    fetch('/api/ratings?slug=' + encodeURIComponent(slug))
+      .then(r => r.json()).then(d => updateRatingSummary(w, d, mine)).catch(() => {});
+    const stars = w.querySelectorAll('.rstar');
+    stars.forEach(s => {
+      s.addEventListener('mouseenter', () => { const v = +s.dataset.v; stars.forEach(t => t.classList.toggle('hover', +t.dataset.v <= v)); });
+      s.addEventListener('mouseleave', () => stars.forEach(t => t.classList.remove('hover')));
+      s.addEventListener('click', async () => {
+        const v = +s.dataset.v;
+        localStorage.setItem('stekel_rating_' + slug, v);
+        stars.forEach(t => { t.classList.toggle('filled', +t.dataset.v <= v); t.classList.remove('hover'); });
+        try {
+          const r = await fetch('/api/ratings', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slug, rating: v }) });
+          updateRatingSummary(w, await r.json(), v);
+        } catch {}
+      });
+    });
+  }
+  function updateRatingSummary(w, d, mine) {
+    const el = w.querySelector('#ratingSummary');
+    if (!el) return;
+    if (d.count > 0) {
+      el.textContent = `${d.avg}/5 · ${d.count} rating${d.count !== 1 ? 's' : ''}${mine ? ` · yours: ${mine}` : ''}`;
+    } else {
+      el.textContent = mine ? `Your rating: ${mine}/5` : 'Be the first to rate';
+    }
+  }
+
+  /* ── Comments ── */
+  function relTime(iso) {
+    const s = (Date.now() - new Date(iso)) / 1000;
+    if (s < 60) return 'just now';
+    if (s < 3600) return Math.floor(s / 60) + 'm ago';
+    if (s < 86400) return Math.floor(s / 3600) + 'h ago';
+    if (s < 2592000) return Math.floor(s / 86400) + 'd ago';
+    return new Date(iso).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+  }
+  function commentCard(c) {
+    return `<div class="comment-card"><div class="comment-meta"><span class="comment-name">${esc(c.author)}</span><span class="comment-time">${relTime(c.created_at)}</span></div><p class="comment-body">${esc(c.body)}</p></div>`;
+  }
+  function initComments(slug, root) {
+    const sec = root.querySelector('#commentsSection');
+    if (!sec) return;
+    sec.innerHTML = `
+      <h3 class="comments-head">Reader Notes</h3>
+      <div class="comments-list" id="commentsList"><p class="comment-placeholder">Loading…</p></div>
+      <form class="comment-form" id="commentForm">
+        <input class="comment-input" type="text" placeholder="Your name (optional)" maxlength="50" autocomplete="name">
+        <textarea class="comment-textarea" placeholder="Share a thought…" rows="3" required maxlength="2000"></textarea>
+        <div class="comment-foot">
+          <span class="comment-hint">Notes are public.</span>
+          <button class="comment-submit" type="submit">Post note</button>
+        </div>
+      </form>`;
+    const list = sec.querySelector('#commentsList');
+    fetch('/api/comments?slug=' + encodeURIComponent(slug))
+      .then(r => r.json())
+      .then(cs => { list.innerHTML = cs.length ? cs.map(commentCard).join('') : '<p class="comment-placeholder">No notes yet — be the first.</p>'; })
+      .catch(() => { list.innerHTML = '<p class="comment-placeholder">Couldn\'t load notes.</p>'; });
+    sec.querySelector('#commentForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('.comment-submit');
+      const body = form.querySelector('.comment-textarea').value.trim();
+      const author = form.querySelector('.comment-input').value.trim();
+      if (!body) return;
+      btn.disabled = true; btn.textContent = 'Posting…';
+      try {
+        const r = await fetch('/api/comments', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slug, author, body }) });
+        if (!r.ok) throw new Error();
+        const c = await r.json();
+        const empty = list.querySelector('.comment-placeholder');
+        if (empty) empty.remove();
+        list.insertAdjacentHTML('beforeend', commentCard(c));
+        form.querySelector('.comment-textarea').value = '';
+        btn.textContent = '✓ Posted';
+        setTimeout(() => { btn.disabled = false; btn.textContent = 'Post note'; }, 2500);
+      } catch {
+        btn.disabled = false; btn.textContent = 'Post note';
+      }
+    });
+  }
+
   function viewItem(x) {
     const full = content(x.slug);
     const known = (typeof DESCRIPTIONS !== "undefined" && DESCRIPTIONS[x.t]) || descCache[x.t] || null;
@@ -472,13 +562,16 @@
             <div class="m-class-code">${x.dewey || x.code}</div>
             <div><div class="m-class-name">${esc(dw.name)}</div><div class="m-class-range">Dewey ${dw.range || ""} · browse all →</div></div>
           </a>
+          <div class="rating-widget" id="ratingWidget"></div>
         </div>
       </div>
       ${full ? `<article class="mirror reading">${injectImagesInline(full, x.slug, x.k === "book")}</article>` : galleryHTML(x.slug, x.k === "book")}
+      <section class="comments-section" id="commentsSection"></section>
       <nav class="prevnext">
         ${prev ? `<a class="pn pn-prev" href="#/item/${encodeURIComponent(prev.slug)}"><span class="pn-dir">← Previous</span><span class="pn-t">${esc(prev.t)}</span></a>` : "<span></span>"}
         ${next ? `<a class="pn pn-next" href="#/item/${encodeURIComponent(next.slug)}"><span class="pn-dir">Next →</span><span class="pn-t">${esc(next.t)}</span></a>` : "<span></span>"}
       </nav>`;
+    if (x.slug) { initRatings(x.slug, root); initComments(x.slug, root); }
     // related items — scored by Dewey class match, author match, keyword overlap
     (function buildRelated() {
       const xWords = new Set((x.t + " " + (x.a || "") + " " + x.section).toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length > 3));
