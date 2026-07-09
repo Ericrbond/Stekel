@@ -20,7 +20,26 @@ module.exports = async (req, res) => {
   const h = headers();
 
   if (req.method === 'GET') {
-    const { slug } = req.query;
+    const { slug, all } = req.query;
+
+    if (all) {
+      const r = await fetch(`${SUPABASE_URL}/rest/v1/ratings?select=slug,rating`, { headers: h });
+      const rows = await r.json();
+      const map = {};
+      if (Array.isArray(rows)) {
+        rows.forEach(({ slug: s, rating }) => {
+          if (!map[s]) map[s] = { sum: 0, count: 0 };
+          map[s].sum += rating;
+          map[s].count++;
+        });
+      }
+      const result = {};
+      Object.entries(map).forEach(([s, { sum, count }]) => {
+        result[s] = { avg: Math.round(sum / count * 10) / 10, count };
+      });
+      return res.json(result);
+    }
+
     if (!slug) return res.status(400).json({ error: 'slug required' });
     const r = await fetch(
       `${SUPABASE_URL}/rest/v1/ratings?slug=eq.${encodeURIComponent(slug)}&select=rating`,

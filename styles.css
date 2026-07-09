@@ -390,6 +390,7 @@ section:nth-child(even) {
 .card .by { font-size: .88rem; color: var(--muted); margin-top: auto; }
 .card .sec { font-size: .74rem; color: var(--muted); font-family: var(--mono); }
 .empty { text-align: center; color: var(--muted); padding: 3rem 1rem; grid-column: 1/-1; }
+.catalog-loading { color: var(--muted); font-size: .9rem; padding: 2rem 0; }
 .catalog-empty { display: flex; flex-direction: column; gap: .4rem; }
 .catalog-empty .empty-msg { font-size: 1.05rem; color: var(--ink-soft); margin: 0; }
 .catalog-empty .empty-msg em { font-style: normal; font-weight: 600; color: var(--ink); }

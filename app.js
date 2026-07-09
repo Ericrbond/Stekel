@@ -352,6 +352,7 @@
 
   /* --- CATALOG --- */
   const cat = { q: "", kind: "all", code: null, sort: "title" };
+  let ratingsMap = null;
   function viewCatalog(code) {
     cat.code = code || null;
     const cm = code ? classMeta(code) : null;
@@ -375,6 +376,7 @@
           <option value="title">Title A–Z</option>
           <option value="author">Author</option>
           <option value="class">Dewey class</option>
+          <option value="rated">Top Rated</option>
         </select>
       </div>
       <div class="catalog-meta" id="catalogMeta"></div>
@@ -393,6 +395,7 @@
       });
       list.sort((a, b) => cat.sort === "author" ? (a.a || "~").localeCompare(b.a || "~") || a.t.localeCompare(b.t)
         : cat.sort === "class" ? (a.dewey || a.code).localeCompare(b.dewey || b.code) || a.t.localeCompare(b.t)
+        : cat.sort === "rated" ? ((ratingsMap?.[b.slug]?.avg || 0) - (ratingsMap?.[a.slug]?.avg || 0)) || ((ratingsMap?.[b.slug]?.count || 0) - (ratingsMap?.[a.slug]?.count || 0)) || a.t.localeCompare(b.t)
         : a.t.localeCompare(b.t));
       meta.innerHTML = "";
       meta.append(el("span", "result-count", `${list.length} ${list.length === 1 ? "entry" : "entries"}`));
@@ -426,7 +429,14 @@
     let drawT;
     $("#searchInput", root).addEventListener("input", (e) => { cat.q = e.target.value; clearTimeout(drawT); drawT = setTimeout(draw, 120); });
     $$("#kindChips .chip", root).forEach((c) => c.addEventListener("click", () => { cat.kind = c.dataset.kind; $$("#kindChips .chip", root).forEach((z) => z.classList.toggle("active", z === c)); draw(); }));
-    $("#sortSel", root).addEventListener("change", (e) => { cat.sort = e.target.value; draw(); });
+    $("#sortSel", root).addEventListener("change", async (e) => {
+      cat.sort = e.target.value;
+      if (cat.sort === "rated" && !ratingsMap) {
+        grid.innerHTML = '<div class="catalog-loading">Loading ratings…</div>';
+        try { ratingsMap = await fetch("/api/ratings?all=1").then((r) => r.json()); } catch { ratingsMap = {}; }
+      }
+      draw();
+    });
     draw();
   }
 
