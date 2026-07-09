@@ -1103,6 +1103,9 @@
     if (s) reg(s, { title: p, sub: `Interview · ${r.year}`, kind: "interview", render: () => viewContentPage({ label: `Interview · ${r.year}`, kind: "guide", title: p, sub: `Interview, ${r.year}`, slug: s, backHref: "#/voices", backLabel: "Voices" }) });
   }));
   if (typeof RESEARCH !== "undefined") RESEARCH.forEach((r) => reg(r.slug, { title: r.title, sub: `Research · ${r.year}`, kind: "research", render: () => viewContentPage({ label: "Research", kind: "guide", title: r.title, sub: `${esc(r.topic)} · ${r.year}`, slug: r.slug, backHref: "#/research", backLabel: "Research", fallback: r.blurb }) }));
+  if (typeof PROGRAMS !== "undefined") PROGRAMS.forEach((p) => p.courses.forEach((course) => {
+    if (course.slug) reg(course.slug, { title: course.name, sub: p.tag, kind: "guide", render: () => viewContentPage({ label: p.org, kind: "guide", title: course.name, sub: p.tag, slug: course.slug, backHref: "#/study", backLabel: "Study" }) });
+  }));
 
   /* ===================== ROUTER ===================== */
   const navOf = { catalog: "catalog", class: "catalog", shelf: "shelf", timelines: "timelines", languages: "languages", documents: "documents", study: "study", voices: "voices", research: "research", saved: "saved" };
