@@ -11,19 +11,22 @@ const DEWEY = [
         "t": "An Incomplete Education",
         "a": "Judy Jones",
         "k": "book",
-        "slug": "an-incomplete-education"
-      },
-      {
-        "t": "Documents That Changed the World",
-        "a": "Scott Christianson",
-        "k": "book",
-        "slug": "documents-that-changed-the-world"
+        "slug": "an-incomplete-education",
+        "dewey": "031"
       },
       {
         "t": "Engineering In Plain Sight",
         "a": "Grady Hillhouse",
         "k": "book",
-        "slug": "engineering-in-plain-sight"
+        "slug": "engineering-in-plain-sight",
+        "dewey": "031"
+      },
+      {
+        "t": "Documents That Changed the World",
+        "a": "Scott Christianson",
+        "k": "book",
+        "slug": "documents-that-changed-the-world",
+        "dewey": "080"
       }
     ]
   },
@@ -34,160 +37,186 @@ const DEWEY = [
     "blurb": "How the mind works, how to live, and the competing visions of human nature.",
     "items": [
       {
-        "t": "12 Rules For Life",
-        "a": "Jordan B. Peterson",
+        "t": "If Nietzsche Were a Narwhal",
+        "a": "Justin Gregg",
         "k": "book",
-        "slug": "12-rules-for-life"
+        "slug": "if-nietzsche-were-a-narwhal",
+        "dewey": "128.4"
       },
       {
         "t": "21 Lessons for the 21st Century",
         "a": "Yuval Noah Harari",
         "k": "book",
-        "slug": "21-lessons-for-the-21-century"
-      },
-      {
-        "t": "48 Laws of Power",
-        "a": "Robert Greene",
-        "k": "book",
-        "slug": "48-laws-of-power"
-      },
-      {
-        "t": "A Conflict of Visions",
-        "a": "Thomas Sowell",
-        "k": "book",
-        "slug": "a-conflict-of-visions"
+        "slug": "21-lessons-for-the-21-century",
+        "dewey": "128.4"
       },
       {
         "t": "Against Empathy",
         "a": "Paul Bloom",
         "k": "book",
-        "slug": "against-empathy"
-      },
-      {
-        "t": "Bushido the Soul of Japan",
-        "a": "Inazo Nitobe",
-        "k": "book",
-        "slug": "bushido-the-soul-of-japan"
-      },
-      {
-        "t": "Debating To Win Arguments",
-        "a": "R. Green",
-        "k": "book",
-        "slug": "debating-to-win-arguments"
-      },
-      {
-        "t": "Detecting Bullshit",
-        "a": "John V. Petrocelli",
-        "k": "book",
-        "slug": "detecting-bullshit"
-      },
-      {
-        "t": "Factfulness",
-        "a": "Hans Rosling",
-        "k": "book",
-        "slug": "factfulness"
-      },
-      {
-        "t": "Flow",
-        "a": "Mihaly Csikszentmihalyi",
-        "k": "book",
-        "slug": "flow"
-      },
-      {
-        "t": "Focus",
-        "a": "Daniel Goleman",
-        "k": "book",
-        "slug": "focus"
+        "slug": "against-empathy",
+        "dewey": "152.4"
       },
       {
         "t": "How Pleasure Works",
         "a": "Paul Bloom",
         "k": "book",
-        "slug": "how-pleasure-works"
-      },
-      {
-        "t": "If Nietzsche Were a Narwhal",
-        "a": "Justin Gregg",
-        "k": "book",
-        "slug": "if-nietzsche-were-a-narwhal"
-      },
-      {
-        "t": "Meditations",
-        "a": "Marcus Aurelius",
-        "k": "book",
-        "slug": "meditations"
+        "slug": "how-pleasure-works",
+        "dewey": "152.4"
       },
       {
         "t": "Memories of My Melancholy Whores",
         "a": "Gabriel García Márquez",
         "k": "book",
-        "slug": "memories-of-my-melancholy-whores"
+        "slug": "memories-of-my-melancholy-whores",
+        "dewey": "152.4"
       },
       {
-        "t": "Mistakes Were Made",
-        "a": "Tavris & Aronson",
+        "t": "Focus",
+        "a": "Daniel Goleman",
         "k": "book",
-        "slug": "mistakes-were-made"
+        "slug": "focus",
+        "dewey": "153.1"
       },
       {
         "t": "Moonwalking With Einstein",
         "a": "Joshua Foer",
         "k": "book",
-        "slug": "moonwalking-with-einstein"
+        "slug": "moonwalking-with-einstein",
+        "dewey": "153.1"
       },
       {
-        "t": "Natural Intelligence",
-        "a": "Leen Gorrisen",
+        "t": "Factfulness",
+        "a": "Hans Rosling",
         "k": "book",
-        "slug": "natural-intelligence"
+        "slug": "factfulness",
+        "dewey": "153.4"
       },
       {
-        "t": "Peak",
-        "a": "Ericsson & Pool",
+        "t": "Flow",
+        "a": "Mihaly Csikszentmihalyi",
         "k": "book",
-        "slug": "peak"
+        "slug": "flow",
+        "dewey": "153.4"
       },
       {
-        "t": "Seneca",
-        "a": "Seneca",
+        "t": "Mistakes Were Made",
+        "a": "Tavris & Aronson",
         "k": "book",
-        "slug": "seneca"
+        "slug": "mistakes-were-made",
+        "dewey": "153.4"
       },
       {
         "t": "Seven and a Half Lessons",
         "a": "Lisa Feldman Barrett",
         "k": "book",
-        "slug": "7-1/2-lessons"
+        "slug": "7-1/2-lessons",
+        "dewey": "153.4"
       },
       {
         "t": "Stealing Fire",
         "a": "Steven Kotler",
         "k": "book",
-        "slug": "stealing-fire"
-      },
-      {
-        "t": "Success Principles",
-        "a": "Jack Canfield",
-        "k": "book",
-        "slug": "success-principles"
-      },
-      {
-        "t": "The Definitive Book of Body Language",
-        "a": "Allan Pease",
-        "k": "book",
-        "slug": "the-definitive-book-of-body-language"
-      },
-      {
-        "t": "The Obstacle Is the Way",
-        "a": "Ryan Holiday",
-        "k": "book",
-        "slug": "the-obstacle-is-the-way"
+        "slug": "stealing-fire",
+        "dewey": "153.4"
       },
       {
         "t": "Thinking Fast and Slow",
         "a": "Daniel Kahneman",
         "k": "book",
-        "slug": "thinking-fast-and-slow"
+        "slug": "thinking-fast-and-slow",
+        "dewey": "153.4"
+      },
+      {
+        "t": "The Definitive Book of Body Language",
+        "a": "Allan Pease",
+        "k": "book",
+        "slug": "the-definitive-book-of-body-language",
+        "dewey": "153.6"
+      },
+      {
+        "t": "Natural Intelligence",
+        "a": "Leen Gorrisen",
+        "k": "book",
+        "slug": "natural-intelligence",
+        "dewey": "153.9"
+      },
+      {
+        "t": "Peak",
+        "a": "Ericsson & Pool",
+        "k": "book",
+        "slug": "peak",
+        "dewey": "153.9"
+      },
+      {
+        "t": "Success Principles",
+        "a": "Jack Canfield",
+        "k": "book",
+        "slug": "success-principles",
+        "dewey": "158.1"
+      },
+      {
+        "t": "Detecting Bullshit",
+        "a": "John V. Petrocelli",
+        "k": "book",
+        "slug": "detecting-bullshit",
+        "dewey": "160"
+      },
+      {
+        "t": "Debating To Win Arguments",
+        "a": "R. Green",
+        "k": "book",
+        "slug": "debating-to-win-arguments",
+        "dewey": "168"
+      },
+      {
+        "t": "12 Rules For Life",
+        "a": "Jordan B. Peterson",
+        "k": "book",
+        "slug": "12-rules-for-life",
+        "dewey": "171.3"
+      },
+      {
+        "t": "48 Laws of Power",
+        "a": "Robert Greene",
+        "k": "book",
+        "slug": "48-laws-of-power",
+        "dewey": "177"
+      },
+      {
+        "t": "Bushido the Soul of Japan",
+        "a": "Inazo Nitobe",
+        "k": "book",
+        "slug": "bushido-the-soul-of-japan",
+        "dewey": "181.12"
+      },
+      {
+        "t": "Meditations",
+        "a": "Marcus Aurelius",
+        "k": "book",
+        "slug": "meditations",
+        "dewey": "188"
+      },
+      {
+        "t": "Seneca",
+        "a": "Seneca",
+        "k": "book",
+        "slug": "seneca",
+        "dewey": "188"
+      },
+      {
+        "t": "The Obstacle Is the Way",
+        "a": "Ryan Holiday",
+        "k": "book",
+        "slug": "the-obstacle-is-the-way",
+        "dewey": "188"
+      },
+      {
+        "t": "A Conflict of Visions",
+        "a": "Thomas Sowell",
+        "k": "book",
+        "slug": "a-conflict-of-visions",
+        "dewey": "190"
       }
     ]
   },
@@ -198,40 +227,46 @@ const DEWEY = [
     "blurb": "Faith, scripture, and the institutions built around belief.",
     "items": [
       {
-        "t": "Aesir With Carlin",
-        "a": "Dan Carlin",
+        "t": "The Righteous Mind",
+        "a": "Jonathan Haidt",
         "k": "book",
-        "slug": "aesir-with-carlin"
-      },
-      {
-        "t": "Heroes",
-        "a": "Stephen Fry",
-        "k": "book",
-        "slug": "heroes"
+        "slug": "the-righteous-mind",
+        "dewey": "205"
       },
       {
         "t": "Museum Of The Bible",
         "a": "",
         "k": "museum",
-        "slug": "museum-of-the-bible"
-      },
-      {
-        "t": "Mythos",
-        "a": "Stephen Fry",
-        "k": "book",
-        "slug": "mythos"
+        "slug": "museum-of-the-bible",
+        "dewey": "220"
       },
       {
         "t": "The Historical Atlas of the Bible",
         "a": "Ian Barnes",
         "k": "book",
-        "slug": "the-historical-atlas-of-the-bible"
+        "slug": "the-historical-atlas-of-the-bible",
+        "dewey": "220.9"
       },
       {
-        "t": "The Righteous Mind",
-        "a": "Jonathan Haidt",
+        "t": "Mythos",
+        "a": "Stephen Fry",
         "k": "book",
-        "slug": "the-righteous-mind"
+        "slug": "mythos",
+        "dewey": "292.1"
+      },
+      {
+        "t": "Heroes",
+        "a": "Stephen Fry",
+        "k": "book",
+        "slug": "heroes",
+        "dewey": "292.13"
+      },
+      {
+        "t": "Aesir With Carlin",
+        "a": "Dan Carlin",
+        "k": "book",
+        "slug": "aesir-with-carlin",
+        "dewey": "293"
       }
     ]
   },
@@ -242,412 +277,480 @@ const DEWEY = [
     "blurb": "Money, markets, politics, and the systems that organize people.",
     "items": [
       {
-        "t": "A Random Walk Down Wall Street",
-        "a": "Burton Gordon Malkiel",
-        "k": "book",
-        "slug": "a-random-walk-down-wall-street-by-malkiel"
-      },
-      {
-        "t": "Aftershock Economy",
-        "a": "Robert Wiedower",
-        "k": "book",
-        "slug": "aftershock-economy"
-      },
-      {
-        "t": "Appeal",
-        "a": "David Walker",
-        "k": "book",
-        "slug": "appeal"
-      },
-      {
-        "t": "Art of War",
-        "a": "孙武 (Sun Tzu)",
-        "k": "book",
-        "slug": "art-of-war"
-      },
-      {
-        "t": "Ayatollah Begs To Differ",
-        "a": "Hooman Majd",
-        "k": "book",
-        "slug": "ayatollah-begs-to-differ"
-      },
-      {
-        "t": "Back To Work",
-        "a": "Bill Clinton",
-        "k": "book",
-        "slug": "back-to-work"
-      },
-      {
-        "t": "Basics Real Estate",
-        "a": "Richard M. Betts",
-        "k": "book",
-        "slug": "basics-real-estate"
-      },
-      {
-        "t": "Basics Stock Market Investing",
-        "a": "Vincent Coxers",
-        "k": "book",
-        "slug": "basics-stock-market-investing"
-      },
-      {
-        "t": "Best Things First",
-        "a": "Bjorn Lomborg",
-        "k": "book",
-        "slug": "best-things-first"
-      },
-      {
-        "t": "Blue Gold",
-        "a": "Barlow & Clarke",
-        "k": "book",
-        "slug": "blue-gold"
-      },
-      {
-        "t": "Building the Bombs",
-        "a": "Charles Loeber",
-        "k": "book",
-        "slug": "building-the-bombs"
-      },
-      {
-        "t": "Catching Fire",
-        "a": "Richard Wrangham",
-        "k": "book",
-        "slug": "catching-fire"
-      },
-      {
-        "t": "Chasing Water",
-        "a": "Brian Richter",
-        "k": "book",
-        "slug": "chasing-water"
-      },
-      {
-        "t": "Collapse",
-        "a": "Jared Diamond",
-        "k": "book",
-        "slug": "collapse"
-      },
-      {
-        "t": "Complete Guide To Money",
-        "a": "Dave Ramsey",
-        "k": "book",
-        "slug": "complete-guide-to-money"
-      },
-      {
-        "t": "Countdown",
-        "a": "Alan Weisman",
-        "k": "book",
-        "slug": "countdown"
-      },
-      {
-        "t": "Elephant and the Dragon",
-        "a": "Robyn Meredith",
-        "k": "book",
-        "slug": "elephant-and-the-dragon"
-      },
-      {
-        "t": "Freakonomics",
-        "a": "Steven D. Levitt",
-        "k": "book",
-        "slug": "freakonomics"
-      },
-      {
-        "t": "Ghettoside",
-        "a": "Jill Leovy",
-        "k": "book",
-        "slug": "ghettoside"
-      },
-      {
-        "t": "I Will Teach You To Be Rich",
-        "a": "Ramit Sethi",
-        "k": "book",
-        "slug": "i-will-teach-you-to-be-rich"
-      },
-      {
-        "t": "Innocent Man",
-        "a": "John Grisham",
-        "k": "book",
-        "slug": "innocent-man"
-      },
-      {
-        "t": "Integrated Watershed Management",
-        "a": "Isobel W. Heathcote",
-        "k": "book",
-        "slug": "integrated-watershed-management"
-      },
-      {
-        "t": "Kaigun",
-        "a": "David C. Evans",
-        "k": "book",
-        "slug": "kaigun"
-      },
-      {
-        "t": "Makers of Modern Strategy",
-        "a": "Peter Paret",
-        "k": "book",
-        "slug": "makers-of-modern-strategy"
-      },
-      {
-        "t": "Man V Markets",
-        "a": "Hirsch",
-        "k": "book",
-        "slug": "man-v-markets"
-      },
-      {
-        "t": "Mania for Subjugation",
-        "a": "Dan Carlin",
-        "k": "book",
-        "slug": "mania-for-subjugation-carlin"
-      },
-      {
-        "t": "Masters of War",
-        "a": "Michael Handel",
-        "k": "book",
-        "slug": "masters-of-war"
-      },
-      {
-        "t": "Military Strategy",
-        "a": "JC Wylie",
-        "k": "book",
-        "slug": "military-strategy"
-      },
-      {
-        "t": "Missoula",
-        "a": "Jon Krakauer",
-        "k": "book",
-        "slug": "missoula"
-      },
-      {
-        "t": "Natural Capital",
-        "a": "Dieter Helm",
-        "k": "book",
-        "slug": "natural-capital"
-      },
-      {
-        "t": "No Is Not Enough",
-        "a": "Naomi Klein",
-        "k": "book",
-        "slug": "no-is-not-enough"
-      },
-      {
-        "t": "Nudge",
-        "a": "Richard H. Thaler",
-        "k": "book",
-        "slug": "nudge"
-      },
-      {
-        "t": "On War",
-        "a": "Carl Von Clausewitz",
-        "k": "book",
-        "slug": "on-war"
-      },
-      {
-        "t": "Physics of the Future",
-        "a": "Michio Kaku",
-        "k": "book",
-        "slug": "physics-of-the-future"
-      },
-      {
-        "t": "Plan Your Estate",
-        "a": "Denis Clifford",
-        "k": "book",
-        "slug": "plan-your-estate"
-      },
-      {
-        "t": "Poor Economics",
-        "a": "Abhijit Banerjee",
-        "k": "book",
-        "slug": "poor-economics"
-      },
-      {
-        "t": "Real Estate — The Basics",
-        "a": "Study guide",
-        "k": "guide",
-        "slug": "guide-real-estate-basics"
-      },
-      {
-        "t": "Real Estate Advantages",
-        "a": "Sharon L. Lechter",
-        "k": "book",
-        "slug": "real-estate-advantages"
-      },
-      {
-        "t": "Restoring Paradise",
-        "a": "Robert Cabin",
-        "k": "book",
-        "slug": "restoring-paradise"
-      },
-      {
-        "t": "Rich Dad Poor Dad",
-        "a": "Robert T. Kiyosaki",
-        "k": "book",
-        "slug": "rich-dad-poor-dad"
-      },
-      {
-        "t": "Rise To Globalism",
-        "a": "Stephen E. Ambrose",
-        "k": "book",
-        "slug": "rise-to-globalism"
-      },
-      {
-        "t": "Small Unit Leadership",
-        "a": "Dandridge M. Malone",
-        "k": "book",
-        "slug": "small-unit-leadership"
-      },
-      {
-        "t": "Stock Market Investing — The Basics",
-        "a": "Study guide",
-        "k": "guide",
-        "slug": "guide-stock-market-basics"
-      },
-      {
-        "t": "Superforecasting",
-        "a": "Philip E. Tetlock",
-        "k": "book",
-        "slug": "superforecasting"
-      },
-      {
-        "t": "The 2018 Global Risk Report",
-        "a": "World Economic Forum",
-        "k": "book",
-        "slug": "the-2018-global-risk-report"
-      },
-      {
-        "t": "The 2023 Global Risks Report",
-        "a": "World Economic Forum",
-        "k": "book",
-        "slug": "the-2023-global-risks-report"
-      },
-      {
-        "t": "The American Way of War",
-        "a": "Russell Frank Weigley",
-        "k": "book",
-        "slug": "the-american-way-of-war"
-      },
-      {
-        "t": "The Anxious Generation",
-        "a": "Jonathan Haidt",
-        "k": "book",
-        "slug": "the-anxious-generation"
-      },
-      {
-        "t": "The Behavior Gap",
-        "a": "Carl Richards",
-        "k": "book",
-        "slug": "the-behavior-gap"
-      },
-      {
-        "t": "The Botany of Desire",
-        "a": "Michael Pollan",
-        "k": "book",
-        "slug": "the-botany-of-desire-by-pollen"
-      },
-      {
-        "t": "The Demon In the Freezer",
-        "a": "Richard Preston",
-        "k": "book",
-        "slug": "the-demon-in-the-freezer"
-      },
-      {
-        "t": "The Healing of America",
-        "a": "T. R. Reid",
-        "k": "book",
-        "slug": "the-healing-of-america"
-      },
-      {
-        "t": "The Heart of Money",
-        "a": "Deborah L. Price",
-        "k": "book",
-        "slug": "the-heart-of-money"
-      },
-      {
-        "t": "The Hundred Year Marathon",
-        "a": "Michael Pillsbury",
-        "k": "book",
-        "slug": "the-hundred-year-marathon"
-      },
-      {
-        "t": "The Investment Answer",
-        "a": "Daniel C. Goldie",
-        "k": "book",
-        "slug": "the-investment-answer"
-      },
-      {
-        "t": "The Lean Startup",
-        "a": "Eric Ries",
-        "k": "book",
-        "slug": "the-lean-startup"
-      },
-      {
         "t": "The Man Who Lied To His Laptop",
         "a": "Clifford Ivar Nass",
         "k": "book",
-        "slug": "the-man-who-lied-to-his-laptop"
-      },
-      {
-        "t": "The Money Book",
-        "a": "Suzie Orman",
-        "k": "book",
-        "slug": "the-money-book"
-      },
-      {
-        "t": "The Richest Man In Babylon",
-        "a": "George S. Clason",
-        "k": "book",
-        "slug": "the-richest-man-in-babylon"
-      },
-      {
-        "t": "The Smartest Guys In the Room",
-        "a": "Bethany McLean",
-        "k": "book",
-        "slug": "the-smartest-guys-in-the-room"
-      },
-      {
-        "t": "The Weather Makers",
-        "a": "Tim Flannery",
-        "k": "book",
-        "slug": "the-weather-makers"
-      },
-      {
-        "t": "The World Without Us",
-        "a": "Alan Weisman",
-        "k": "book",
-        "slug": "the-world-without-us"
-      },
-      {
-        "t": "Think Your Way To Wealth",
-        "a": "Napoleon Hill",
-        "k": "book",
-        "slug": "think-your-way-to-wealth"
+        "slug": "the-man-who-lied-to-his-laptop",
+        "dewey": "302.231"
       },
       {
         "t": "Transforming Leadership",
         "a": "James MacGregor Burns",
         "k": "book",
-        "slug": "transforming-leadership"
+        "slug": "transforming-leadership",
+        "dewey": "303.34"
       },
       {
-        "t": "Unto This Last",
-        "a": "John Ruskin",
+        "t": "Physics of the Future",
+        "a": "Michio Kaku",
         "k": "book",
-        "slug": "unto-this-last"
+        "slug": "physics-of-the-future",
+        "dewey": "303.49"
       },
       {
-        "t": "When the Rivers Run Dry",
-        "a": "Fred Pearce",
+        "t": "Superforecasting",
+        "a": "Philip E. Tetlock",
         "k": "book",
-        "slug": "when-the-rivers-run-dry"
+        "slug": "superforecasting",
+        "dewey": "303.49"
       },
       {
         "t": "Museum of the Future",
         "a": "",
         "k": "museum",
-        "slug": "museum-of-the-future-dubai"
+        "slug": "museum-of-the-future-dubai",
+        "dewey": "303.49"
+      },
+      {
+        "t": "Collapse",
+        "a": "Jared Diamond",
+        "k": "book",
+        "slug": "collapse",
+        "dewey": "304.2"
+      },
+      {
+        "t": "The World Without Us",
+        "a": "Alan Weisman",
+        "k": "book",
+        "slug": "the-world-without-us",
+        "dewey": "304.2"
+      },
+      {
+        "t": "The Botany of Desire",
+        "a": "Michael Pollan",
+        "k": "book",
+        "slug": "the-botany-of-desire-by-pollen",
+        "dewey": "304.2"
+      },
+      {
+        "t": "Countdown",
+        "a": "Alan Weisman",
+        "k": "book",
+        "slug": "countdown",
+        "dewey": "304.6"
       },
       {
         "t": "Linden Museum",
         "a": "",
         "k": "museum",
-        "slug": "linden-museum-stuttgart"
+        "slug": "linden-museum-stuttgart",
+        "dewey": "306.09"
+      },
+      {
+        "t": "No Is Not Enough",
+        "a": "Naomi Klein",
+        "k": "book",
+        "slug": "no-is-not-enough",
+        "dewey": "320.51"
+      },
+      {
+        "t": "The Hundred Year Marathon",
+        "a": "Michael Pillsbury",
+        "k": "book",
+        "slug": "the-hundred-year-marathon",
+        "dewey": "327.51"
+      },
+      {
+        "t": "Rise To Globalism",
+        "a": "Stephen E. Ambrose",
+        "k": "book",
+        "slug": "rise-to-globalism",
+        "dewey": "327.73"
+      },
+      {
+        "t": "Freakonomics",
+        "a": "Steven D. Levitt",
+        "k": "book",
+        "slug": "freakonomics",
+        "dewey": "330.01"
+      },
+      {
+        "t": "Unto This Last",
+        "a": "John Ruskin",
+        "k": "book",
+        "slug": "unto-this-last",
+        "dewey": "330.1"
+      },
+      {
+        "t": "Complete Guide To Money",
+        "a": "Dave Ramsey",
+        "k": "book",
+        "slug": "complete-guide-to-money",
+        "dewey": "332.024"
+      },
+      {
+        "t": "I Will Teach You To Be Rich",
+        "a": "Ramit Sethi",
+        "k": "book",
+        "slug": "i-will-teach-you-to-be-rich",
+        "dewey": "332.024"
+      },
+      {
+        "t": "Rich Dad Poor Dad",
+        "a": "Robert T. Kiyosaki",
+        "k": "book",
+        "slug": "rich-dad-poor-dad",
+        "dewey": "332.024"
+      },
+      {
+        "t": "The Behavior Gap",
+        "a": "Carl Richards",
+        "k": "book",
+        "slug": "the-behavior-gap",
+        "dewey": "332.024"
+      },
+      {
+        "t": "The Heart of Money",
+        "a": "Deborah L. Price",
+        "k": "book",
+        "slug": "the-heart-of-money",
+        "dewey": "332.024"
+      },
+      {
+        "t": "The Money Book",
+        "a": "Suzie Orman",
+        "k": "book",
+        "slug": "the-money-book",
+        "dewey": "332.024"
+      },
+      {
+        "t": "The Richest Man In Babylon",
+        "a": "George S. Clason",
+        "k": "book",
+        "slug": "the-richest-man-in-babylon",
+        "dewey": "332.024"
+      },
+      {
+        "t": "Think Your Way To Wealth",
+        "a": "Napoleon Hill",
+        "k": "book",
+        "slug": "think-your-way-to-wealth",
+        "dewey": "332.024"
+      },
+      {
+        "t": "Man V Markets",
+        "a": "Hirsch",
+        "k": "book",
+        "slug": "man-v-markets",
+        "dewey": "332.6"
+      },
+      {
+        "t": "A Random Walk Down Wall Street",
+        "a": "Burton Gordon Malkiel",
+        "k": "book",
+        "slug": "a-random-walk-down-wall-street-by-malkiel",
+        "dewey": "332.6"
+      },
+      {
+        "t": "Basics Stock Market Investing",
+        "a": "Vincent Coxers",
+        "k": "book",
+        "slug": "basics-stock-market-investing",
+        "dewey": "332.63"
+      },
+      {
+        "t": "Stock Market Investing — The Basics",
+        "a": "Study guide",
+        "k": "guide",
+        "slug": "guide-stock-market-basics",
+        "dewey": "332.63"
+      },
+      {
+        "t": "The Investment Answer",
+        "a": "Daniel C. Goldie",
+        "k": "book",
+        "slug": "the-investment-answer",
+        "dewey": "332.678"
+      },
+      {
+        "t": "Basics Real Estate",
+        "a": "Richard M. Betts",
+        "k": "book",
+        "slug": "basics-real-estate",
+        "dewey": "333.33"
+      },
+      {
+        "t": "Real Estate Advantages",
+        "a": "Sharon L. Lechter",
+        "k": "book",
+        "slug": "real-estate-advantages",
+        "dewey": "333.33"
+      },
+      {
+        "t": "Real Estate — The Basics",
+        "a": "Study guide",
+        "k": "guide",
+        "slug": "guide-real-estate-basics",
+        "dewey": "333.33"
+      },
+      {
+        "t": "Natural Capital",
+        "a": "Dieter Helm",
+        "k": "book",
+        "slug": "natural-capital",
+        "dewey": "333.7"
+      },
+      {
+        "t": "Blue Gold",
+        "a": "Barlow & Clarke",
+        "k": "book",
+        "slug": "blue-gold",
+        "dewey": "333.91"
+      },
+      {
+        "t": "Chasing Water",
+        "a": "Brian Richter",
+        "k": "book",
+        "slug": "chasing-water",
+        "dewey": "333.91"
+      },
+      {
+        "t": "Integrated Watershed Management",
+        "a": "Isobel W. Heathcote",
+        "k": "book",
+        "slug": "integrated-watershed-management",
+        "dewey": "333.91"
+      },
+      {
+        "t": "When the Rivers Run Dry",
+        "a": "Fred Pearce",
+        "k": "book",
+        "slug": "when-the-rivers-run-dry",
+        "dewey": "333.91"
+      },
+      {
+        "t": "Restoring Paradise",
+        "a": "Robert Cabin",
+        "k": "book",
+        "slug": "restoring-paradise",
+        "dewey": "333.95"
+      },
+      {
+        "t": "Elephant and the Dragon",
+        "a": "Robyn Meredith",
+        "k": "book",
+        "slug": "elephant-and-the-dragon",
+        "dewey": "337.51"
+      },
+      {
+        "t": "The Lean Startup",
+        "a": "Eric Ries",
+        "k": "book",
+        "slug": "the-lean-startup",
+        "dewey": "338.04"
+      },
+      {
+        "t": "Nudge",
+        "a": "Richard H. Thaler",
+        "k": "book",
+        "slug": "nudge",
+        "dewey": "338.9"
+      },
+      {
+        "t": "Back To Work",
+        "a": "Bill Clinton",
+        "k": "book",
+        "slug": "back-to-work",
+        "dewey": "338.973"
+      },
+      {
+        "t": "Poor Economics",
+        "a": "Abhijit Banerjee",
+        "k": "book",
+        "slug": "poor-economics",
+        "dewey": "339.46"
+      },
+      {
+        "t": "Aftershock Economy",
+        "a": "Robert Wiedower",
+        "k": "book",
+        "slug": "aftershock-economy",
+        "dewey": "339.5"
+      },
+      {
+        "t": "Appeal",
+        "a": "David Walker",
+        "k": "book",
+        "slug": "appeal",
+        "dewey": "342.73"
+      },
+      {
+        "t": "Plan Your Estate",
+        "a": "Denis Clifford",
+        "k": "book",
+        "slug": "plan-your-estate",
+        "dewey": "346.052"
+      },
+      {
+        "t": "Art of War",
+        "a": "孙武 (Sun Tzu)",
+        "k": "book",
+        "slug": "art-of-war",
+        "dewey": "355.02"
+      },
+      {
+        "t": "Makers of Modern Strategy",
+        "a": "Peter Paret",
+        "k": "book",
+        "slug": "makers-of-modern-strategy",
+        "dewey": "355.02"
+      },
+      {
+        "t": "On War",
+        "a": "Carl Von Clausewitz",
+        "k": "book",
+        "slug": "on-war",
+        "dewey": "355.02"
+      },
+      {
+        "t": "Mania for Subjugation",
+        "a": "Dan Carlin",
+        "k": "book",
+        "slug": "mania-for-subjugation-carlin",
+        "dewey": "355.02"
+      },
+      {
+        "t": "The American Way of War",
+        "a": "Russell Frank Weigley",
+        "k": "book",
+        "slug": "the-american-way-of-war",
+        "dewey": "355.033"
+      },
+      {
+        "t": "Small Unit Leadership",
+        "a": "Dandridge M. Malone",
+        "k": "book",
+        "slug": "small-unit-leadership",
+        "dewey": "355.33"
+      },
+      {
+        "t": "Masters of War",
+        "a": "Michael Handel",
+        "k": "book",
+        "slug": "masters-of-war",
+        "dewey": "355.4"
+      },
+      {
+        "t": "Military Strategy",
+        "a": "JC Wylie",
+        "k": "book",
+        "slug": "military-strategy",
+        "dewey": "355.4"
+      },
+      {
+        "t": "Building the Bombs",
+        "a": "Charles Loeber",
+        "k": "book",
+        "slug": "building-the-bombs",
+        "dewey": "358.39"
+      },
+      {
+        "t": "Kaigun",
+        "a": "David C. Evans",
+        "k": "book",
+        "slug": "kaigun",
+        "dewey": "359.0952"
+      },
+      {
+        "t": "The Healing of America",
+        "a": "T. R. Reid",
+        "k": "book",
+        "slug": "the-healing-of-america",
+        "dewey": "362.1"
+      },
+      {
+        "t": "The Anxious Generation",
+        "a": "Jonathan Haidt",
+        "k": "book",
+        "slug": "the-anxious-generation",
+        "dewey": "362.2"
+      },
+      {
+        "t": "The 2018 Global Risk Report",
+        "a": "World Economic Forum",
+        "k": "book",
+        "slug": "the-2018-global-risk-report",
+        "dewey": "363.1"
+      },
+      {
+        "t": "The 2023 Global Risks Report",
+        "a": "World Economic Forum",
+        "k": "book",
+        "slug": "the-2023-global-risks-report",
+        "dewey": "363.1"
+      },
+      {
+        "t": "The Demon In the Freezer",
+        "a": "Richard Preston",
+        "k": "book",
+        "slug": "the-demon-in-the-freezer",
+        "dewey": "363.325"
+      },
+      {
+        "t": "Best Things First",
+        "a": "Bjorn Lomborg",
+        "k": "book",
+        "slug": "best-things-first",
+        "dewey": "363.7"
+      },
+      {
+        "t": "The Weather Makers",
+        "a": "Tim Flannery",
+        "k": "book",
+        "slug": "the-weather-makers",
+        "dewey": "363.738"
+      },
+      {
+        "t": "Ghettoside",
+        "a": "Jill Leovy",
+        "k": "book",
+        "slug": "ghettoside",
+        "dewey": "364.1"
+      },
+      {
+        "t": "Missoula",
+        "a": "Jon Krakauer",
+        "k": "book",
+        "slug": "missoula",
+        "dewey": "364.153"
+      },
+      {
+        "t": "The Smartest Guys In the Room",
+        "a": "Bethany McLean",
+        "k": "book",
+        "slug": "the-smartest-guys-in-the-room",
+        "dewey": "364.168"
+      },
+      {
+        "t": "Innocent Man",
+        "a": "John Grisham",
+        "k": "book",
+        "slug": "innocent-man",
+        "dewey": "364.973"
+      },
+      {
+        "t": "Catching Fire",
+        "a": "Richard Wrangham",
+        "k": "book",
+        "slug": "catching-fire",
+        "dewey": "394.1"
+      },
+      {
+        "t": "Ayatollah Begs To Differ",
+        "a": "Hooman Majd",
+        "k": "book",
+        "slug": "ayatollah-begs-to-differ",
+        "dewey": "955.054"
       }
     ]
   },
@@ -658,22 +761,25 @@ const DEWEY = [
     "blurb": "Twenty-plus pocket guides for getting by, and getting curious, abroad.",
     "items": [
       {
-        "t": "Dracula",
-        "a": "Bram Stoker",
-        "k": "book",
-        "slug": "dracula"
-      },
-      {
         "t": "Language Guides",
         "a": "22 languages — see the atlas",
         "k": "guide",
-        "slug": "languages-home"
+        "slug": "languages-home",
+        "dewey": "418.002"
       },
       {
         "t": "The Scarlet Letter",
         "a": "Nathaniel Hawthorne",
         "k": "book",
-        "slug": "the-scarlet-letter"
+        "slug": "the-scarlet-letter",
+        "dewey": "813.3"
+      },
+      {
+        "t": "Dracula",
+        "a": "Bram Stoker",
+        "k": "book",
+        "slug": "dracula",
+        "dewey": "823.8"
       }
     ]
   },
@@ -684,304 +790,354 @@ const DEWEY = [
     "blurb": "Deep time, life on Earth, and the physics that governs all of it.",
     "items": [
       {
-        "t": "A Brief History of Earth",
-        "a": "Andrew H. Knoll",
-        "k": "book",
-        "slug": "a-brief-history-of-earth"
-      },
-      {
-        "t": "A Brief History of Everyone Who Ever Lived",
-        "a": "Adam Rutherford",
-        "k": "book",
-        "slug": "a-brief-history-of-everyone-who-ever-lived"
-      },
-      {
-        "t": "A Life On Our Planet",
-        "a": "David Attenborough",
-        "k": "book",
-        "slug": "a-life-on-our-planet"
-      },
-      {
         "t": "A Short History of Nearly Everything",
         "a": "Bill Bryson",
         "k": "book",
-        "slug": "a-short-history-of-nearly-everything"
+        "slug": "a-short-history-of-nearly-everything",
+        "dewey": "500"
       },
       {
         "t": "American Museum Of Natural History",
         "a": "",
         "k": "museum",
-        "slug": "american-museum-of-natural-history"
-      },
-      {
-        "t": "Earth",
-        "a": "Michael Allaby",
-        "k": "book",
-        "slug": "earth"
-      },
-      {
-        "t": "Ecology In Action",
-        "a": "Fred Singer",
-        "k": "book",
-        "slug": "ecology-in-action"
-      },
-      {
-        "t": "Ecoviews",
-        "a": "J. Whitfield Gibbons",
-        "k": "book",
-        "slug": "ecoviews"
-      },
-      {
-        "t": "Essentials of Geology",
-        "a": "Stephen Marshak",
-        "k": "book",
-        "slug": "essentials-of-geology"
+        "slug": "american-museum-of-natural-history",
+        "dewey": "508"
       },
       {
         "t": "Field Museum",
         "a": "",
         "k": "museum",
-        "slug": "field-museum"
-      },
-      {
-        "t": "Fighting Disease",
-        "a": "Michaud & Feinstein",
-        "k": "book",
-        "slug": "fighting-disease"
-      },
-      {
-        "t": "Firmament",
-        "a": "Simon Clark",
-        "k": "book",
-        "slug": "firmament"
-      },
-      {
-        "t": "Geologic History of the Amazon",
-        "a": "Val et al",
-        "k": "book",
-        "slug": "geologic-history-of-the-amazon"
-      },
-      {
-        "t": "Gödel, Escher, Bach",
-        "a": "Douglas Hofstadter",
-        "k": "book",
-        "slug": "geb"
-      },
-      {
-        "t": "Gray Fossil Site",
-        "a": "",
-        "k": "museum",
-        "slug": "gray-fossil-site"
-      },
-      {
-        "t": "Hiking the Southwests Geology",
-        "a": "Ralph Hopkins",
-        "k": "book",
-        "slug": "hiking-the-southwests-geology"
-      },
-      {
-        "t": "How Bad Are Bananas",
-        "a": "Mike Berners-Lee",
-        "k": "book",
-        "slug": "how-bad-are-bananas"
-      },
-      {
-        "t": "How To Avoid a Climate Disaster",
-        "a": "Bill Gates",
-        "k": "book",
-        "slug": "how-to-avoid-a-climate-disaster"
-      },
-      {
-        "t": "Human Universe",
-        "a": "Brian Cox",
-        "k": "book",
-        "slug": "human-universe"
-      },
-      {
-        "t": "Hydrology 1",
-        "a": "",
-        "k": "book",
-        "slug": "hydrology-1"
-      },
-      {
-        "t": "New Mexico Museum of Natural History",
-        "a": "",
-        "k": "museum",
-        "slug": "new-mexico-museum-of-natural-history"
-      },
-      {
-        "t": "Numbers Guide",
-        "a": "The Economist",
-        "k": "book",
-        "slug": "numbers-guide-economist"
-      },
-      {
-        "t": "Oceans",
-        "a": "Stephen Hutchinson & Lawrence Hawkins",
-        "k": "book",
-        "slug": "oceans"
-      },
-      {
-        "t": "Physics of Nuclear Explosives",
-        "a": "Dalton BARROSO",
-        "k": "book",
-        "slug": "physics-of-nuclear-explosives"
-      },
-      {
-        "t": "Remote Sensing and Gis For Ecologists",
-        "a": "Martin Wegmann",
-        "k": "book",
-        "slug": "remote-sensing-and-gis-for-ecologists"
-      },
-      {
-        "t": "Six Easy Pieces Feynman",
-        "a": "Richard Phillips Feynman",
-        "k": "book",
-        "slug": "six-easy-pieces"
-      },
-      {
-        "t": "Statistics 101",
-        "a": "David Borman",
-        "k": "book",
-        "slug": "statistics-101"
-      },
-      {
-        "t": "Surely You're Joking Mr Feynman",
-        "a": "Richard Phillips Feynman",
-        "k": "book",
-        "slug": "surely-youre-joking-mr-feynman"
-      },
-      {
-        "t": "Sustainability Science",
-        "a": "Bert de Vries",
-        "k": "book",
-        "slug": "sustainability-science"
-      },
-      {
-        "t": "The Essential of Biochemistry",
-        "a": "Research and Education Association",
-        "k": "book",
-        "slug": "the-essential-of-biochemistry"
-      },
-      {
-        "t": "The Future of Humanity",
-        "a": "Michiel Kaku",
-        "k": "book",
-        "slug": "the-future-of-humanity"
-      },
-      {
-        "t": "The God Equation",
-        "a": "Michio Kaku",
-        "k": "book",
-        "slug": "the-god-equation"
-      },
-      {
-        "t": "The Hidden Life of Trees",
-        "a": "Peter Wohlleben",
-        "k": "book",
-        "slug": "the-hidden-life-of-trees"
-      },
-      {
-        "t": "The Inner Life of Animals",
-        "a": "Peter Wohlleben",
-        "k": "book",
-        "slug": "the-inner-life-of-animals"
-      },
-      {
-        "t": "The Joy of x Strogatz",
-        "a": "Steven H. Strogatz",
-        "k": "book",
-        "slug": "joy-of-x"
-      },
-      {
-        "t": "The Planets",
-        "a": "Brian Cox & Andrew Cohen",
-        "k": "book",
-        "slug": "the-planets"
-      },
-      {
-        "t": "The Rise and Fall of the Dinosaurs",
-        "a": "Stephen Brusatte",
-        "k": "book",
-        "slug": "the-rise-and-fall-of-the-dinosaurs"
-      },
-      {
-        "t": "The Rise and Reign of Mammals",
-        "a": "Steve Brusatte",
-        "k": "book",
-        "slug": "the-rise-and-reign-of-mammals"
-      },
-      {
-        "t": "The Secret Wisdom of Nature",
-        "a": "Peter Wohlleben",
-        "k": "book",
-        "slug": "the-secret-wisdom-of-nature"
-      },
-      {
-        "t": "The Sixth Extinction",
-        "a": "Elizabeth Kolbert",
-        "k": "book",
-        "slug": "the-sixth-extinction"
-      },
-      {
-        "t": "The Telomere Effect",
-        "a": "Dr. Elizabeth Blackburn",
-        "k": "book",
-        "slug": "the-telomere-effect"
-      },
-      {
-        "t": "The Weather Detective",
-        "a": "Peter Wohlleben",
-        "k": "book",
-        "slug": "the-weather-detective"
-      },
-      {
-        "t": "The Weather Experiment",
-        "a": "Peter Moore",
-        "k": "book",
-        "slug": "the-weather-experiment"
-      },
-      {
-        "t": "Virus",
-        "a": "",
-        "k": "book",
-        "slug": "virus"
-      },
-      {
-        "t": "Volcanoes In the Sea",
-        "a": "Gordon Andrew Macdonald",
-        "k": "book",
-        "slug": "volcanoes-in-the-sea"
-      },
-      {
-        "t": "Weather",
-        "a": "Jenny Offill",
-        "k": "book",
-        "slug": "weather"
+        "slug": "field-museum",
+        "dewey": "508"
       },
       {
         "t": "Stuttgart State Museum of Natural History",
         "a": "",
         "k": "museum",
-        "slug": "stuttgart-natural-history-museum"
+        "slug": "stuttgart-natural-history-museum",
+        "dewey": "508"
+      },
+      {
+        "t": "The Joy of x Strogatz",
+        "a": "Steven H. Strogatz",
+        "k": "book",
+        "slug": "joy-of-x",
+        "dewey": "510"
+      },
+      {
+        "t": "Gödel, Escher, Bach",
+        "a": "Douglas Hofstadter",
+        "k": "book",
+        "slug": "geb",
+        "dewey": "511.3"
+      },
+      {
+        "t": "Numbers Guide",
+        "a": "The Economist",
+        "k": "book",
+        "slug": "numbers-guide-economist",
+        "dewey": "519"
+      },
+      {
+        "t": "Statistics 101",
+        "a": "David Borman",
+        "k": "book",
+        "slug": "statistics-101",
+        "dewey": "519.5"
       },
       {
         "t": "Stuttgart Planetarium",
         "a": "",
         "k": "museum",
-        "slug": "stuttgart-planetarium"
+        "slug": "stuttgart-planetarium",
+        "dewey": "520"
       },
       {
-        "t": "U.S. Botanic Garden",
-        "a": "",
-        "k": "museum",
-        "slug": "dc-national-botanical-gardens"
+        "t": "Human Universe",
+        "a": "Brian Cox",
+        "k": "book",
+        "slug": "human-universe",
+        "dewey": "523.1"
+      },
+      {
+        "t": "The Future of Humanity",
+        "a": "Michiel Kaku",
+        "k": "book",
+        "slug": "the-future-of-humanity",
+        "dewey": "523.1"
+      },
+      {
+        "t": "The Planets",
+        "a": "Brian Cox & Andrew Cohen",
+        "k": "book",
+        "slug": "the-planets",
+        "dewey": "523.4"
+      },
+      {
+        "t": "Six Easy Pieces Feynman",
+        "a": "Richard Phillips Feynman",
+        "k": "book",
+        "slug": "six-easy-pieces",
+        "dewey": "530"
+      },
+      {
+        "t": "Surely You're Joking Mr Feynman",
+        "a": "Richard Phillips Feynman",
+        "k": "book",
+        "slug": "surely-youre-joking-mr-feynman",
+        "dewey": "530.092"
+      },
+      {
+        "t": "The God Equation",
+        "a": "Michio Kaku",
+        "k": "book",
+        "slug": "the-god-equation",
+        "dewey": "530.14"
+      },
+      {
+        "t": "Physics of Nuclear Explosives",
+        "a": "Dalton BARROSO",
+        "k": "book",
+        "slug": "physics-of-nuclear-explosives",
+        "dewey": "539.7"
+      },
+      {
+        "t": "Earth",
+        "a": "Michael Allaby",
+        "k": "book",
+        "slug": "earth",
+        "dewey": "551"
+      },
+      {
+        "t": "Essentials of Geology",
+        "a": "Stephen Marshak",
+        "k": "book",
+        "slug": "essentials-of-geology",
+        "dewey": "551"
+      },
+      {
+        "t": "Volcanoes In the Sea",
+        "a": "Gordon Andrew Macdonald",
+        "k": "book",
+        "slug": "volcanoes-in-the-sea",
+        "dewey": "551.21"
       },
       {
         "t": "Garden of the Gods",
         "a": "",
         "k": "museum",
-        "slug": "garden-of-the-gods"
+        "slug": "garden-of-the-gods",
+        "dewey": "551.41"
+      },
+      {
+        "t": "Oceans",
+        "a": "Stephen Hutchinson & Lawrence Hawkins",
+        "k": "book",
+        "slug": "oceans",
+        "dewey": "551.46"
+      },
+      {
+        "t": "Hydrology 1",
+        "a": "",
+        "k": "book",
+        "slug": "hydrology-1",
+        "dewey": "551.48"
+      },
+      {
+        "t": "Firmament",
+        "a": "Simon Clark",
+        "k": "book",
+        "slug": "firmament",
+        "dewey": "551.5"
+      },
+      {
+        "t": "The Weather Detective",
+        "a": "Peter Wohlleben",
+        "k": "book",
+        "slug": "the-weather-detective",
+        "dewey": "551.5"
+      },
+      {
+        "t": "The Weather Experiment",
+        "a": "Peter Moore",
+        "k": "book",
+        "slug": "the-weather-experiment",
+        "dewey": "551.5"
+      },
+      {
+        "t": "Weather",
+        "a": "Jenny Offill",
+        "k": "book",
+        "slug": "weather",
+        "dewey": "551.5"
+      },
+      {
+        "t": "How Bad Are Bananas",
+        "a": "Mike Berners-Lee",
+        "k": "book",
+        "slug": "how-bad-are-bananas",
+        "dewey": "551.6"
+      },
+      {
+        "t": "How To Avoid a Climate Disaster",
+        "a": "Bill Gates",
+        "k": "book",
+        "slug": "how-to-avoid-a-climate-disaster",
+        "dewey": "551.6"
+      },
+      {
+        "t": "A Brief History of Earth",
+        "a": "Andrew H. Knoll",
+        "k": "book",
+        "slug": "a-brief-history-of-earth",
+        "dewey": "551.7"
+      },
+      {
+        "t": "Geologic History of the Amazon",
+        "a": "Val et al",
+        "k": "book",
+        "slug": "geologic-history-of-the-amazon",
+        "dewey": "551.7"
+      },
+      {
+        "t": "Hiking the Southwests Geology",
+        "a": "Ralph Hopkins",
+        "k": "book",
+        "slug": "hiking-the-southwests-geology",
+        "dewey": "557"
+      },
+      {
+        "t": "Gray Fossil Site",
+        "a": "",
+        "k": "museum",
+        "slug": "gray-fossil-site",
+        "dewey": "560"
+      },
+      {
+        "t": "New Mexico Museum of Natural History",
+        "a": "",
+        "k": "museum",
+        "slug": "new-mexico-museum-of-natural-history",
+        "dewey": "560"
+      },
+      {
+        "t": "The Rise and Fall of the Dinosaurs",
+        "a": "Stephen Brusatte",
+        "k": "book",
+        "slug": "the-rise-and-fall-of-the-dinosaurs",
+        "dewey": "567.9"
+      },
+      {
+        "t": "The Rise and Reign of Mammals",
+        "a": "Steve Brusatte",
+        "k": "book",
+        "slug": "the-rise-and-reign-of-mammals",
+        "dewey": "569"
+      },
+      {
+        "t": "Fighting Disease",
+        "a": "Michaud & Feinstein",
+        "k": "book",
+        "slug": "fighting-disease",
+        "dewey": "571.9"
+      },
+      {
+        "t": "The Essential of Biochemistry",
+        "a": "Research and Education Association",
+        "k": "book",
+        "slug": "the-essential-of-biochemistry",
+        "dewey": "572"
+      },
+      {
+        "t": "The Telomere Effect",
+        "a": "Dr. Elizabeth Blackburn",
+        "k": "book",
+        "slug": "the-telomere-effect",
+        "dewey": "572.87"
+      },
+      {
+        "t": "The Sixth Extinction",
+        "a": "Elizabeth Kolbert",
+        "k": "book",
+        "slug": "the-sixth-extinction",
+        "dewey": "576.84"
+      },
+      {
+        "t": "A Life On Our Planet",
+        "a": "David Attenborough",
+        "k": "book",
+        "slug": "a-life-on-our-planet",
+        "dewey": "577"
+      },
+      {
+        "t": "Ecology In Action",
+        "a": "Fred Singer",
+        "k": "book",
+        "slug": "ecology-in-action",
+        "dewey": "577"
+      },
+      {
+        "t": "Ecoviews",
+        "a": "J. Whitfield Gibbons",
+        "k": "book",
+        "slug": "ecoviews",
+        "dewey": "577"
+      },
+      {
+        "t": "Sustainability Science",
+        "a": "Bert de Vries",
+        "k": "book",
+        "slug": "sustainability-science",
+        "dewey": "577"
+      },
+      {
+        "t": "The Secret Wisdom of Nature",
+        "a": "Peter Wohlleben",
+        "k": "book",
+        "slug": "the-secret-wisdom-of-nature",
+        "dewey": "577"
+      },
+      {
+        "t": "Remote Sensing and Gis For Ecologists",
+        "a": "Martin Wegmann",
+        "k": "book",
+        "slug": "remote-sensing-and-gis-for-ecologists",
+        "dewey": "577.028"
+      },
+      {
+        "t": "Virus",
+        "a": "",
+        "k": "book",
+        "slug": "virus",
+        "dewey": "579.2"
+      },
+      {
+        "t": "U.S. Botanic Garden",
+        "a": "",
+        "k": "museum",
+        "slug": "dc-national-botanical-gardens",
+        "dewey": "580"
+      },
+      {
+        "t": "The Hidden Life of Trees",
+        "a": "Peter Wohlleben",
+        "k": "book",
+        "slug": "the-hidden-life-of-trees",
+        "dewey": "582.16"
+      },
+      {
+        "t": "The Inner Life of Animals",
+        "a": "Peter Wohlleben",
+        "k": "book",
+        "slug": "the-inner-life-of-animals",
+        "dewey": "591.5"
+      },
+      {
+        "t": "A Brief History of Everyone Who Ever Lived",
+        "a": "Adam Rutherford",
+        "k": "book",
+        "slug": "a-brief-history-of-everyone-who-ever-lived",
+        "dewey": "599.9"
       }
     ]
   },
@@ -992,202 +1148,235 @@ const DEWEY = [
     "blurb": "Applied science — and the frontiers it keeps pushing into.",
     "items": [
       {
-        "t": "A City on Mars",
-        "a": "Kelly & Zach Weinersmith",
-        "k": "book",
-        "slug": "a-city-on-mars-by-weinersmith"
-      },
-      {
-        "t": "Engineers of Victory",
-        "a": "Paul M. Kennedy",
-        "k": "book",
-        "slug": "engineers-of-victory"
-      },
-      {
-        "t": "Five Stars",
-        "a": "Carmine Gallo",
-        "k": "book",
-        "slug": "five-stars"
-      },
-      {
-        "t": "Human Resources",
-        "a": "Dan Carlin",
-        "k": "book",
-        "slug": "human-resources"
-      },
-      {
-        "t": "Ingredients",
-        "a": "George Zaidan",
-        "k": "book",
-        "slug": "ingredients"
-      },
-      {
-        "t": "Killer Germs",
-        "a": "Barry & David Zimmerman",
-        "k": "book",
-        "slug": "killer-germs"
-      },
-      {
-        "t": "Lab 257",
-        "a": "Michael C. Carroll",
-        "k": "book",
-        "slug": "lab-257"
-      },
-      {
-        "t": "Longitude",
-        "a": "Dava Sobel",
-        "k": "book",
-        "slug": "longitude"
-      },
-      {
-        "t": "Modern Romance",
-        "a": "Aziz Ansari",
-        "k": "book",
-        "slug": "modern-romance"
-      },
-      {
         "t": "Mountains Beyond Mountains",
         "a": "Tracy Kidder",
         "k": "book",
-        "slug": "mountains-beyond-mountains"
-      },
-      {
-        "t": "National Air And Space Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "national-air-and-space-museum"
-      },
-      {
-        "t": "Plant Based Protein",
-        "a": "Scott Wilson",
-        "k": "book",
-        "slug": "plant-based-protein"
-      },
-      {
-        "t": "Quantum Supremacy",
-        "a": "Michio Kaku",
-        "k": "book",
-        "slug": "quantum-supremacy"
-      },
-      {
-        "t": "Skinny Bitch",
-        "a": "Rory Freedman",
-        "k": "book",
-        "slug": "skinny-bitch"
-      },
-      {
-        "t": "Superintelligence",
-        "a": "Nick Bostrom",
-        "k": "book",
-        "slug": "superintelligence"
-      },
-      {
-        "t": "The 4 Hour Body",
-        "a": "Timothy Ferriss",
-        "k": "book",
-        "slug": "the-4-hour-body"
-      },
-      {
-        "t": "The 4 Hour Workweek",
-        "a": "Timothy Ferriss",
-        "k": "book",
-        "slug": "the-4-hour-workweek"
-      },
-      {
-        "t": "The Battery",
-        "a": "Henry R. Schlesinger",
-        "k": "book",
-        "slug": "the-battery"
-      },
-      {
-        "t": "The Curve of Binding Energy McPhee",
-        "a": "John McPhee",
-        "k": "book",
-        "slug": "curve-of-binding-energy"
+        "slug": "mountains-beyond-mountains",
+        "dewey": "610.92"
       },
       {
         "t": "The Future of the Mind",
         "a": "Michio Kaku",
         "k": "book",
-        "slug": "the-future-of-the-mind"
+        "slug": "the-future-of-the-mind",
+        "dewey": "612.8"
       },
       {
-        "t": "The Henry Ford Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "the-henry-ford-museum"
-      },
-      {
-        "t": "The Millionaire Next Door",
-        "a": "Thomas J. Stanley",
+        "t": "Skinny Bitch",
+        "a": "Rory Freedman",
         "k": "book",
-        "slug": "the-millionaire-next-door"
+        "slug": "skinny-bitch",
+        "dewey": "613.25"
       },
       {
-        "t": "The Omnivores Dilemma",
-        "a": "Michael Pollan",
-        "k": "book",
-        "slug": "the-omnivores-dilemma"
-      },
-      {
-        "t": "The Visual Guide To Lockpicking",
-        "a": "",
-        "k": "book",
-        "slug": "the-visual-guide-to-lockpicking"
-      },
-      {
-        "t": "Tools of Titans",
+        "t": "The 4 Hour Body",
         "a": "Timothy Ferriss",
         "k": "book",
-        "slug": "tools-of-titans"
+        "slug": "the-4-hour-body",
+        "dewey": "613.7"
       },
       {
-        "t": "Treasure Island",
-        "a": "Robert Louis Stevenson",
+        "t": "Lab 257",
+        "a": "Michael C. Carroll",
         "k": "book",
-        "slug": "treasure-island"
-      },
-      {
-        "t": "Valve Handbook",
-        "a": "Philip L. Skousen",
-        "k": "book",
-        "slug": "valve-handbook"
+        "slug": "lab-257",
+        "dewey": "614.5"
       },
       {
         "t": "Virus Ground Zero",
         "a": "Ed Regis",
         "k": "book",
-        "slug": "virus-ground-zero"
+        "slug": "virus-ground-zero",
+        "dewey": "614.57"
       },
       {
         "t": "Virus Hunters of the Cdc",
         "a": "",
         "k": "book",
-        "slug": "virus-hunters-of-the-cdc"
+        "slug": "virus-hunters-of-the-cdc",
+        "dewey": "614.57"
+      },
+      {
+        "t": "Killer Germs",
+        "a": "Barry & David Zimmerman",
+        "k": "book",
+        "slug": "killer-germs",
+        "dewey": "616.9"
+      },
+      {
+        "t": "The Battery",
+        "a": "Henry R. Schlesinger",
+        "k": "book",
+        "slug": "the-battery",
+        "dewey": "621.31"
+      },
+      {
+        "t": "Quantum Supremacy",
+        "a": "Michio Kaku",
+        "k": "book",
+        "slug": "quantum-supremacy",
+        "dewey": "621.39"
+      },
+      {
+        "t": "Superintelligence",
+        "a": "Nick Bostrom",
+        "k": "book",
+        "slug": "superintelligence",
+        "dewey": "621.399"
+      },
+      {
+        "t": "Valve Handbook",
+        "a": "Philip L. Skousen",
+        "k": "book",
+        "slug": "valve-handbook",
+        "dewey": "621.84"
+      },
+      {
+        "t": "Engineers of Victory",
+        "a": "Paul M. Kennedy",
+        "k": "book",
+        "slug": "engineers-of-victory",
+        "dewey": "623.4"
+      },
+      {
+        "t": "The Curve of Binding Energy McPhee",
+        "a": "John McPhee",
+        "k": "book",
+        "slug": "curve-of-binding-energy",
+        "dewey": "623.45"
+      },
+      {
+        "t": "Treasure Island",
+        "a": "Robert Louis Stevenson",
+        "k": "book",
+        "slug": "treasure-island",
+        "dewey": "623.88"
+      },
+      {
+        "t": "National Air And Space Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "national-air-and-space-museum",
+        "dewey": "629.13"
       },
       {
         "t": "Wright Brothers National Memorial",
         "a": "",
         "k": "museum",
-        "slug": "wright-brothers"
-      },
-      {
-        "t": "Mercedes-Benz Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "mercedes-museum-stuttgart"
+        "slug": "wright-brothers",
+        "dewey": "629.13"
       },
       {
         "t": "Udvar-Hazy Center",
         "a": "",
         "k": "museum",
-        "slug": "udvar-hazy"
+        "slug": "udvar-hazy",
+        "dewey": "629.13"
+      },
+      {
+        "t": "The Henry Ford Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "the-henry-ford-museum",
+        "dewey": "629.2"
+      },
+      {
+        "t": "Mercedes-Benz Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "mercedes-museum-stuttgart",
+        "dewey": "629.222"
+      },
+      {
+        "t": "A City on Mars",
+        "a": "Kelly & Zach Weinersmith",
+        "k": "book",
+        "slug": "a-city-on-mars-by-weinersmith",
+        "dewey": "629.44"
+      },
+      {
+        "t": "Longitude",
+        "a": "Dava Sobel",
+        "k": "book",
+        "slug": "longitude",
+        "dewey": "629.45"
       },
       {
         "t": "U.S. National Forest Service",
         "a": "",
         "k": "museum",
-        "slug": "us-national-forest-service"
+        "slug": "us-national-forest-service",
+        "dewey": "634.9"
+      },
+      {
+        "t": "The Omnivores Dilemma",
+        "a": "Michael Pollan",
+        "k": "book",
+        "slug": "the-omnivores-dilemma",
+        "dewey": "641.3"
+      },
+      {
+        "t": "Plant Based Protein",
+        "a": "Scott Wilson",
+        "k": "book",
+        "slug": "plant-based-protein",
+        "dewey": "641.5636"
+      },
+      {
+        "t": "Modern Romance",
+        "a": "Aziz Ansari",
+        "k": "book",
+        "slug": "modern-romance",
+        "dewey": "646.77"
+      },
+      {
+        "t": "The Millionaire Next Door",
+        "a": "Thomas J. Stanley",
+        "k": "book",
+        "slug": "the-millionaire-next-door",
+        "dewey": "650.1"
+      },
+      {
+        "t": "Human Resources",
+        "a": "Dan Carlin",
+        "k": "book",
+        "slug": "human-resources",
+        "dewey": "658.3"
+      },
+      {
+        "t": "The 4 Hour Workweek",
+        "a": "Timothy Ferriss",
+        "k": "book",
+        "slug": "the-4-hour-workweek",
+        "dewey": "658.4"
+      },
+      {
+        "t": "Tools of Titans",
+        "a": "Timothy Ferriss",
+        "k": "book",
+        "slug": "tools-of-titans",
+        "dewey": "658.409"
+      },
+      {
+        "t": "Five Stars",
+        "a": "Carmine Gallo",
+        "k": "book",
+        "slug": "five-stars",
+        "dewey": "659.1"
+      },
+      {
+        "t": "Ingredients",
+        "a": "George Zaidan",
+        "k": "book",
+        "slug": "ingredients",
+        "dewey": "664"
+      },
+      {
+        "t": "The Visual Guide To Lockpicking",
+        "a": "",
+        "k": "book",
+        "slug": "the-visual-guide-to-lockpicking",
+        "dewey": "683.32"
       }
     ]
   },
@@ -1201,151 +1390,176 @@ const DEWEY = [
         "t": "Art Institute Of Chicago",
         "a": "",
         "k": "museum",
-        "slug": "art-institute-of-chicago"
-      },
-      {
-        "t": "Asian Art Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "asian-art-museum"
-      },
-      {
-        "t": "Drink",
-        "a": "David Nutt",
-        "k": "book",
-        "slug": "drink"
-      },
-      {
-        "t": "Landesmuseum Württemberg",
-        "a": "",
-        "k": "museum",
-        "slug": "landesmuseum-wurttemberg"
-      },
-      {
-        "t": "Museo Larco",
-        "a": "",
-        "k": "museum",
-        "slug": "museo-larco"
-      },
-      {
-        "t": "National Gallery of Art",
-        "a": "",
-        "k": "museum",
-        "slug": "us-national-gallery-of-art"
-      },
-      {
-        "t": "National Portrait Gallery",
-        "a": "",
-        "k": "museum",
-        "slug": "us-national-portrait-gallery"
-      },
-      {
-        "t": "Rijksmuseum",
-        "a": "",
-        "k": "museum",
-        "slug": "rijksmuseum"
-      },
-      {
-        "t": "Royal Museum of Fine Arts, Belgium",
-        "a": "",
-        "k": "museum",
-        "slug": "royal-museum-of-fine-arts-of-belgium"
+        "slug": "art-institute-of-chicago",
+        "dewey": "708.1"
       },
       {
         "t": "Seattle Art Museum",
         "a": "",
         "k": "museum",
-        "slug": "seattle-art-museum"
+        "slug": "seattle-art-museum",
+        "dewey": "708.1"
       },
       {
-        "t": "The Champions Mind",
-        "a": "Jim Afremow",
-        "k": "book",
-        "slug": "the-champions-mind"
-      },
-      {
-        "t": "The Lost Art of Reading Natures Signs",
-        "a": "Tristan Gooley",
-        "k": "book",
-        "slug": "the-lost-art-of-reading-natures-signs"
-      },
-      {
-        "t": "The Man Eaters of Tsavo",
-        "a": "J. H. Patterson",
-        "k": "book",
-        "slug": "the-man-eaters-of-tsavo"
-      },
-      {
-        "t": "The Marriage of Heaven and Hell",
-        "a": "William Blake",
-        "k": "book",
-        "slug": "the-marriage-of-heaven-and-hell"
-      },
-      {
-        "t": "The Rise of Superman",
-        "a": "Steven Kotler",
-        "k": "book",
-        "slug": "the-rise-of-superman"
-      },
-      {
-        "t": "Unnatural Selection",
-        "a": "Gary Larson",
-        "k": "book",
-        "slug": "unnatural-selection"
-      },
-      {
-        "t": "Academia Gallery",
+        "t": "National Gallery of Art",
         "a": "",
         "k": "museum",
-        "slug": "academia-gallery-florence"
-      },
-      {
-        "t": "Burj Khalifa At The Top",
-        "a": "",
-        "k": "museum",
-        "slug": "burj-khalifa-museum-dubai"
-      },
-      {
-        "t": "Louvre Abu Dhabi",
-        "a": "",
-        "k": "museum",
-        "slug": "louvre-abu-dhabi"
-      },
-      {
-        "t": "London National Gallery",
-        "a": "",
-        "k": "museum",
-        "slug": "london-national-gallery"
+        "slug": "us-national-gallery-of-art",
+        "dewey": "708.1"
       },
       {
         "t": "The Metropolitan Museum of Art",
         "a": "",
         "k": "museum",
-        "slug": "metropolitan-museum-of-art"
+        "slug": "metropolitan-museum-of-art",
+        "dewey": "708.1"
       },
       {
-        "t": "Olympic Museum",
+        "t": "London National Gallery",
         "a": "",
         "k": "museum",
-        "slug": "olympic-museum-lausanne"
+        "slug": "london-national-gallery",
+        "dewey": "708.2"
+      },
+      {
+        "t": "Landesmuseum Württemberg",
+        "a": "",
+        "k": "museum",
+        "slug": "landesmuseum-wurttemberg",
+        "dewey": "708.3"
       },
       {
         "t": "Stuttgart Kunstmuseum",
         "a": "",
         "k": "museum",
-        "slug": "stuttgart-cube-museum"
+        "slug": "stuttgart-cube-museum",
+        "dewey": "708.3"
+      },
+      {
+        "t": "Academia Gallery",
+        "a": "",
+        "k": "museum",
+        "slug": "academia-gallery-florence",
+        "dewey": "708.45"
       },
       {
         "t": "Uffizi Gallery",
         "a": "",
         "k": "museum",
-        "slug": "uffizi-gallery-florence"
+        "slug": "uffizi-gallery-florence",
+        "dewey": "708.45"
+      },
+      {
+        "t": "Rijksmuseum",
+        "a": "",
+        "k": "museum",
+        "slug": "rijksmuseum",
+        "dewey": "708.492"
+      },
+      {
+        "t": "Royal Museum of Fine Arts, Belgium",
+        "a": "",
+        "k": "museum",
+        "slug": "royal-museum-of-fine-arts-of-belgium",
+        "dewey": "708.493"
+      },
+      {
+        "t": "Louvre Abu Dhabi",
+        "a": "",
+        "k": "museum",
+        "slug": "louvre-abu-dhabi",
+        "dewey": "708.957"
+      },
+      {
+        "t": "Asian Art Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "asian-art-museum",
+        "dewey": "709.5"
+      },
+      {
+        "t": "Museo Larco",
+        "a": "",
+        "k": "museum",
+        "slug": "museo-larco",
+        "dewey": "709.85"
+      },
+      {
+        "t": "Burj Khalifa At The Top",
+        "a": "",
+        "k": "museum",
+        "slug": "burj-khalifa-museum-dubai",
+        "dewey": "720.483"
+      },
+      {
+        "t": "Drink",
+        "a": "David Nutt",
+        "k": "book",
+        "slug": "drink",
+        "dewey": "741.5"
+      },
+      {
+        "t": "Unnatural Selection",
+        "a": "Gary Larson",
+        "k": "book",
+        "slug": "unnatural-selection",
+        "dewey": "741.5973"
+      },
+      {
+        "t": "The Marriage of Heaven and Hell",
+        "a": "William Blake",
+        "k": "book",
+        "slug": "the-marriage-of-heaven-and-hell",
+        "dewey": "741.64"
+      },
+      {
+        "t": "National Portrait Gallery",
+        "a": "",
+        "k": "museum",
+        "slug": "us-national-portrait-gallery",
+        "dewey": "757"
+      },
+      {
+        "t": "The Champions Mind",
+        "a": "Jim Afremow",
+        "k": "book",
+        "slug": "the-champions-mind",
+        "dewey": "796.01"
+      },
+      {
+        "t": "The Rise of Superman",
+        "a": "Steven Kotler",
+        "k": "book",
+        "slug": "the-rise-of-superman",
+        "dewey": "796.01"
+      },
+      {
+        "t": "Olympic Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "olympic-museum-lausanne",
+        "dewey": "796.48"
       },
       {
         "t": "U.S. Olympic & Paralympic Museum",
         "a": "",
         "k": "museum",
-        "slug": "us-olympic-museum"
+        "slug": "us-olympic-museum",
+        "dewey": "796.48"
+      },
+      {
+        "t": "The Lost Art of Reading Natures Signs",
+        "a": "Tristan Gooley",
+        "k": "book",
+        "slug": "the-lost-art-of-reading-natures-signs",
+        "dewey": "796.5"
+      },
+      {
+        "t": "The Man Eaters of Tsavo",
+        "a": "J. H. Patterson",
+        "k": "book",
+        "slug": "the-man-eaters-of-tsavo",
+        "dewey": "799.27"
       }
     ]
   },
@@ -1356,316 +1570,368 @@ const DEWEY = [
     "blurb": "The novels and stories worth returning to.",
     "items": [
       {
-        "t": "1984",
-        "a": "George Orwell",
-        "k": "book",
-        "slug": "1984-by-orwell"
-      },
-      {
-        "t": "A River Runs Through It",
-        "a": "Norman  Maclean",
-        "k": "book",
-        "slug": "a-river-runs-through-it"
-      },
-      {
-        "t": "All Quiet on the Western Front",
-        "a": "Erich Remarque",
-        "k": "book",
-        "slug": "alls-quiet-on-the-western-front"
-      },
-      {
-        "t": "Animal Farm",
-        "a": "George Orwell",
-        "k": "book",
-        "slug": "animal-farm"
-      },
-      {
-        "t": "Anna Karenina",
-        "a": "Leo Tolstoy",
-        "k": "book",
-        "slug": "anna-karenina"
-      },
-      {
-        "t": "Bewac",
-        "a": "Björn Hjellström",
-        "k": "book",
-        "slug": "bewac"
-      },
-      {
-        "t": "Brave New World",
-        "a": "Aldous Huxley",
-        "k": "book",
-        "slug": "brave-new-world"
-      },
-      {
-        "t": "Bridge of San Luis Rey",
-        "a": "Thornton Wilder",
-        "k": "book",
-        "slug": "bridge-of-san-luis-rey"
-      },
-      {
         "t": "Celestron Nexstar 8 Se",
         "a": "",
         "k": "book",
-        "slug": "celestron-nexstar-8-se"
+        "slug": "celestron-nexstar-8-se",
+        "dewey": "808"
       },
       {
         "t": "Contact Bedford",
         "a": "",
         "k": "book",
-        "slug": "contact-bedford"
-      },
-      {
-        "t": "Dark Age",
-        "a": "Pierce Brown",
-        "k": "book",
-        "slug": "dark-age"
+        "slug": "contact-bedford",
+        "dewey": "808"
       },
       {
         "t": "Deep Time",
         "a": "Riley Black",
         "k": "book",
-        "slug": "deep-time"
-      },
-      {
-        "t": "Gates of Fire",
-        "a": "Steven Pressfield",
-        "k": "book",
-        "slug": "gates-of-fire"
-      },
-      {
-        "t": "Ghost Fleet",
-        "a": "P. W. Singer",
-        "k": "book",
-        "slug": "ghost-fleet-by-singer"
-      },
-      {
-        "t": "Golden Son",
-        "a": "Pierce Brown",
-        "k": "book",
-        "slug": "golden-son"
-      },
-      {
-        "t": "Homegoing",
-        "a": "Yaa Gyasi",
-        "k": "book",
-        "slug": "homegoing"
-      },
-      {
-        "t": "Hyperion",
-        "a": "Dan Simmons",
-        "k": "book",
-        "slug": "hyperion-by-simmons"
+        "slug": "deep-time",
+        "dewey": "808"
       },
       {
         "t": "Immune",
         "a": "Phillip Dettmer",
         "k": "book",
-        "slug": "immune"
-      },
-      {
-        "t": "Inferno",
-        "a": "Dan Brown",
-        "k": "book",
-        "slug": "inferno"
-      },
-      {
-        "t": "Interpreter of Maladies",
-        "a": "Jhumpa Lahiri",
-        "k": "book",
-        "slug": "interpreter-of-maladies"
-      },
-      {
-        "t": "Iron Gold",
-        "a": "Pierce Brown",
-        "k": "book",
-        "slug": "iron-gold"
-      },
-      {
-        "t": "Island Beneath the Sea",
-        "a": "Isabel Allende",
-        "k": "book",
-        "slug": "island-beneath-the-sea"
-      },
-      {
-        "t": "Killing Rommel",
-        "a": "Steven Pressfield",
-        "k": "book",
-        "slug": "killing-rommel"
-      },
-      {
-        "t": "Les Misérables",
-        "a": "Victor Hugo",
-        "k": "book",
-        "slug": "les-mis"
-      },
-      {
-        "t": "Light Bringer",
-        "a": "Pierce Brown",
-        "k": "book",
-        "slug": "light-bringer"
-      },
-      {
-        "t": "Lolita",
-        "a": "Vladimir Nabokov",
-        "k": "book",
-        "slug": "lolita"
-      },
-      {
-        "t": "Lord of the Flies",
-        "a": "William Golding",
-        "k": "book",
-        "slug": "lord-of-the-flies"
+        "slug": "immune",
+        "dewey": "808"
       },
       {
         "t": "Morning Star",
         "a": "Pierce Brown",
         "k": "book",
-        "slug": "morning-star"
+        "slug": "morning-star",
+        "dewey": "813"
       },
       {
         "t": "Origin",
         "a": "Dan Brown",
         "k": "book",
-        "slug": "origin"
-      },
-      {
-        "t": "Paradise Lost",
-        "a": "John Milton",
-        "k": "book",
-        "slug": "paradise-lost-by-milton"
-      },
-      {
-        "t": "Reading Lolita In Tehran",
-        "a": "Azar Nafisi",
-        "k": "book",
-        "slug": "reading-lolita-in-tehran"
+        "slug": "origin",
+        "dewey": "813"
       },
       {
         "t": "Red Rising",
         "a": "Pierce Brown",
         "k": "book",
-        "slug": "red-rising"
+        "slug": "red-rising",
+        "dewey": "813"
       },
       {
         "t": "Remarkably Bright Creatures",
         "a": "Shelby Van Pelt",
         "k": "book",
-        "slug": "remarkably-bright-creatures"
+        "slug": "remarkably-bright-creatures",
+        "dewey": "813"
       },
       {
         "t": "Rip Van Winkle",
         "a": "Washington Irving",
         "k": "book",
-        "slug": "rip-van-winkle"
-      },
-      {
-        "t": "Shadow of the Wind",
-        "a": "Carlos Zafón",
-        "k": "book",
-        "slug": "shadow-of-the-wind"
+        "slug": "rip-van-winkle",
+        "dewey": "813"
       },
       {
         "t": "Small Great Things",
         "a": "Jodi Picoult",
         "k": "book",
-        "slug": "small-great-things"
-      },
-      {
-        "t": "The Bfg",
-        "a": "Roald Dahl",
-        "k": "book",
-        "slug": "the-bfg"
-      },
-      {
-        "t": "The Body",
-        "a": "Bill Bryson",
-        "k": "book",
-        "slug": "the-body"
-      },
-      {
-        "t": "The Fall of Hyperion",
-        "a": "Dan Simmons",
-        "k": "book",
-        "slug": "the-fall-of-hyperion-by-simmons"
+        "slug": "small-great-things",
+        "dewey": "813"
       },
       {
         "t": "The Last Unicorn",
         "a": "Peter S. Beagle",
         "k": "book",
-        "slug": "the-last-unicorn"
-      },
-      {
-        "t": "The Little Book of Lykke",
-        "a": "Meik Wiking",
-        "k": "book",
-        "slug": "the-little-book-of-lykke"
+        "slug": "the-last-unicorn",
+        "dewey": "813"
       },
       {
         "t": "The Martian",
         "a": "Andy Weir",
         "k": "book",
-        "slug": "the-martian"
-      },
-      {
-        "t": "The Odessa File",
-        "a": "Frederick Forsyth",
-        "k": "book",
-        "slug": "the-odessa-file"
-      },
-      {
-        "t": "The Power of One",
-        "a": "Bryce Courtenay",
-        "k": "book",
-        "slug": "the-power-of-one"
-      },
-      {
-        "t": "The Quiet American",
-        "a": "Graham Greene",
-        "k": "book",
-        "slug": "the-quiet-american"
-      },
-      {
-        "t": "Things Fall Apart",
-        "a": "Chinua Achebe",
-        "k": "book",
-        "slug": "things-fall-apart"
-      },
-      {
-        "t": "Troy",
-        "a": "Stephen Fry",
-        "k": "book",
-        "slug": "troy"
-      },
-      {
-        "t": "Ulysses",
-        "a": "James Joyce",
-        "k": "book",
-        "slug": "ulysses"
-      },
-      {
-        "t": "Wash Your Hands",
-        "a": "",
-        "k": "book",
-        "slug": "wash-your-hands"
-      },
-      {
-        "t": "Who's Afraid of Carl",
-        "a": "",
-        "k": "book",
-        "slug": "whose-afraid-of-carl"
+        "slug": "the-martian",
+        "dewey": "813"
       },
       {
         "t": "Winter of Our Discontent",
         "a": "John Steinbeck",
         "k": "book",
-        "slug": "winter-of-our-discontent"
+        "slug": "winter-of-our-discontent",
+        "dewey": "813"
+      },
+      {
+        "t": "The Fall of Hyperion",
+        "a": "Dan Simmons",
+        "k": "book",
+        "slug": "the-fall-of-hyperion-by-simmons",
+        "dewey": "813"
+      },
+      {
+        "t": "Bridge of San Luis Rey",
+        "a": "Thornton Wilder",
+        "k": "book",
+        "slug": "bridge-of-san-luis-rey",
+        "dewey": "813.52"
+      },
+      {
+        "t": "A River Runs Through It",
+        "a": "Norman  Maclean",
+        "k": "book",
+        "slug": "a-river-runs-through-it",
+        "dewey": "813.54"
+      },
+      {
+        "t": "Gates of Fire",
+        "a": "Steven Pressfield",
+        "k": "book",
+        "slug": "gates-of-fire",
+        "dewey": "813.54"
+      },
+      {
+        "t": "Interpreter of Maladies",
+        "a": "Jhumpa Lahiri",
+        "k": "book",
+        "slug": "interpreter-of-maladies",
+        "dewey": "813.54"
+      },
+      {
+        "t": "Hyperion",
+        "a": "Dan Simmons",
+        "k": "book",
+        "slug": "hyperion-by-simmons",
+        "dewey": "813.54"
+      },
+      {
+        "t": "Dark Age",
+        "a": "Pierce Brown",
+        "k": "book",
+        "slug": "dark-age",
+        "dewey": "813.6"
+      },
+      {
+        "t": "Golden Son",
+        "a": "Pierce Brown",
+        "k": "book",
+        "slug": "golden-son",
+        "dewey": "813.6"
+      },
+      {
+        "t": "Homegoing",
+        "a": "Yaa Gyasi",
+        "k": "book",
+        "slug": "homegoing",
+        "dewey": "813.6"
+      },
+      {
+        "t": "Inferno",
+        "a": "Dan Brown",
+        "k": "book",
+        "slug": "inferno",
+        "dewey": "813.6"
+      },
+      {
+        "t": "Iron Gold",
+        "a": "Pierce Brown",
+        "k": "book",
+        "slug": "iron-gold",
+        "dewey": "813.6"
+      },
+      {
+        "t": "Killing Rommel",
+        "a": "Steven Pressfield",
+        "k": "book",
+        "slug": "killing-rommel",
+        "dewey": "813.6"
+      },
+      {
+        "t": "Light Bringer",
+        "a": "Pierce Brown",
+        "k": "book",
+        "slug": "light-bringer",
+        "dewey": "813.6"
+      },
+      {
+        "t": "Ghost Fleet",
+        "a": "P. W. Singer",
+        "k": "book",
+        "slug": "ghost-fleet-by-singer",
+        "dewey": "813.6"
+      },
+      {
+        "t": "Reading Lolita In Tehran",
+        "a": "Azar Nafisi",
+        "k": "book",
+        "slug": "reading-lolita-in-tehran",
+        "dewey": "814"
+      },
+      {
+        "t": "The Body",
+        "a": "Bill Bryson",
+        "k": "book",
+        "slug": "the-body",
+        "dewey": "814"
+      },
+      {
+        "t": "Paradise Lost",
+        "a": "John Milton",
+        "k": "book",
+        "slug": "paradise-lost-by-milton",
+        "dewey": "821"
+      },
+      {
+        "t": "Lord of the Flies",
+        "a": "William Golding",
+        "k": "book",
+        "slug": "lord-of-the-flies",
+        "dewey": "823"
+      },
+      {
+        "t": "The Bfg",
+        "a": "Roald Dahl",
+        "k": "book",
+        "slug": "the-bfg",
+        "dewey": "823"
+      },
+      {
+        "t": "The Odessa File",
+        "a": "Frederick Forsyth",
+        "k": "book",
+        "slug": "the-odessa-file",
+        "dewey": "823"
+      },
+      {
+        "t": "The Power of One",
+        "a": "Bryce Courtenay",
+        "k": "book",
+        "slug": "the-power-of-one",
+        "dewey": "823"
+      },
+      {
+        "t": "The Quiet American",
+        "a": "Graham Greene",
+        "k": "book",
+        "slug": "the-quiet-american",
+        "dewey": "823"
+      },
+      {
+        "t": "Things Fall Apart",
+        "a": "Chinua Achebe",
+        "k": "book",
+        "slug": "things-fall-apart",
+        "dewey": "823"
+      },
+      {
+        "t": "Troy",
+        "a": "Stephen Fry",
+        "k": "book",
+        "slug": "troy",
+        "dewey": "823"
+      },
+      {
+        "t": "Ulysses",
+        "a": "James Joyce",
+        "k": "book",
+        "slug": "ulysses",
+        "dewey": "823"
+      },
+      {
+        "t": "Wash Your Hands",
+        "a": "",
+        "k": "book",
+        "slug": "wash-your-hands",
+        "dewey": "823"
+      },
+      {
+        "t": "Who's Afraid of Carl",
+        "a": "",
+        "k": "book",
+        "slug": "whose-afraid-of-carl",
+        "dewey": "823"
+      },
+      {
+        "t": "Animal Farm",
+        "a": "George Orwell",
+        "k": "book",
+        "slug": "animal-farm",
+        "dewey": "823.912"
+      },
+      {
+        "t": "Brave New World",
+        "a": "Aldous Huxley",
+        "k": "book",
+        "slug": "brave-new-world",
+        "dewey": "823.912"
+      },
+      {
+        "t": "1984",
+        "a": "George Orwell",
+        "k": "book",
+        "slug": "1984-by-orwell",
+        "dewey": "823.914"
+      },
+      {
+        "t": "Lolita",
+        "a": "Vladimir Nabokov",
+        "k": "book",
+        "slug": "lolita",
+        "dewey": "823.914"
+      },
+      {
+        "t": "All Quiet on the Western Front",
+        "a": "Erich Remarque",
+        "k": "book",
+        "slug": "alls-quiet-on-the-western-front",
+        "dewey": "833.912"
+      },
+      {
+        "t": "Bewac",
+        "a": "Björn Hjellström",
+        "k": "book",
+        "slug": "bewac",
+        "dewey": "839.738"
+      },
+      {
+        "t": "The Little Book of Lykke",
+        "a": "Meik Wiking",
+        "k": "book",
+        "slug": "the-little-book-of-lykke",
+        "dewey": "839.8"
+      },
+      {
+        "t": "Les Misérables",
+        "a": "Victor Hugo",
+        "k": "book",
+        "slug": "les-mis",
+        "dewey": "843.8"
+      },
+      {
+        "t": "Shadow of the Wind",
+        "a": "Carlos Zafón",
+        "k": "book",
+        "slug": "shadow-of-the-wind",
+        "dewey": "863"
+      },
+      {
+        "t": "Island Beneath the Sea",
+        "a": "Isabel Allende",
+        "k": "book",
+        "slug": "island-beneath-the-sea",
+        "dewey": "863.64"
       },
       {
         "t": "Zorba the Greek",
         "a": "",
         "k": "book",
-        "slug": "zorba-the-greek"
+        "slug": "zorba-the-greek",
+        "dewey": "889.3"
+      },
+      {
+        "t": "Anna Karenina",
+        "a": "Leo Tolstoy",
+        "k": "book",
+        "slug": "anna-karenina",
+        "dewey": "891.733"
       }
     ]
   },
@@ -1676,442 +1942,515 @@ const DEWEY = [
     "blurb": "How we got here — from the first Americans to the space age.",
     "items": [
       {
-        "t": "100 Years of Sea Power",
-        "a": "George Baer",
+        "t": "Sapiens",
+        "a": "Yuval Noah Harari",
         "k": "book",
-        "slug": "100-years-of-sea-power-by-baer"
-      },
-      {
-        "t": "1491",
-        "a": "Charles C. Mann",
-        "k": "book",
-        "slug": "1491-by-mann"
-      },
-      {
-        "t": "1493",
-        "a": "Charles C. Mann",
-        "k": "book",
-        "slug": "1493-by-mann"
-      },
-      {
-        "t": "A Promised Land",
-        "a": "Barack Obama",
-        "k": "book",
-        "slug": "a-promised-land-by-obama"
-      },
-      {
-        "t": "Africa Is Not a Country",
-        "a": "Dipo Faloyin",
-        "k": "book",
-        "slug": "africa-is-not-a-country"
-      },
-      {
-        "t": "All the Best",
-        "a": "George W. Bush",
-        "k": "book",
-        "slug": "all-the-best-bush"
-      },
-      {
-        "t": "Anchorage Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "anchorage-museum"
-      },
-      {
-        "t": "Atlas of War",
-        "a": "National Geographic",
-        "k": "book",
-        "slug": "atlas-of-war"
-      },
-      {
-        "t": "Ball's Bluff Battlefield",
-        "a": "",
-        "k": "museum",
-        "slug": "balls-bluff-battlefield-park"
-      },
-      {
-        "t": "British Strategic Defeat In the Southern Campaign",
-        "a": "Jesse Pearson",
-        "k": "book",
-        "slug": "british-strategic-defeat-in-the-southern-campaign"
-      },
-      {
-        "t": "Bullets Not Ballots",
-        "a": "Jacqueline L. Hazelton",
-        "k": "book",
-        "slug": "bullets-not-ballots"
-      },
-      {
-        "t": "Columbus",
-        "a": "Felipe Fernandez-Armesto",
-        "k": "book",
-        "slug": "columbus"
-      },
-      {
-        "t": "Combined Fleet Decoded",
-        "a": "John Prados",
-        "k": "book",
-        "slug": "combined-fleet-decoded"
-      },
-      {
-        "t": "Country Music Museum And Hall Of Fame",
-        "a": "",
-        "k": "museum",
-        "slug": "country-music-museum-and-hall-of-fame"
-      },
-      {
-        "t": "Decision Points",
-        "a": "George W. Bush",
-        "k": "book",
-        "slug": "decision-points"
-      },
-      {
-        "t": "Drone Theory",
-        "a": "Grégoire Chamayou",
-        "k": "book",
-        "slug": "drone-theory"
-      },
-      {
-        "t": "Endurance",
-        "a": "Alfred Lansing",
-        "k": "book",
-        "slug": "endurance"
-      },
-      {
-        "t": "EPA Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "epa-museum"
-      },
-      {
-        "t": "Fort Raleigh Historic Site",
-        "a": "",
-        "k": "museum",
-        "slug": "fort-raleigh"
-      },
-      {
-        "t": "Freedom At Midnight",
-        "a": "Dominique Lapierre",
-        "k": "book",
-        "slug": "freedom-at-midnight"
-      },
-      {
-        "t": "Genghis Khan",
-        "a": "Jack Weatherford",
-        "k": "book",
-        "slug": "ghengis-khan"
-      },
-      {
-        "t": "George Washington Masonic Memorial",
-        "a": "",
-        "k": "museum",
-        "slug": "the-george-washington-masonic-national-memorial"
-      },
-      {
-        "t": "Haitian Revolution",
-        "a": "Jeremy D. Popkin",
-        "k": "book",
-        "slug": "haitian-revolution"
-      },
-      {
-        "t": "In the Graveyard of Empires",
-        "a": "Seth G. Jones",
-        "k": "book",
-        "slug": "in-the-graveyard-of-empires"
-      },
-      {
-        "t": "Indianapolis",
-        "a": "Vincent & Vladic",
-        "k": "book",
-        "slug": "indianapolis"
-      },
-      {
-        "t": "King Leopolds Ghost",
-        "a": "Adam Hochschild",
-        "k": "book",
-        "slug": "king-leopolds-ghost"
-      },
-      {
-        "t": "McClung Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "mcclung-museum"
-      },
-      {
-        "t": "Milken Center for the American Dream",
-        "a": "",
-        "k": "museum",
-        "slug": "mcaad-museum"
-      },
-      {
-        "t": "Mount St. Helens Nat'l Volcanic Monument",
-        "a": "",
-        "k": "museum",
-        "slug": "mount-st-helens-national-volcanic-monument"
-      },
-      {
-        "t": "Museo Amazónico",
-        "a": "",
-        "k": "museum",
-        "slug": "museo-amazonico"
-      },
-      {
-        "t": "Museo de Arqueología, Lima",
-        "a": "",
-        "k": "museum",
-        "slug": "museo-arqueologia-lima"
-      },
-      {
-        "t": "Museum of Indigenous Amazonian Cultures",
-        "a": "",
-        "k": "museum",
-        "slug": "museum-of-indigenous-amazonian-cultures"
-      },
-      {
-        "t": "Museum Of Nuclear Science",
-        "a": "",
-        "k": "museum",
-        "slug": "museum-of-nuclear-science"
-      },
-      {
-        "t": "My Life",
-        "a": "Bill Clinton",
-        "k": "book",
-        "slug": "my-life"
-      },
-      {
-        "t": "Namibia Independence Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "namibia-independence-museum"
-      },
-      {
-        "t": "National African American Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "african-american-museum"
-      },
-      {
-        "t": "National Archives Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "national-archives-museum"
-      },
-      {
-        "t": "National Museum of the American Indian",
-        "a": "",
-        "k": "museum",
-        "slug": "american-indian-museum"
-      },
-      {
-        "t": "National Museum of the Marine Corps",
-        "a": "",
-        "k": "museum",
-        "slug": "usmc-museum"
+        "slug": "sapiens",
+        "dewey": "909"
       },
       {
         "t": "NYPL Rare Books Division",
         "a": "",
         "k": "museum",
-        "slug": "nyc-public-library-rare-books-museum"
-      },
-      {
-        "t": "Proverbs of the Samburu",
-        "a": "Lmakiya Lesarge",
-        "k": "book",
-        "slug": "proverbs-of-the-samburu"
-      },
-      {
-        "t": "Punic Nightmares",
-        "a": "Dan Carlin",
-        "k": "book",
-        "slug": "punic-nightmares"
-      },
-      {
-        "t": "Robben Island Museum",
-        "a": "",
-        "k": "museum",
-        "slug": "robben-island-museum"
-      },
-      {
-        "t": "Sapiens",
-        "a": "Yuval Noah Harari",
-        "k": "book",
-        "slug": "sapiens"
-      },
-      {
-        "t": "Shadow Divers",
-        "a": "Robert Kurson",
-        "k": "book",
-        "slug": "shadow-divers"
-      },
-      {
-        "t": "Shattered Sword",
-        "a": "Jonathan Parshall",
-        "k": "book",
-        "slug": "shattered-sword"
-      },
-      {
-        "t": "Six Frigates",
-        "a": "Ian W. Toll",
-        "k": "book",
-        "slug": "six-frigates"
-      },
-      {
-        "t": "Somalia",
-        "a": "I.M. Lewis",
-        "k": "book",
-        "slug": "somalia"
-      },
-      {
-        "t": "SPQR",
-        "a": "Mary Beard",
-        "k": "book",
-        "slug": "spqr"
-      },
-      {
-        "t": "Surrender Or Starve",
-        "a": "Robert D. Kaplan",
-        "k": "book",
-        "slug": "surrender-or-starve"
-      },
-      {
-        "t": "Table Mountain National Park",
-        "a": "",
-        "k": "museum",
-        "slug": "table-mountain-national-park"
-      },
-      {
-        "t": "The Boundless Sea",
-        "a": "David Abulafia",
-        "k": "book",
-        "slug": "the-boundless-sea"
-      },
-      {
-        "t": "The Fall of Berlin 1945",
-        "a": "Antony Beevor",
-        "k": "book",
-        "slug": "the-fall-of-berlin-1945"
-      },
-      {
-        "t": "The Fate of Africa",
-        "a": "Martin Meredith",
-        "k": "book",
-        "slug": "the-fate-of-africa"
-      },
-      {
-        "t": "The French Revolution",
-        "a": "Ian Davidson",
-        "k": "book",
-        "slug": "the-french-revolution"
-      },
-      {
-        "t": "The Gamble",
-        "a": "Thomas Ricks",
-        "k": "book",
-        "slug": "the-gamble"
-      },
-      {
-        "t": "The Influence of Seapower On History",
-        "a": "Alfred Thayer Mahan",
-        "k": "book",
-        "slug": "the-influence-of-seapower-on-history"
-      },
-      {
-        "t": "The Last Centurion",
-        "a": "John Ringo",
-        "k": "book",
-        "slug": "the-last-centurion"
-      },
-      {
-        "t": "The New Climate War",
-        "a": "Michael E. Mann",
-        "k": "book",
-        "slug": "the-new-climate-war"
-      },
-      {
-        "t": "The Pacific War Companion",
-        "a": "Daniel Marston",
-        "k": "book",
-        "slug": "the-pacific-war-companion"
-      },
-      {
-        "t": "The Secret History of Ninjutsu",
-        "a": "Kacem Zoughari Ph.D.",
-        "k": "book",
-        "slug": "the-secret-history-of-ninjutsu"
-      },
-      {
-        "t": "The Shortest History of China",
-        "a": "Linda Jaivin",
-        "k": "book",
-        "slug": "the-shortest-history-of-china"
-      },
-      {
-        "t": "There Goes Robert E Lee",
-        "a": "Christopher Caldwell",
-        "k": "book",
-        "slug": "there-goes-robert-e-lee"
-      },
-      {
-        "t": "These Truths",
-        "a": "Jill Lepore",
-        "k": "book",
-        "slug": "these-truths"
-      },
-      {
-        "t": "To Subdue America",
-        "a": "",
-        "k": "book",
-        "slug": "to-subdue-america"
-      },
-      {
-        "t": "Turn Right At Machu Picchu",
-        "a": "Mark Adams",
-        "k": "book",
-        "slug": "turn-right-at-machu-picchu"
-      },
-      {
-        "t": "Undaunted Courage",
-        "a": "Stephen E. Ambrose",
-        "k": "book",
-        "slug": "undaunted-courage"
-      },
-      {
-        "t": "Washingtons Crossing",
-        "a": "",
-        "k": "book",
-        "slug": "washingtons-crossing"
-      },
-      {
-        "t": "Yemen",
-        "a": "Tim Mackintosh-Smith",
-        "k": "book",
-        "slug": "yemen"
+        "slug": "nyc-public-library-rare-books-museum",
+        "dewey": "909"
       },
       {
         "t": "British Museum",
         "a": "",
         "k": "museum",
-        "slug": "british-museum-london"
+        "slug": "british-museum-london",
+        "dewey": "909"
+      },
+      {
+        "t": "The Boundless Sea",
+        "a": "David Abulafia",
+        "k": "book",
+        "slug": "the-boundless-sea",
+        "dewey": "909.09"
+      },
+      {
+        "t": "The Influence of Seapower On History",
+        "a": "Alfred Thayer Mahan",
+        "k": "book",
+        "slug": "the-influence-of-seapower-on-history",
+        "dewey": "909.09"
+      },
+      {
+        "t": "Drone Theory",
+        "a": "Grégoire Chamayou",
+        "k": "book",
+        "slug": "drone-theory",
+        "dewey": "909.83"
+      },
+      {
+        "t": "The New Climate War",
+        "a": "Michael E. Mann",
+        "k": "book",
+        "slug": "the-new-climate-war",
+        "dewey": "909.83"
+      },
+      {
+        "t": "Atlas of War",
+        "a": "National Geographic",
+        "k": "book",
+        "slug": "atlas-of-war",
+        "dewey": "911"
+      },
+      {
+        "t": "Undaunted Courage",
+        "a": "Stephen E. Ambrose",
+        "k": "book",
+        "slug": "undaunted-courage",
+        "dewey": "917.804"
+      },
+      {
+        "t": "Endurance",
+        "a": "Alfred Lansing",
+        "k": "book",
+        "slug": "endurance",
+        "dewey": "919.89"
+      },
+      {
+        "t": "Punic Nightmares",
+        "a": "Dan Carlin",
+        "k": "book",
+        "slug": "punic-nightmares",
+        "dewey": "937"
+      },
+      {
+        "t": "SPQR",
+        "a": "Mary Beard",
+        "k": "book",
+        "slug": "spqr",
+        "dewey": "937"
+      },
+      {
+        "t": "Combined Fleet Decoded",
+        "a": "John Prados",
+        "k": "book",
+        "slug": "combined-fleet-decoded",
+        "dewey": "940.5426"
+      },
+      {
+        "t": "Shattered Sword",
+        "a": "Jonathan Parshall",
+        "k": "book",
+        "slug": "shattered-sword",
+        "dewey": "940.5426"
+      },
+      {
+        "t": "The Pacific War Companion",
+        "a": "Daniel Marston",
+        "k": "book",
+        "slug": "the-pacific-war-companion",
+        "dewey": "940.5426"
+      },
+      {
+        "t": "Indianapolis",
+        "a": "Vincent & Vladic",
+        "k": "book",
+        "slug": "indianapolis",
+        "dewey": "940.5451"
+      },
+      {
+        "t": "Shadow Divers",
+        "a": "Robert Kurson",
+        "k": "book",
+        "slug": "shadow-divers",
+        "dewey": "940.5451"
+      },
+      {
+        "t": "The Fall of Berlin 1945",
+        "a": "Antony Beevor",
+        "k": "book",
+        "slug": "the-fall-of-berlin-1945",
+        "dewey": "943.0872"
+      },
+      {
+        "t": "The French Revolution",
+        "a": "Ian Davidson",
+        "k": "book",
+        "slug": "the-french-revolution",
+        "dewey": "944.04"
+      },
+      {
+        "t": "Genghis Khan",
+        "a": "Jack Weatherford",
+        "k": "book",
+        "slug": "ghengis-khan",
+        "dewey": "950.2"
+      },
+      {
+        "t": "The Shortest History of China",
+        "a": "Linda Jaivin",
+        "k": "book",
+        "slug": "the-shortest-history-of-china",
+        "dewey": "951"
+      },
+      {
+        "t": "The Secret History of Ninjutsu",
+        "a": "Kacem Zoughari Ph.D.",
+        "k": "book",
+        "slug": "the-secret-history-of-ninjutsu",
+        "dewey": "952"
+      },
+      {
+        "t": "Yemen",
+        "a": "Tim Mackintosh-Smith",
+        "k": "book",
+        "slug": "yemen",
+        "dewey": "953.3"
       },
       {
         "t": "Al Fahidi Fort Museum",
         "a": "",
         "k": "museum",
-        "slug": "al-fahidi-coin-museum-dubai"
+        "slug": "al-fahidi-coin-museum-dubai",
+        "dewey": "953.57"
+      },
+      {
+        "t": "Freedom At Midnight",
+        "a": "Dominique Lapierre",
+        "k": "book",
+        "slug": "freedom-at-midnight",
+        "dewey": "954.042"
       },
       {
         "t": "Istanbul Airport Museum",
         "a": "",
         "k": "museum",
-        "slug": "istanbul-airport-museum"
+        "slug": "istanbul-airport-museum",
+        "dewey": "956.1"
+      },
+      {
+        "t": "The Gamble",
+        "a": "Thomas Ricks",
+        "k": "book",
+        "slug": "the-gamble",
+        "dewey": "956.7044"
+      },
+      {
+        "t": "In the Graveyard of Empires",
+        "a": "Seth G. Jones",
+        "k": "book",
+        "slug": "in-the-graveyard-of-empires",
+        "dewey": "958.1047"
+      },
+      {
+        "t": "Africa Is Not a Country",
+        "a": "Dipo Faloyin",
+        "k": "book",
+        "slug": "africa-is-not-a-country",
+        "dewey": "960"
+      },
+      {
+        "t": "The Fate of Africa",
+        "a": "Martin Meredith",
+        "k": "book",
+        "slug": "the-fate-of-africa",
+        "dewey": "960.32"
+      },
+      {
+        "t": "Surrender Or Starve",
+        "a": "Robert D. Kaplan",
+        "k": "book",
+        "slug": "surrender-or-starve",
+        "dewey": "963"
+      },
+      {
+        "t": "King Leopolds Ghost",
+        "a": "Adam Hochschild",
+        "k": "book",
+        "slug": "king-leopolds-ghost",
+        "dewey": "967.51"
+      },
+      {
+        "t": "Proverbs of the Samburu",
+        "a": "Lmakiya Lesarge",
+        "k": "book",
+        "slug": "proverbs-of-the-samburu",
+        "dewey": "967.62"
+      },
+      {
+        "t": "Somalia",
+        "a": "I.M. Lewis",
+        "k": "book",
+        "slug": "somalia",
+        "dewey": "967.73"
+      },
+      {
+        "t": "Robben Island Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "robben-island-museum",
+        "dewey": "968.06"
+      },
+      {
+        "t": "Table Mountain National Park",
+        "a": "",
+        "k": "museum",
+        "slug": "table-mountain-national-park",
+        "dewey": "968.7"
+      },
+      {
+        "t": "Namibia Independence Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "namibia-independence-museum",
+        "dewey": "968.88"
       },
       {
         "t": "Takamaka Museum",
         "a": "",
         "k": "museum",
-        "slug": "takamaka-museum-mahe"
+        "slug": "takamaka-museum-mahe",
+        "dewey": "969.6"
+      },
+      {
+        "t": "1491",
+        "a": "Charles C. Mann",
+        "k": "book",
+        "slug": "1491-by-mann",
+        "dewey": "970.01"
+      },
+      {
+        "t": "Columbus",
+        "a": "Felipe Fernandez-Armesto",
+        "k": "book",
+        "slug": "columbus",
+        "dewey": "970.015"
+      },
+      {
+        "t": "1493",
+        "a": "Charles C. Mann",
+        "k": "book",
+        "slug": "1493-by-mann",
+        "dewey": "970.02"
+      },
+      {
+        "t": "To Subdue America",
+        "a": "",
+        "k": "book",
+        "slug": "to-subdue-america",
+        "dewey": "970.1"
+      },
+      {
+        "t": "National Museum of the American Indian",
+        "a": "",
+        "k": "museum",
+        "slug": "american-indian-museum",
+        "dewey": "970.1"
+      },
+      {
+        "t": "Haitian Revolution",
+        "a": "Jeremy D. Popkin",
+        "k": "book",
+        "slug": "haitian-revolution",
+        "dewey": "972.94"
+      },
+      {
+        "t": "National Archives Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "national-archives-museum",
+        "dewey": "973"
+      },
+      {
+        "t": "These Truths",
+        "a": "Jill Lepore",
+        "k": "book",
+        "slug": "these-truths",
+        "dewey": "973"
+      },
+      {
+        "t": "Milken Center for the American Dream",
+        "a": "",
+        "k": "museum",
+        "slug": "mcaad-museum",
+        "dewey": "973"
+      },
+      {
+        "t": "National Museum of the Marine Corps",
+        "a": "",
+        "k": "museum",
+        "slug": "usmc-museum",
+        "dewey": "973"
+      },
+      {
+        "t": "National African American Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "african-american-museum",
+        "dewey": "973.0496"
+      },
+      {
+        "t": "Washingtons Crossing",
+        "a": "",
+        "k": "book",
+        "slug": "washingtons-crossing",
+        "dewey": "973.332"
+      },
+      {
+        "t": "British Strategic Defeat In the Southern Campaign",
+        "a": "Jesse Pearson",
+        "k": "book",
+        "slug": "british-strategic-defeat-in-the-southern-campaign",
+        "dewey": "973.337"
+      },
+      {
+        "t": "Six Frigates",
+        "a": "Ian W. Toll",
+        "k": "book",
+        "slug": "six-frigates",
+        "dewey": "973.4"
+      },
+      {
+        "t": "George Washington Masonic Memorial",
+        "a": "",
+        "k": "museum",
+        "slug": "the-george-washington-masonic-national-memorial",
+        "dewey": "973.4"
+      },
+      {
+        "t": "There Goes Robert E Lee",
+        "a": "Christopher Caldwell",
+        "k": "book",
+        "slug": "there-goes-robert-e-lee",
+        "dewey": "973.7"
+      },
+      {
+        "t": "Ball's Bluff Battlefield",
+        "a": "",
+        "k": "museum",
+        "slug": "balls-bluff-battlefield-park",
+        "dewey": "973.731"
+      },
+      {
+        "t": "100 Years of Sea Power",
+        "a": "George Baer",
+        "k": "book",
+        "slug": "100-years-of-sea-power-by-baer",
+        "dewey": "973.8"
+      },
+      {
+        "t": "Bullets Not Ballots",
+        "a": "Jacqueline L. Hazelton",
+        "k": "book",
+        "slug": "bullets-not-ballots",
+        "dewey": "973.9"
+      },
+      {
+        "t": "EPA Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "epa-museum",
+        "dewey": "973.9"
+      },
+      {
+        "t": "Museum Of Nuclear Science",
+        "a": "",
+        "k": "museum",
+        "slug": "museum-of-nuclear-science",
+        "dewey": "973.918"
+      },
+      {
+        "t": "My Life",
+        "a": "Bill Clinton",
+        "k": "book",
+        "slug": "my-life",
+        "dewey": "973.929"
+      },
+      {
+        "t": "The Last Centurion",
+        "a": "John Ringo",
+        "k": "book",
+        "slug": "the-last-centurion",
+        "dewey": "973.93"
+      },
+      {
+        "t": "Decision Points",
+        "a": "George W. Bush",
+        "k": "book",
+        "slug": "decision-points",
+        "dewey": "973.931"
+      },
+      {
+        "t": "All the Best",
+        "a": "George W. Bush",
+        "k": "book",
+        "slug": "all-the-best-bush",
+        "dewey": "973.931"
+      },
+      {
+        "t": "A Promised Land",
+        "a": "Barack Obama",
+        "k": "book",
+        "slug": "a-promised-land-by-obama",
+        "dewey": "973.932"
+      },
+      {
+        "t": "Fort Raleigh Historic Site",
+        "a": "",
+        "k": "museum",
+        "slug": "fort-raleigh",
+        "dewey": "975.6"
+      },
+      {
+        "t": "Country Music Museum And Hall Of Fame",
+        "a": "",
+        "k": "museum",
+        "slug": "country-music-museum-and-hall-of-fame",
+        "dewey": "976.855"
+      },
+      {
+        "t": "McClung Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "mcclung-museum",
+        "dewey": "976.885"
+      },
+      {
+        "t": "Mount St. Helens Nat'l Volcanic Monument",
+        "a": "",
+        "k": "museum",
+        "slug": "mount-st-helens-national-volcanic-monument",
+        "dewey": "979.784"
+      },
+      {
+        "t": "Anchorage Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "anchorage-museum",
+        "dewey": "979.83"
+      },
+      {
+        "t": "Museum of Indigenous Amazonian Cultures",
+        "a": "",
+        "k": "museum",
+        "slug": "museum-of-indigenous-amazonian-cultures",
+        "dewey": "980.04"
+      },
+      {
+        "t": "Museo Amazónico",
+        "a": "",
+        "k": "museum",
+        "slug": "museo-amazonico",
+        "dewey": "981.1"
+      },
+      {
+        "t": "Turn Right At Machu Picchu",
+        "a": "Mark Adams",
+        "k": "book",
+        "slug": "turn-right-at-machu-picchu",
+        "dewey": "985"
+      },
+      {
+        "t": "Museo de Arqueología, Lima",
+        "a": "",
+        "k": "museum",
+        "slug": "museo-arqueologia-lima",
+        "dewey": "985"
       }
     ]
   }

@@ -193,7 +193,7 @@
         <span class="kind ${x.k}">${kindLabel[x.k] || x.k}</span>
         <h4>${esc(x.t)}</h4>
         <div class="by">${esc(x.a || "")}</div>
-        <div class="sec">${x.code} · ${esc(x.section)}</div>
+        <div class="sec">${x.dewey || x.code} · ${esc(x.section)}</div>
       </div>`;
     return a;
   }
@@ -392,7 +392,7 @@
         return true;
       });
       list.sort((a, b) => cat.sort === "author" ? (a.a || "~").localeCompare(b.a || "~") || a.t.localeCompare(b.t)
-        : cat.sort === "class" ? a.code.localeCompare(b.code) || a.t.localeCompare(b.t)
+        : cat.sort === "class" ? (a.dewey || a.code).localeCompare(b.dewey || b.code) || a.t.localeCompare(b.t)
         : a.t.localeCompare(b.t));
       meta.innerHTML = "";
       meta.append(el("span", "result-count", `${list.length} ${list.length === 1 ? "entry" : "entries"}`));
@@ -469,7 +469,7 @@
           </div>
           ${full ? "" : (known ? `<p class="m-desc">${esc(known)}</p>` : (willFetch ? `<p class="m-desc m-desc-loading" id="mDesc"></p>` : ""))}
           <a class="m-class" href="#/class/${x.code}">
-            <div class="m-class-code">${x.code}</div>
+            <div class="m-class-code">${x.dewey || x.code}</div>
             <div><div class="m-class-name">${esc(dw.name)}</div><div class="m-class-range">Dewey ${dw.range || ""} · browse all →</div></div>
           </a>
         </div>
