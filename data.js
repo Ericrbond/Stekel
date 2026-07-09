@@ -766,20 +766,6 @@ const DEWEY = [
         "k": "guide",
         "slug": "languages-home",
         "dewey": "418.002"
-      },
-      {
-        "t": "The Scarlet Letter",
-        "a": "Nathaniel Hawthorne",
-        "k": "book",
-        "slug": "the-scarlet-letter",
-        "dewey": "813.3"
-      },
-      {
-        "t": "Dracula",
-        "a": "Bram Stoker",
-        "k": "book",
-        "slug": "dracula",
-        "dewey": "823.8"
       }
     ]
   },
@@ -1668,6 +1654,13 @@ const DEWEY = [
         "dewey": "813"
       },
       {
+        "t": "The Scarlet Letter",
+        "a": "Nathaniel Hawthorne",
+        "k": "book",
+        "slug": "the-scarlet-letter",
+        "dewey": "813.3"
+      },
+      {
         "t": "Bridge of San Luis Rey",
         "a": "Thornton Wilder",
         "k": "book",
@@ -1848,6 +1841,13 @@ const DEWEY = [
         "k": "book",
         "slug": "whose-afraid-of-carl",
         "dewey": "823"
+      },
+      {
+        "t": "Dracula",
+        "a": "Bram Stoker",
+        "k": "book",
+        "slug": "dracula",
+        "dewey": "823.8"
       },
       {
         "t": "Animal Farm",
