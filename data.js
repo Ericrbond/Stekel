@@ -1162,6 +1162,13 @@ const DEWEY = [
         "dewey": "613.7"
       },
       {
+        "t": "Drink",
+        "a": "David Nutt",
+        "k": "book",
+        "slug": "drink",
+        "dewey": "613.81"
+      },
+      {
         "t": "Lab 257",
         "a": "Michael C. Carroll",
         "k": "book",
@@ -1477,14 +1484,7 @@ const DEWEY = [
         "slug": "burj-khalifa-museum-dubai",
         "dewey": "720.483"
       },
-      {
-        "t": "Drink",
-        "a": "David Nutt",
-        "k": "book",
-        "slug": "drink",
-        "dewey": "741.5"
-      },
-      {
+            {
         "t": "Unnatural Selection",
         "a": "Gary Larson",
         "k": "book",
@@ -2777,25 +2777,25 @@ const PROGRAMS = [
     "org": "Johns Hopkins University",
     "tag": "Environmental Science & Policy",
     "courses": [
-      "Climate Change on the Front Lines",
-      "Drinking Water",
-      "Ecology",
-      "Environmental GIS",
-      "Geology & Tropical Ecology",
-      "Hydrology",
-      "Open-Source GIS",
-      "Sustainability Science",
-      "Water Scarcity",
-      "Watershed Management"
+      { "name": "Climate Change on the Front Lines", "slug": "jhu-climate-change-on-the-front-lines" },
+      { "name": "Drinking Water", "slug": "jhu-drinking-water" },
+      { "name": "Ecology", "slug": "jhu-ecology" },
+      { "name": "Environmental GIS", "slug": "jhu-environmental-gis" },
+      { "name": "Geology & Tropical Ecology", "slug": "jhu-geology-and-tropical-ecology" },
+      { "name": "Hydrology", "slug": "jhu-hydrology" },
+      { "name": "Open-Source GIS", "slug": "jhu-open-source-gis" },
+      { "name": "Sustainability Science", "slug": "jhu-sustainability-science" },
+      { "name": "Water Scarcity", "slug": "jhu-water-scarcity" },
+      { "name": "Watershed Management", "slug": "jhu-watershed-management" }
     ]
   },
   {
     "org": "Joint Professional Military Education",
     "tag": "Strategy & History",
     "courses": [
-      "Strategy & Warfare",
-      "The American Revolutionary War",
-      "WWII — The Pacific Theater"
+      { "name": "Strategy & Warfare", "slug": "jpme-strategy-war" },
+      { "name": "The American Revolutionary War", "slug": "jpme-american-revolutionary-war" },
+      { "name": "WWII — The Pacific Theater", "slug": "jpme-wwii-pacific-theater" }
     ]
   }
 ];

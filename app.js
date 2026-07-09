@@ -924,21 +924,7 @@
     root.innerHTML = `${crumb([["#/", "Home"], [null, "Study"]])}
       <div class="section-head"><p class="eyebrow">Go deeper</p><h2>Study programs.</h2></div><div id="programs"></div>`;
     view.append(root);
-    // Try to find catalog items matching a course/book name (case-insensitive prefix/substring)
-    function matchCatalogItem(name) {
-      const n = name.toLowerCase();
-      return ALL.find((x) => x.t.toLowerCase() === n) || ALL.find((x) => x.t.toLowerCase().includes(n) || n.includes(x.t.toLowerCase()));
-    }
-    // Estimate reading time: use real reading time if item has content, otherwise assume ~8 hours per course
     const HRS_PER_COURSE = 8;
-    function courseTimeLabel(name) {
-      const match = matchCatalogItem(name);
-      if (match && match.slug) {
-        const fc = content(match.slug);
-        if (fc) { const words = plainFromHTML(fc).split(" ").filter(Boolean).length; const mins = Math.max(1, Math.round(words / 200)); return mins < 60 ? `${mins} min` : `~${Math.round(mins / 60)} hr`; }
-      }
-      return `~${HRS_PER_COURSE} hr`;
-    }
     const prog = $("#programs", root);
     PROGRAMS.forEach((p) => {
       const c = el("div", "prog");
@@ -946,16 +932,20 @@
       let coursesHTML;
       if (useOrder) {
         const totalHrs = p.courses.length * HRS_PER_COURSE;
-        const itemsHTML = p.courses.map((name, i) => {
-          const match = matchCatalogItem(name);
-          const href = match && match.slug ? `#/item/${encodeURIComponent(match.slug)}` : null;
-          const timeLabel = courseTimeLabel(name);
+        const itemsHTML = p.courses.map((course, i) => {
+          const name = course.name || course;
+          const slug = course.slug || null;
+          const href = slug ? `#/item/${encodeURIComponent(slug)}` : null;
+          const fc = slug ? content(slug) : null;
+          let timeLabel;
+          if (fc) { const words = plainFromHTML(fc).split(" ").filter(Boolean).length; const mins = Math.max(1, Math.round(words / 200)); timeLabel = mins < 60 ? `${mins} min` : `~${Math.round(mins / 60)} hr`; }
+          else timeLabel = `~${HRS_PER_COURSE} hr`;
           const inner = `<span class="ro-num">${i + 1}</span><span class="ro-title">${esc(name)}</span><span class="ro-time">${esc(timeLabel)}</span>`;
           return href ? `<a class="ro-item" href="${href}">${inner}</a>` : `<div class="ro-item">${inner}</div>`;
         }).join("");
         coursesHTML = `<ol class="reading-order">${itemsHTML}</ol><div class="ro-total">Total estimated time: <strong>~${totalHrs} hours</strong></div>`;
       } else {
-        coursesHTML = `<div class="course-list">${p.courses.map((name) => `<span class="course">${esc(name)}</span>`).join("")}</div>`;
+        coursesHTML = `<div class="course-list">${p.courses.map((course) => { const name = course.name || course; const slug = course.slug; return slug ? `<a class="course" href="#/item/${encodeURIComponent(slug)}">${esc(name)}</a>` : `<span class="course">${esc(name)}</span>`; }).join("")}</div>`;
       }
       c.innerHTML = `<div class="prog-head"><h3>${esc(p.org)}</h3><span class="tag">${esc(p.tag)}</span></div>${coursesHTML}`;
       prog.append(c);
