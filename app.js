@@ -517,9 +517,22 @@
         </div>
       </form>`;
     const list = sec.querySelector('#commentsList');
+    function setCommentLink(count) {
+      const wrap = root.querySelector('#commentLink');
+      if (!wrap) return;
+      const a = document.createElement('a');
+      a.className = 'comment-quick-link' + (count ? '' : ' comment-quick-link--empty');
+      a.href = '#';
+      a.textContent = count ? `${count} ${count === 1 ? 'comment' : 'comments'}` : 'Leave a comment';
+      a.addEventListener('click', e => { e.preventDefault(); sec.scrollIntoView({ behavior: 'smooth' }); });
+      wrap.replaceChildren(a);
+    }
     fetch('/api/comments?slug=' + encodeURIComponent(slug))
       .then(r => r.json())
-      .then(cs => { list.innerHTML = cs.length ? cs.map(commentCard).join('') : '<p class="comment-placeholder">No notes yet — be the first.</p>'; })
+      .then(cs => {
+        list.innerHTML = cs.length ? cs.map(commentCard).join('') : '<p class="comment-placeholder">No notes yet — be the first.</p>';
+        setCommentLink(cs.length);
+      })
       .catch(() => { list.innerHTML = '<p class="comment-placeholder">Couldn\'t load notes.</p>'; });
     sec.querySelector('#commentForm').addEventListener('submit', async e => {
       e.preventDefault();
@@ -536,6 +549,7 @@
         const empty = list.querySelector('.comment-placeholder');
         if (empty) empty.remove();
         list.insertAdjacentHTML('beforeend', commentCard(c));
+        setCommentLink(list.querySelectorAll('.comment-card').length);
         form.querySelector('.comment-textarea').value = '';
         btn.textContent = '✓ Posted';
         setTimeout(() => { btn.disabled = false; btn.textContent = 'Post note'; }, 2500);
@@ -573,6 +587,7 @@
             <div><div class="m-class-name">${esc(dw.name)}</div><div class="m-class-range">Dewey ${dw.range || ""} · browse all →</div></div>
           </a>
           <div class="rating-widget" id="ratingWidget"></div>
+          <div class="comment-link-wrap" id="commentLink"></div>
         </div>
       </div>
       ${full ? `<article class="mirror reading">${injectImagesInline(full, x.slug, x.k === "book")}</article>` : galleryHTML(x.slug, x.k === "book")}

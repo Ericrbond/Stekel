@@ -705,6 +705,12 @@ a.m-class:hover { border-color: var(--clay); transform: translateY(-2px); }
 .mirror.reading p { margin: 0 0 1.35rem; }
 .detail .mirror.reading { margin-left: auto; margin-right: auto; }
 
+/* ── Comment quick-link ── */
+.comment-link-wrap { margin-top: .55rem; min-height: 1.4em; }
+.comment-quick-link { font-size: .85rem; color: var(--clay); text-decoration: none; font-weight: 500; }
+.comment-quick-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+.comment-quick-link--empty { color: var(--muted); font-weight: 400; }
+
 /* ── Star ratings ── */
 .rating-widget { margin-top: 1.4rem; }
 .rating-row { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
