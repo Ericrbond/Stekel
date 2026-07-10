@@ -624,16 +624,20 @@
   function viewContentPage(opts) {
     const full = content(opts.slug);
     const CDN = window.STEKEL_CDN || "assets/stekel/";
-    const coverHTML = opts.cover ? `<div class="m-cover-wrap"><img class="m-cover" src="${CDN}${opts.cover}" alt="${esc(opts.title)}"></div>` : "";
+    const kindSpan = `<span class="kind ${opts.kind || "guide"}">${opts.label || ""}${full ? ` · ${readingTime(full)}` : ""}</span>`;
+    const subLine = opts.sub ? `<p class="detail-by">${opts.sub}</p>` : "";
+    const headerOrTop = opts.portrait
+      ? `<div class="detail-top">
+          <div class="detail-cover"><div class="portrait-wrap"><img src="${CDN}${opts.portrait}" alt="${esc(opts.title)}" loading="lazy" onerror="this.parentElement.classList.add('portrait-fallback')"></div></div>
+          <div class="detail-meta">${kindSpan}<h1>${esc(opts.title)}</h1>${subLine}</div>
+        </div>`
+      : `<header class="page-head">${kindSpan}<h1>${esc(opts.title)}</h1>${subLine}</header>`;
+    const floatCover = opts.cover ? `<div class="m-cover-wrap"><img class="m-cover" src="${CDN}${opts.cover}" alt="${esc(opts.title)}"></div>` : "";
     const root = el("div", "wrap page detail narrow");
     root.innerHTML = `
       ${crumb([["#/", "Home"], [opts.backHref || "#/", opts.backLabel || "Back"], [null, opts.title]])}
-      <header class="page-head">
-        <span class="kind ${opts.kind || "guide"}">${opts.label || ""}${full ? ` · ${readingTime(full)}` : ""}</span>
-        <h1>${esc(opts.title)}</h1>
-        ${opts.sub ? `<p class="detail-by">${opts.sub}</p>` : ""}
-      </header>
-      ${coverHTML}
+      ${headerOrTop}
+      ${floatCover}
       ${opts.extra || ""}
       ${full ? `<article class="mirror reading">${injectImagesInline(full, opts.slug, false)}</article>` : `<p class="m-blurb">${esc(opts.fallback || "No further content recorded.")}</p>${galleryHTML(opts.slug, false)}`}`;
     view.append(root);
@@ -1145,7 +1149,8 @@
   }));
   INTERVIEWS.rounds.forEach((r) => r.people.forEach((p) => {
     const s = [`${p.toLowerCase()}-interview-${r.year}`, `${p.toLowerCase()}-${r.year}-interview`].find((x) => content(x));
-    if (s) reg(s, { title: p, sub: `Interview · ${r.year}`, kind: "interview", render: () => viewContentPage({ label: `Interview · ${r.year}`, kind: "guide", title: p, sub: `Interview, ${r.year}`, slug: s, backHref: "#/voices", backLabel: "Voices" }) });
+    const portrait = (INTERVIEWS.photos || {})[p];
+    if (s) reg(s, { title: p, sub: `Interview · ${r.year}`, kind: "interview", render: () => viewContentPage({ label: `Interview · ${r.year}`, kind: "guide", title: p, sub: `Interview, ${r.year}`, slug: s, backHref: "#/voices", backLabel: "Voices", portrait }) });
   }));
   if (typeof RESEARCH !== "undefined") RESEARCH.forEach((r) => reg(r.slug, { title: r.title, sub: `Research · ${r.year}`, kind: "research", render: () => viewContentPage({ label: "Research", kind: "guide", title: r.title, sub: `${esc(r.topic)} · ${r.year}`, slug: r.slug, backHref: "#/research", backLabel: "Research", fallback: r.blurb }) }));
   if (typeof PROGRAMS !== "undefined") PROGRAMS.forEach((p) => p.courses.forEach((course) => {
