@@ -3,7 +3,7 @@
 const DEWEY = [
   {
     "code": "000",
-    "range": "000–099",
+    "range": "000\u2013099",
     "name": "General Knowledge",
     "blurb": "Reference, information, and the broad foundations of how we know what we know.",
     "items": [
@@ -32,7 +32,7 @@ const DEWEY = [
   },
   {
     "code": "100",
-    "range": "100–199",
+    "range": "100\u2013199",
     "name": "Philosophy & Psychology",
     "blurb": "How the mind works, how to live, and the competing visions of human nature.",
     "items": [
@@ -63,7 +63,7 @@ const DEWEY = [
         "a": "Paul Bloom",
         "k": "book",
         "slug": "how-pleasure-works",
-        "dewey": "152.4"
+        "dewey": "152.1"
       },
       {
         "t": "Focus",
@@ -216,7 +216,7 @@ const DEWEY = [
   },
   {
     "code": "200",
-    "range": "200–299",
+    "range": "200\u2013299",
     "name": "Religion",
     "blurb": "Faith, scripture, and the institutions built around belief.",
     "items": [
@@ -267,7 +267,7 @@ const DEWEY = [
   },
   {
     "code": "300",
-    "range": "300–399",
+    "range": "300\u2013399",
     "name": "Social Sciences",
     "blurb": "Money, markets, politics, and the systems that organize people.",
     "items": [
@@ -455,7 +455,7 @@ const DEWEY = [
         "dewey": "332.63"
       },
       {
-        "t": "Stock Market Investing — The Basics",
+        "t": "Stock Market Investing \u2014 The Basics",
         "a": "Study guide",
         "k": "guide",
         "slug": "guide-stock-market-basics",
@@ -483,7 +483,7 @@ const DEWEY = [
         "dewey": "333.33"
       },
       {
-        "t": "Real Estate — The Basics",
+        "t": "Real Estate \u2014 The Basics",
         "a": "Study guide",
         "k": "guide",
         "slug": "guide-real-estate-basics",
@@ -589,7 +589,7 @@ const DEWEY = [
       },
       {
         "t": "Art of War",
-        "a": "孙武 (Sun Tzu)",
+        "a": "\u5b59\u6b66 (Sun Tzu)",
         "k": "book",
         "slug": "art-of-war",
         "dewey": "355.02"
@@ -747,18 +747,25 @@ const DEWEY = [
         "k": "book",
         "slug": "ayatollah-begs-to-differ",
         "dewey": "955.054"
+      },
+      {
+        "t": "100 Years of Sea Power",
+        "a": "George Baer",
+        "k": "book",
+        "slug": "100-years-of-sea-power-by-baer",
+        "dewey": "359.0973"
       }
     ]
   },
   {
     "code": "400",
-    "range": "400–499",
+    "range": "400\u2013499",
     "name": "Language",
     "blurb": "Twenty-plus pocket guides for getting by, and getting curious, abroad.",
     "items": [
       {
         "t": "Language Guides",
-        "a": "22 languages — see the atlas",
+        "a": "22 languages \u2014 see the atlas",
         "k": "guide",
         "slug": "languages-home",
         "dewey": "418.002"
@@ -767,7 +774,7 @@ const DEWEY = [
   },
   {
     "code": "500",
-    "range": "500–599",
+    "range": "500\u2013599",
     "name": "Science",
     "blurb": "Deep time, life on Earth, and the physics that governs all of it.",
     "items": [
@@ -807,7 +814,7 @@ const DEWEY = [
         "dewey": "510"
       },
       {
-        "t": "Gödel, Escher, Bach",
+        "t": "G\u00f6del, Escher, Bach",
         "a": "Douglas Hofstadter",
         "k": "book",
         "slug": "geb",
@@ -1120,14 +1127,21 @@ const DEWEY = [
         "k": "book",
         "slug": "a-brief-history-of-everyone-who-ever-lived",
         "dewey": "599.9"
+      },
+      {
+        "t": "Mount St. Helens Nat'l Volcanic Monument",
+        "a": "",
+        "k": "museum",
+        "slug": "mount-st-helens-national-volcanic-monument",
+        "dewey": "551.21"
       }
     ]
   },
   {
     "code": "600",
-    "range": "600–699",
+    "range": "600\u2013699",
     "name": "Technology",
-    "blurb": "Applied science — and the frontiers it keeps pushing into.",
+    "blurb": "Applied science \u2014 and the frontiers it keeps pushing into.",
     "items": [
       {
         "t": "Mountains Beyond Mountains",
@@ -1371,9 +1385,9 @@ const DEWEY = [
   },
   {
     "code": "700",
-    "range": "700–799",
+    "range": "700\u2013799",
     "name": "Arts & Recreation",
-    "blurb": "Galleries and halls — where craft becomes culture.",
+    "blurb": "Galleries and halls \u2014 where craft becomes culture.",
     "items": [
       {
         "t": "Art Institute Of Chicago",
@@ -1411,7 +1425,7 @@ const DEWEY = [
         "dewey": "708.2"
       },
       {
-        "t": "Landesmuseum Württemberg",
+        "t": "Landesmuseum W\u00fcrttemberg",
         "a": "",
         "k": "museum",
         "slug": "landesmuseum-wurttemberg",
@@ -1480,7 +1494,7 @@ const DEWEY = [
         "slug": "burj-khalifa-museum-dubai",
         "dewey": "720.483"
       },
-            {
+      {
         "t": "Unnatural Selection",
         "a": "Gary Larson",
         "k": "book",
@@ -1538,7 +1552,7 @@ const DEWEY = [
       },
       {
         "t": "Bewac",
-        "a": "Björn Hjellström",
+        "a": "Bj\u00f6rn Hjellstr\u00f6m",
         "k": "book",
         "slug": "bewac",
         "dewey": "796.58"
@@ -1549,12 +1563,19 @@ const DEWEY = [
         "k": "book",
         "slug": "the-man-eaters-of-tsavo",
         "dewey": "799.27"
+      },
+      {
+        "t": "Country Music Museum And Hall Of Fame",
+        "a": "",
+        "k": "museum",
+        "slug": "country-music-museum-and-hall-of-fame",
+        "dewey": "781.642"
       }
     ]
   },
   {
     "code": "800",
-    "range": "800–899",
+    "range": "800\u2013899",
     "name": "Literature",
     "blurb": "The novels and stories worth returning to.",
     "items": [
@@ -1895,7 +1916,7 @@ const DEWEY = [
         "dewey": "839.8"
       },
       {
-        "t": "Les Misérables",
+        "t": "Les Mis\u00e9rables",
         "a": "Victor Hugo",
         "k": "book",
         "slug": "les-mis",
@@ -1903,7 +1924,7 @@ const DEWEY = [
       },
       {
         "t": "Shadow of the Wind",
-        "a": "Carlos Zafón",
+        "a": "Carlos Zaf\u00f3n",
         "k": "book",
         "slug": "shadow-of-the-wind",
         "dewey": "863"
@@ -1917,7 +1938,7 @@ const DEWEY = [
       },
       {
         "t": "Memories of My Melancholy Whores",
-        "a": "Gabriel García Márquez",
+        "a": "Gabriel Garc\u00eda M\u00e1rquez",
         "k": "book",
         "slug": "memories-of-my-melancholy-whores",
         "dewey": "863.64"
@@ -1940,9 +1961,9 @@ const DEWEY = [
   },
   {
     "code": "900",
-    "range": "900–999",
+    "range": "900\u2013999",
     "name": "History & Geography",
-    "blurb": "How we got here — from the first Americans to the space age.",
+    "blurb": "How we got here \u2014 from the first Americans to the space age.",
     "items": [
       {
         "t": "Sapiens",
@@ -1981,7 +2002,7 @@ const DEWEY = [
       },
       {
         "t": "Drone Theory",
-        "a": "Grégoire Chamayou",
+        "a": "Gr\u00e9goire Chamayou",
         "k": "book",
         "slug": "drone-theory",
         "dewey": "909.83"
@@ -2330,13 +2351,6 @@ const DEWEY = [
         "dewey": "973.731"
       },
       {
-        "t": "100 Years of Sea Power",
-        "a": "George Baer",
-        "k": "book",
-        "slug": "100-years-of-sea-power-by-baer",
-        "dewey": "973.8"
-      },
-      {
         "t": "Bullets Not Ballots",
         "a": "Jacqueline L. Hazelton",
         "k": "book",
@@ -2400,25 +2414,11 @@ const DEWEY = [
         "dewey": "975.6"
       },
       {
-        "t": "Country Music Museum And Hall Of Fame",
-        "a": "",
-        "k": "museum",
-        "slug": "country-music-museum-and-hall-of-fame",
-        "dewey": "976.855"
-      },
-      {
         "t": "McClung Museum",
         "a": "",
         "k": "museum",
         "slug": "mcclung-museum",
         "dewey": "976.885"
-      },
-      {
-        "t": "Mount St. Helens Nat'l Volcanic Monument",
-        "a": "",
-        "k": "museum",
-        "slug": "mount-st-helens-national-volcanic-monument",
-        "dewey": "979.784"
       },
       {
         "t": "Anchorage Museum",
@@ -2435,11 +2435,11 @@ const DEWEY = [
         "dewey": "980.04"
       },
       {
-        "t": "Museo Amazónico",
+        "t": "Museo Amaz\u00f3nico",
         "a": "",
         "k": "museum",
         "slug": "museo-amazonico",
-        "dewey": "981.1"
+        "dewey": "985"
       },
       {
         "t": "Turn Right At Machu Picchu",
@@ -2449,7 +2449,7 @@ const DEWEY = [
         "dewey": "985"
       },
       {
-        "t": "Museo de Arqueología, Lima",
+        "t": "Museo de Arqueolog\u00eda, Lima",
         "a": "",
         "k": "museum",
         "slug": "museo-arqueologia-lima",
