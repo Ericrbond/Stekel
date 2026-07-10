@@ -527,8 +527,7 @@
       a.addEventListener('click', e => {
         e.preventDefault();
         const navH = document.querySelector('header.nav')?.offsetHeight || 72;
-        const top = sec.getBoundingClientRect().top + window.scrollY - navH;
-        window.scrollTo({ top, behavior: 'smooth' });
+        window.scrollTo(0, sec.getBoundingClientRect().top + window.scrollY - navH);
       });
       wrap.replaceChildren(a);
     }
