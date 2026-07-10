@@ -3313,6 +3313,7 @@ const COVERS = {
   "The Historical Atlas of the Bible": { "local": "historical-atlas-bible.jpeg" },
   "Appeal": { "c": 1850281 },
   "Back To Work": { "c": 9942981 },
+  "Burj Khalifa At The Top": { "local": "Burj_Khalifa_Museum_Dubai.jpeg" },
   "Building the Bombs": { "c": 14148666 },
   "Collapse": { "c": 12915198 },
   "Countdown": { "c": 7284869 },
