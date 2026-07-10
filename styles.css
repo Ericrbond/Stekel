@@ -633,7 +633,7 @@ footer.foot::before {
 
 /* ── pages (router views) ────────────────────────────────────────────── */
 .page { padding-top: 6.5rem; padding-bottom: 4.5rem; min-height: 70vh; }
-.page.narrow { max-width: 760px; }
+.page.narrow { max-width: var(--maxw); }
 .hero-home { min-height: 86svh; }
 
 .crumb { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; font-size: .85rem; color: var(--muted); margin-bottom: 2rem; }
@@ -697,7 +697,7 @@ a.m-class:hover { border-color: var(--clay); transform: translateY(-2px); }
 
 /* reading column */
 .mirror.reading {
-  margin-top: 2.5rem; padding-top: 2.5rem; max-width: 720px;
+  margin-top: 2.5rem; padding-top: 2.5rem; max-width: 900px;
   font-size: 1.08rem; line-height: 1.85;
   font-feature-settings: "liga" 1, "kern" 1;
   -webkit-font-feature-settings: "liga" 1, "kern" 1;
