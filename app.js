@@ -524,7 +524,12 @@
       a.className = 'comment-quick-link' + (count ? '' : ' comment-quick-link--empty');
       a.href = '#';
       a.textContent = count ? `${count} ${count === 1 ? 'comment' : 'comments'}` : 'Leave a comment';
-      a.addEventListener('click', e => { e.preventDefault(); sec.scrollIntoView({ behavior: 'smooth' }); });
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const navH = document.querySelector('header.nav')?.offsetHeight || 72;
+        const top = sec.getBoundingClientRect().top + window.scrollY - navH;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
       wrap.replaceChildren(a);
     }
     fetch('/api/comments?slug=' + encodeURIComponent(slug))
