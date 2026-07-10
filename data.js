@@ -339,7 +339,8 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "linden-museum-stuttgart",
-        "dewey": "306.09"
+        "dewey": "306.09",
+        "galleryEnd": true
       },
       {
         "t": "No Is Not Enough",
