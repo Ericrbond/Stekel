@@ -1537,6 +1537,13 @@ const DEWEY = [
         "dewey": "796.5"
       },
       {
+        "t": "Bewac",
+        "a": "Björn Hjellström",
+        "k": "book",
+        "slug": "bewac",
+        "dewey": "796.58"
+      },
+      {
         "t": "The Man Eaters of Tsavo",
         "a": "J. H. Patterson",
         "k": "book",
@@ -1879,13 +1886,6 @@ const DEWEY = [
         "k": "book",
         "slug": "alls-quiet-on-the-western-front",
         "dewey": "833.912"
-      },
-      {
-        "t": "Bewac",
-        "a": "Björn Hjellström",
-        "k": "book",
-        "slug": "bewac",
-        "dewey": "839.738"
       },
       {
         "t": "The Little Book of Lykke",
