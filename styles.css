@@ -623,7 +623,7 @@ footer.foot::before {
 .mirror hr { border: 0; border-top: 1px solid var(--hair); margin: 2.2rem 0; width: 100%; }
 .mirror table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .92rem; }
 .mirror td, .mirror th { border: 1px solid var(--hair); padding: .5rem .7rem; text-align: left; }
-.mirror img { max-width: 100%; height: auto; border-radius: 8px; }
+.mirror img { max-width: 100%; height: auto; border-radius: 8px; min-height: 40px; }
 .modal-card.text { max-width: 680px; }
 
 .clickable { cursor: pointer; transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease); }

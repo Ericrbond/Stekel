@@ -526,8 +526,21 @@
       a.textContent = count ? `${count} ${count === 1 ? 'comment' : 'comments'}` : 'Leave a comment';
       a.addEventListener('click', e => {
         e.preventDefault();
-        const navH = document.querySelector('header.nav')?.offsetHeight || 72;
-        window.scrollTo(0, sec.getBoundingClientRect().top + window.scrollY - navH);
+        const pending = [...root.querySelectorAll('article img')].filter(img => !img.complete);
+        const doScroll = () => {
+          const navH = document.querySelector('header.nav')?.offsetHeight || 72;
+          window.scrollTo(0, sec.getBoundingClientRect().top + window.scrollY - navH);
+        };
+        if (!pending.length) { doScroll(); return; }
+        // Force lazy images above comments to load so layout is stable before measuring
+        pending.forEach(img => { img.loading = 'eager'; });
+        let n = pending.length;
+        const tick = () => { if (--n <= 0) doScroll(); };
+        pending.forEach(img => {
+          img.addEventListener('load', tick, { once: true });
+          img.addEventListener('error', tick, { once: true });
+        });
+        setTimeout(doScroll, 3000);
       });
       wrap.replaceChildren(a);
     }
