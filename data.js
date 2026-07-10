@@ -55,7 +55,8 @@ const DEWEY = [
         "a": "Paul Bloom",
         "k": "book",
         "slug": "against-empathy",
-        "dewey": "152.4"
+        "dewey": "152.4",
+        "galleryEnd": true
       },
       {
         "t": "How Pleasure Works",
