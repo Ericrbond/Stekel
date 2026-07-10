@@ -245,7 +245,8 @@ const DEWEY = [
         "a": "Ian Barnes",
         "k": "book",
         "slug": "the-historical-atlas-of-the-bible",
-        "dewey": "220.9"
+        "dewey": "220.9",
+        "galleryEnd": true
       },
       {
         "t": "Mythos",
@@ -3307,7 +3308,7 @@ const COVERS = {
   "Focus": { "c": 12672951 },
   "Seneca": { "c": 12626851 },
   "Heroes": { "c": 8650334 },
-  "The Historical Atlas of the Bible": { "c": 10572133 },
+  "The Historical Atlas of the Bible": { "local": "historical-atlas-bible.jpeg" },
   "Appeal": { "c": 1850281 },
   "Back To Work": { "c": 9942981 },
   "Building the Bombs": { "c": 14148666 },

@@ -607,7 +607,7 @@
           <div class="comment-link-wrap" id="commentLink"></div>
         </div>
       </div>
-      ${full ? `<article class="mirror reading">${injectImagesInline(full, x.slug, x.k === "book")}</article>` : galleryHTML(x.slug, x.k === "book")}
+      ${full ? `<article class="mirror reading">${x.galleryEnd ? full : injectImagesInline(full, x.slug, x.k === "book")}</article>${x.galleryEnd ? galleryHTML(x.slug, x.k === "book") : ''}` : galleryHTML(x.slug, x.k === "book")}
       <section class="comments-section" id="commentsSection"></section>
       <nav class="prevnext">
         ${prev ? `<a class="pn pn-prev" href="#/item/${encodeURIComponent(prev.slug)}"><span class="pn-dir">← Previous</span><span class="pn-t">${esc(prev.t)}</span></a>` : "<span></span>"}
