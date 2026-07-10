@@ -3306,7 +3306,7 @@ const COVERS = {
     "c": 850687
   }
 ,
-  "Focus": { "c": 12672951 },
+  "Focus": { "local": "Focus_by_Goleman.jpg" },
   "Seneca": { "c": 12626851 },
   "Heroes": { "c": 8650334 },
   "The Historical Atlas of the Bible": { "local": "historical-atlas-bible.jpeg" },
