@@ -66,13 +66,6 @@ const DEWEY = [
         "dewey": "152.4"
       },
       {
-        "t": "Memories of My Melancholy Whores",
-        "a": "Gabriel García Márquez",
-        "k": "book",
-        "slug": "memories-of-my-melancholy-whores",
-        "dewey": "152.4"
-      },
-      {
         "t": "Focus",
         "a": "Daniel Goleman",
         "k": "book",
@@ -1919,6 +1912,13 @@ const DEWEY = [
         "a": "Isabel Allende",
         "k": "book",
         "slug": "island-beneath-the-sea",
+        "dewey": "863.64"
+      },
+      {
+        "t": "Memories of My Melancholy Whores",
+        "a": "Gabriel García Márquez",
+        "k": "book",
+        "slug": "memories-of-my-melancholy-whores",
         "dewey": "863.64"
       },
       {
