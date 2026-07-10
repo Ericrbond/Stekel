@@ -971,27 +971,67 @@
   }
 
   function viewVoices() {
+    const CDN = window.STEKEL_CDN || "assets/stekel/";
     const root = el("div", "wrap page");
     root.innerHTML = `${crumb([["#/", "Home"], [null, "Voices"]])}
       <div class="section-head"><p class="eyebrow">Voices</p><h2>The people behind the pages.</h2><p>${esc(INTERVIEWS.blurb)}</p></div>
-      <div class="iv" id="interviews"></div>
-      <div class="section-head" style="margin-top:4rem"><p class="eyebrow">Worth keeping</p><h2>Quotes.</h2></div>
-      <div class="quote-wrap" id="quotes"></div>`;
+      <div class="iv-grid" id="interviews"></div>
+      <div class="section-head" style="margin-top:4rem"><p class="eyebrow">Worth keeping</p><h2>From the conversations.</h2></div>
+      <div class="qa-wrap" id="quotesQA"></div>`;
     view.append(root);
-    const iv = $("#interviews", root);
+
+    // Flat unique list of people — best slug across any round
+    const seen = new Set(), people = [];
     INTERVIEWS.rounds.forEach((r) => {
-      const c = el("div", "iv-round"); c.innerHTML = `<div class="year">${r.year}</div>`;
-      const wrap = el("div", "iv-people");
       r.people.forEach((p) => {
-        const slug = [`${p.toLowerCase()}-interview-${r.year}`, `${p.toLowerCase()}-${r.year}-interview`].find((s) => content(s));
-        const pill = slug ? el("a", "iv-person clickable") : el("span", "iv-person");
-        if (slug) pill.href = "#/item/" + encodeURIComponent(slug);
-        pill.textContent = p; wrap.append(pill);
+        if (seen.has(p)) return; seen.add(p);
+        const slug = INTERVIEWS.rounds.flatMap((rr) =>
+          [`${p.toLowerCase()}-interview-${rr.year}`, `${p.toLowerCase()}-${rr.year}-interview`]
+        ).find((s) => content(s));
+        people.push({ name: p, slug, photo: (INTERVIEWS.photos || {})[p] });
       });
-      c.append(wrap); iv.append(c);
     });
-    const q = $("#quotes", root);
-    QUOTES.forEach((qt) => q.append(el("div", "quote", `<q>${esc(qt.q)}</q><div class="a">${esc(qt.a)}</div>`)));
+
+    const iv = $("#interviews", root);
+    people.forEach(({ name, slug, photo }) => {
+      const card = slug ? el("a", "iv-card") : el("div", "iv-card iv-card--no-link");
+      if (slug) card.href = "#/item/" + encodeURIComponent(slug);
+      const imgWrap = el("div", "iv-photo");
+      if (photo) imgWrap.innerHTML = `<img src="${CDN}${photo}" alt="${esc(name)}" loading="lazy" onerror="this.parentElement.classList.add('iv-photo--fallback')">`;
+      else imgWrap.classList.add("iv-photo--fallback");
+      card.append(imgWrap, el("div", "iv-name", name));
+      iv.append(card);
+    });
+
+    // Extract Q&A pairs from interview HTML
+    function extractQA(html, person) {
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const paras = [...doc.querySelectorAll("p")];
+      const pairs = [];
+      for (let i = 0; i < paras.length - 1; i++) {
+        const qEl = paras[i], aEl = paras[i + 1];
+        const q = qEl.textContent.trim(), a = aEl.textContent.trim();
+        if (!q || !a || q.startsWith("A 20") || q.length > 200) continue;
+        if (qEl.querySelector("b,strong") || !aEl.querySelector("b,strong")) continue;
+        pairs.push({ q: q.charAt(0).toUpperCase() + q.slice(1), a, person });
+        i++;
+      }
+      return pairs;
+    }
+
+    const allQA = [];
+    people.forEach(({ name, slug }) => { if (slug) allQA.push(...extractQA(content(slug), name)); });
+
+    // Shuffle and show 8
+    for (let i = allQA.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [allQA[i], allQA[j]] = [allQA[j], allQA[i]];
+    }
+    const qaWrap = $("#quotesQA", root);
+    allQA.slice(0, 8).forEach(({ q, a, person }) => {
+      qaWrap.append(el("div", "qa-item",
+        `<div class="qa-q">${esc(q)}</div><div class="qa-a">${esc(a)}</div><div class="qa-who">${esc(person)}</div>`));
+    });
   }
 
   /* --- SAVED --- */

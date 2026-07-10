@@ -459,14 +459,25 @@ a.ro-item:hover { border-color: var(--clay); transform: translateX(4px); box-sha
 .course-list { display: flex; flex-wrap: wrap; gap: .5rem; }
 .course { font-size: .9rem; background: var(--paper); border: 1px solid var(--hair); border-radius: 999px; padding: .45rem .9rem; color: var(--ink-soft); }
 
-/* interviews */
-.iv { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.2rem; }
-.iv-round { background: var(--card); border: 1px solid var(--hair); border-radius: var(--r-lg); padding: clamp(1.5rem,3vw,2rem); }
-.iv-round .year { font-family: var(--serif); font-size: 2.4rem; font-weight: 600; color: var(--clay); line-height: 1; }
-.iv-people { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.2rem; }
-.iv-person { font-size: .88rem; padding: .35rem .75rem; border-radius: 999px; background: var(--paper); border: 1px solid var(--hair); }
+/* interviews — photo grid */
+.iv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 1.5rem 1rem; }
+.iv-card { display: flex; flex-direction: column; align-items: center; gap: .6rem; text-decoration: none; color: var(--ink-soft); cursor: pointer; }
+.iv-card--no-link { cursor: default; }
+.iv-photo { width: 84px; height: 84px; border-radius: 50%; overflow: hidden; background: var(--paper); border: 2px solid var(--hair); flex-shrink: 0; }
+.iv-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.iv-photo--fallback { background: var(--clay); display: flex; align-items: center; justify-content: center; }
+.iv-name { font-size: .85rem; font-weight: 500; text-align: center; }
+a.iv-card:hover .iv-photo { border-color: var(--clay); }
+a.iv-card:hover .iv-name { color: var(--clay-deep); }
 
-/* quotes */
+/* interview Q&A */
+.qa-wrap { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); }
+.qa-item { background: var(--card); border: 1px solid var(--hair); border-radius: var(--r-lg); padding: 1.5rem 1.75rem; display: flex; flex-direction: column; gap: .6rem; }
+.qa-q { font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.qa-a { font-family: var(--serif); font-size: 1.15rem; line-height: 1.45; color: var(--ink); flex: 1; }
+.qa-who { font-size: .8rem; color: var(--clay); font-weight: 500; margin-top: .25rem; }
+
+/* quotes (kept for home page) */
 .quote-wrap { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); }
 .quote { background: var(--card); border: 1px solid var(--hair); border-radius: var(--r-lg); padding: 2rem; position: relative; }
 .quote::before { content: "\201C"; font-family: var(--serif); font-size: 5rem; color: color-mix(in srgb, var(--clay) 30%, transparent); position: absolute; top: .3rem; left: 1rem; line-height: 1; }

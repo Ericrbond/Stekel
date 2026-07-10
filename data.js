@@ -2818,6 +2818,19 @@ const RESEARCH = [
 
 const INTERVIEWS = {
   "blurb": "An oral-history project — the same people, revisited across the years.",
+  "photos": {
+    "Amy": "Amy.jpeg",
+    "Beth": "Beth.jpeg",
+    "Brett": "Brett.jpeg",
+    "Eline": "Eline.jpeg",
+    "Eric": "Eric.jpeg",
+    "Jamie": "Jamie_Bond_Fife.png",
+    "Lisa": "Lisa.jpeg",
+    "Michael": "Michael_Odio.png",
+    "Rachel": "Rachel_Bond_Odio.png",
+    "Seth": "Seth.jpeg",
+    "Mady": "Madsen_Bond.jpeg"
+  },
   "rounds": [
     {
       "year": "2019",
