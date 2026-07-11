@@ -2236,7 +2236,8 @@ const DEWEY = [
         "a": "Charles C. Mann",
         "k": "book",
         "slug": "1491-by-mann",
-        "dewey": "970.01"
+        "dewey": "970.01",
+        "galleryEnd": true
       },
       {
         "t": "Columbus",
