@@ -133,6 +133,20 @@
     if (!html) return `<div class="pg-inline-gallery">${list.map((f) => figHTML(f, true)).join("")}</div>`;
     // Already has inline images from the mirrored content — don't duplicate.
     if (html.includes("pg-fig-inline")) return html;
+    // Section-mapped placement: inject specific images after named headings.
+    const entry = REGISTRY && REGISTRY.get(slug);
+    if (entry && entry.imageMap) {
+      const imap = entry.imageMap;
+      const decodeEntities = s => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+      return html.replace(/<\/h[123]>/gi, (match, offset) => {
+        const before = html.slice(0, offset + match.length);
+        const hStart = before.lastIndexOf("<h");
+        const headingText = decodeEntities(before.slice(hStart).replace(/<[^>]+>/g, "").trim());
+        const imgs = imap[headingText];
+        if (imgs && imgs.length) return match + `<div class="pg-inline-gallery">${imgs.map(f => figHTML(f, true)).join("")}</div>`;
+        return match;
+      });
+    }
     // Split on heading close tags — natural reading boundaries.
     const HEADING_RE = /(<\/h[123]>)/gi;
     const parts = html.split(HEADING_RE);

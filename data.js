@@ -2019,7 +2019,26 @@ const DEWEY = [
         "a": "National Geographic",
         "k": "book",
         "slug": "atlas-of-war",
-        "dewey": "911"
+        "dewey": "911",
+        "imageMap": {
+          "Greco-Persian Wars": ["Greek-Persian_Wars.png","Persian_Immortals.png","Persian_Invasions_of_Greece.png"],
+          "China's Warring States": ["350-250_BCE_Chinese_Warring_States.JPG"],
+          "Alexander the Great": ["Empire_of_Alexander_the_Great.png"],
+          "Punic Wars": ["218_BCE_Hannibals_Invasion_of_Italy.jpeg","218-201_BCE_Second_Punic_War.png","Mediterranean_Punic_Wars.png"],
+          "The Norman Conquest": ["1066_Norman_Invasion_of_England.JPG","William_of_Normandy-_Timeline.png"],
+          "The Holy Wars": ["The_Crusades_Map.jpg","The_Crusades.JPG"],
+          "The Mongol Armies": ["The_Mongol_Conquests.png","Mongol_Empire.jpg","The_Mongol_Horse_Archer.JPG","The_Mongol_Homeland.jpeg","Royal_Famil_y_of_the_Great_Mongolian_Empire.jpeg","Mongol-Tibetan_Alphabet.jpeg"],
+          "Spanish Colonialism in the America's": ["Hernan_Cortes_Templo_Major_Museo.jpeg","1427-1520_Aztecs.jpeg","Aztec_Empire.JPG","Aztecan_Rulers.jpeg"],
+          "American Revolution": ["American_Revolutionary_War.JPG"],
+          "Napoleonic Wars": ["Napoleonic_Wars.JPG"],
+          "The Plains Wars": ["N._America_Indian_Nations.png","US_Indian_Wars_Smithsonian.jpeg","USA_Native_American_Tribal_Wars.png","USA_Native_American_Tribes.png"],
+          "US Civil War": ["1861-1865_US_Civil_War.jpeg"],
+          "The War to End All Wars": ["WW1_Battles.jpg","WWI_Western_Front.JPG","Landing_at_Gallipoli_WWI.jpg","WWI_Infographic.jpeg","WWI_German_Advance_through_Belgium.png","WWI_Western_Front_1914.png","WWI_Map_of_the_Dardanelles.jpeg","1914-1918_WWI_Battles.png","Pre_and_Post_WWI.png"],
+          "WWII: The World Divided- Europe": ["European_Theater_WWII.jpg","WWII_European_Theater.jpg","WWII_European_Theater.png","DDay_WWII.png"],
+          "WWII: The World Divided- Pacific": ["US_Amphibious_Landings_in_WWII.jpg","WWII_Pacific_Theater_Smithsonian.jpeg","WWII_Operation_Meetinghouse_2.jpeg","WWII_Little_Boy.jpeg"],
+          "Vietnam: An Undeclared War": ["1973-1975_Vietnam_War_Map.png","Vietnam_War_Map.jpeg","N._Vietnamese_President_Ho_Chi_Minh_Smithsonian.jpeg","Bhuddist_Monk_Immolation_Vietnam_War_Smithsonian.jpeg"],
+          "Desert Shield & Desert Storm": ["Desert_Storm.JPG"]
+        }
       },
       {
         "t": "Undaunted Courage",
