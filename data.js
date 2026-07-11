@@ -2405,7 +2405,8 @@ const DEWEY = [
         "a": "Barack Obama",
         "k": "book",
         "slug": "a-promised-land-by-obama",
-        "dewey": "973.932"
+        "dewey": "973.932",
+        "galleryEnd": true
       },
       {
         "t": "Fort Raleigh Historic Site",
