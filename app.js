@@ -127,16 +127,15 @@
   // Images are distributed evenly after </h1>, </h2>, </h3> split points.
   // When no headings exist, images are injected after every 3rd paragraph.
   // Falls back to a bottom gallery for pages with no article content (museums/guides with no text).
-  function injectImagesInline(html, slug, skipCover) {
+  function injectImagesInline(html, slug, skipCover, imageMap) {
     const list = pageImages(slug, skipCover);
     if (!list.length) return html;
     if (!html) return `<div class="pg-inline-gallery">${list.map((f) => figHTML(f, true)).join("")}</div>`;
     // Already has inline images from the mirrored content — don't duplicate.
     if (html.includes("pg-fig-inline")) return html;
     // Section-mapped placement: inject images after the section CONTENT (before the next heading).
-    const entry = REGISTRY && REGISTRY.get(slug);
-    if (entry && entry.imageMap) {
-      const imap = entry.imageMap;
+    if (imageMap) {
+      const imap = imageMap;
       const decode = s => s.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'");
       const opens = [...html.matchAll(/<h1[^>]*>/gi)];
       const closes = [...html.matchAll(/<\/h1>/gi)];
@@ -627,7 +626,7 @@
           <div class="comment-link-wrap" id="commentLink"></div>
         </div>
       </div>
-      ${full ? `<article class="mirror reading">${x.galleryEnd ? full : injectImagesInline(full, x.slug, x.k === "book")}</article>${x.galleryEnd ? galleryHTML(x.slug, x.k === "book") : ''}` : galleryHTML(x.slug, x.k === "book")}
+      ${full ? `<article class="mirror reading">${x.galleryEnd ? full : injectImagesInline(full, x.slug, x.k === "book", x.imageMap)}</article>${x.galleryEnd ? galleryHTML(x.slug, x.k === "book") : ''}` : galleryHTML(x.slug, x.k === "book")}
       <section class="comments-section" id="commentsSection"></section>
       <nav class="prevnext">
         ${prev ? `<a class="pn pn-prev" href="#/item/${encodeURIComponent(prev.slug)}"><span class="pn-dir">← Previous</span><span class="pn-t">${esc(prev.t)}</span></a>` : "<span></span>"}
