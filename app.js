@@ -136,7 +136,7 @@
     // Section-mapped placement: inject images after the section CONTENT (before the next heading).
     if (imageMap) {
       const imap = imageMap;
-      const decode = s => s.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'");
+      const decode = s => s.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/[‘’]/g,"'").replace(/[“”]/g,'"');
       const opens = [...html.matchAll(/<h1[^>]*>/gi)];
       const closes = [...html.matchAll(/<\/h1>/gi)];
       const n = Math.min(opens.length, closes.length);
