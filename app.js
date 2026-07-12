@@ -133,19 +133,25 @@
     if (!html) return `<div class="pg-inline-gallery">${list.map((f) => figHTML(f, true)).join("")}</div>`;
     // Already has inline images from the mirrored content — don't duplicate.
     if (html.includes("pg-fig-inline")) return html;
-    // Section-mapped placement: inject specific images after named headings.
+    // Section-mapped placement: inject images after the section CONTENT (before the next heading).
     const entry = REGISTRY && REGISTRY.get(slug);
     if (entry && entry.imageMap) {
       const imap = entry.imageMap;
-      const decodeEntities = s => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
-      return html.replace(/<\/h[123]>/gi, (match, offset) => {
-        const before = html.slice(0, offset + match.length);
-        const hStart = before.lastIndexOf("<h");
-        const headingText = decodeEntities(before.slice(hStart).replace(/<[^>]+>/g, "").trim());
+      const decode = s => s.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'");
+      const opens = [...html.matchAll(/<h1[^>]*>/gi)];
+      const closes = [...html.matchAll(/<\/h1>/gi)];
+      const n = Math.min(opens.length, closes.length);
+      let result = "", pos = 0;
+      for (let i = 0; i < n; i++) {
+        const headingText = decode(html.slice(opens[i].index + opens[i][0].length, closes[i].index).replace(/<[^>]+>/g,"").trim());
         const imgs = imap[headingText];
-        if (imgs && imgs.length) return match + `<div class="pg-inline-gallery">${imgs.map(f => figHTML(f, true)).join("")}</div>`;
-        return match;
-      });
+        if (!imgs || !imgs.length) continue;
+        const nextH1 = i + 1 < opens.length ? opens[i+1].index : html.length;
+        result += html.slice(pos, nextH1);
+        result += `<div class="pg-inline-gallery">${imgs.map(f => figHTML(f, true)).join("")}</div>`;
+        pos = nextH1;
+      }
+      return result + html.slice(pos);
     }
     // Split on heading close tags — natural reading boundaries.
     const HEADING_RE = /(<\/h[123]>)/gi;
