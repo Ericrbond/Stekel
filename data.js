@@ -12,6 +12,7 @@ const DEWEY = [
         "a": "Judy Jones",
         "k": "book",
         "slug": "an-incomplete-education",
+        "galleryEnd": true,
         "dewey": "031"
       },
       {
@@ -19,6 +20,72 @@ const DEWEY = [
         "a": "Grady Hillhouse",
         "k": "book",
         "slug": "engineering-in-plain-sight",
+        "imageMap": {
+          "Ch 1 Electrical Grid": [
+                    "1_Eletrical_Generation_System.jpeg",
+                    "1_Electrical_Power_Generation_Stations.jpeg",
+                    "1_Wind_Farm.jpeg",
+                    "1_High_Voltage_Distribution_Lines_1.jpeg",
+                    "1_High_Voltage_Distribution_Lines.jpeg",
+                    "1_Electrical_Substation.jpeg",
+                    "1_Transformers_and_Circuit_Breakers.jpeg",
+                    "1_Utility_Pole_Transformers.jpeg",
+                    "1_Utility_Poles.jpeg"
+          ],
+          "Ch 2 Communications": [
+                    "2_Telecommunications_Lines.jpeg",
+                    "2_Underground_Telecommunications.jpeg",
+                    "2_Antenna_Towers.jpeg",
+                    "2_Satellite_Communications.jpeg",
+                    "2_Cell_Site_Base_Station.jpeg"
+          ],
+          "Ch 3 Roadways": [
+                    "3_Crosswalks.jpeg",
+                    "3_Traffic_Control_Methods.jpeg",
+                    "3_Traffic_Signals.jpeg",
+                    "3_Road_Signs.jpeg",
+                    "3_Highway_Earthworks.jpeg",
+                    "3_Highway_Sections.jpeg",
+                    "3_Highway_Layout.jpeg",
+                    "3_Highway_Interchanges.jpeg"
+          ],
+          "Ch 4 Bridges and Tunnels": [
+                    "4_Bridges.jpeg",
+                    "4_Bridge_Suepr_and_Substructures.jpeg",
+                    "4_Tunnel_Types.jpeg",
+                    "4_Tunnels.jpeg"
+          ],
+          "Ch 5 Railways": [
+                    "5_Railway_Construction.jpeg",
+                    "5_Railway_Crossing_Safety.jpeg",
+                    "5_Railway_Safety.jpeg",
+                    "5_Electrified_Railways.jpeg"
+          ],
+          "Ch 6 Dams, Levees, and Coastal Structures": [
+                    "6_Coastal_Shore_Protection.jpeg",
+                    "6_Port_Layout.jpeg",
+                    "6_Canal_Construction.jpeg",
+                    "6_Floodplains_and_Floodwalls.jpeg",
+                    "6_Dam_Overview.jpeg",
+                    "6_Dam_Construction.jpeg",
+                    "6_Embankments.jpeg"
+          ],
+          "Ch 7 Municipal Water and Wastewater": [
+                    "7_Intake_and_Pumping_Station.jpeg",
+                    "7_Groundwater_Wells.jpeg",
+                    "7_Aqueducts.jpeg",
+                    "7_Water_Treatment_Plant.jpeg",
+                    "7_Water_Delivery_Infrastructure.jpeg",
+                    "7_Sewer_Systems.jpeg",
+                    "7_Sewage_Treatment_Plant.jpeg",
+                    "7_Storm_and_Sanitary_Sewer_Systems.jpeg"
+          ],
+          "Ch 8 Construction": [
+                    "8_Construction_Sites.jpeg",
+                    "8_Cranes.jpeg",
+                    "8_Construction_Equipment.jpeg"
+          ]
+},
         "dewey": "031"
       },
       {
@@ -84,6 +151,7 @@ const DEWEY = [
         "a": "Hans Rosling",
         "k": "book",
         "slug": "factfulness",
+        "galleryEnd": true,
         "dewey": "153.4"
       },
       {
@@ -91,6 +159,7 @@ const DEWEY = [
         "a": "Mihaly Csikszentmihalyi",
         "k": "book",
         "slug": "flow",
+        "galleryEnd": true,
         "dewey": "153.4"
       },
       {
@@ -126,6 +195,7 @@ const DEWEY = [
         "a": "Allan Pease",
         "k": "book",
         "slug": "the-definitive-book-of-body-language",
+        "galleryEnd": true,
         "dewey": "153.6"
       },
       {
@@ -133,6 +203,7 @@ const DEWEY = [
         "a": "Leen Gorrisen",
         "k": "book",
         "slug": "natural-intelligence",
+        "galleryEnd": true,
         "dewey": "153.9"
       },
       {
@@ -147,6 +218,29 @@ const DEWEY = [
         "a": "Jack Canfield",
         "k": "book",
         "slug": "success-principles",
+        "imageMap": {
+          "Principle 6 Use the Law of Attraction": [
+                    "The_Self-Talk_Endless_Loop.jpeg"
+          ],
+          "Principle 8 Chunk It Down": [
+                    "Principle_8-_Mind_Mapping_Example.jpeg"
+          ],
+          "Principle 10 Release the Brakes": [
+                    "Principle_10-_Tapping_Therapy.jpeg"
+          ],
+          "Principle 12 Act As If": [
+                    "Principle_12-_Come_as_You_Will_Be_Party_2.jpeg"
+          ],
+          "Principle 23 Practice the Rule of 5": [
+                    "The_Cycle_of_Completion.jpeg"
+          ],
+          "Principle 44 Create a Network of Mentors and Others Who Will Up-Level You": [
+                    "Mentorship_Letter.jpeg"
+          ],
+          "Principle 56 Develop a Positive Money Consciousness": [
+                    "Poor_Financial_Approach.jpeg"
+          ]
+},
         "dewey": "158.1"
       },
       {
@@ -154,6 +248,7 @@ const DEWEY = [
         "a": "John V. Petrocelli",
         "k": "book",
         "slug": "detecting-bullshit",
+        "galleryEnd": true,
         "dewey": "160"
       },
       {
@@ -168,6 +263,7 @@ const DEWEY = [
         "a": "Jordan B. Peterson",
         "k": "book",
         "slug": "12-rules-for-life",
+        "galleryEnd": true,
         "dewey": "171.3"
       },
       {
@@ -189,6 +285,7 @@ const DEWEY = [
         "a": "Marcus Aurelius",
         "k": "book",
         "slug": "meditations",
+        "galleryEnd": true,
         "dewey": "188"
       },
       {
@@ -247,6 +344,7 @@ const DEWEY = [
         "a": "Stephen Fry",
         "k": "book",
         "slug": "mythos",
+        "galleryEnd": true,
         "dewey": "292.1"
       },
       {
@@ -254,6 +352,62 @@ const DEWEY = [
         "a": "Stephen Fry",
         "k": "book",
         "slug": "heroes",
+        "imageMap": {
+          "Summary": [
+                    "Olympic_Gods_Family_Tree.jpeg",
+                    "The_World_of_Greek_Myths.jpeg",
+                    "The_Pythia_at_Delphi.jpeg",
+                    "The_Tribute.jpeg"
+          ],
+          "PERSEUS": [
+                    "Danae_and_Perseus_rescued_from_the_wooden_box.jpeg",
+                    "Perseus_rescues_Andromeda_from_the_sea_dragon_Cetus.jpeg",
+                    "The_Head_of_Medusa.jpeg",
+                    "The_Shower_of_Gold.jpeg"
+          ],
+          "HERACLES (‘Hercules’)": [
+                    "The_infant_Heracles_choking_a_snake.jpeg",
+                    "The_creation_of_the_Milky_Way.jpeg",
+                    "Heracles_First_Labor_the_Great_Nemean_Lion.jpeg",
+                    "Heracles_holds_the_Erymanthian_Boar_over_Eurystheus.jpeg",
+                    "An_Amazon_defending_herself_from_one_of_Heracles_men.jpeg",
+                    "The_Garden_of_the_Hesperides.jpeg",
+                    "Prometheus_punishment.jpeg",
+                    "The_Olympians_triumphant_on_Mount_Olympus.jpeg"
+          ],
+          "BELLEROPHON": [
+                    "Pegasus_and_Bellerophon.jpeg"
+          ],
+          "ORPHEUS": [
+                    "Orpheus_turns_too_quickly.jpeg"
+          ],
+          "JASON": [
+                    "Hylas_and_the_nymphs.jpeg",
+                    "Jason_finds_the_Golden_Fleece.jpeg",
+                    "Jason_taming_the_Khalkotauroi.jpeg",
+                    "Medea_tames_the_Colchis_Dragon.jpeg",
+                    "Medea.jpeg",
+                    "The_Clashing_Rocks.jpeg",
+                    "Voyage_of_the_Argo.jpeg"
+          ],
+          "ATALANTA": [
+                    "The_Calydonian_Hunt.jpeg",
+                    "The_Foot_Race_with_Atalanta.jpeg"
+          ],
+          "OEDIPUS": [
+                    "Oedipus_answers_the_riddle_of_the_Sphinx.jpeg"
+          ],
+          "THESEUS": [
+                    "Ariadne_abandoned.jpeg",
+                    "The_art_of_bull-leaping.jpeg",
+                    "The_Cretan_Labyrinth.jpeg",
+                    "The_Fall_of_Icarus.jpeg",
+                    "The_Labors_of_Theseus.jpeg",
+                    "The_Minotaur.jpeg",
+                    "Theseus_and_the_Marathonian_Bull.jpeg",
+                    "Theseus_in_Athens_Syntagma_Square.jpeg"
+          ]
+},
         "dewey": "292.13"
       },
       {
@@ -261,6 +415,7 @@ const DEWEY = [
         "a": "Dan Carlin",
         "k": "book",
         "slug": "aesir-with-carlin",
+        "galleryEnd": true,
         "dewey": "293"
       }
     ]
@@ -297,6 +452,7 @@ const DEWEY = [
         "a": "Philip E. Tetlock",
         "k": "book",
         "slug": "superforecasting",
+        "galleryEnd": true,
         "dewey": "303.49"
       },
       {
@@ -311,6 +467,7 @@ const DEWEY = [
         "a": "Jared Diamond",
         "k": "book",
         "slug": "collapse",
+        "galleryEnd": true,
         "dewey": "304.2"
       },
       {
@@ -375,6 +532,7 @@ const DEWEY = [
         "a": "John Ruskin",
         "k": "book",
         "slug": "unto-this-last",
+        "galleryEnd": true,
         "dewey": "330.1"
       },
       {
@@ -389,6 +547,7 @@ const DEWEY = [
         "a": "Ramit Sethi",
         "k": "book",
         "slug": "i-will-teach-you-to-be-rich",
+        "galleryEnd": true,
         "dewey": "332.024"
       },
       {
@@ -452,6 +611,7 @@ const DEWEY = [
         "a": "Vincent Coxers",
         "k": "book",
         "slug": "basics-stock-market-investing",
+        "galleryEnd": true,
         "dewey": "332.63"
       },
       {
@@ -466,6 +626,7 @@ const DEWEY = [
         "a": "Daniel C. Goldie",
         "k": "book",
         "slug": "the-investment-answer",
+        "galleryEnd": true,
         "dewey": "332.678"
       },
       {
@@ -473,6 +634,7 @@ const DEWEY = [
         "a": "Richard M. Betts",
         "k": "book",
         "slug": "basics-real-estate",
+        "galleryEnd": true,
         "dewey": "333.33"
       },
       {
@@ -515,6 +677,7 @@ const DEWEY = [
         "a": "Isobel W. Heathcote",
         "k": "book",
         "slug": "integrated-watershed-management",
+        "galleryEnd": true,
         "dewey": "333.91"
       },
       {
@@ -529,6 +692,7 @@ const DEWEY = [
         "a": "Robert Cabin",
         "k": "book",
         "slug": "restoring-paradise",
+        "galleryEnd": true,
         "dewey": "333.95"
       },
       {
@@ -543,6 +707,7 @@ const DEWEY = [
         "a": "Eric Ries",
         "k": "book",
         "slug": "the-lean-startup",
+        "galleryEnd": true,
         "dewey": "338.04"
       },
       {
@@ -557,6 +722,7 @@ const DEWEY = [
         "a": "Bill Clinton",
         "k": "book",
         "slug": "back-to-work",
+        "galleryEnd": true,
         "dewey": "338.973"
       },
       {
@@ -620,6 +786,7 @@ const DEWEY = [
         "a": "Russell Frank Weigley",
         "k": "book",
         "slug": "the-american-way-of-war",
+        "galleryEnd": true,
         "dewey": "355.033"
       },
       {
@@ -641,6 +808,7 @@ const DEWEY = [
         "a": "JC Wylie",
         "k": "book",
         "slug": "military-strategy",
+        "galleryEnd": true,
         "dewey": "355.4"
       },
       {
@@ -648,6 +816,7 @@ const DEWEY = [
         "a": "Charles Loeber",
         "k": "book",
         "slug": "building-the-bombs",
+        "galleryEnd": true,
         "dewey": "358.39"
       },
       {
@@ -669,6 +838,7 @@ const DEWEY = [
         "a": "Jonathan Haidt",
         "k": "book",
         "slug": "the-anxious-generation",
+        "galleryEnd": true,
         "dewey": "362.2"
       },
       {
@@ -683,6 +853,34 @@ const DEWEY = [
         "a": "World Economic Forum",
         "k": "book",
         "slug": "the-2023-global-risks-report",
+        "imageMap": {
+          "Summary": [
+                    "Figure_E_Global_Risks_Ranked_by_Severity.png",
+                    "Figure_C_Global_Risk_Landscape.png",
+                    "Figure_A_Global_Risks_Ranked_by_Severity_Over_the_Short_and_Long_Term.png",
+                    "Figure_D_Currently_Manifesting_Risks.png"
+          ],
+          "Scenario Quadrants": [
+                    "Natural_Resource_Polycrisis_Framework.png"
+          ],
+          "Chronology": [
+                    "1.1_Currently_Manifesting_Risks.png",
+                    "1.2_Global_Risks_Ranked_by_Severity_Over_the_Short_Term_2y.png",
+                    "1.4_Price_Hikes_in_Basic_Necessities_2020-2022.png",
+                    "1.9_Risk_Interconnections-_the_Erosion_of_Social_Cohesion.png",
+                    "2.1_Global_Risks_Ranked_by_Severity_Over_the_Long_Term_10y.png",
+                    "2.3_Compounding_Environmental_Crises.png",
+                    "2.5_Loss_of_Functional_Health.png",
+                    "2.6_Pre-2022_Trends_in_Militarization_and_Conflict.png",
+                    "2.8_Key_Drivers_of_Interstate_Conflict.png",
+                    "3.1_Natural_Resource_Polycrisis.png",
+                    "3.4_Relevance_of_Critical_Metals_and_Minerals.png",
+                    "3.5_Reserves_of_Critical_Metals_and_Minerals.png",
+                    "4.1_Perceptions_Around_Preparedness_and_Governance.png",
+                    "Band_Aid_Solutions.png",
+                    "Figure_F_Perceptions_Around_Preparedness_and_Governance.png"
+          ]
+},
         "dewey": "363.1"
       },
       {
@@ -690,6 +888,7 @@ const DEWEY = [
         "a": "Richard Preston",
         "k": "book",
         "slug": "the-demon-in-the-freezer",
+        "galleryEnd": true,
         "dewey": "363.325"
       },
       {
@@ -697,6 +896,56 @@ const DEWEY = [
         "a": "Bjorn Lomborg",
         "k": "book",
         "slug": "best-things-first",
+        "imageMap": {
+          "Summary": [
+                    "Overview_of_Best_Things_First_Policies.jpeg"
+          ],
+          "Ch 2: Promises, promises": [
+                    "Figure_2.3_Global_Fulfillment_of_all_SDGs_based_on_2000-2021_data.jpeg",
+                    "Figure_2.4_Global_and_low-to_high-_income_country_groups_on_all_SDGs.jpeg",
+                    "SDG_Goals_per_current_trends.jpeg"
+          ],
+          "Ch 3: Do the smartest solutions first": [
+                    "Figure_3.1_The_annual_cost_for_each_of_the_12_policies_proposed_in_the_book.jpeg"
+          ],
+          "Ch 5: Education": [
+                    "Figure_5.1_Global_Fulfillment_of_SDG4_Education.jpeg"
+          ],
+          "Ch 7: Agricultural R&amp;D: More and cheaper food": [
+                    "Figure_7.1_Share_of_the_global_population_that_is_undernourished_1928-2022..jpeg",
+                    "Figure_7.2_Share_of_the_global_population_in_poverty_1820-2022..jpeg",
+                    "Figure_7.3_Global_cereal_yields_1850-2021..jpeg",
+                    "Figure_7.4_Global_Grain_poroduction_1926-1938_and_1949-2021.jpeg",
+                    "Agricultural_Investment.jpeg",
+                    "Figure_7.6_Share_of_the_workforce_in_agriculture_1800-2019.jpeg",
+                    "Figure_7.7_Share_of_the_global_population_that_is_undernour-ished1990-2056.jpeg"
+          ],
+          "Ch 8: Malaria": [
+                    "Figure_8.1_Global_malaria_death_rate_1900-2021.jpeg",
+                    "Figure_8.2_Regional_malaria_death_rates_1900-2021.jpeg",
+                    "Figure_8.4_Malaria_deaths_2000-2021.jpeg",
+                    "Figure_8.5_Incremental_costs_of_increasing_the_coverage_of_LLINs_and_awareness_campaigns_from_2023-2030.jpeg"
+          ],
+          "Ch 10: Nutrition": [
+                    "Figure_10.2_Global_number_of_stunted_children_1990-2020.jpeg"
+          ],
+          "Ch 11: Chronic Diseases": [
+                    "Figure_11.4_Causes_of_the_Worlds_56.5M_deaths_in_2019.jpeg",
+                    "Figure_11.5_Number_of_Deaths_from_Infectious_Diseases_and_NCDs.jpeg",
+                    "Figure_11.6_Number_of_cigarettes_smoked_per_adult_man_and_woman_in_the_USA.jpeg",
+                    "Table_11.1_Best_to_worst_chronic_disease_interventions_across_all_low-and_lower-middle-income_countries.jpeg"
+          ],
+          "Ch 12: Childhood immunization": [
+                    "Figure_12.1_Average_annual_US_cases_of_vaccine-preventable_diseases_over_the_20th_century_and_today..jpeg",
+                    "Figure_12.3_Vaccine_rates_for_measles_and_DTP3_1980-2021..jpeg"
+          ],
+          "Ch 13: More trade": [
+                    "Figure_13.2_Gains_of_trade_for_different_nations.jpeg"
+          ],
+          "Ch 15: Land tenure security": [
+                    "Table_15.6_Summary_of_benefit-cost_analysis_for_land_tenure_security_in_sub-Saharan_Africa_billion_dollars_over_30_years..jpeg"
+          ]
+},
         "dewey": "363.7"
       },
       {
@@ -753,6 +1002,7 @@ const DEWEY = [
         "a": "George Baer",
         "k": "book",
         "slug": "100-years-of-sea-power-by-baer",
+        "galleryEnd": true,
         "dewey": "359.0973"
       }
     ]
@@ -768,6 +1018,7 @@ const DEWEY = [
         "a": "22 languages \u2014 see the atlas",
         "k": "guide",
         "slug": "languages-home",
+        "galleryEnd": true,
         "dewey": "418.002"
       }
     ]
@@ -790,6 +1041,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "american-museum-of-natural-history",
+        "galleryEnd": true,
         "dewey": "508"
       },
       {
@@ -797,6 +1049,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "field-museum",
+        "galleryEnd": true,
         "dewey": "508"
       },
       {
@@ -804,6 +1057,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "stuttgart-natural-history-museum",
+        "galleryEnd": true,
         "dewey": "508"
       },
       {
@@ -818,6 +1072,41 @@ const DEWEY = [
         "a": "Douglas Hofstadter",
         "k": "book",
         "slug": "geb",
+        "imageMap": {
+          "Ch. 1: The MU-puzzle": [
+                    "MIU_System_Tree.jpeg"
+          ],
+          "Ch. IX: Mumon and Gödel": [
+                    "1952_Dragon_my_MC_Escher.jpg",
+                    "Central_Dogmap_.png",
+                    "Typogenetic_Code.jpeg",
+                    "TNT_String_Relationships.jpeg"
+          ],
+          "Ch. X: Levels of Description, and Computational Systems": [
+                    "Feynman_diagram_showing_the_propagation_of_a_renormalized_electron_from_A_to_B.jpeg"
+          ],
+          "…Ant Fugue": [
+                    "1953_Ant_Fugue_by_Escher.jpg",
+                    "Holism_and_Reductionism.jpg"
+          ],
+          "Ch. XI: Brains &amp; Thoughts": [
+                    "Symbolic_Levels_of_the_Mind.jpeg",
+                    "The_Human_Brain_seen_from_the_left_side.jpeg",
+                    "Hardware_Levels.jpeg"
+          ],
+          "Ch. XVI: Self-Ref and Self-Rep": [
+                    "A_Polyribosome.jpeg",
+                    "A_Section_of_mRNA_passing_through_a_Ribosome.jpeg",
+                    "Morphogenetic_pathway_of_the_T4_virus.jpeg",
+                    "Summary_of_DNA_readability.jpeg",
+                    "The_Four_Constituent_Bases_of_DNA.jpeg",
+                    "The_Genetic_Code.jpeg",
+                    "Viral_Infection_in_a_Bacteria_Cell.jpeg"
+          ],
+          "Ch. XX: Strange Loops, Or Tangle Hierarchies": [
+                    "Srinivasa_Ramanujan.jpeg"
+          ]
+},
         "dewey": "511.3"
       },
       {
@@ -832,6 +1121,7 @@ const DEWEY = [
         "a": "David Borman",
         "k": "book",
         "slug": "statistics-101",
+        "galleryEnd": true,
         "dewey": "519.5"
       },
       {
@@ -839,6 +1129,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "stuttgart-planetarium",
+        "galleryEnd": true,
         "dewey": "520"
       },
       {
@@ -846,6 +1137,7 @@ const DEWEY = [
         "a": "Brian Cox",
         "k": "book",
         "slug": "human-universe",
+        "galleryEnd": true,
         "dewey": "523.1"
       },
       {
@@ -853,6 +1145,7 @@ const DEWEY = [
         "a": "Michiel Kaku",
         "k": "book",
         "slug": "the-future-of-humanity",
+        "galleryEnd": true,
         "dewey": "523.1"
       },
       {
@@ -860,6 +1153,204 @@ const DEWEY = [
         "a": "Brian Cox & Andrew Cohen",
         "k": "book",
         "slug": "the-planets",
+        "imageMap": {
+          "Summary­": [
+                    "Solar_Prominence.jpeg",
+                    "Sun9.jpeg"
+          ],
+          "Mercury": [
+                    "Anatomy_of_Mercury.jpeg",
+                    "MASCS_Images_of_Mercury.png",
+                    "Mercury_by_Mariner_10.jpeg",
+                    "Mercury_from_Messenger.jpeg",
+                    "Mercury_Surface_Temperature.jpeg",
+                    "Mercury-_Caloris_Basin.jpeg",
+                    "Mercury-_Impact_Craters.jpeg",
+                    "Mercury-_Messenger_spacecraft.jpeg",
+                    "Mercury-_Southern_Hemisphere.jpeg",
+                    "Mercurys_North_Polar_Region.jpeg",
+                    "Messengers_Mission.jpeg"
+          ],
+          "Venus": [
+                    "2012_Transit_of_Venus_in_front_of_the_Sun.jpeg",
+                    "Venera.1_Diagram.jpeg"
+          ],
+          "Moon": [
+                    "196907_Apollo_11.jpeg",
+                    "20150921_Earths_Atmosphere_from_ISS.jpeg",
+                    "Analysis_of_Crater_Size_and_the_Age_of_Rock_Samples_Taken_on_the_Moon.png",
+                    "Earths_Magnetic_Field.jpeg",
+                    "Far_Side_of_the_Moon.jpeg",
+                    "Juan_de_Fuca_Black_Smoker.jpeg",
+                    "Moon_Apollo_Missions.jpeg",
+                    "Soil_Sampling_Moon.jpeg",
+                    "Stromalites_from_Earths_Cretaceous.jpeg"
+          ],
+          "Mars": [
+                    "20140815_Mars_Opportunity_Rover.jpeg",
+                    "Echus_Chasma_Canyon_Mars.jpeg",
+                    "Eridania_Basin_of_Mars.jpeg",
+                    "Eridania_Basin_Water_Volume_Mars.jpeg",
+                    "Gale_Crater_Curiosity_Rover_Mars.jpeg",
+                    "Global_Topographic_views_of_Mars_from_MOLA.png",
+                    "Ireson_Hill_Mars.jpeg",
+                    "Jezero_Crater_Mars.jpeg",
+                    "Mars_5.PNG",
+                    "Mars_Curiosity_Rover_1.jpeg",
+                    "Mars_Curiosity_Rover_2.jpeg",
+                    "Mars_Curiosity_Rover.jpeg",
+                    "Mars_Elysium_Planitia.jpeg",
+                    "Mars-_Aram_Chaos.jpeg",
+                    "NASAs_MRO_Spacecraft.jpeg",
+                    "Noctis_Labyrinthus_Mars.jpeg",
+                    "Olympus_Mons_Mars.jpeg",
+                    "Periods_of_Mars.jpeg",
+                    "Three_Views_of_Mars_Escaping_Atmosphere_from_MAVEN.png"
+          ],
+          "Asteroid Belt": [
+                    "Asteroids_Ida_and_Gaspra.jpeg",
+                    "Ceres_Features.jpeg",
+                    "Dawns_Trajectory_to_Vesta_and_Ceres.jpeg",
+                    "Map_of_Vesta_showing_the_Distribution_of_Dark_Materials_throughout_the_Asteroids_S._Hemisphere.png",
+                    "NASAs_Dawn_Spacecraft.jpeg",
+                    "Vesta.jpeg",
+                    "Vetsa_Timescale.jpeg"
+          ],
+          "Jupiter": [
+                    "1973_Pioneer_10_ivo_Jupiter.jpeg",
+                    "1989_Galileo_Spacecraft.jpeg",
+                    "Cassinis_Flyby_of_Jupiter.jpeg",
+                    "Io_by_Galileo.jpeg",
+                    "Io_Largest_Volcano_.jpeg",
+                    "Jupiter_2.jpeg",
+                    "Jupiter_3.jpeg",
+                    "Jupiter_5.jpeg",
+                    "Jupiter.jpeg",
+                    "Jupiters_4.jpeg",
+                    "Jupiters_Great_Red_Spot.jpeg",
+                    "Jupiters_Moon_Ganymede.jpeg",
+                    "Jupiters_South_Pole_by_Juno.jpeg",
+                    "Moons_of_Jupiter_1.jpeg",
+                    "Moons_of_Jupiter.jpeg"
+          ],
+          "Saturn": [
+                    "2010_Saturns_Moon_Mimas.jpeg",
+                    "19971015_Cassini_Mission_Launch.jpeg",
+                    "A_Storm_on_Saturn_by_Cassini.jpeg",
+                    "Anatomy_of_Saturn.jpeg",
+                    "Cassini_Spacecraft.jpeg",
+                    "Cassini-Huygens_Mission_to_Titan.jpeg",
+                    "Cassinis_Trajectory.jpeg",
+                    "Enceladus_by_Cassini.jpeg",
+                    "End_of_Cassini_Mission_on_Saturn.jpeg",
+                    "Hydrothermal_Vents_on_Enceladus.jpeg",
+                    "Ligeia_Mare_on_Titan.jpeg",
+                    "Methane_and_Gas_on_Enceladus.jpeg",
+                    "North_Pole_of_Saturn_by_Cassini.jpeg",
+                    "North_Pole_Storm_on_Saturn_by_Cassini.jpeg",
+                    "Saturnian_Storm_by_Cassini.jpeg",
+                    "Saturns_Atmosphere.jpeg",
+                    "Saturns_Moon_and_Rings.jpeg",
+                    "Saturns_Moon_Daphni.jpeg",
+                    "Saturns_Moon_Dione.jpeg",
+                    "Saturns_Moon_Enceladus_1.jpeg",
+                    "Saturns_Moon_Enceladus_23.jpeg",
+                    "Saturns_Moon_Enceladus.jpeg",
+                    "Saturns_Moon_Hyperion.jpeg",
+                    "Saturns_Moon_Iapetus.jpeg",
+                    "Saturns_Moon_Titan.jpeg",
+                    "Saturns_moons_Epimetheus_and_Janus.jpeg",
+                    "Saturns_Rings_1.jpeg",
+                    "Saturns_Rings_2.jpeg",
+                    "Saturns_Rings_by_Cassini_3.jpeg",
+                    "Saturns_Rings.jpeg",
+                    "Sunlight_View_of_Saturns_North_Pole_by_Cassini.png",
+                    "Titan_and_Saturn_from_Cassini.jpeg"
+          ],
+          "Uranus": [
+                    "1986_Uranus_by_Voyager_2.jpeg",
+                    "19860125_Uranus_by_Voyager_2.jpeg",
+                    "Anatomy_of_Uranus.jpeg",
+                    "Uranus_3.jpeg",
+                    "Uranus_4.jpeg",
+                    "Uranus_Moon_Ariel.jpeg",
+                    "Uranus_Moon_Miranda.jpeg",
+                    "Uranus_Moon_Oberon.jpeg",
+                    "Uranus_Moon_Titanius.jpeg",
+                    "Uranus_Moon_Umbriel.jpeg",
+                    "Uranus_Ring_by_Voyager_2.jpeg"
+          ],
+          "Neptune": [
+                    "1846_Discovery_of_Neptune.jpeg",
+                    "Anatomy_of_Neptune.jpeg",
+                    "Cloud_Streaks_on_Neptune.jpeg",
+                    "Ice_Geysers_on_Neptunes_Moon_Triton.jpeg",
+                    "Neptunes_Great_Spot_by_Voyager_II.jpeg",
+                    "Neptunes_Moon_Triton_1.jpeg",
+                    "Neptunes_Moon_Triton.jpeg",
+                    "S_Pole_of_Neptunes_Moon_Triton.jpeg"
+          ],
+          "Pluto": [
+                    "193003_Image_of_Pluto.jpeg",
+                    "197806_Plutos_Moon_Charon.jpeg",
+                    "False_Color_Image_of_Pluto.jpeg",
+                    "Pluto_by_HST.jpeg",
+                    "Pluto_by_New_Horizons_1.jpeg",
+                    "Pluto_by_New_Horizons.jpeg",
+                    "Pluto_byNew_Horizons_2.jpeg",
+                    "Plutos_Atmosphere.jpeg",
+                    "Plutos_Moon_Charon.jpeg",
+                    "Plutos_Moon_nix.jpeg",
+                    "Sputnik_Planitia_on_Pluto.jpeg"
+          ],
+          "---Kuiper Belt---": [
+                    "Dwarf_Planet_Eros.jpeg",
+                    "Dwarf_Planet_Quaoar.jpeg",
+                    "IMG_3671.jpeg",
+                    "Kuiper_Belt.jpeg"
+          ],
+          "Stars": [
+                    "A_Young_Star.jpeg",
+                    "Crab_Nebula.jpeg",
+                    "Dying_Star.jpeg",
+                    "Gliese_System.jpeg",
+                    "Light_Comparison.png",
+                    "Orion_Nebula.jpeg",
+                    "Red_Star.jpeg",
+                    "Sirius_B_Star.jpeg"
+          ],
+          "Solar System": [
+                    "Planet_Mass_Comparison.jpeg",
+                    "Scale_of_the_Solar_System.jpeg"
+          ],
+          "Exoplanets": [
+                    "Gliese_876_Planets.jpeg",
+                    "NASAs_Kepler_Spacecraft.jpeg",
+                    "New_Horizons_Space_Probe.jpeg",
+                    "Ultima_Thule_by_New_Horizons.jpeg",
+                    "Ultima_Thule.jpeg"
+          ],
+          "Space Exploration": [
+                    "1671_Paris_Observatory.jpeg",
+                    "19770820_Launch_of_Voyager_2.jpeg",
+                    "IMG_3014.jpeg",
+                    "Lunar_and_Mars_Rovers.jpeg",
+                    "Mariner_4_Spacecraft.jpeg",
+                    "Mariner_10_Spacecraft.jpeg",
+                    "Voyager_II_Spacecraft.jpeg"
+          ],
+          "Chronology": [
+                    "Andromeda_Galaxy.jpeg",
+                    "Chicxulub_crater.jpeg",
+                    "GHG_Effect.jpeg",
+                    "Meteor_Formation.jpeg",
+                    "Milky_Way_from_Earths.jpeg",
+                    "Panoramic_of_the_Milky_Way.jpeg",
+                    "Pulsar_Rendering.jpeg",
+                    "Relative_Size_of_Earths_moon_and_dwarf_planets.jpeg",
+                    "Milky_Way_from_New_Zealand.PNG"
+          ]
+},
         "dewey": "523.4"
       },
       {
@@ -867,6 +1358,28 @@ const DEWEY = [
         "a": "Richard Phillips Feynman",
         "k": "book",
         "slug": "six-easy-pieces",
+        "imageMap": {
+          "2 Basic Physics": [
+                    "Table_2-1_The_Electromagnetic_Spectrum.jpeg",
+                    "Table_2-2_Elementary_Particles.jpeg",
+                    "Table_2-3_Elementary_Interactions.jpeg"
+          ],
+          "3 The Relation of Physics to Other Sciences": [
+                    "Figure_3-1_The_Krebs_Cycle.jpeg",
+                    "Figure_3-2_Schematic_Diagram_of_DNA.jpeg"
+          ],
+          "4 Conservation of Energy": [
+                    "Figure_4-2_A_Reversible_Machine.jpeg"
+          ],
+          "5 The Theory of Gravitation": [
+                    "Figure_5-5_The_earth-moon_system_with_tides.jpeg",
+                    "Figure_5-13_Cavendish_apparatus_to_verify_the_law_of_universal_gravitation.jpeg"
+          ],
+          "6 Quantum Behavior": [
+                    "Figure_6-3_Interference_experiment_with_electrons.jpeg",
+                    "Figure_6-4_A_different_electron_experiment.jpeg"
+          ]
+},
         "dewey": "530"
       },
       {
@@ -881,6 +1394,7 @@ const DEWEY = [
         "a": "Michio Kaku",
         "k": "book",
         "slug": "the-god-equation",
+        "galleryEnd": true,
         "dewey": "530.14"
       },
       {
@@ -888,6 +1402,42 @@ const DEWEY = [
         "a": "Dalton BARROSO",
         "k": "book",
         "slug": "physics-of-nuclear-explosives",
+        "imageMap": {
+          "Ch 1 Introduction": [
+                    "Figure_1-1_Average_Binding_Energy.jpeg",
+                    "Figure_1-2_Fission_chain_reaction.jpeg",
+                    "Figure_1-3_Production_of_fissile_isotopes_Pu239_and_U233.jpeg",
+                    "Figure_1-6_Phases_of_Criticality_Variation.jpeg"
+          ],
+          "Ch 3 Hydrodynamic &amp; Thermodynamic at High Temperatures &amp; Densities": [
+                    "Table_3-1_First_Electrons_to_be_successively_removed_from_the_U_atoms.jpeg",
+                    "Figure_3-3_Electronic_structure_of_neutral_atoms_of_U.jpeg"
+          ],
+          "Ch 4 Numerical Simulation of Nuclear Explosions": [
+                    "Figure_4-9_Time_evolution_of_the_total_neutron_flux_at_Pu_center.jpeg",
+                    "Figure_4-16_Little_Boy_explosion_calculation.jpeg"
+          ],
+          "Ch 5 Hydrodynamic Theory of Chemical High-Explosive Detonation": [
+                    "Figure_5-13_Explosive_lenses.jpeg",
+                    "Figure_5-15_Implosion_scheme_using_log_spiral_explosive_lens.jpeg"
+          ],
+          "Ch 6 Dynamic Compression of Solids": [
+                    "Figure_6-11_Shock_pressure_versus_density_curve.jpeg"
+          ],
+          "Ch 8 Implosion-Type Nuclear Explosives": [
+                    "Figure_8-1_Influences_of_chemical_HE.jpeg",
+                    "Figure_8-9_Fat_Man_possibly_configurations.jpeg",
+                    "Figure_8-11_Concept_of_nuclear_device_with_multiple_nuclear_explosives.jpeg"
+          ],
+          "Ch 10 Thermonuclear Detonations": [
+                    "Figure_10-2_Inertial_confinement_fusion_concept.jpeg",
+                    "Figure_10-3_Thermonuclear_detonation_wave.jpeg",
+                    "Ch_10_Thermonuclear_Burning_Equations.jpeg",
+                    "Figure_10-8_Schematic_idealization_of_thermonuclear_detonation.jpeg",
+                    "Figure_10-9_Implosion_of_LiDT_with_U_tamper.jpeg",
+                    "Figure_10-11_Time_evolution_of_density_and_temperature_at_the_central_region_of_LiDT.jpeg"
+          ]
+},
         "dewey": "539.7"
       },
       {
@@ -895,6 +1445,66 @@ const DEWEY = [
         "a": "Michael Allaby",
         "k": "book",
         "slug": "earth",
+        "imageMap": {
+          "Earth’s History": [
+                    "4.5_Ga_Birth_of_the_Moon.jpeg",
+                    "4.6-4.2_Ga_Early_Earth_Bombardment.jpeg",
+                    "Equinoxes_and_Solstices.jpeg",
+                    "Relative_Size_of_Planets.jpeg",
+                    "Evolution_of_the_Horse.jpeg",
+                    "Mass_Extinction.jpeg",
+                    "Spread_of_Modern_Humans.jpeg",
+                    "Prokariotic_Cell.jpeg"
+          ],
+          "Inside Earth": [
+                    "Common_Rock-Forming_Minerals.jpeg",
+                    "Mohs_Hardness_Scale.jpeg",
+                    "Ocean_to_Continent_Boundaries.jpeg",
+                    "Continent_to_Continent_Boundaries.jpeg",
+                    "Ocean_to_Ocean_Subduction.jpeg",
+                    "Geyser.jpeg",
+                    "Plate_Tectonics.jpeg",
+                    "Lithosphere.jpeg",
+                    "Rocks_in_the_Grand_Canyon.jpeg",
+                    "Soil_Horizon.jpeg",
+                    "How_Rocks_Form.jpeg",
+                    "Largest_Mountains_on_Earth.jpeg"
+          ],
+          "Shaping the Surface": [
+                    "Glaciers.jpeg",
+                    "River_Meandering.jpeg",
+                    "The_Mississippi_River_Delta.jpeg"
+          ],
+          "Seas &amp; Oceans": [
+                    "Coral_Polyp.jpeg",
+                    "Invasive_Species.jpeg",
+                    "Ocean_Gyres.jpeg",
+                    "The_Water_Cycle.jpeg",
+                    "Pelagic_Zone.jpeg",
+                    "Largest_Lakes_on_Earth.jpeg",
+                    "Largest_Rivers.jpeg",
+                    "Great_Ocean_Conveyor_Belt.jpeg"
+          ],
+          "Land": [
+                    "Alpine_Habitat_Zones.jpeg",
+                    "Awesome_Frog.jpeg",
+                    "Food_Web.jpeg"
+          ],
+          "Weather &amp; Climate": [
+                    "Three_Cell_Model.jpeg",
+                    "Koppen_Climate_Zones.jpeg",
+                    "ENSO.jpeg",
+                    "ITCZ.jpeg",
+                    "Clouds.jpeg",
+                    "Atmosphere.jpeg",
+                    "Local_Wind_Names.jpeg",
+                    "Global_Energy_Demand.jpeg",
+                    "Disappearance_of_the_Aral_Sea.jpeg",
+                    "Monsoons.jpeg",
+                    "Pleistocene_Ice_Sheets.jpeg",
+                    "Population_Growth.jpeg"
+          ]
+},
         "dewey": "551"
       },
       {
@@ -902,6 +1512,7 @@ const DEWEY = [
         "a": "Stephen Marshak",
         "k": "book",
         "slug": "essentials-of-geology",
+        "galleryEnd": true,
         "dewey": "551"
       },
       {
@@ -909,6 +1520,7 @@ const DEWEY = [
         "a": "Gordon Andrew Macdonald",
         "k": "book",
         "slug": "volcanoes-in-the-sea",
+        "galleryEnd": true,
         "dewey": "551.21"
       },
       {
@@ -923,6 +1535,61 @@ const DEWEY = [
         "a": "Stephen Hutchinson & Lawrence Hawkins",
         "k": "book",
         "slug": "oceans",
+        "imageMap": {
+          "The Blue Planet": [
+                    "Water_Cycle.jpeg",
+                    "Water_Molecule.jpeg",
+                    "Origin_of_Ocean_Salts.jpeg",
+                    "Ocean_Temperatures.jpeg",
+                    "Distribution_of_Water_on_Earth.jpeg",
+                    "Composition_of_Seawater.jpeg",
+                    "Annual_Global_Surface_Mean_Temperature_Anomalies.jpeg",
+                    "El_Nino_La_Nina_Ocean_Temperatures.jpeg",
+                    "El_Nino_La_Nina_Temperature_Anomalies.jpeg",
+                    "Shelf_Sea_Cross-Section.jpeg",
+                    "Thermohaline_Circulation.jpeg",
+                    "Pelagic_Zones.jpeg",
+                    "Great_Ocean_Conveyor_Belt.jpeg",
+                    "Global_Wave_Height.jpeg",
+                    "Largest_Rivers.jpeg",
+                    "Largest_Lakes_on_Earth.jpeg"
+          ],
+          "Exploring the Oceans": [
+                    "Naval_Expeditions.jpeg",
+                    "Angelica_saved_by_Ruggiero_by_Ingres.jpg",
+                    "1831_Voyage_of_the_Beagle.jpeg",
+                    "1839_Hard-Hat.jpeg"
+          ],
+          "Ocean Life": [
+                    "Food_Web.jpeg",
+                    "Plankton_Distribution.jpeg",
+                    "Osmoregulation_in_Fish.jpeg",
+                    "Nematocyst_Stings.jpeg",
+                    "Lugworm_Cast.jpeg",
+                    "Inside_a_Starfish.jpeg",
+                    "Inside_a_Photophore.jpeg",
+                    "Inside_a_Lamp_Shell.jpeg",
+                    "Fish_Eyes.jpeg"
+          ],
+          "Into the Deep": [
+                    "Deepsea_Ratfish.jpeg",
+                    "Flashlight_Fish.jpeg",
+                    "Gulper_Eel.jpeg"
+          ],
+          "The Fringes": [
+                    "Estuary_Types.jpeg",
+                    "Formation_of_an_Atoll.jpeg",
+                    "Inside_a_Black_Smoker.jpeg",
+                    "Mud_Communities.jpeg"
+          ],
+          "The Human Impact": [
+                    "Oil_and_Gas_Locations.jpeg",
+                    "Fisheries_in_Decline.jpeg",
+                    "2001_Total_Shellfish_Production.jpeg",
+                    "1910-2000_Whales_Caught_Worldwide.jpeg",
+                    "2001_Top_25_Fish_Caught.jpeg"
+          ]
+},
         "dewey": "551.46"
       },
       {
@@ -930,6 +1597,7 @@ const DEWEY = [
         "a": "",
         "k": "book",
         "slug": "hydrology-1",
+        "galleryEnd": true,
         "dewey": "551.48"
       },
       {
@@ -937,6 +1605,7 @@ const DEWEY = [
         "a": "Simon Clark",
         "k": "book",
         "slug": "firmament",
+        "galleryEnd": true,
         "dewey": "551.5"
       },
       {
@@ -951,6 +1620,7 @@ const DEWEY = [
         "a": "Peter Moore",
         "k": "book",
         "slug": "the-weather-experiment",
+        "galleryEnd": true,
         "dewey": "551.5"
       },
       {
@@ -958,6 +1628,7 @@ const DEWEY = [
         "a": "Jenny Offill",
         "k": "book",
         "slug": "weather",
+        "galleryEnd": true,
         "dewey": "551.5"
       },
       {
@@ -965,6 +1636,7 @@ const DEWEY = [
         "a": "Mike Berners-Lee",
         "k": "book",
         "slug": "how-bad-are-bananas",
+        "galleryEnd": true,
         "dewey": "551.6"
       },
       {
@@ -972,6 +1644,7 @@ const DEWEY = [
         "a": "Bill Gates",
         "k": "book",
         "slug": "how-to-avoid-a-climate-disaster",
+        "galleryEnd": true,
         "dewey": "551.6"
       },
       {
@@ -979,6 +1652,7 @@ const DEWEY = [
         "a": "Andrew H. Knoll",
         "k": "book",
         "slug": "a-brief-history-of-earth",
+        "galleryEnd": true,
         "dewey": "551.7"
       },
       {
@@ -986,6 +1660,26 @@ const DEWEY = [
         "a": "Val et al",
         "k": "book",
         "slug": "geologic-history-of-the-amazon",
+        "imageMap": {
+          "Summary": [
+                    "Geology_and_Geodiversity_of_the_Amazon.png"
+          ],
+          "Geologic History": [
+                    "Geochronological_map_of_the_Amazon.png"
+          ],
+          "Geodiversity &amp; Soils": [
+                    "Amazon_Soil_Classes.png"
+          ],
+          "Hydrology": [
+                    "Drivers_of_Amazon_Hydrology.png"
+          ],
+          "Minerals": [
+                    "Mineral_Resources_of_the_Amazon.png"
+          ],
+          "Outlook": [
+                    "Projected_coastline_of_South_America_after_Earths_ice_caps_have_melted.png"
+          ]
+},
         "dewey": "551.7"
       },
       {
@@ -993,6 +1687,7 @@ const DEWEY = [
         "a": "Ralph Hopkins",
         "k": "book",
         "slug": "hiking-the-southwests-geology",
+        "galleryEnd": true,
         "dewey": "557"
       },
       {
@@ -1000,6 +1695,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "gray-fossil-site",
+        "galleryEnd": true,
         "dewey": "560"
       },
       {
@@ -1007,6 +1703,37 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "new-mexico-museum-of-natural-history",
+        "imageMap": {
+          "Animalia": [
+                    "Archaeopteryx_NM_Museum_of_Natural_History.jpeg",
+                    "Dimetrodon_NM_Museum_of_Natural_History.jpeg",
+                    "Clovis_Culture_NM_Museum_of_Natural_History.jpeg",
+                    "Eudimorphodon_Pterosaur_1_NM_Museum_of_Natural_History.jpeg",
+                    "Eudimorphodon_Pterosaur_NM_Museum_of_Natural_History.jpeg",
+                    "Gorgonopsid_NM_Museum_of_Natural_History.jpeg",
+                    "IMG_4193.jpeg",
+                    "IMG_4205.jpeg",
+                    "Ophiacodon_NM_Museum_of_Natural_History.jpeg",
+                    "Mammal_Cladiogram_NM_Museum_of_Natural_History.jpeg",
+                    "Placerias_Dicynodont_1_NM_Museum_of_Natural_History.jpeg",
+                    "Placerias_Dicynodont_NM_Museum_of_Natural_History.jpeg",
+                    "Ray_Fins_vs._Lobe_Fins_NM_Museum_of_Natural_History.jpeg",
+                    "Saurophaganax_NM_Museum_of_Natural_History.jpeg",
+                    "Stegosaurus_NM_Museum_of_Natural_History.jpeg",
+                    "Tiktaalik_1_NM_Museum_of_Natural_History.jpeg",
+                    "Tiktaalik_2_NM_Museum_of_Natural_History.jpeg"
+          ],
+          "Plantae": [
+                    "Male_and_Female_Cones_NM_Museum_of_Natural_History.png"
+          ],
+          "Chronology": [
+                    "2_Ma_to_Present_Ice_Ages_NM_Museum_of_Natural_History.jpeg",
+                    "20_Ma_Rio_Grande_Rift_NM_Museum_of_Natural_History.jpeg",
+                    "Major_Plate_Boundaries_and_Earthquakes_NM_Museum_of_Natural_History.jpeg",
+                    "How_seismic_waves_move_through_the_earth_NM_Museum_of_Natural_History.jpeg",
+                    "Pangea_NM_Museum_of_Natural_History.png"
+          ]
+},
         "dewey": "560"
       },
       {
@@ -1014,6 +1741,7 @@ const DEWEY = [
         "a": "Stephen Brusatte",
         "k": "book",
         "slug": "the-rise-and-fall-of-the-dinosaurs",
+        "galleryEnd": true,
         "dewey": "567.9"
       },
       {
@@ -1021,6 +1749,66 @@ const DEWEY = [
         "a": "Steve Brusatte",
         "k": "book",
         "slug": "the-rise-and-reign-of-mammals",
+        "imageMap": {
+          "Summary": [
+                    "Mammal_Evolutionary_Tree.jpg"
+          ],
+          "Chronology": [
+                    "3.7_Ma_Australopithecus_leave_their_footprints_in_Tanzania.jpeg",
+                    "1874_Copes_Field_Notebook.jpeg",
+                    "1876_Edward_Drinker_Cope.jpeg",
+                    "Archaeothyris.jpeg",
+                    "Ardipithecus.jpeg",
+                    "Bat_Wing_vs._Human_Arm.jpeg",
+                    "Carnassial_Teeth_in_Carnivornan_Mammals.jpeg",
+                    "Columbian_mammoths.jpeg",
+                    "Cretaceous_Era_Repenomamus_Mammal.jpeg",
+                    "Deinotherium.jpeg",
+                    "Diapsids_and_Synapsids.jpeg",
+                    "Dicynodonts.jpeg",
+                    "Differences_in_locomotion_between_reptiles_that_move_side_to_side_and_mammals_that_move_up_and_down.jpeg",
+                    "early_mammal_Megazostrodon.jpeg",
+                    "early_primate_fossil_Darwinius.jpeg",
+                    "Early_Predators_of_the_American_Savannah.jpeg",
+                    "Ectoconus.jpeg",
+                    "Elephant_Evolution.jpeg",
+                    "Eurohippus.jpeg",
+                    "Evolution_of_the_Homo_Sapien_Skull.jpeg",
+                    "Hypsodont_Teeth_vs._Human_Teeth.jpeg",
+                    "extinct_afrotherian_Arsinotherium.jpeg",
+                    "Jaw_Changes_over_time.jpeg",
+                    "fossil_bat_Onychonyc-teris.jpeg",
+                    "Jurassic_Era_gliding_haramiyidan_Maiopatagium.jpeg",
+                    "marsupial_lion_Thyla-coleo.jpeg",
+                    "Fossil_Whale_Skeletons_in_Desert.jpeg",
+                    "Kryptobaatar.jpeg",
+                    "Megalonyx.jpeg",
+                    "Fossil_Whale_Skeletons.jpeg",
+                    "Neanderthals.jpeg",
+                    "Oligokyphus.jpeg",
+                    "Pelycosaurs.jpeg",
+                    "saber-toothed_Smilodon.jpeg",
+                    "Phanerozoic_Major_Events.jpeg",
+                    "Post_K-T_extinction_Mammals.jpeg",
+                    "skull_of_a_Cretaceous_multituber-culate.jpeg",
+                    "Predatory_sparassodont_marsupials.jpeg",
+                    "Skull_of_Australopith-ecus.jpeg",
+                    "Riversleigh_marsupial_fossils.jpeg",
+                    "Skull_of_Stylinodon_and_Jaw_of_Eoconodon.jpeg",
+                    "Skull_of_Toothed_vs._Baleen_Whales.jpeg",
+                    "The_transformation_of_jaw_bones_of_mammal_ancestors_into_the_tiny_ear_ossicles_of_mammals.jpeg",
+                    "Teleoceras.jpeg",
+                    "Therapsids.jpeg",
+                    "Vilevolodon.jpeg",
+                    "The_enlargement_of_brain_size_in_synapsids_over_time.jpeg",
+                    "Thrinaxodon.jpeg",
+                    "Whale_Evolution.jpeg",
+                    "The_evolution_of_tribosphenic_molars.jpeg",
+                    "Woolly_mammoth_mummies_found_frozen_in_Siberian_permafrost.jpeg",
+                    "X-Ray_Image_of_Red_Squirrel_Skull.jpeg",
+                    "Zalambdalestes_Mammal.jpeg"
+          ]
+},
         "dewey": "569"
       },
       {
@@ -1028,6 +1816,7 @@ const DEWEY = [
         "a": "Michaud & Feinstein",
         "k": "book",
         "slug": "fighting-disease",
+        "galleryEnd": true,
         "dewey": "571.9"
       },
       {
@@ -1035,6 +1824,7 @@ const DEWEY = [
         "a": "Research and Education Association",
         "k": "book",
         "slug": "the-essential-of-biochemistry",
+        "galleryEnd": true,
         "dewey": "572"
       },
       {
@@ -1049,6 +1839,7 @@ const DEWEY = [
         "a": "Elizabeth Kolbert",
         "k": "book",
         "slug": "the-sixth-extinction",
+        "galleryEnd": true,
         "dewey": "576.84"
       },
       {
@@ -1056,6 +1847,7 @@ const DEWEY = [
         "a": "David Attenborough",
         "k": "book",
         "slug": "a-life-on-our-planet",
+        "galleryEnd": true,
         "dewey": "577"
       },
       {
@@ -1063,6 +1855,7 @@ const DEWEY = [
         "a": "Fred Singer",
         "k": "book",
         "slug": "ecology-in-action",
+        "galleryEnd": true,
         "dewey": "577"
       },
       {
@@ -1077,6 +1870,7 @@ const DEWEY = [
         "a": "Bert de Vries",
         "k": "book",
         "slug": "sustainability-science",
+        "galleryEnd": true,
         "dewey": "577"
       },
       {
@@ -1091,6 +1885,7 @@ const DEWEY = [
         "a": "Martin Wegmann",
         "k": "book",
         "slug": "remote-sensing-and-gis-for-ecologists",
+        "galleryEnd": true,
         "dewey": "577.028"
       },
       {
@@ -1105,6 +1900,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "dc-national-botanical-gardens",
+        "galleryEnd": true,
         "dewey": "580"
       },
       {
@@ -1112,6 +1908,7 @@ const DEWEY = [
         "a": "Peter Wohlleben",
         "k": "book",
         "slug": "the-hidden-life-of-trees",
+        "galleryEnd": true,
         "dewey": "582.16"
       },
       {
@@ -1133,6 +1930,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "mount-st-helens-national-volcanic-monument",
+        "galleryEnd": true,
         "dewey": "551.21"
       }
     ]
@@ -1155,6 +1953,7 @@ const DEWEY = [
         "a": "Michio Kaku",
         "k": "book",
         "slug": "the-future-of-the-mind",
+        "galleryEnd": true,
         "dewey": "612.8"
       },
       {
@@ -1176,6 +1975,7 @@ const DEWEY = [
         "a": "David Nutt",
         "k": "book",
         "slug": "drink",
+        "galleryEnd": true,
         "dewey": "613.81"
       },
       {
@@ -1183,6 +1983,7 @@ const DEWEY = [
         "a": "Michael C. Carroll",
         "k": "book",
         "slug": "lab-257",
+        "galleryEnd": true,
         "dewey": "614.5"
       },
       {
@@ -1204,6 +2005,7 @@ const DEWEY = [
         "a": "Barry & David Zimmerman",
         "k": "book",
         "slug": "killer-germs",
+        "galleryEnd": true,
         "dewey": "616.9"
       },
       {
@@ -1211,6 +2013,7 @@ const DEWEY = [
         "a": "Henry R. Schlesinger",
         "k": "book",
         "slug": "the-battery",
+        "galleryEnd": true,
         "dewey": "621.31"
       },
       {
@@ -1218,6 +2021,31 @@ const DEWEY = [
         "a": "Michio Kaku",
         "k": "book",
         "slug": "quantum-supremacy",
+        "imageMap": {
+          "2 END OF THE DIGITAL AGE": [
+                    "Turing_Machine.jpeg"
+          ],
+          "3 RISE OF THE QUANTUM": [
+                    "Double_Slit_Experiment.jpeg",
+                    "Entanglement.jpeg"
+          ],
+          "5 THE RACE IS ON": [
+                    "Qubits_per_Company.jpeg",
+                    "Spin_of_Ion_Quantum_Computer_Atoms.jpeg"
+          ],
+          "12 AI AND QUANTUM COMPUTERS": [
+                    "Protein_Folding.jpeg"
+          ],
+          "15 THE SUN IN A BOTTLE": [
+                    "Tokamak_Fusion_Reactor.jpeg"
+          ],
+          "16 SIMULATING THE UNIVERSE": [
+                    "Matter_of_the_Universe.jpeg"
+          ],
+          "Chronology": [
+                    "The_Antikythera_mechanism.jpeg"
+          ]
+},
         "dewey": "621.39"
       },
       {
@@ -1246,6 +2074,7 @@ const DEWEY = [
         "a": "John McPhee",
         "k": "book",
         "slug": "curve-of-binding-energy",
+        "galleryEnd": true,
         "dewey": "623.45"
       },
       {
@@ -1260,6 +2089,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "national-air-and-space-museum",
+        "galleryEnd": true,
         "dewey": "629.13"
       },
       {
@@ -1267,6 +2097,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "wright-brothers",
+        "galleryEnd": true,
         "dewey": "629.13"
       },
       {
@@ -1281,6 +2112,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "the-henry-ford-museum",
+        "galleryEnd": true,
         "dewey": "629.2"
       },
       {
@@ -1288,6 +2120,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "mercedes-museum-stuttgart",
+        "galleryEnd": true,
         "dewey": "629.222"
       },
       {
@@ -1365,6 +2198,7 @@ const DEWEY = [
         "a": "Carmine Gallo",
         "k": "book",
         "slug": "five-stars",
+        "galleryEnd": true,
         "dewey": "659.1"
       },
       {
@@ -1372,6 +2206,7 @@ const DEWEY = [
         "a": "George Zaidan",
         "k": "book",
         "slug": "ingredients",
+        "galleryEnd": true,
         "dewey": "664"
       },
       {
@@ -1379,6 +2214,7 @@ const DEWEY = [
         "a": "",
         "k": "book",
         "slug": "the-visual-guide-to-lockpicking",
+        "galleryEnd": true,
         "dewey": "683.32"
       }
     ]
@@ -1394,6 +2230,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "art-institute-of-chicago",
+        "galleryEnd": true,
         "dewey": "708.1"
       },
       {
@@ -1401,6 +2238,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "seattle-art-museum",
+        "galleryEnd": true,
         "dewey": "708.1"
       },
       {
@@ -1408,6 +2246,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "us-national-gallery-of-art",
+        "galleryEnd": true,
         "dewey": "708.1"
       },
       {
@@ -1415,6 +2254,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "metropolitan-museum-of-art",
+        "galleryEnd": true,
         "dewey": "708.1"
       },
       {
@@ -1429,6 +2269,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "landesmuseum-wurttemberg",
+        "galleryEnd": true,
         "dewey": "708.3"
       },
       {
@@ -1457,6 +2298,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "rijksmuseum",
+        "galleryEnd": true,
         "dewey": "708.492"
       },
       {
@@ -1464,6 +2306,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "royal-museum-of-fine-arts-of-belgium",
+        "galleryEnd": true,
         "dewey": "708.493"
       },
       {
@@ -1471,6 +2314,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "louvre-abu-dhabi",
+        "galleryEnd": true,
         "dewey": "708.957"
       },
       {
@@ -1478,6 +2322,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "asian-art-museum",
+        "galleryEnd": true,
         "dewey": "709.5"
       },
       {
@@ -1485,6 +2330,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "museo-larco",
+        "galleryEnd": true,
         "dewey": "709.85"
       },
       {
@@ -1513,6 +2359,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "us-national-portrait-gallery",
+        "galleryEnd": true,
         "dewey": "757"
       },
       {
@@ -1534,6 +2381,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "olympic-museum-lausanne",
+        "galleryEnd": true,
         "dewey": "796.48"
       },
       {
@@ -1541,6 +2389,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "us-olympic-museum",
+        "galleryEnd": true,
         "dewey": "796.48"
       },
       {
@@ -1548,6 +2397,7 @@ const DEWEY = [
         "a": "Tristan Gooley",
         "k": "book",
         "slug": "the-lost-art-of-reading-natures-signs",
+        "galleryEnd": true,
         "dewey": "796.5"
       },
       {
@@ -1555,6 +2405,7 @@ const DEWEY = [
         "a": "Bj\u00f6rn Hjellstr\u00f6m",
         "k": "book",
         "slug": "bewac",
+        "galleryEnd": true,
         "dewey": "796.58"
       },
       {
@@ -1562,6 +2413,7 @@ const DEWEY = [
         "a": "J. H. Patterson",
         "k": "book",
         "slug": "the-man-eaters-of-tsavo",
+        "galleryEnd": true,
         "dewey": "799.27"
       },
       {
@@ -1569,6 +2421,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "country-music-museum-and-hall-of-fame",
+        "galleryEnd": true,
         "dewey": "781.642"
       }
     ]
@@ -1584,6 +2437,16 @@ const DEWEY = [
         "a": "",
         "k": "book",
         "slug": "celestron-nexstar-8-se",
+        "imageMap": {
+          "Celestron Nexstar 8 SE Telescope": [
+                    "NexStar_8SE_Overview.png"
+          ],
+          "Telescope Basics": [
+                    "Celestial_Coordinate_System.png",
+                    "Schmidt-Cassegrain_Optical_Design_Cutout.png",
+                    "Positions_of_the_Big_Dipper_throughout_the_Year.png"
+          ]
+},
         "dewey": "808"
       },
       {
@@ -1591,6 +2454,7 @@ const DEWEY = [
         "a": "",
         "k": "book",
         "slug": "contact-bedford",
+        "galleryEnd": true,
         "dewey": "808"
       },
       {
@@ -1598,6 +2462,7 @@ const DEWEY = [
         "a": "Riley Black",
         "k": "book",
         "slug": "deep-time",
+        "galleryEnd": true,
         "dewey": "808"
       },
       {
@@ -1605,6 +2470,7 @@ const DEWEY = [
         "a": "Phillip Dettmer",
         "k": "book",
         "slug": "immune",
+        "galleryEnd": true,
         "dewey": "808"
       },
       {
@@ -1626,6 +2492,7 @@ const DEWEY = [
         "a": "Pierce Brown",
         "k": "book",
         "slug": "red-rising",
+        "galleryEnd": true,
         "dewey": "813"
       },
       {
@@ -1689,6 +2556,20 @@ const DEWEY = [
         "a": "Thornton Wilder",
         "k": "book",
         "slug": "bridge-of-san-luis-rey",
+        "imageMap": {
+          "Introduction": [
+                    "The_Bridge_of_San_Luis_Rey_.jpeg"
+          ],
+          "Part One: Perhaps an Accident": [
+                    "1_Brother_Juniper.jpeg"
+          ],
+          "Part Two: The Marquesa de Montemayor; Pepita": [
+                    "2_The_Marquesa_de_Montemayor.jpeg"
+          ],
+          "Part Three: Esteban": [
+                    "3_Esteban.jpeg"
+          ]
+},
         "dewey": "813.52"
       },
       {
@@ -1703,6 +2584,7 @@ const DEWEY = [
         "a": "Steven Pressfield",
         "k": "book",
         "slug": "gates-of-fire",
+        "galleryEnd": true,
         "dewey": "813.54"
       },
       {
@@ -1745,6 +2627,7 @@ const DEWEY = [
         "a": "Dan Brown",
         "k": "book",
         "slug": "inferno",
+        "galleryEnd": true,
         "dewey": "813.6"
       },
       {
@@ -1759,6 +2642,7 @@ const DEWEY = [
         "a": "Steven Pressfield",
         "k": "book",
         "slug": "killing-rommel",
+        "galleryEnd": true,
         "dewey": "813.6"
       },
       {
@@ -1843,6 +2727,73 @@ const DEWEY = [
         "a": "Stephen Fry",
         "k": "book",
         "slug": "troy",
+        "imageMap": {
+          "Summary": [
+                    "The_World_of_the_Greek_Myths.jpeg",
+                    "Homer.jpeg"
+          ],
+          "Rise of Troy": [
+                    "City_of_Troy.jpeg"
+          ],
+          "1st Destruction of Troy": [
+                    "Heracles_rescues_Hesione.jpeg"
+          ],
+          "Telamon &amp; Peleus": [
+                    "Chiron_and_the_Centaurs.jpeg"
+          ],
+          "Peleus &amp; Thetis": [
+                    "Marriage_of_Thetis_and_Peleus.jpeg",
+                    "Judgement_of_Paris.jpeg"
+          ],
+          "Helen": [
+                    "Helen.jpeg",
+                    "Leda_and_Zeus.jpeg"
+          ],
+          "Agamemnon &amp; Menelaus": [
+                    "Menelaus.jpeg"
+          ],
+          "Achilles": [
+                    "Education_of_Achilles.jpeg"
+          ],
+          "Paris the Prince": [
+                    "Cassandra.jpeg"
+          ],
+          "Paris &amp; Helen": [
+                    "Abduction_of_Helen.jpeg"
+          ],
+          "Palamedes &amp; Odysseus": [
+                    "Odysseus_feigns_madness.jpeg"
+          ],
+          "Iphigenia &amp; the Wind": [
+                    "Iphigenias_Sacrifice.jpeg"
+          ],
+          "Battle Begins": [
+                    "The_Achaean_Force_lands_at_Troy.jpeg"
+          ],
+          "Chryseis &amp; Briseis": [
+                    "Briseis_leaves_Achilles.jpeg"
+          ],
+          "Diomedes v. the Gods": [
+                    "The_Duel_of_Ajax_and_Hector.jpeg",
+                    "The_Combat_of_Diomedes.jpeg"
+          ],
+          "Death of Patroclus": [
+                    "Body_of_Patroclus.jpeg"
+          ],
+          "Armor of Achilles": [
+                    "Shield_of_Achilles.jpeg"
+          ],
+          "The Aristeia of Achilles": [
+                    "Achilles_dragging_Hectors_body_around_the_walls_of_Troy.jpeg"
+          ],
+          "Achilles Heel": [
+                    "Wounded_Achilles.jpeg"
+          ],
+          "Beware of Greeks": [
+                    "Sacking_of_Troy.jpeg",
+                    "Laocoon_and_his_sons_attacked_by_serpents.jpeg"
+          ]
+},
         "dewey": "823"
       },
       {
@@ -1850,6 +2801,7 @@ const DEWEY = [
         "a": "James Joyce",
         "k": "book",
         "slug": "ulysses",
+        "galleryEnd": true,
         "dewey": "823"
       },
       {
@@ -1970,6 +2922,7 @@ const DEWEY = [
         "a": "Yuval Noah Harari",
         "k": "book",
         "slug": "sapiens",
+        "galleryEnd": true,
         "dewey": "909"
       },
       {
@@ -1977,6 +2930,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "nyc-public-library-rare-books-museum",
+        "galleryEnd": true,
         "dewey": "909"
       },
       {
@@ -1984,6 +2938,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "british-museum-london",
+        "galleryEnd": true,
         "dewey": "909"
       },
       {
@@ -1991,6 +2946,7 @@ const DEWEY = [
         "a": "David Abulafia",
         "k": "book",
         "slug": "the-boundless-sea",
+        "galleryEnd": true,
         "dewey": "909.09"
       },
       {
@@ -2045,6 +3001,7 @@ const DEWEY = [
         "a": "Stephen E. Ambrose",
         "k": "book",
         "slug": "undaunted-courage",
+        "galleryEnd": true,
         "dewey": "917.804"
       },
       {
@@ -2052,6 +3009,7 @@ const DEWEY = [
         "a": "Alfred Lansing",
         "k": "book",
         "slug": "endurance",
+        "galleryEnd": true,
         "dewey": "919.89"
       },
       {
@@ -2059,6 +3017,7 @@ const DEWEY = [
         "a": "Dan Carlin",
         "k": "book",
         "slug": "punic-nightmares",
+        "galleryEnd": true,
         "dewey": "937"
       },
       {
@@ -2066,6 +3025,7 @@ const DEWEY = [
         "a": "Mary Beard",
         "k": "book",
         "slug": "spqr",
+        "galleryEnd": true,
         "dewey": "937"
       },
       {
@@ -2073,6 +3033,7 @@ const DEWEY = [
         "a": "John Prados",
         "k": "book",
         "slug": "combined-fleet-decoded",
+        "galleryEnd": true,
         "dewey": "940.5426"
       },
       {
@@ -2080,6 +3041,7 @@ const DEWEY = [
         "a": "Jonathan Parshall",
         "k": "book",
         "slug": "shattered-sword",
+        "galleryEnd": true,
         "dewey": "940.5426"
       },
       {
@@ -2087,6 +3049,7 @@ const DEWEY = [
         "a": "Daniel Marston",
         "k": "book",
         "slug": "the-pacific-war-companion",
+        "galleryEnd": true,
         "dewey": "940.5426"
       },
       {
@@ -2094,6 +3057,7 @@ const DEWEY = [
         "a": "Vincent & Vladic",
         "k": "book",
         "slug": "indianapolis",
+        "galleryEnd": true,
         "dewey": "940.5451"
       },
       {
@@ -2101,6 +3065,7 @@ const DEWEY = [
         "a": "Robert Kurson",
         "k": "book",
         "slug": "shadow-divers",
+        "galleryEnd": true,
         "dewey": "940.5451"
       },
       {
@@ -2108,6 +3073,7 @@ const DEWEY = [
         "a": "Antony Beevor",
         "k": "book",
         "slug": "the-fall-of-berlin-1945",
+        "galleryEnd": true,
         "dewey": "943.0872"
       },
       {
@@ -2115,6 +3081,7 @@ const DEWEY = [
         "a": "Ian Davidson",
         "k": "book",
         "slug": "the-french-revolution",
+        "galleryEnd": true,
         "dewey": "944.04"
       },
       {
@@ -2122,6 +3089,7 @@ const DEWEY = [
         "a": "Jack Weatherford",
         "k": "book",
         "slug": "ghengis-khan",
+        "galleryEnd": true,
         "dewey": "950.2"
       },
       {
@@ -2129,6 +3097,7 @@ const DEWEY = [
         "a": "Linda Jaivin",
         "k": "book",
         "slug": "the-shortest-history-of-china",
+        "galleryEnd": true,
         "dewey": "951"
       },
       {
@@ -2143,6 +3112,7 @@ const DEWEY = [
         "a": "Tim Mackintosh-Smith",
         "k": "book",
         "slug": "yemen",
+        "galleryEnd": true,
         "dewey": "953.3"
       },
       {
@@ -2157,6 +3127,7 @@ const DEWEY = [
         "a": "Dominique Lapierre",
         "k": "book",
         "slug": "freedom-at-midnight",
+        "galleryEnd": true,
         "dewey": "954.042"
       },
       {
@@ -2164,6 +3135,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "istanbul-airport-museum",
+        "galleryEnd": true,
         "dewey": "956.1"
       },
       {
@@ -2178,6 +3150,7 @@ const DEWEY = [
         "a": "Seth G. Jones",
         "k": "book",
         "slug": "in-the-graveyard-of-empires",
+        "galleryEnd": true,
         "dewey": "958.1047"
       },
       {
@@ -2192,6 +3165,7 @@ const DEWEY = [
         "a": "Martin Meredith",
         "k": "book",
         "slug": "the-fate-of-africa",
+        "galleryEnd": true,
         "dewey": "960.32"
       },
       {
@@ -2206,6 +3180,7 @@ const DEWEY = [
         "a": "Adam Hochschild",
         "k": "book",
         "slug": "king-leopolds-ghost",
+        "galleryEnd": true,
         "dewey": "967.51"
       },
       {
@@ -2220,6 +3195,7 @@ const DEWEY = [
         "a": "I.M. Lewis",
         "k": "book",
         "slug": "somalia",
+        "galleryEnd": true,
         "dewey": "967.73"
       },
       {
@@ -2227,6 +3203,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "robben-island-museum",
+        "galleryEnd": true,
         "dewey": "968.06"
       },
       {
@@ -2263,6 +3240,7 @@ const DEWEY = [
         "a": "Felipe Fernandez-Armesto",
         "k": "book",
         "slug": "columbus",
+        "galleryEnd": true,
         "dewey": "970.015"
       },
       {
@@ -2284,6 +3262,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "american-indian-museum",
+        "galleryEnd": true,
         "dewey": "970.1"
       },
       {
@@ -2291,6 +3270,7 @@ const DEWEY = [
         "a": "Jeremy D. Popkin",
         "k": "book",
         "slug": "haitian-revolution",
+        "galleryEnd": true,
         "dewey": "972.94"
       },
       {
@@ -2298,6 +3278,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "national-archives-museum",
+        "galleryEnd": true,
         "dewey": "973"
       },
       {
@@ -2305,6 +3286,7 @@ const DEWEY = [
         "a": "Jill Lepore",
         "k": "book",
         "slug": "these-truths",
+        "galleryEnd": true,
         "dewey": "973"
       },
       {
@@ -2312,6 +3294,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "mcaad-museum",
+        "galleryEnd": true,
         "dewey": "973"
       },
       {
@@ -2319,6 +3302,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "usmc-museum",
+        "galleryEnd": true,
         "dewey": "973"
       },
       {
@@ -2326,6 +3310,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "african-american-museum",
+        "galleryEnd": true,
         "dewey": "973.0496"
       },
       {
@@ -2333,6 +3318,7 @@ const DEWEY = [
         "a": "",
         "k": "book",
         "slug": "washingtons-crossing",
+        "galleryEnd": true,
         "dewey": "973.332"
       },
       {
@@ -2340,6 +3326,7 @@ const DEWEY = [
         "a": "Jesse Pearson",
         "k": "book",
         "slug": "british-strategic-defeat-in-the-southern-campaign",
+        "galleryEnd": true,
         "dewey": "973.337"
       },
       {
@@ -2354,6 +3341,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "the-george-washington-masonic-national-memorial",
+        "galleryEnd": true,
         "dewey": "973.4"
       },
       {
@@ -2368,6 +3356,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "balls-bluff-battlefield-park",
+        "galleryEnd": true,
         "dewey": "973.731"
       },
       {
@@ -2382,6 +3371,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "epa-museum",
+        "galleryEnd": true,
         "dewey": "973.9"
       },
       {
@@ -2389,6 +3379,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "museum-of-nuclear-science",
+        "galleryEnd": true,
         "dewey": "973.918"
       },
       {
@@ -2396,6 +3387,7 @@ const DEWEY = [
         "a": "Bill Clinton",
         "k": "book",
         "slug": "my-life",
+        "galleryEnd": true,
         "dewey": "973.929"
       },
       {
@@ -2432,6 +3424,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "fort-raleigh",
+        "galleryEnd": true,
         "dewey": "975.6"
       },
       {
@@ -2439,6 +3432,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "mcclung-museum",
+        "galleryEnd": true,
         "dewey": "976.885"
       },
       {
@@ -2446,6 +3440,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "anchorage-museum",
+        "galleryEnd": true,
         "dewey": "979.83"
       },
       {
@@ -2453,6 +3448,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "museum-of-indigenous-amazonian-cultures",
+        "galleryEnd": true,
         "dewey": "980.04"
       },
       {
@@ -2460,6 +3456,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "museo-amazonico",
+        "galleryEnd": true,
         "dewey": "985"
       },
       {
@@ -2467,6 +3464,7 @@ const DEWEY = [
         "a": "Mark Adams",
         "k": "book",
         "slug": "turn-right-at-machu-picchu",
+        "galleryEnd": true,
         "dewey": "985"
       },
       {
@@ -2474,6 +3472,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "museo-arqueologia-lima",
+        "galleryEnd": true,
         "dewey": "985"
       }
     ]
@@ -2726,6 +3725,7 @@ const LANGUAGES = [
     "name": "Turkish",
     "hello": "Merhaba",
     "slug": "turkish",
+        "galleryEnd": true,
     "flag": "Turkiye_Flag.png"
   }
 ];
@@ -2801,16 +3801,143 @@ const PROGRAMS = [
     "org": "Johns Hopkins University",
     "tag": "Environmental Science & Policy",
     "courses": [
-      { "name": "Climate Change on the Front Lines", "slug": "jhu-climate-change-on-the-front-lines", "cover": "JHU_Climate_Change_on_the_Frontlines_with_Poudel.png" },
+      { "name": "Climate Change on the Front Lines", "slug": "jhu-climate-change-on-the-front-lines",
+        "galleryEnd": true, "cover": "JHU_Climate_Change_on_the_Frontlines_with_Poudel.png" },
       { "name": "Drinking Water", "slug": "jhu-drinking-water", "cover": "JHU_Drinking_WaterSanitationHealth_with_Patterson.png" },
-      { "name": "Ecology", "slug": "jhu-ecology", "cover": "JHU_Ecology_with_Blay.png" },
+      { "name": "Ecology", "slug": "jhu-ecology",
+        "imageMap": {
+          "Summary": [
+                    "Global_Mean_NPP.jpeg",
+                    "Global_Warming_Predictions.jpg",
+                    "NPP_in_the_Marine_Ecosystem.jpeg",
+                    "Population-Pyramid-1950-to-2100.jpg",
+                    "Behavior_Ecology_Group_Size.png",
+                    "Big_Five_Extinction_Events.png",
+                    "Big_Five_Mass_Extinctions.png",
+                    "Conservation_Methods.png",
+                    "Exponential_Growth_Model.png",
+                    "Exponential_Growth_Model2.png",
+                    "Exponential_vs._Logistical_Growth.png",
+                    "Fossil_Record_Analysis.png",
+                    "Global_Mammal_Population_Declines.png",
+                    "Logistic_Growth_Formula.png",
+                    "Global_Temperature_Seasonality.png",
+                    "Logistic_Growth_Graph.png",
+                    "Invertebrate_Declines.png",
+                    "Logistic_Growth_Model.png",
+                    "Methods_of_Comparing_Past_and_Present_Extinction_Events.png",
+                    "Null_and_Alternate_Hypothesis.png",
+                    "Observed_and_Projected_Growing_Season_Lenth_in_the_Great_Lakes.png",
+                    "Rates_of_Change_in_Exponential_Growth.png",
+                    "Refining_Models.png",
+                    "Simpsons_Index.png",
+                    "Smallpox_Infection_Rates.png",
+                    "The_Human_Footprint.png",
+                    "Trophic_Cascades_in_the_Savannah.png",
+                    "UN_Population_Estimates.png",
+                    "US_HIV_Transmission_2009.png",
+                    "Variability.png"
+          ],
+          "Ecology of Some Warblers of Northeastern Coniferous by MacArthur": [
+                    "2014_Sheldon_Annual_Seasonality_across_Latitude.png"
+          ],
+          "The Biodiversity of Species and their Rates of Extinction by Pimm": [
+                    "2014_Pimm_Species_Proportion_and_Geographical_Range.png"
+          ],
+          "Defaunation in the Anthropocene by Dirzo": [
+                    "2014_Dirzo_Defaunation_Cascades.png",
+                    "2014_Dirzo_Evidence_in_invertebrate_abundance.png",
+                    "2014_Dirzo_Global_Population_Declines_in_Mammals_and_Birds.png",
+                    "2014_Dirzo_Results_of_Experimental_Manipulation_Simulating_Differential_Defaunation.png"
+          ],
+          "Reversing Defaunation by Seddon": [
+                    "2014_Seddon_The_Conservation_Translocation_Spectrum.png"
+          ],
+          "Biodiversity Redistribution Under Climate Change by Pecl": [
+                    "2017_Peci_Species_Range_Shifts_and_Human_Systems.png"
+          ]
+}, "cover": "JHU_Ecology_with_Blay.png" },
       { "name": "Environmental GIS", "slug": "jhu-environmental-gis", "cover": "JHU_Environmental_Applications_of_GIS_with_Isaacs.png" },
-      { "name": "Geology & Tropical Ecology", "slug": "jhu-geology-and-tropical-ecology", "cover": "JHU_Geology_and_Tropical_Ecology_of_Hawaii_with_da_Rosa.png" },
-      { "name": "Hydrology", "slug": "jhu-hydrology", "cover": "JHU_Hydrology_with_Runyan.png" },
-      { "name": "Open-Source GIS", "slug": "jhu-open-source-gis", "cover": "JHU_Open_Source_GIS_with_Isaacs.png" },
-      { "name": "Sustainability Science", "slug": "jhu-sustainability-science", "cover": "JHU_Sustainability_Science_with_da_Rosa.png" },
-      { "name": "Water Scarcity", "slug": "jhu-water-scarcity", "cover": "JHU_Water_Scarcity_with_Patterson.png" },
-      { "name": "Watershed Management", "slug": "jhu-watershed-management", "cover": "JHU_Watershed_Management_with_Patterson.png" }
+      { "name": "Geology & Tropical Ecology", "slug": "jhu-geology-and-tropical-ecology",
+        "galleryEnd": true, "cover": "JHU_Geology_and_Tropical_Ecology_of_Hawaii_with_da_Rosa.png" },
+      { "name": "Hydrology", "slug": "jhu-hydrology",
+        "imageMap": {
+          "Solar Energy": [
+                    "electromagneticspectrum.jpg",
+                    "Hydrology1.png",
+                    "Surface_Energy_Budget.png"
+          ],
+          "Albedo (α)": [
+                    "Albedo_Comparison.png",
+                    "Albedos.png"
+          ],
+          "Watersheds": [
+                    "Watersheds.png",
+                    "Watershed2.png"
+          ],
+          "Precipitation": [
+                    "Mean_Precipitation_for_USA.png",
+                    "Precipitation_Response.png",
+                    "Precipitation_Size.png"
+          ],
+          "Runoff": [
+                    "Runoff.jpg"
+          ],
+          "Open Channel Flow": [
+                    "Hydrograph.png",
+                    "Discharge.png",
+                    "FDC_Exceedance.png"
+          ],
+          "Infiltration": [
+                    "Infilitration.png",
+                    "Infiltration_Variables.png",
+                    "Infiltrometer.png"
+          ],
+          "Soil": [
+                    "Soil_Field_Capacity.png",
+                    "Soil_Field_Capcities_by_Porosity.png",
+                    "Soil_Matrix_Consituents.png",
+                    "Soil_Metric_Comparison.png",
+                    "Soil_Moisture_June.png",
+                    "Soil_Moisture_November.png",
+                    "Soil_Water_by_Pressure.png",
+                    "Stomata_and_Guard_Cells.png",
+                    "Tree_Water_Uptake.png",
+                    "USDA_Soil_Class.png",
+                    "Various_Soil_Classifications.png",
+                    "Bulk_Densities.png"
+          ],
+          "Surface Tension": [
+                    "Tensionometer.png",
+                    "Surface_Tension_in_Soil.png"
+          ],
+          "Evapotranspiration": [
+                    "PETR.png",
+                    "Estimating_ET.png",
+                    "Estimating_ET_1.png",
+                    "ET_Sources.png"
+          ],
+          "Chronology": [
+                    "Absolute_Humidity_at_Saturation.png",
+                    "C_values_for_Rational_Method.png",
+                    "Curve_Number_for_NRCS.png",
+                    "Moisture_Characteristic_Curve.png",
+                    "NRCS_2.png",
+                    "NRCS_Antecedent_Wetness.png",
+                    "NRCS.png",
+                    "Residence_Time.png",
+                    "Standard_Deviation.png",
+                    "Pressure_Systems.png"
+          ]
+}, "cover": "JHU_Hydrology_with_Runyan.png" },
+      { "name": "Open-Source GIS", "slug": "jhu-open-source-gis",
+        "galleryEnd": true, "cover": "JHU_Open_Source_GIS_with_Isaacs.png" },
+      { "name": "Sustainability Science", "slug": "jhu-sustainability-science",
+        "galleryEnd": true, "cover": "JHU_Sustainability_Science_with_da_Rosa.png" },
+      { "name": "Water Scarcity", "slug": "jhu-water-scarcity",
+        "galleryEnd": true, "cover": "JHU_Water_Scarcity_with_Patterson.png" },
+      { "name": "Watershed Management", "slug": "jhu-watershed-management",
+        "galleryEnd": true, "cover": "JHU_Watershed_Management_with_Patterson.png" }
     ]
   },
   {
@@ -2818,8 +3945,10 @@ const PROGRAMS = [
     "tag": "Strategy & History",
     "courses": [
       { "name": "Strategy & Warfare", "slug": "jpme-strategy-war", "cover": "JPME_Ph_I_Mod_I_Strategy_and_War.png" },
-      { "name": "The American Revolutionary War", "slug": "jpme-american-revolutionary-war", "cover": "JPME_Ph_I_Mod_II_American_Revolutionary_War.png" },
-      { "name": "WWII — The Pacific Theater", "slug": "jpme-wwii-pacific-theater", "cover": "JPME_Ph_I_Mod_III_WWII_Pacific_Theater.png" }
+      { "name": "The American Revolutionary War", "slug": "jpme-american-revolutionary-war",
+        "galleryEnd": true, "cover": "JPME_Ph_I_Mod_II_American_Revolutionary_War.png" },
+      { "name": "WWII — The Pacific Theater", "slug": "jpme-wwii-pacific-theater",
+        "galleryEnd": true, "cover": "JPME_Ph_I_Mod_III_WWII_Pacific_Theater.png" }
     ]
   }
 ];
