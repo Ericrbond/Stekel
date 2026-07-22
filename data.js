@@ -481,7 +481,7 @@ const DEWEY = [
         "t": "The Botany of Desire",
         "a": "Michael Pollan",
         "k": "book",
-        "slug": "the-botany-of-desire-by-pollen",
+        "slug": "the-botany-of-desire",
         "dewey": "304.2"
       },
       {
@@ -1001,7 +1001,7 @@ const DEWEY = [
         "t": "100 Years of Sea Power",
         "a": "George Baer",
         "k": "book",
-        "slug": "100-years-of-sea-power-by-baer",
+        "slug": "100-years-of-sea-power",
         "galleryEnd": true,
         "dewey": "359.0973"
       }
@@ -2127,7 +2127,7 @@ const DEWEY = [
         "t": "A City on Mars",
         "a": "Kelly & Zach Weinersmith",
         "k": "book",
-        "slug": "a-city-on-mars-by-weinersmith",
+        "slug": "a-city-on-mars",
         "dewey": "629.44"
       },
       {
@@ -2541,7 +2541,7 @@ const DEWEY = [
         "t": "The Fall of Hyperion",
         "a": "Dan Simmons",
         "k": "book",
-        "slug": "the-fall-of-hyperion-by-simmons",
+        "slug": "the-fall-of-hyperion",
         "dewey": "813"
       },
       {
@@ -2598,7 +2598,7 @@ const DEWEY = [
         "t": "Hyperion",
         "a": "Dan Simmons",
         "k": "book",
-        "slug": "hyperion-by-simmons",
+        "slug": "hyperion",
         "dewey": "813.54"
       },
       {
@@ -2656,7 +2656,7 @@ const DEWEY = [
         "t": "Ghost Fleet",
         "a": "P. W. Singer",
         "k": "book",
-        "slug": "ghost-fleet-by-singer",
+        "slug": "ghost-fleet",
         "dewey": "813.6"
       },
       {
@@ -2677,7 +2677,7 @@ const DEWEY = [
         "t": "Paradise Lost",
         "a": "John Milton",
         "k": "book",
-        "slug": "paradise-lost-by-milton",
+        "slug": "paradise-lost",
         "dewey": "821"
       },
       {
@@ -2843,7 +2843,7 @@ const DEWEY = [
         "t": "1984",
         "a": "George Orwell",
         "k": "book",
-        "slug": "1984-by-orwell",
+        "slug": "1984",
         "dewey": "823.914"
       },
       {
@@ -3231,7 +3231,7 @@ const DEWEY = [
         "t": "1491",
         "a": "Charles C. Mann",
         "k": "book",
-        "slug": "1491-by-mann",
+        "slug": "1491",
         "dewey": "970.01",
         "galleryEnd": true
       },
@@ -3247,7 +3247,7 @@ const DEWEY = [
         "t": "1493",
         "a": "Charles C. Mann",
         "k": "book",
-        "slug": "1493-by-mann",
+        "slug": "1493",
         "dewey": "970.02"
       },
       {
@@ -3415,7 +3415,7 @@ const DEWEY = [
         "t": "A Promised Land",
         "a": "Barack Obama",
         "k": "book",
-        "slug": "a-promised-land-by-obama",
+        "slug": "a-promised-land",
         "dewey": "973.932",
         "galleryEnd": true
       },
@@ -4828,7 +4828,7 @@ const DESCRIPTIONS = {
 
 /* Eric's original stekel.org images, per page (ordered: hero first). Local files under assets/stekel/. */
 var PAGE_IMAGES = {
-  "100-years-of-sea-power-by-baer": [
+  "100-years-of-sea-power": [
     "Pacific_Theater.jpg",
     "WWII_Pacific_Theater_Smithsonian.jpeg",
     "US_Amphibious_Landings_in_WWII.jpg"
@@ -4836,7 +4836,7 @@ var PAGE_IMAGES = {
   "12-rules-for-life": [
     "Jordan_Peterson.jpeg"
   ],
-  "1491-by-mann": [
+  "1491": [
     "700_CE_Wari_and_Tiwanaku.jpeg",
     "12ka_N._America.jpeg",
     "562-682_Kaan-Mutal_War.jpeg",
@@ -4913,7 +4913,7 @@ var PAGE_IMAGES = {
     "Whale_Shark_Attenborough.jpeg",
     "White_Stork_Attenborough.jpeg"
   ],
-  "a-promised-land-by-obama": [
+  "a-promised-land": [
     "20021102_Obama_elected_to_Senate.jpeg",
     "20110501_OP_Neptune_Spear_from_the_White_House.jpeg",
     "Obama_Speedh_Writing.jpeg",
@@ -8211,7 +8211,7 @@ var PAGE_IMAGES = {
     "Leclanche_Wet_Cell_Battery.png",
     "Induction.gif"
   ],
-  "the-botany-of-desire-by-pollen": [
+  "the-botany-of-desire": [
     "Queen_of_the_Night_Tulip.png",
     "Semper_Augustus_Tulip.png"
   ],
