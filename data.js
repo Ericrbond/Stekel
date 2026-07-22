@@ -603,7 +603,7 @@ const DEWEY = [
         "t": "A Random Walk Down Wall Street",
         "a": "Burton Gordon Malkiel",
         "k": "book",
-        "slug": "a-random-walk-down-wall-street-by-malkiel",
+        "slug": "a-random-walk-down-wall-street",
         "dewey": "332.6"
       },
       {
