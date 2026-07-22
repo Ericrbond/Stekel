@@ -898,54 +898,79 @@ const DEWEY = [
         "slug": "best-things-first",
         "imageMap": {
           "Summary": [
-                    "Overview_of_Best_Things_First_Policies.jpeg"
+            "Overview_of_Best_Things_First_Policies.jpeg"
           ],
           "Ch 2: Promises, promises": [
-                    "Figure_2.3_Global_Fulfillment_of_all_SDGs_based_on_2000-2021_data.jpeg",
-                    "Figure_2.4_Global_and_low-to_high-_income_country_groups_on_all_SDGs.jpeg",
-                    "SDG_Goals_per_current_trends.jpeg"
+            "Figure_2.1_Death_of_Children_under_5_yo__in_millions__1990-2019.jpeg",
+            "Figure_2.3_Global_Fulfillment_of_all_SDGs_based_on_2000-2021_data.jpeg",
+            "Figure_2.4_Global_and_low-to_high-_income_country_groups_on_all_SDGs.jpeg",
+            "SDG_Goals_per_current_trends.jpeg"
           ],
           "Ch 3: Do the smartest solutions first": [
-                    "Figure_3.1_The_annual_cost_for_each_of_the_12_policies_proposed_in_the_book.jpeg"
+            "Figure_3.1_The_annual_cost_for_each_of_the_12_policies_proposed_in_the_book.jpeg"
           ],
           "Ch 5: Education": [
-                    "Figure_5.1_Global_Fulfillment_of_SDG4_Education.jpeg"
+            "Figure_5.1_Global_Fulfillment_of_SDG4_Education.jpeg",
+            "Figure_5.2_Four_New_Delhi_math_classes__where_each_student__a_circle__has_been_assessed_on_his_or_her_actual_level_of_achievement..jpeg",
+            "Table_5.1_Education_policies__annual_costs_and_benefits_per_student_in_dollars__and_benefit-cost_ratios..jpeg"
           ],
-          "Ch 7: Agricultural R&amp;D: More and cheaper food": [
-                    "Figure_7.1_Share_of_the_global_population_that_is_undernourished_1928-2022..jpeg",
-                    "Figure_7.2_Share_of_the_global_population_in_poverty_1820-2022..jpeg",
-                    "Figure_7.3_Global_cereal_yields_1850-2021..jpeg",
-                    "Figure_7.4_Global_Grain_poroduction_1926-1938_and_1949-2021.jpeg",
-                    "Agricultural_Investment.jpeg",
-                    "Figure_7.6_Share_of_the_workforce_in_agriculture_1800-2019.jpeg",
-                    "Figure_7.7_Share_of_the_global_population_that_is_undernour-ished1990-2056.jpeg"
+          "Ch 6: Maternal and newborn health": [
+            "Figure_6.1_Maternal_deaths_in_percent_of_all_live_births__1800-2020.jpeg",
+            "Figure_6.2_Estimated_global_newborn_deaths__first_28_days__in_percent_of_all_live_births_from_1800-2021.jpeg",
+            "Figure_6.3_Scaling_up_BEmONC_and_family_planning_to_90__coverage.jpeg"
+          ],
+          "Ch 7: Agricultural R&D: More and cheaper food": [
+            "Figure_7.1_Share_of_the_global_population_that_is_undernourished_1928-2022..jpeg",
+            "Figure_7.2_Share_of_the_global_population_in_poverty_1820-2022..jpeg",
+            "Figure_7.3_Global_cereal_yields_1850-2021..jpeg",
+            "Figure_7.4_Global_Grain_poroduction_1926-1938_and_1949-2021.jpeg",
+            "Figure_7.5_Global_Food_Prices__1900-2023._From_1960_the_World_Bank_Agriculture_Commodity_Price_Index_before_20_grown_commodities.jpeg",
+            "Agricultural_Investment.jpeg",
+            "Figure_7.6_Share_of_the_workforce_in_agriculture_1800-2019.jpeg",
+            "Figure_7.7_Share_of_the_global_population_that_is_undernour-ished1990-2056.jpeg",
+            "Figure_7.10_Number_of_people_hungry_under_baseline_and_ever_more_abitious_R_D_investment.jpeg"
           ],
           "Ch 8: Malaria": [
-                    "Figure_8.1_Global_malaria_death_rate_1900-2021.jpeg",
-                    "Figure_8.2_Regional_malaria_death_rates_1900-2021.jpeg",
-                    "Figure_8.4_Malaria_deaths_2000-2021.jpeg",
-                    "Figure_8.5_Incremental_costs_of_increasing_the_coverage_of_LLINs_and_awareness_campaigns_from_2023-2030.jpeg"
+            "Figure_8.1_Global_malaria_death_rate_1900-2021.jpeg",
+            "Figure_8.2_Regional_malaria_death_rates_1900-2021.jpeg",
+            "Figure_8.4_Malaria_deaths_2000-2021.jpeg",
+            "Figure_8.5_Incremental_costs_of_increasing_the_coverage_of_LLINs_and_awareness_campaigns_from_2023-2030.jpeg"
           ],
           "Ch 10: Nutrition": [
-                    "Figure_10.2_Global_number_of_stunted_children_1990-2020.jpeg"
+            "Figure_10.1_Stunting_of_children_under_five_years_of_age__from_1900_to_2020..jpeg",
+            "Figure_10.2_Global_number_of_stunted_children_1990-2020.jpeg",
+            "Table_10.5_Summary_of_nutrition_policies__annual_benefits_and_costs_in_million_dollars__and_benefit-cost_ratio.PNG"
           ],
           "Ch 11: Chronic Diseases": [
-                    "Figure_11.4_Causes_of_the_Worlds_56.5M_deaths_in_2019.jpeg",
-                    "Figure_11.5_Number_of_Deaths_from_Infectious_Diseases_and_NCDs.jpeg",
-                    "Figure_11.6_Number_of_cigarettes_smoked_per_adult_man_and_woman_in_the_USA.jpeg",
-                    "Table_11.1_Best_to_worst_chronic_disease_interventions_across_all_low-and_lower-middle-income_countries.jpeg"
+            "Figure_11.1_Death_rate_of_infectious_diseases__cancer__and_cardiovascular_disease.jpeg",
+            "Figure_11.3_Death_rates_of_infectious_diseases__cancer__and_cardiovascular_disease_and_total_death_per_100_000_for_the_USA_1900-2022__standardizzed_to_the_2000_US_population.jpeg",
+            "Figure_11.4_Causes_of_the_Worlds_56.5M_deaths_in_2019.jpeg",
+            "Figure_11.5_Number_of_Deaths_from_Infectious_Diseases_and_NCDs.jpeg",
+            "Table_11.2_Overview_of_tobacco__al-cohol__fat__and_salt_regulations_and_taxes_for_all_low-_and_lower-middle-income_countries..jpeg",
+            "Figure_11.6_Number_of_cigarettes_smoked_per_adult_man_and_woman_in_the_USA.jpeg",
+            "Table_11.1_Best_to_worst_chronic_disease_interventions_across_all_low-and_lower-middle-income_countries.jpeg",
+            "Tax_and_Regulations_Change_for_Alcohol__Tarns_Fat__Salts__and_Cigarettes.jpeg"
           ],
           "Ch 12: Childhood immunization": [
-                    "Figure_12.1_Average_annual_US_cases_of_vaccine-preventable_diseases_over_the_20th_century_and_today..jpeg",
-                    "Figure_12.3_Vaccine_rates_for_measles_and_DTP3_1980-2021..jpeg"
+            "Figure_12.1_Average_annual_US_cases_of_vaccine-preventable_diseases_over_the_20th_century_and_today..jpeg",
+            "Figure_12.3_Vaccine_rates_for_measles_and_DTP3_1980-2021..jpeg",
+            "Figure_12.4_Lives_saved_for_each_birth_year_2001-2030_.jpeg",
+            "Figure_12.5_Annual_avoided_deaths_by_birth_year__2000-2030__with_and_without_additional_vaccines_from_2023.jpeg"
           ],
           "Ch 13: More trade": [
-                    "Figure_13.2_Gains_of_trade_for_different_nations.jpeg"
+            "Figure_13.2_Gains_of_trade_for_different_nations.jpeg",
+            "Table_13.1_5__more_trade_from_2023-2072__costs_and_benefits_in_billion_dollars..jpeg"
+          ],
+          "Ch 14: Increase Highly skilled migration by 10%": [
+            "Figure_14.1_Global_inequality_1820-2018_.jpeg",
+            "Figure_14.2_Median_wages_for_similar_work_in_countries_with_less_than__12_000_in_GDP_per_person_.jpeg",
+            "Table_14.1_10__rise_in_skilled_migration_globally__benefits_and_costs_in_billion_dollars__and_benefit-cost_ratios..jpeg"
           ],
           "Ch 15: Land tenure security": [
-                    "Table_15.6_Summary_of_benefit-cost_analysis_for_land_tenure_security_in_sub-Saharan_Africa_billion_dollars_over_30_years..jpeg"
+            "Table_15.4_Rural_land_registration_costs_and_benefits_in_billion_dollars_over_30_years_.jpeg",
+            "Table_15.6_Summary_of_benefit-cost_analysis_for_land_tenure_security_in_sub-Saharan_Africa_billion_dollars_over_30_years..jpeg"
           ]
-},
+        },
         "dewey": "363.7"
       },
       {
