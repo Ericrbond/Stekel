@@ -148,8 +148,8 @@
         const nextH1 = i + 1 < opens.length ? opens[i+1].index : html.length;
         // Inject before the section-divider line that precedes the next heading, not after it.
         const lookback = html.slice(Math.max(0, nextH1 - 300), nextH1);
-        const sepMatch = lookback.match(/(<p><strong>_{10,}<\/strong><\/p>\s*)$/);
-        const insertAt = sepMatch ? nextH1 - sepMatch[1].length : nextH1;
+        const sepMatch = lookback.match(/(?:<p><strong>_{10,}<\/strong><\/p>|<hr\s*\/?>)\s*$/);
+        const insertAt = sepMatch ? nextH1 - sepMatch[0].length : nextH1;
         result += html.slice(pos, insertAt);
         result += `<div class="pg-inline-gallery">${imgs.map(f => figHTML(f, true)).join("")}</div>`;
         pos = insertAt;
