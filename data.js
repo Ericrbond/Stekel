@@ -1179,7 +1179,7 @@ const DEWEY = [
         "k": "book",
         "slug": "the-planets",
         "imageMap": {
-          "Summary­": [
+          "Sun": [
                     "Solar_Prominence.jpeg",
                     "Sun9.jpeg"
           ],
