@@ -627,6 +627,7 @@ footer.foot::before {
 .mirror a:hover { color: var(--clay-deep); }
 .mirror blockquote { margin: 1rem 0; padding: .5rem 0 .5rem 1.1rem; border-left: 3px solid var(--hair); color: var(--muted); font-style: italic; }
 .mirror strong, .mirror b { color: var(--ink); }
+.mirror u { text-decoration: underline; text-underline-offset: 2px; }
 .mirror hr { border: 0; border-top: 1px solid var(--hair); margin: 2.2rem 0; width: 100%; }
 .mirror table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .92rem; }
 .mirror td, .mirror th { border: 1px solid var(--hair); padding: .5rem .7rem; text-align: left; }
