@@ -199,7 +199,19 @@
     if (imgIdx < list.length) result += `<div class="pg-inline-gallery">${list.slice(imgIdx).map((f) => figHTML(f, true)).join("")}</div>`;
     return result;
   }
-  // For pages with NO article text: shows a bottom image grid (museum/guide cover shots).
+  function styleReadingHeadings(article) {
+    article.querySelectorAll('p').forEach(function(p) {
+      if (/^_+$/.test(p.textContent.trim())) p.replaceWith(document.createElement('hr'));
+    });
+    article.querySelectorAll('h1').forEach(function(h) {
+      if (h.textContent.trim().startsWith('---')) {
+        h.classList.add('sect-label');
+        h.innerHTML = h.innerHTML.replace(/---\s*/, '');
+      }
+    });
+    article.querySelectorAll('h1.sect-label + hr').forEach(function(hr) { hr.remove(); });
+  }
+    // For pages with NO article text: shows a bottom image grid (museum/guide cover shots).
   function galleryHTML(slug, skipCover) {
     const list = pageImages(slug, skipCover);
     if (!list.length) return "";
@@ -637,6 +649,8 @@
         ${next ? `<a class="pn pn-next" href="#/item/${encodeURIComponent(next.slug)}"><span class="pn-dir">Next →</span><span class="pn-t">${esc(next.t)}</span></a>` : "<span></span>"}
       </nav>`;
     if (x.slug) { initRatings(x.slug, root); initComments(x.slug, root); }
+    const readEl = root.querySelector('article.mirror.reading');
+    if (readEl) styleReadingHeadings(readEl);
     // related items — scored by Dewey class match, author match, keyword overlap
     (function buildRelated() {
       const xWords = new Set((x.t + " " + (x.a || "") + " " + x.section).toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter((w) => w.length > 3));
@@ -695,6 +709,8 @@
       ${floatCover}
       ${opts.extra || ""}
       ${full ? `<article class="mirror reading">${injectImagesInline(full, opts.slug, false)}</article>` : `<p class="m-blurb">${esc(opts.fallback || "No further content recorded.")}</p>${galleryHTML(opts.slug, false)}`}`;
+    const rcEl = root.querySelector('article.mirror.reading');
+    if (rcEl) styleReadingHeadings(rcEl);
     view.append(root);
   }
 
