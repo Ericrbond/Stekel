@@ -209,7 +209,6 @@
         h.innerHTML = h.innerHTML.replace(/---\s*/, '');
       }
     });
-    article.querySelectorAll('h1.sect-label + hr').forEach(function(hr) { hr.remove(); });
   }
     // For pages with NO article text: shows a bottom image grid (museum/guide cover shots).
   function galleryHTML(slug, skipCover) {

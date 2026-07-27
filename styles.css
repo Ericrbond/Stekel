@@ -619,8 +619,7 @@ footer.foot::before {
 .mirror.reading h3 { font-size: 1.2rem; margin-top: 1.8rem; }
 .mirror.reading h1:first-child { margin-top: 0; }
 .mirror.reading hr { border: 0; border-top: 2px solid var(--hair); margin: 2.8rem 0 0; }
-.mirror.reading h1.sect-label { font-family: var(--sans); font-size: .95rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--clay); margin: 1.5rem 0 0; }
-.mirror.reading h1.sect-label + h1 { margin-top: 1.25rem; }
+.mirror.reading h1.sect-label { font-size: clamp(1.5rem, 3.5vw, 1.75rem); font-weight: 700; letter-spacing: -.025em; color: var(--clay); margin-top: 1.75rem; }
 .mirror p { margin: 0 0 1rem; }
 .mirror ul, .mirror ol { margin: 0 0 1rem; padding-left: 1.3rem; }
 .mirror li { margin: .35rem 0; }
