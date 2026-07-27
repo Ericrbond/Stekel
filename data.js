@@ -1677,7 +1677,26 @@ const DEWEY = [
         "a": "Andrew H. Knoll",
         "k": "book",
         "slug": "a-brief-history-of-earth",
-        "galleryEnd": true,
+        "imageMap": {
+          "Summary": [
+            "3.45_Ga_Stromatolites_from_W._Australia.jpeg",
+            "375_Ma_Tiktaalik.jpeg",
+            "A_Compilation_of_the_genus_level_diversity_of_marine_animals_through_time.jpeg",
+            "Archaeopteryx_lithographica.jpeg",
+            "Cambrian_Shale_Trilobites.jpeg",
+            "Elements_in_the_Earth_vs._Human_Body.jpeg",
+            "Global_Temperatures_over_the_past_140_years.jpeg",
+            "Hominin_relationships_and_species.jpeg",
+            "Kimberella-quadrata.jpg",
+            "Opabinina-_an_extinct_relative_of_arthropods.jpeg",
+            "Orogenesis-_Knoll.jpeg",
+            "placozoan.png",
+            "The_Geological_Time_Scale-_International_Chronostratigraphic_Chart_version_202.jpeg",
+            "The_K-Pg_boundary_in_Gubbio__Italy.jpeg",
+            "Trichoplax_adhaerens_and_its_proposed_evolutionary_relationship_to_Ediacaran_and_living_animals.jpeg",
+            "Trichoplax_adhaerens.png"
+          ]
+        },
         "dewey": "551.7"
       },
       {
