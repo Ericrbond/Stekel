@@ -206,7 +206,7 @@
     article.querySelectorAll('h1').forEach(function(h) {
       if (h.textContent.trim().startsWith('---')) {
         h.classList.add('sect-label');
-        h.innerHTML = h.innerHTML.replace(/---\s*/, '');
+        h.innerHTML = h.innerHTML.replace(/---/g, '').trim();
       }
     });
   }
