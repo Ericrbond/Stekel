@@ -151,7 +151,32 @@ const DEWEY = [
         "a": "Hans Rosling",
         "k": "book",
         "slug": "factfulness",
-        "galleryEnd": true,
+        "imageMap": {
+          "Summary": [
+            "Factfulness_Rules_of_Thumb.jpeg",
+            "Income_Level_v._Lifespan.png",
+            "1800-Today_Extreme_Poverty.jpeg",
+            "1800-_Today_Average_Life_Expetancy.jpeg",
+            "16_Bad_Things_Decreasing.jpeg",
+            "16_Bad_Things_Decreasing_2.jpeg",
+            "16_Good_Things_Increasing_1.jpeg",
+            "16_Good_Things_Increasing_2.jpeg",
+            "8000_BCE-_Today_World_Population.jpeg",
+            "Future_World_Population_Forecast.jpeg",
+            "Future_World_Population_Forecast_by_Age_Group.jpeg",
+            "1800-Today_Average_number_of_babies_per_woman.jpeg",
+            "Future_World_Population_by_Age_Group.jpeg",
+            "Babies_per_Woman_by_Income_Level.jpeg",
+            "1900-Present_Deaths_by_Disaster.jpeg",
+            "1900-Present_Death_by_Battle.jpeg",
+            "Life_on_the_Four_Income_Levels.jpeg",
+            "People_by_Region_and_Income.jpeg",
+            "1800-Today_Swedens_Wealth_and_Poverty.jpeg",
+            "2016_Global_Energy_Sources.jpeg",
+            "Wartime_Fatalities_by_World_Population_PErcentage.png",
+            "World_Population.jpeg"
+          ]
+        },
         "dewey": "153.4"
       },
       {
