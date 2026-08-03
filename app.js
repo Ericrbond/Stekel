@@ -586,7 +586,7 @@
         list.innerHTML = cs.length ? cs.map(commentCard).join('') : '<p class="comment-placeholder">No notes yet — be the first.</p>';
         setCommentLink(cs.length);
       })
-      .catch(() => { list.innerHTML = '<p class="comment-placeholder">Couldn\'t load notes.</p>'; });
+      .catch(() => { list.innerHTML = '<p class="comment-placeholder">Couldn\'t load notes.</p>'; setCommentLink(0); });
     sec.querySelector('#commentForm').addEventListener('submit', async e => {
       e.preventDefault();
       const form = e.target;
