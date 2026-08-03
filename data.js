@@ -200,7 +200,8 @@ const DEWEY = [
         "a": "Lisa Feldman Barrett",
         "k": "book",
         "slug": "7-1/2-lessons",
-        "dewey": "153.4"
+        "dewey": "153.4",
+        "imageMap": {"Summary": ["Allostasis.jpeg","Affect_or_Mood.jpeg","Neuron_Hubs.jpeg","Neurons_and_their_Wiring.jpeg","Triune_Brain_Idea.jpeg"]}
       },
       {
         "t": "Stealing Fire",
@@ -4942,7 +4943,7 @@ var PAGE_IMAGES = {
   "21-lessons-for-the-21-century": [
     "The_Liberal_Set_Menu.jpeg"
   ],
-  "2-lessons": [
+  "7-1/2-lessons": [
     "Affect_or_Mood.jpeg",
     "Allostasis.jpeg",
     "Neuron_Hubs.jpeg",
