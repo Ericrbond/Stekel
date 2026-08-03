@@ -2077,6 +2077,14 @@ const DEWEY = [
         "dewey": "614.57"
       },
       {
+        "t": "Immune",
+        "a": "Phillip Dettmer",
+        "k": "book",
+        "slug": "immune",
+        "galleryEnd": true,
+        "dewey": "616.07"
+      },
+      {
         "t": "Killer Germs",
         "a": "Barry & David Zimmerman",
         "k": "book",
@@ -2538,14 +2546,6 @@ const DEWEY = [
         "a": "Riley Black",
         "k": "book",
         "slug": "deep-time",
-        "galleryEnd": true,
-        "dewey": "808"
-      },
-      {
-        "t": "Immune",
-        "a": "Phillip Dettmer",
-        "k": "book",
-        "slug": "immune",
         "galleryEnd": true,
         "dewey": "808"
       },
