@@ -1188,7 +1188,9 @@ const DEWEY = [
         "a": "Michiel Kaku",
         "k": "book",
         "slug": "the-future-of-humanity",
-        "galleryEnd": true,
+        "imageMap": {
+          "The SLS/Orion Rocket": ["Space_Travel_Rocket_Size.png"]
+        },
         "dewey": "523.1"
       },
       {
