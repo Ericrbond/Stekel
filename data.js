@@ -115,7 +115,8 @@ const DEWEY = [
         "a": "Yuval Noah Harari",
         "k": "book",
         "slug": "21-lessons-for-the-21-century",
-        "dewey": "128.4"
+        "dewey": "128.4",
+        "galleryEnd": true
       },
       {
         "t": "Against Empathy",
@@ -4142,7 +4143,8 @@ const COVERS = {
     "c": 9155814
   },
   "A Conflict of Visions": {
-    "c": 15166962
+    "c": 15166962,
+    "local": "A_Conflict_of_Visions_by_Sowell.jpeg"
   },
   "A Life On Our Planet": {
     "c": 10508997, "local": "A_Life_on_Our_Planet_by_Attenborough.jpeg" },
