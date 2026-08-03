@@ -4503,7 +4503,7 @@ const COVERS = {
   "Killer Germs": { "c": 594074 },
   "Drink": { "c": 10405782 },
   "The Champions Mind": { "c": 14370897 },
-  "1984": { "c": 8745958 },
+  "1984": { "c": 8745958, "local": "1984_by_Orwell.jpg" },
   "All Quiet on the Western Front": { "c": 10655404 },
   "Paradise Lost": { "c": 5992814 },
   "The Body": { "local": "The_Body_by_Bryson.png", "c": 12722746 },
