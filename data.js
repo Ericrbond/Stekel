@@ -379,65 +379,6 @@ const DEWEY = [
         "a": "Stephen Fry",
         "k": "book",
         "slug": "heroes",
-        "imageMap": {
-          "Summary": [
-                    "Olympic_Gods_Family_Tree.jpeg",
-                    "The_World_of_Greek_Myths.jpeg",
-                    "The_Pythia_at_Delphi.jpeg",
-                    "The_Tribute.jpeg"
-          ],
-          "PERSEUS": [
-                    "Danae_and_Perseus_rescued_from_the_wooden_box.jpeg",
-                    "Perseus_holds_the_head_of_Medusa__whose_body_lies_on_the_ground.jpeg",
-                    "Perseus_rescues_Andromeda_from_the_sea_dragon_Cetus.jpeg",
-                    "The_Head_of_Medusa.jpeg",
-                    "The_Shower_of_Gold.jpeg"
-          ],
-          "HERACLES (‘Hercules’)": [
-                    "The_infant_Heracles_choking_a_snake.jpeg",
-                    "The_creation_of_the_Milky_Way.jpeg",
-                    "Heracles_First_Labor_the_Great_Nemean_Lion.jpeg",
-                    "Heracles_with_his_lion_skin__club__and_bow.jpeg",
-                    "Heracles_holds_the_Erymanthian_Boar_over_Eurystheus.jpeg",
-                    "An_Amazon_defending_herself_from_one_of_Heracles_men.jpeg",
-                    "The_Garden_of_the_Hesperides.jpeg",
-                    "Prometheus_punishment.jpeg",
-                    "The_Olympians_triumphant_on_Mount_Olympus.jpeg"
-          ],
-          "BELLEROPHON": [
-                    "Pegasus_and_Bellerophon.jpeg"
-          ],
-          "ORPHEUS": [
-                    "Orpheus_plays_for_love__before_Hades_and_Persephone.jpeg",
-                    "Orpheus_turns_too_quickly.jpeg"
-          ],
-          "JASON": [
-                    "Hylas_and_the_nymphs.jpeg",
-                    "Jason_finds_the_Golden_Fleece.jpeg",
-                    "Jason_taming_the_Khalkotauroi.jpeg",
-                    "Medea_tames_the_Colchis_Dragon.jpeg",
-                    "Medea.jpeg",
-                    "The_Clashing_Rocks.jpeg",
-                    "Voyage_of_the_Argo.jpeg"
-          ],
-          "ATALANTA": [
-                    "The_Calydonian_Hunt.jpeg",
-                    "The_Foot_Race_with_Atalanta.jpeg"
-          ],
-          "OEDIPUS": [
-                    "Oedipus_answers_the_riddle_of_the_Sphinx.jpeg"
-          ],
-          "THESEUS": [
-                    "Ariadne_abandoned.jpeg",
-                    "The_art_of_bull-leaping.jpeg",
-                    "The_Cretan_Labyrinth.jpeg",
-                    "The_Fall_of_Icarus.jpeg",
-                    "The_Labors_of_Theseus.jpeg",
-                    "The_Minotaur.jpeg",
-                    "Theseus_and_the_Marathonian_Bull.jpeg",
-                    "Theseus_in_Athens_Syntagma_Square.jpeg"
-          ]
-},
         "dewey": "292.13"
       },
       {
