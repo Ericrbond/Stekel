@@ -552,31 +552,33 @@
       </form>`;
     const list = sec.querySelector('#commentsList');
     function setCommentLink(count) {
-      const wrap = root.querySelector('#commentLink');
-      if (!wrap) return;
-      const a = document.createElement('a');
-      a.className = 'comment-quick-link' + (count ? '' : ' comment-quick-link--empty');
-      a.href = '#';
-      a.textContent = count ? `${count} ${count === 1 ? 'comment' : 'comments'}` : 'Leave a comment';
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const pending = [...root.querySelectorAll('article img')].filter(img => !img.complete);
-        const doScroll = () => {
-          const navH = document.querySelector('header.nav')?.offsetHeight || 72;
-          window.scrollTo(0, sec.getBoundingClientRect().top + window.scrollY - navH);
-        };
-        if (!pending.length) { doScroll(); return; }
-        // Force lazy images above comments to load so layout is stable before measuring
-        pending.forEach(img => { img.loading = 'eager'; });
-        let n = pending.length;
-        const tick = () => { if (--n <= 0) doScroll(); };
-        pending.forEach(img => {
-          img.addEventListener('load', tick, { once: true });
-          img.addEventListener('error', tick, { once: true });
+      const makeLink = () => {
+        const a = document.createElement('a');
+        a.className = 'comment-quick-link' + (count ? '' : ' comment-quick-link--empty');
+        a.href = '#';
+        a.textContent = count ? `${count} ${count === 1 ? 'comment' : 'comments'}` : 'Leave a comment';
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          const pending = [...root.querySelectorAll('article img')].filter(img => !img.complete);
+          const doScroll = () => {
+            const navH = document.querySelector('header.nav')?.offsetHeight || 72;
+            window.scrollTo(0, sec.getBoundingClientRect().top + window.scrollY - navH);
+          };
+          if (!pending.length) { doScroll(); return; }
+          pending.forEach(img => { img.loading = 'eager'; });
+          let n = pending.length;
+          const tick = () => { if (--n <= 0) doScroll(); };
+          pending.forEach(img => {
+            img.addEventListener('load', tick, { once: true });
+            img.addEventListener('error', tick, { once: true });
+          });
+          setTimeout(doScroll, 3000);
         });
-        setTimeout(doScroll, 3000);
+        return a;
+      };
+      [root.querySelector('#commentLink'), root.querySelector('#commentLinkEnd')].forEach(wrap => {
+        if (wrap) wrap.replaceChildren(makeLink());
       });
-      wrap.replaceChildren(a);
     }
     fetch('/api/comments?slug=' + encodeURIComponent(slug))
       .then(r => r.json())
@@ -642,6 +644,7 @@
         </div>
       </div>
       ${full ? `<article class="mirror reading">${x.galleryEnd ? full : injectImagesInline(full, x.slug, x.k === "book", x.imageMap)}</article>${x.galleryEnd ? galleryHTML(x.slug, x.k === "book") : ''}` : galleryHTML(x.slug, x.k === "book")}
+      <div class="comment-link-wrap comment-link-wrap--end" id="commentLinkEnd"></div>
       <section class="comments-section" id="commentsSection"></section>
       <nav class="prevnext">
         ${prev ? `<a class="pn pn-prev" href="#/item/${encodeURIComponent(prev.slug)}"><span class="pn-dir">← Previous</span><span class="pn-t">${esc(prev.t)}</span></a>` : "<span></span>"}

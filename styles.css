@@ -718,6 +718,7 @@ a.m-class:hover { border-color: var(--clay); transform: translateY(-2px); }
 .comment-quick-link { font-size: .85rem; color: var(--clay); text-decoration: none; font-weight: 500; }
 .comment-quick-link:hover { text-decoration: underline; text-underline-offset: 2px; }
 .comment-quick-link--empty { color: var(--muted); font-weight: 400; }
+.comment-link-wrap--end { margin-top: 2rem; border-top: 1px solid var(--rule); padding-top: 1.2rem; }
 
 /* ── Star ratings ── */
 .rating-widget { margin-top: 1.4rem; }
