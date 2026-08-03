@@ -131,6 +131,8 @@
     const list = pageImages(slug, skipCover);
     if (!list.length) return html;
     if (!html) return `<div class="pg-inline-gallery">${list.map((f) => figHTML(f, true)).join("")}</div>`;
+    // Resolve CDN-relative image tokens embedded directly in content.
+    if (html.includes("{{CDN}}")) html = html.replace(/\{\{CDN\}\}/g, CDN_BASE);
     // Already has inline images from the mirrored content — don't duplicate.
     if (html.includes("pg-fig-inline")) return html;
     // Section-mapped placement: inject images after the section CONTENT (before the next heading).
