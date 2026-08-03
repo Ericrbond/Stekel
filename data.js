@@ -1041,13 +1041,6 @@ const DEWEY = [
         "dewey": "394.1"
       },
       {
-        "t": "Ayatollah Begs To Differ",
-        "a": "Hooman Majd",
-        "k": "book",
-        "slug": "ayatollah-begs-to-differ",
-        "dewey": "955.054"
-      },
-      {
         "t": "100 Years of Sea Power",
         "a": "George Baer",
         "k": "book",
@@ -1758,6 +1751,14 @@ const DEWEY = [
         "slug": "hiking-the-southwests-geology",
         "galleryEnd": true,
         "dewey": "557"
+      },
+      {
+        "t": "Deep Time",
+        "a": "Riley Black",
+        "k": "book",
+        "slug": "deep-time",
+        "galleryEnd": true,
+        "dewey": "560"
       },
       {
         "t": "Gray Fossil Site",
@@ -2542,14 +2543,6 @@ const DEWEY = [
         "dewey": "808"
       },
       {
-        "t": "Deep Time",
-        "a": "Riley Black",
-        "k": "book",
-        "slug": "deep-time",
-        "galleryEnd": true,
-        "dewey": "808"
-      },
-      {
         "t": "Morning Star",
         "a": "Pierce Brown",
         "k": "book",
@@ -3198,6 +3191,13 @@ const DEWEY = [
         "slug": "freedom-at-midnight",
         "galleryEnd": true,
         "dewey": "954.042"
+      },
+      {
+        "t": "Ayatollah Begs To Differ",
+        "a": "Hooman Majd",
+        "k": "book",
+        "slug": "ayatollah-begs-to-differ",
+        "dewey": "955.054"
       },
       {
         "t": "Istanbul Airport Museum",
