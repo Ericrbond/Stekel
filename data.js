@@ -2018,6 +2018,13 @@ const DEWEY = [
         "dewey": "610.92"
       },
       {
+        "t": "The Body",
+        "a": "Bill Bryson",
+        "k": "book",
+        "slug": "the-body",
+        "dewey": "612"
+      },
+      {
         "t": "The Future of the Mind",
         "a": "Michio Kaku",
         "k": "book",
@@ -2733,13 +2740,6 @@ const DEWEY = [
         "a": "Azar Nafisi",
         "k": "book",
         "slug": "reading-lolita-in-tehran",
-        "dewey": "814"
-      },
-      {
-        "t": "The Body",
-        "a": "Bill Bryson",
-        "k": "book",
-        "slug": "the-body",
         "dewey": "814"
       },
       {
@@ -4553,7 +4553,7 @@ const COVERS = {
   "1984": { "c": 8745958 },
   "All Quiet on the Western Front": { "c": 10655404 },
   "Paradise Lost": { "c": 5992814 },
-  "The Body": { "c": 12722746 },
+  "The Body": { "local": "The_Body_by_Bryson.png", "c": 12722746 },
   "Troy": { "c": 10657530 },
   "Wash Your Hands": { "c": 2116237 },
   "Zorba the Greek": { "c": 13336342 },
