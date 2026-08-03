@@ -453,6 +453,7 @@ const DEWEY = [
         "a": "Michael Pollan",
         "k": "book",
         "slug": "the-botany-of-desire",
+        "galleryEnd": true,
         "dewey": "304.2"
       },
       {
