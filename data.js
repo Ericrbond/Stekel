@@ -388,6 +388,7 @@ const DEWEY = [
           ],
           "PERSEUS": [
                     "Danae_and_Perseus_rescued_from_the_wooden_box.jpeg",
+                    "Perseus_holds_the_head_of_Medusa__whose_body_lies_on_the_ground.jpeg",
                     "Perseus_rescues_Andromeda_from_the_sea_dragon_Cetus.jpeg",
                     "The_Head_of_Medusa.jpeg",
                     "The_Shower_of_Gold.jpeg"
@@ -396,6 +397,7 @@ const DEWEY = [
                     "The_infant_Heracles_choking_a_snake.jpeg",
                     "The_creation_of_the_Milky_Way.jpeg",
                     "Heracles_First_Labor_the_Great_Nemean_Lion.jpeg",
+                    "Heracles_with_his_lion_skin__club__and_bow.jpeg",
                     "Heracles_holds_the_Erymanthian_Boar_over_Eurystheus.jpeg",
                     "An_Amazon_defending_herself_from_one_of_Heracles_men.jpeg",
                     "The_Garden_of_the_Hesperides.jpeg",
@@ -406,6 +408,7 @@ const DEWEY = [
                     "Pegasus_and_Bellerophon.jpeg"
           ],
           "ORPHEUS": [
+                    "Orpheus_plays_for_love__before_Hades_and_Persephone.jpeg",
                     "Orpheus_turns_too_quickly.jpeg"
           ],
           "JASON": [
