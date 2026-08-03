@@ -2863,7 +2863,10 @@ const DEWEY = [
         "a": "James Joyce",
         "k": "book",
         "slug": "ulysses",
-        "galleryEnd": true,
+        "imageMap": {
+          "Summary": ["Ulysses_Map.jpg", "Odysseus_Journey.png"],
+          "13 Nausicaa": ["Gerty_MacDowell.jpg"]
+        },
         "dewey": "823"
       },
       {
