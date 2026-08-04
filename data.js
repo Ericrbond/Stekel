@@ -423,7 +423,6 @@ const DEWEY = [
         "a": "Philip E. Tetlock",
         "k": "book",
         "slug": "superforecasting",
-        "galleryEnd": true,
         "dewey": "303.49"
       },
       {
