@@ -223,8 +223,9 @@
   function card(x) {
     const a = el("a", "card reveal");
     a.href = "#/item/" + encodeURIComponent(x.slug || "");
+    const myRating = x.slug ? parseInt(localStorage.getItem('stekel_rating_' + x.slug)) || 0 : 0;
     a.innerHTML = `
-      <div class="card-cover">${coverHTML(x, "M")}${x.slug ? starBtn(x.slug) : ""}</div>
+      <div class="card-cover">${coverHTML(x, "M")}${x.slug ? starBtn(x.slug) : ""}${myRating ? `<div class="card-rating">★ ${myRating}</div>` : ""}</div>
       <div class="card-body">
         <span class="kind ${x.k}">${kindLabel[x.k] || x.k}</span>
         <h4>${esc(x.t)}</h4>
@@ -389,6 +390,17 @@
   /* --- CATALOG --- */
   const cat = { q: "", kind: "all", code: null, sort: "title" };
   let ratingsMap = null;
+  function localRatingsMap() {
+    const m = {};
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith('stekel_rating_')) {
+        const v = parseInt(localStorage.getItem(k));
+        if (v) m[k.slice(14)] = { avg: v, count: 1 };
+      }
+    }
+    return m;
+  }
   function viewCatalog(code) {
     cat.code = code || null;
     const cm = code ? classMeta(code) : null;
@@ -469,7 +481,7 @@
       cat.sort = e.target.value;
       if (cat.sort === "rated" && !ratingsMap) {
         grid.innerHTML = '<div class="catalog-loading">Loading ratings…</div>';
-        try { ratingsMap = await fetch("/api/ratings?all=1").then((r) => r.json()); } catch { ratingsMap = {}; }
+        try { ratingsMap = await fetch("/api/ratings?all=1").then((r) => r.json()); } catch { ratingsMap = localRatingsMap(); }
       }
       draw();
     });

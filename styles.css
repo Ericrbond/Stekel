@@ -721,6 +721,7 @@ a.m-class:hover { border-color: var(--clay); transform: translateY(-2px); }
 .comment-link-wrap--end { margin-top: 2rem; border-top: 1px solid var(--rule); padding-top: 1.2rem; }
 
 /* ── Star ratings ── */
+.card-rating { position: absolute; bottom: .4rem; left: .4rem; background: rgba(0,0,0,.55); color: #ffd700; font-size: .72rem; font-weight: 700; padding: 2px 6px; border-radius: 4px; pointer-events: none; }
 .rating-widget { margin-top: 1.4rem; }
 .rating-row { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
 .rating-stars { display: flex; gap: 2px; }
