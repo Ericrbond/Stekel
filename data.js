@@ -1101,7 +1101,7 @@ const DEWEY = [
         "y": 1991,
         "p": "The Economist",
         "k": "book",
-        "slug": "numbers-guide-economist",
+        "slug": "numbers-guide",
         "dewey": "519.5"
       },
       {
