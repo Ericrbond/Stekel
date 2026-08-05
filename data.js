@@ -7156,18 +7156,7 @@ var PAGE_IMAGES = {
     "Ancient_Map_of_Galilee_Museum_of_the_Bible.jpeg",
     "Canaan_Museum_of_the_Bible.jpeg",
     "Lessons_from_the_New_England_Primer_Museum_of_the_Bible.jpeg",
-    "museum-of-the-bible_16751219 Attack on the Narragansett Museum of the Bible.jpeg",
-    "museum-of-the-bible_1688 The New England Primer Museum of the Bible.jpeg",
-    "museum-of-the-bible_1776 Common Sense by Thomas Paine Museum of the Bible.jpeg",
-    "museum-of-the-bible_1776 Restrictions on Religious Freedom in the Original 13 States Museum of the Bible.jpeg",
-    "museum-of-the-bible_1785 A Grammatical Institute of the English Language by Noah Webster Museum of the Bible.jpeg",
-    "museum-of-the-bible_1947 Muhammed edh-Dhib Hassan Discoverer of the Dead Sea Scrolls.jpeg",
-    "museum-of-the-bible_37 BCE The Second Temple in Jerusalem.jpeg",
-    "museum-of-the-bible_Ancient Map of Galilee Museum of the Bible.jpeg",
-    "museum-of-the-bible_Canaan Museum of the Bible.jpeg",
-    "museum-of-the-bible_Lessons from the New England Primer Museum of the Bible.jpeg",
-    "museum-of-the-bible_Museum of the Bible.png",
-    "museum-of-the-bible_The Gutenberg Press Museum of the Bible.jpeg"
+    "Museum_of_the_Bible.png"
   ],
   "my-life": [
     "19751011_Wedding_of_Bill_and_Hillary_Clinton.jpeg",
