@@ -353,6 +353,7 @@ const DEWEY = [
         "a": "",
         "k": "museum",
         "slug": "museum-of-the-bible",
+        "galleryEnd": true,
         "dewey": "220"
       },
       {
@@ -7173,31 +7174,18 @@ var PAGE_IMAGES = {
     "Bill_Clintons_Parents.jpeg"
   ],
   "mythos": [
-    "Apollo_v._Marsyus.jpeg",
-    "Arachne.jpeg",
-    "Athena_rises_from_her_father_Zeus.jpeg",
-    "Birth_of_Aphrodite.jpeg",
-    "Eros_and_Psyche.jpeg",
-    "Gaia-Ouranos_Family_Tree.jpeg",
-    "Infant_Zeus_with_Amalthea_on_Crete.jpeg",
-    "Kronos_devouring_his_son.jpeg",
-    "Kronos-Rhea_Family_Tree.jpeg",
-    "Pandora_and_her_Box.jpeg",
-    "Persephone_and_the_Seasons.jpeg",
-    "Phaeton_flying_to_close_to_the_sun.jpeg",
-    "Prometheus_bringing_fire_to_man.jpeg",
-    "The_9_Muses.jpeg",
     "The_Gods_of_Olympus.jpeg",
-    "The_Three_Fates.jpeg",
-    "World_of_the_Greek_Myths.jpeg",
-    "Zeus_punishes_Promotheus.jpeg",
     "1576_The_Olympian_Gods_with_Hercules_and_the_Muses_by_Zucchi_Uffizi_Gallery.jpeg",
     "The_Greek_Isle_Groups.jpeg",
     "2c_Bust_of_Zeus_Uffizi_Gallery.jpeg",
+    "Athena_rises_from_her_father_Zeus.jpeg",
     "Bust_of_Zeus_Uffizi_Gallery.jpeg",
+    "Infant_Zeus_with_Amalthea_on_Crete.jpeg",
     "1568_Hercules_Crowned_by_the_Muses_by_Allori_Uffizi_Gallery.jpeg",
+    "Zeus_punishes_Promotheus.jpeg",
     "Bust_of_Hercules_Uffizi_Gallery.jpeg",
-    "Hercules_slaying_the_Centaur_Nessus_Uffizi_Gallery.jpeg"
+    "Hercules_slaying_the_Centaur_Nessus_Uffizi_Gallery.jpeg",
+    "Apollo_v._Marsyus.jpeg"
   ],
   "namibia-independence-museum": [
     "1926-1941_Uukwangali_Ruler_Hompa_Kanuni_Namibian_Independence_Museum.jpeg",
