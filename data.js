@@ -274,7 +274,6 @@ const DEWEY = [
         "a": "John V. Petrocelli",
         "k": "book",
         "slug": "detecting-bullshit",
-        "galleryEnd": true,
         "dewey": "160"
       },
       {
@@ -311,7 +310,6 @@ const DEWEY = [
         "a": "Marcus Aurelius",
         "k": "book",
         "slug": "meditations",
-        "galleryEnd": true,
         "dewey": "188"
       },
       {
