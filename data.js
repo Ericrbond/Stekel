@@ -4557,6 +4557,7 @@ const COVERS = {
   "McClung Museum": {"local": "museum_mcclung-museum.jpg"},
   "Museum Of The Bible": {"local": "museum_museum-of-the-bible.png"},
   "Museum of the Future": {"local": "Futures_Museum_Dubai.png"},
+  "Linden Museum": {"local": "Linden_Museum_Stuttgart.png"},
   "National Air And Space Museum": {"local": "museum_national-air-and-space-museum.png"},
   "National Museum of the Marine Corps": {"local": "museum_usmc-museum.png"},
   "Anchorage Museum": {"local": "museum_anchorage-museum.png"},
