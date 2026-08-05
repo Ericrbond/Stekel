@@ -657,7 +657,7 @@
           <div class="comment-link-wrap" id="commentLink"></div>
         </div>
       </div>
-      ${full ? `<article class="mirror reading">${x.galleryEnd ? full : injectImagesInline(full, x.slug, x.k === "book", x.imageMap)}</article>${x.galleryEnd ? galleryHTML(x.slug, x.k === "book") : ''}` : galleryHTML(x.slug, x.k === "book")}
+      ${full ? `<article class="mirror reading">${x.galleryEnd ? full.replace(/\{\{CDN\}\}/g, CDN_BASE) : injectImagesInline(full, x.slug, x.k === "book", x.imageMap)}</article>${x.galleryEnd ? galleryHTML(x.slug, x.k === "book") : ''}` : galleryHTML(x.slug, x.k === "book")}
       <div class="comment-link-wrap comment-link-wrap--end" id="commentLinkEnd"></div>
       <section class="comments-section" id="commentsSection"></section>
       <nav class="prevnext">
