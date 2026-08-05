@@ -1098,9 +1098,11 @@ const DEWEY = [
       {
         "t": "Numbers Guide",
         "a": "The Economist",
+        "y": 1991,
+        "p": "The Economist",
         "k": "book",
         "slug": "numbers-guide-economist",
-        "dewey": "519"
+        "dewey": "519.5"
       },
       {
         "t": "Statistics 101",
@@ -2671,6 +2673,24 @@ const DEWEY = [
         "a": "P. W. Singer",
         "k": "book",
         "slug": "ghost-fleet",
+        "dewey": "813.6"
+      },
+      {
+        "t": "Demon Copperhead",
+        "a": "Barbara Kingsolver",
+        "y": 2022,
+        "p": "Harper",
+        "k": "book",
+        "slug": "demon-copperhead",
+        "dewey": "813.6"
+      },
+      {
+        "t": "The Nightingale",
+        "a": "Kristin Hannah",
+        "y": 2015,
+        "p": "St. Martin's Press",
+        "k": "book",
+        "slug": "the-nightingale",
         "dewey": "813.6"
       },
       {
@@ -4492,7 +4512,9 @@ const COVERS = {
   "Gödel, Escher, Bach": { "c": 14368453 },
   "Hiking the Southwests Geology": { "c": 699691 },
   "Hydrology 1": { "c": 10346427 },
-  "Numbers Guide": { "c": 302567 },
+  "Numbers Guide": { "c": 302567, "local": "Numbers_Guide_by_the_Economist.png" },
+  "Demon Copperhead": { "local": "Demon_Copperhead_by_Kingsolver.jpg", "c": 13383458 },
+  "The Nightingale": { "local": "The_Nightingale_by_Hannah.jpg", "c": 8413101 },
   "Virus": { "c": 5031455 },
   "A City on Mars": { "c": 14095692 },
   "Five Stars": { "c": 10119325 },
