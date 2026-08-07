@@ -3297,12 +3297,26 @@ const DEWEY = [
         "dewey": "970.1"
       },
       {
+        "t": "Teotihuacan",
+        "a": "",
+        "k": "museum",
+        "slug": "teotihuacan",
+        "dewey": "972.01"
+      },
+      {
         "t": "Haitian Revolution",
         "a": "Jeremy D. Popkin",
         "k": "book",
         "slug": "haitian-revolution",
         "galleryEnd": true,
         "dewey": "972.94"
+      },
+      {
+        "t": "Virgin Islands National Park",
+        "a": "",
+        "k": "museum",
+        "slug": "virgin-islands-national-park",
+        "dewey": "972.972"
       },
       {
         "t": "National Archives Museum",
@@ -4609,7 +4623,9 @@ const COVERS = {
 ,
   "Aesir With Carlin": {"local": "Twilight_of_the_Aesir_with_Carlin.jpg"},
   "Natural Intelligence": {"local": "NI_by_Gorissen.jpg"},
-  "Bewac": {"local": "BEWAC_by_Hjellstrom.jpg"}
+  "Bewac": {"local": "BEWAC_by_Hjellstrom.jpg"},
+  "Teotihuacan": {"local": "Teotihuacan.jpeg"},
+  "Virgin Islands National Park": {"local": "Virgin Islands National Park.png"}
 };
 
 /* Open Library work keys — used to fetch descriptions on demand. */
