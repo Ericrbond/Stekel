@@ -584,13 +584,6 @@ const DEWEY = [
         "dewey": "332.63"
       },
       {
-        "t": "Stock Market Investing \u2014 The Basics",
-        "a": "Study guide",
-        "k": "guide",
-        "slug": "guide-stock-market-basics",
-        "dewey": "332.63"
-      },
-      {
         "t": "The Investment Answer",
         "a": "Daniel C. Goldie",
         "k": "book",
