@@ -3318,6 +3318,13 @@ const DEWEY = [
         "dewey": "972.01"
       },
       {
+        "t": "Museo del Templo Mayor",
+        "a": "",
+        "k": "museum",
+        "slug": "museo-del-templo-mayor",
+        "dewey": "972.018"
+      },
+      {
         "t": "Haitian Revolution",
         "a": "Jeremy D. Popkin",
         "k": "book",
@@ -4646,6 +4653,7 @@ const COVERS = {
   "Natural Intelligence": {"local": "NI_by_Gorissen.jpg"},
   "Bewac": {"local": "BEWAC_by_Hjellstrom.jpg"},
   "Teotihuacan": {"local": "Teotihuacan.jpeg"},
+  "Museo del Templo Mayor": {"local": "Museo del Templo Mayor.png"},
   "Virgin Islands National Park": {"local": "Virgin Islands National Park.png"},
   "Barbados Museum": {"local": "Barbados Museum & Historical Society.png"},
   "Secret of Secrets": {"local": "Secret of Secrets by Brown.jpg"},
