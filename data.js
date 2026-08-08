@@ -2199,6 +2199,13 @@ const DEWEY = [
         "dewey": "650.1"
       },
       {
+        "t": "The Go-Giver",
+        "a": "Bob Burg",
+        "k": "book",
+        "slug": "the-go-giver",
+        "dewey": "650.1"
+      },
+      {
         "t": "Human Resources",
         "a": "Dan Carlin",
         "k": "book",
@@ -2638,6 +2645,13 @@ const DEWEY = [
         "k": "book",
         "slug": "inferno",
         "galleryEnd": true,
+        "dewey": "813.6"
+      },
+      {
+        "t": "Secret of Secrets",
+        "a": "Dan Brown",
+        "k": "book",
+        "slug": "secret-of-secrets",
         "dewey": "813.6"
       },
       {
@@ -3317,6 +3331,13 @@ const DEWEY = [
         "k": "museum",
         "slug": "virgin-islands-national-park",
         "dewey": "972.972"
+      },
+      {
+        "t": "Barbados Museum",
+        "a": "",
+        "k": "museum",
+        "slug": "barbados-museum",
+        "dewey": "972.981"
       },
       {
         "t": "National Archives Museum",
@@ -4625,7 +4646,10 @@ const COVERS = {
   "Natural Intelligence": {"local": "NI_by_Gorissen.jpg"},
   "Bewac": {"local": "BEWAC_by_Hjellstrom.jpg"},
   "Teotihuacan": {"local": "Teotihuacan.jpeg"},
-  "Virgin Islands National Park": {"local": "Virgin Islands National Park.png"}
+  "Virgin Islands National Park": {"local": "Virgin Islands National Park.png"},
+  "Barbados Museum": {"local": "Barbados Museum & Historical Society.png"},
+  "Secret of Secrets": {"local": "Secret of Secrets by Brown.jpg"},
+  "The Go-Giver": {"local": "The Go-Giver by Burg.jpg"}
 };
 
 /* Open Library work keys — used to fetch descriptions on demand. */
