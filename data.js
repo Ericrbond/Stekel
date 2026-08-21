@@ -943,6 +943,14 @@ const DEWEY = [
         "dewey": "363.738"
       },
       {
+        "t": "An Inconvenient Truth",
+        "a": "Al Gore",
+        "k": "book",
+        "slug": "an-inconvenient-truth",
+        "galleryEnd": true,
+        "dewey": "363.7387"
+      },
+      {
         "t": "Ghettoside",
         "a": "Jill Leovy",
         "k": "book",
@@ -4651,6 +4659,7 @@ const COVERS = {
 ,
   "Aesir With Carlin": {"local": "Twilight_of_the_Aesir_with_Carlin.jpg"},
   "Natural Intelligence": {"local": "NI_by_Gorissen.jpg"},
+  "An Inconvenient Truth": {"local": "An Inconvenient Truth by Gore.jpg"},
   "Bewac": {"local": "BEWAC_by_Hjellstrom.jpg"},
   "Teotihuacan": {"local": "Teotihuacan.jpeg"},
   "Museo del Templo Mayor": {"local": "Museo del Templo Mayor.png"},
@@ -9799,5 +9808,26 @@ var PAGE_IMAGES = {
     "us-olympic-museum_18960406_American_James_Connolly_becomes_the_first_to_win_an_Olympic_event_US_Olympic_Museum.jpeg",
     "us-olympic-museum_1968_Tommie_Smith-John_Carlos_raise_their_fists_for_racial_justice_at_the_Olympics_US_Olympic_Museum.jpeg",
     "us-olympic-museum_1980_Miracle_on_Ice_Scoreboard_US_Olympic_Musem.jpeg"
-  ]
+  ],
+  "an-inconvenient-truth": [
+    "1000_yrs_of_Northern_Hemisphere_Temperature.jpeg",
+    "1960-2014_Aral_Sea_Shrinkage_Britannica.png",
+    "1963-2001_Drying_of_Lake_Chad.jpeg",
+    "19681224_Earthrise.jpg",
+    "196907_Buzz_Aldrin_on_Moon.png",
+    "1980-2005_Retreat_of_Alaskas_Columbia_Glacier.jpeg",
+    "2006-2018_Rodonia_Brazil_Deforestation.png",
+    "Continental_Ice_cap_cross_section.jpeg",
+    "Coral_Habitat_Change.jpeg",
+    "Disappearing_Antarctic_Peninsula_Shelf_Ice.jpeg",
+    "Emerging_Infectious_Disease_Vectors.jpeg",
+    "Global_Temperature_Changes_by_Latitude.jpeg",
+    "Haiti_vs_Dominican_Rep.jpeg",
+    "Human_Population_Increase.jpeg",
+    "Hurricane_Intensity_and_Ocean_Temperatures.jpeg",
+    "Radiative_Forcing.jpeg",
+    "Rodonia_Brazil_Deforestation.webp",
+    "Sea_Ice_Melting-_Albedo_Feedback_Loop.jpeg",
+    "Shift_in_Seasons.jpeg"
+]
 };
