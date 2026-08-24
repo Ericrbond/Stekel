@@ -2162,6 +2162,7 @@ const DEWEY = [
         "a": "Kelly & Zach Weinersmith",
         "k": "book",
         "slug": "a-city-on-mars",
+        "galleryEnd": true,
         "dewey": "629.44"
       },
       {
@@ -4921,6 +4922,7 @@ const DESCRIPTIONS = {
 
 /* Eric's original stekel.org images, per page (ordered: hero first). Local files under assets/stekel/. */
 var PAGE_IMAGES = {
+  "a-city-on-mars": ["1970_East_and_West_Pakistan.jpeg", "Animal_Launches_in_Space.jpeg", "Biosphere_2_Recipes.jpeg", "Biosphere_2_Schematic.jpeg", "Cost_to_send_stuff_into_orbit_(2021).jpeg", "Earths_tilt_and_seasons.jpeg", "Earth-Mars_Travel.jpeg", "Elements_used_in_Space_Travel.jpeg", "Gemini_Mission.jpeg", "Geosynchronous_Orbit.jpeg", "Lava_Tubes.jpeg", "Legal_Frameworks.jpeg", "Magnetic_Pulse_Launches.jpeg", "Mars_Chemical_Formulas.jpeg", "Moon_station.jpeg", "NASA_proposed_landing_sites_for_Artemis_III.jpeg", "Phobos_and_Deimos.jpeg", "Solar_System_Distances.jpeg", "Space_Objects.jpeg", "Space_Shuttle_v_Mir.jpeg", "Space_Station_Drawings.jpeg", "Spallation.jpeg", "Sputnik_Satellites.jpeg", "Turkish_Rep_of_Northern_Cyprus.jpeg", "V2_Rocket.jpeg"],
   "100-years-of-sea-power": [
     "Pacific_Theater.jpg",
     "WWII_Pacific_Theater_Smithsonian.jpeg",
