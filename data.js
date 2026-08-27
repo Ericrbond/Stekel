@@ -2950,7 +2950,6 @@ const DEWEY = [
         "dewey": "889.3"
       },
       {
-        {
         "t": "Speak, Memory",
         "a": "Vladimir Nabokov",
         "k": "book",
