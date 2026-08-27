@@ -2958,7 +2958,8 @@ const DEWEY = [
         "galleryEnd": true,
         "dewey": "891.73"
       },
-      "t": "Anna Karenina",
+      {
+        "t": "Anna Karenina",
         "a": "Leo Tolstoy",
         "k": "book",
         "slug": "anna-karenina",
