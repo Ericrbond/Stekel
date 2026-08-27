@@ -277,6 +277,31 @@ def add_gallery_end(dewey, slug):
     print(f"  WARNING: slug '{slug}' not found in DEWEY for galleryEnd")
     return dewey
 
+def register_cover(title, local_filename):
+    """Add entry to COVERS keyed by book title."""
+    with open(DATA_JS) as f:
+        d = f.read()
+    covers_start = d.find('const COVERS')
+    covers_brace = d.index('{', covers_start)
+    depth, pos = 0, covers_brace
+    while pos < len(d):
+        if d[pos] == '{': depth += 1
+        elif d[pos] == '}':
+            depth -= 1
+            if depth == 0:
+                covers_end = pos + 1
+                break
+        pos += 1
+    covers = json.loads(d[covers_brace:covers_end])
+    if title in covers:
+        print(f"  COVERS entry already exists for '{title}' ✓")
+        return
+    covers[title] = {"local": local_filename}
+    new_d = d[:covers_brace] + json.dumps(covers, ensure_ascii=False, indent=2) + d[covers_end:]
+    with open(DATA_JS, 'w') as f:
+        f.write(new_d)
+    print(f"  COVERS['{title}'] = {local_filename!r} ✓")
+
 def add_page_images_entry(slug, web_names):
     """Insert PAGE_IMAGES entry using simple string insert at top of the object."""
     with open(DATA_JS) as f:
@@ -496,12 +521,14 @@ def main():
 
     # cover
     if cover_file:
-        ext  = os.path.splitext(cover_file)[1].lower()
-        dest = os.path.join(COVERS_DIR, slug + ext)
+        ext       = os.path.splitext(cover_file)[1].lower()
+        cover_web = slug + ext
+        dest      = os.path.join(COVERS_DIR, cover_web)
         shutil.copy2(os.path.join(book_dir, cover_file), dest)
-        rel = f"assets/covers/{slug}{ext}"
+        rel = f"assets/covers/{cover_web}"
         files_to_commit.append(rel)
         print(f"\nCover → {rel} ✓")
+        register_cover(title_display, cover_web)
 
     # images
     if has_images:
