@@ -4142,18 +4142,28 @@ const COVERS = {
     "c": 803118
   },
   "1493": {
-    "c": 6899279, "local": "1493_by_Mann.jpg" },
+    "c": 6899279,
+    "local": "1493_by_Mann.jpg"
+  },
   "12 Rules For Life": {
-    "c": 8131760, "local": "12_Rules_for_Life_by_Peterson.jpeg" },
+    "c": 8131760,
+    "local": "12_Rules_for_Life_by_Peterson.jpeg"
+  },
   "21 Lessons for the 21st Century": {
-    "c": 10108277, "local": "21_Lessons_for_the_21_Century_by_Harari.jpeg" },
+    "c": 10108277,
+    "local": "21_Lessons_for_the_21_Century_by_Harari.jpeg"
+  },
   "48 Laws of Power": {
-    "c": 6424160, "local": "48_Laws_of_Power_by_Greene.jpg" },
+    "c": 6424160,
+    "local": "48_Laws_of_Power_by_Greene.jpg"
+  },
   "Seven and a Half Lessons": {
     "c": 10543903
   },
   "A Brief History of Earth": {
-    "c": 10858991, "local": "A_Brief_History_of_Earth_by_Knoll.jpeg" },
+    "c": 10858991,
+    "local": "A_Brief_History_of_Earth_by_Knoll.jpeg"
+  },
   "A Brief History of Everyone Who Ever Lived": {
     "c": 9155814
   },
@@ -4162,520 +4172,1126 @@ const COVERS = {
     "local": "A_Conflict_of_Visions_by_Sowell.jpeg"
   },
   "A Life On Our Planet": {
-    "c": 10508997, "local": "A_Life_on_Our_Planet_by_Attenborough.jpeg" },
+    "c": 10508997,
+    "local": "A_Life_on_Our_Planet_by_Attenborough.jpeg"
+  },
   "A Promised Land": {
-    "c": 10449357, "local": "A_Promised_Land_by_Obama.jpeg" },
+    "c": 10449357,
+    "local": "A_Promised_Land_by_Obama.jpeg"
+  },
   "A Random Walk Down Wall Street": {
-    "c": 246978, "local": "A_Random_Walk_Down_Wall_Street_by_Malkiel.jpg" },
+    "c": 246978,
+    "local": "A_Random_Walk_Down_Wall_Street_by_Malkiel.jpg"
+  },
   "A River Runs Through It": {
-    "c": 408624, "local": "A_River_Runs_Through_It_by_Maclean.jpeg" },
+    "c": 408624,
+    "local": "A_River_Runs_Through_It_by_Maclean.jpeg"
+  },
   "A Short History of Nearly Everything": {
-    "c": 12725620, "local": "A_Short_History_of_Nearly_Everything.jpg" },
+    "c": 12725620,
+    "local": "A_Short_History_of_Nearly_Everything.jpg"
+  },
   "Africa Is Not a Country": {
-    "c": 12993587, "local": "Africa_is_Not_a_Country_by_Faloyin.jpg" },
+    "c": 12993587,
+    "local": "Africa_is_Not_a_Country_by_Faloyin.jpg"
+  },
   "Against Empathy": {
-    "c": 12515747, "local": "Against_Empathy_by_Bloom.jpeg" },
+    "c": 12515747,
+    "local": "Against_Empathy_by_Bloom.jpeg"
+  },
   "An Incomplete Education": {
-    "c": 418693, "local": "An_Incomplete_Education_by_Jones.jpeg" },
+    "c": 418693,
+    "local": "An_Incomplete_Education_by_Jones.jpeg"
+  },
   "Animal Farm": {
-    "c": 11261770, "local": "Animal_Farm_by_Orwell.jpg" },
+    "c": 11261770,
+    "local": "Animal_Farm_by_Orwell.jpg"
+  },
   "Art of War": {
-    "c": 4849549, "local": "Art_of_War_by_Sun_Tzu.jpg" },
+    "c": 4849549,
+    "local": "Art_of_War_by_Sun_Tzu.jpg"
+  },
   "Atlas of War": {
-    "c": 14618414, "local": "Atlas_of_War_by_NatGeo.jpeg" },
+    "c": 14618414,
+    "local": "Atlas_of_War_by_NatGeo.jpeg"
+  },
   "Ayatollah Begs To Differ": {
-    "c": 10361504, "local": "Ayatollah_Begs_to_Differ_by_Majd.jpg" },
+    "c": 10361504,
+    "local": "Ayatollah_Begs_to_Differ_by_Majd.jpg"
+  },
   "Basics Real Estate": {
-    "c": 1115522, "local": "Basics-_Real_Estate.png" },
+    "c": 1115522,
+    "local": "Basics-_Real_Estate.png"
+  },
   "Basics Stock Market Investing": {
-    "c": 12420807, "local": "Basics-_Stock_Market_Investing.png" },
+    "c": 12420807,
+    "local": "Basics-_Stock_Market_Investing.png"
+  },
   "Blue Gold": {
-    "c": 14727863, "local": "Blue_Gold_by_Barlow.jpg" },
+    "c": 14727863,
+    "local": "Blue_Gold_by_Barlow.jpg"
+  },
   "Brave New World": {
-    "c": 8231823, "local": "Brave_New_World_by_Huxley.jpg" },
+    "c": 8231823,
+    "local": "Brave_New_World_by_Huxley.jpg"
+  },
   "Bridge of San Luis Rey": {
-    "c": 40577, "local": "The_Bridge_of_San_Luis_Rey_.jpeg" },
+    "c": 40577,
+    "local": "The_Bridge_of_San_Luis_Rey_.jpeg"
+  },
   "Bullets Not Ballots": {
-    "c": 12444248, "local": "Bullets_Not_Ballots_by_Hazelton.jpeg" },
+    "c": 12444248,
+    "local": "Bullets_Not_Ballots_by_Hazelton.jpeg"
+  },
   "Catching Fire": {
-    "c": 6279740, "local": "Catching_Fire_by_Wrangham.jpeg" },
+    "c": 6279740,
+    "local": "Catching_Fire_by_Wrangham.jpeg"
+  },
   "Chasing Water": {
-    "c": 8984896, "local": "Chasing_Water_by_Richter.jpeg" },
+    "c": 8984896,
+    "local": "Chasing_Water_by_Richter.jpeg"
+  },
   "Combined Fleet Decoded": {
-    "c": 780548, "local": "Combined_Fleet_Decoded_by_Prados.jpg" },
+    "c": 780548,
+    "local": "Combined_Fleet_Decoded_by_Prados.jpg"
+  },
   "Complete Guide To Money": {
-    "c": 7670852, "local": "Complete_Guide_to_Money_by_Ramsey.jpg" },
+    "c": 7670852,
+    "local": "Complete_Guide_to_Money_by_Ramsey.jpg"
+  },
   "The Curve of Binding Energy McPhee": {
     "c": 7972873
   },
   "Dark Age": {
-    "c": 8748017, "local": "Dark_Age_by_Brown.jpeg" },
+    "c": 8748017,
+    "local": "Dark_Age_by_Brown.jpeg"
+  },
   "Decision Points": {
-    "c": 6672818, "local": "Decision_Points_by_George_W._Bush.jpg" },
+    "c": 6672818,
+    "local": "Decision_Points_by_George_W._Bush.jpg"
+  },
   "Detecting Bullshit": {
-    "c": 11527197, "local": "Detecting_Bullshit_by_Petrocelli.jpeg" },
+    "c": 11527197,
+    "local": "Detecting_Bullshit_by_Petrocelli.jpeg"
+  },
   "Documents That Changed the World": {
-    "c": 14610132, "local": "Documents_that_Changed_the_World.jpg" },
+    "c": 14610132,
+    "local": "Documents_that_Changed_the_World.jpg"
+  },
   "Dracula": {
-    "c": 12216503, "local": "Dracula_by_Stoker.jpeg" },
+    "c": 12216503,
+    "local": "Dracula_by_Stoker.jpeg"
+  },
   "Ecology In Action": {
-    "c": 12981524, "local": "Ecology_in_Action_by_Singer.jpg" },
+    "c": 12981524,
+    "local": "Ecology_in_Action_by_Singer.jpg"
+  },
   "Ecoviews": {
-    "c": 616752, "local": "Ecoviews_by_Gibbons.jpeg" },
+    "c": 616752,
+    "local": "Ecoviews_by_Gibbons.jpeg"
+  },
   "Elephant and the Dragon": {
-    "c": 1727141, "local": "Elephant_and_the_Dragon_by_Robyn_Meredith.jpg" },
+    "c": 1727141,
+    "local": "Elephant_and_the_Dragon_by_Robyn_Meredith.jpg"
+  },
   "Endurance": {
-    "c": 542833, "local": "Endurance_by_Lansing.jpg" },
+    "c": 542833,
+    "local": "Endurance_by_Lansing.jpg"
+  },
   "Engineering In Plain Sight": {
-    "c": 12690144, "local": "_2022__Engineering_in_Plain_Sight_by_Hillhouse.jpeg" },
+    "c": 12690144,
+    "local": "_2022__Engineering_in_Plain_Sight_by_Hillhouse.jpeg"
+  },
   "Engineers of Victory": {
-    "c": 12493107, "local": "Engineers_of_Victory_by_Paul_Kennedy.jpg" },
+    "c": 12493107,
+    "local": "Engineers_of_Victory_by_Paul_Kennedy.jpg"
+  },
   "Essentials of Geology": {
-    "c": 10161581, "local": "Essentials_of_Geology_by_Marshak.png" },
+    "c": 10161581,
+    "local": "Essentials_of_Geology_by_Marshak.png"
+  },
   "Factfulness": {
-    "c": 8186237, "local": "Factfulness_by_Rosling.jpg" },
+    "c": 8186237,
+    "local": "Factfulness_by_Rosling.jpg"
+  },
   "Firmament": {
-    "c": 12660041, "local": "Firmament_by_Clark.jpeg" },
+    "c": 12660041,
+    "local": "Firmament_by_Clark.jpeg"
+  },
   "Flow": {
-    "c": 11041932, "local": "Flow_by_Csikszentmihat.jpg" },
+    "c": 11041932,
+    "local": "Flow_by_Csikszentmihat.jpg"
+  },
   "Freakonomics": {
-    "c": 11172914, "local": "Freakonomics_by_Levitt.jpg" },
+    "c": 11172914,
+    "local": "Freakonomics_by_Levitt.jpg"
+  },
   "Freedom At Midnight": {
-    "c": 4410, "local": "Freedom_at_Midnight.jpg" },
+    "c": 4410,
+    "local": "Freedom_at_Midnight.jpg"
+  },
   "Gates of Fire": {
-    "c": 370144, "local": "Gates_of_Fire_by_Pressfield.jpg" },
+    "c": 370144,
+    "local": "Gates_of_Fire_by_Pressfield.jpg"
+  },
   "Genghis Khan": {
     "c": 390818
   },
   "Ghettoside": {
-    "c": 7333314, "local": "Ghettoside_by_Leavy.jpg" },
+    "c": 7333314,
+    "local": "Ghettoside_by_Leavy.jpg"
+  },
   "Ghost Fleet": {
-    "c": 13522671, "local": "Ghost_Fleet_by_Singer.jpg" },
+    "c": 13522671,
+    "local": "Ghost_Fleet_by_Singer.jpg"
+  },
   "Golden Son": {
-    "c": 8454351, "local": "Golden_Son_by_Brown.jpg" },
+    "c": 8454351,
+    "local": "Golden_Son_by_Brown.jpg"
+  },
   "Haitian Revolution": {
     "c": 12792901
   },
   "Homegoing": {
-    "c": 8081171, "local": "Homegoing_by_Gyasi.jpg" },
+    "c": 8081171,
+    "local": "Homegoing_by_Gyasi.jpg"
+  },
   "How Bad Are Bananas": {
-    "c": 9124468, "local": "How_Bad_are_Bananas_by_Berners-Lee.jpg" },
+    "c": 9124468,
+    "local": "How_Bad_are_Bananas_by_Berners-Lee.jpg"
+  },
   "How Pleasure Works": {
-    "c": 13086806, "local": "How_Pleasure_Works_by_Bloom.jpg" },
+    "c": 13086806,
+    "local": "How_Pleasure_Works_by_Bloom.jpg"
+  },
   "How To Avoid a Climate Disaster": {
-    "c": 10656063, "local": "How_to_Avoid_a_Climate_Disaster_by_Gates.jpg" },
+    "c": 10656063,
+    "local": "How_to_Avoid_a_Climate_Disaster_by_Gates.jpg"
+  },
   "Human Universe": {
-    "c": 9380330, "local": "Human_Universe_by_Cox.jpeg" },
+    "c": 9380330,
+    "local": "Human_Universe_by_Cox.jpeg"
+  },
   "Hyperion": {
-    "c": 380332, "local": "Hyperion_by_Simmons.jpeg" },
+    "c": 380332,
+    "local": "Hyperion_by_Simmons.jpeg"
+  },
   "I Will Teach You To Be Rich": {
-    "c": 6305971, "local": "I_Will_Teach_you_to_be_Rich_by_Sethi.jpg" },
+    "c": 6305971,
+    "local": "I_Will_Teach_you_to_be_Rich_by_Sethi.jpg"
+  },
   "If Nietzsche Were a Narwhal": {
-    "c": 12526234, "local": "If_Nietzsche_Were_a_Narwhal_by_Gregg.png" },
+    "c": 12526234,
+    "local": "If_Nietzsche_Were_a_Narwhal_by_Gregg.png"
+  },
   "In the Graveyard of Empires": {
-    "c": 6933674, "local": "In_the_Graveyard_Of_Empires_by_Jones..jpg" },
+    "c": 6933674,
+    "local": "In_the_Graveyard_Of_Empires_by_Jones..jpg"
+  },
   "Inferno": {
-    "c": 9322673, "local": "Inferno_by_Dan_Brown.jpg" },
+    "c": 9322673,
+    "local": "Inferno_by_Dan_Brown.jpg"
+  },
   "Ingredients": {
-    "c": 9358598, "local": "Ingredients_by_Zaidan.jpeg" },
+    "c": 9358598,
+    "local": "Ingredients_by_Zaidan.jpeg"
+  },
   "Innocent Man": {
-    "c": 9322895, "local": "Innocent_Man_by_John_Grisham.jpg" },
+    "c": 9322895,
+    "local": "Innocent_Man_by_John_Grisham.jpg"
+  },
   "Integrated Watershed Management": {
-    "c": 301755, "local": "Integrated_Watershed_Management_by_Heathcote.jpeg" },
+    "c": 301755,
+    "local": "Integrated_Watershed_Management_by_Heathcote.jpeg"
+  },
   "Interpreter of Maladies": {
-    "c": 4915588, "local": "Interpreter_of_Maladies_by_Lahiri.jpg" },
+    "c": 4915588,
+    "local": "Interpreter_of_Maladies_by_Lahiri.jpg"
+  },
   "Iron Gold": {
-    "c": 14511722, "local": "Iron_Gold_by_Brown.jpeg" },
+    "c": 14511722,
+    "local": "Iron_Gold_by_Brown.jpeg"
+  },
   "The Joy of x Strogatz": {
-    "c": 9266506, "local": "Joy_of_X_by_Strogatz.jpg" },
+    "c": 9266506,
+    "local": "Joy_of_X_by_Strogatz.jpg"
+  },
   "Kaigun": {
-    "c": 659112, "local": "Kaigun_by_Evans_and_Peattie.png" },
+    "c": 659112,
+    "local": "Kaigun_by_Evans_and_Peattie.png"
+  },
   "Killing Rommel": {
-    "c": 2412087, "local": "Killing_Rommel_by_Pressfield.jpg" },
+    "c": 2412087,
+    "local": "Killing_Rommel_by_Pressfield.jpg"
+  },
   "King Leopolds Ghost": {
-    "c": 392738, "local": "King_Leopolds_Ghost_by_Hochschild.jpg" },
+    "c": 392738,
+    "local": "King_Leopolds_Ghost_by_Hochschild.jpg"
+  },
   "Lab 257": {
-    "c": 20757, "local": "Lab_257.png" },
+    "c": 20757,
+    "local": "Lab_257.png"
+  },
   "Les Misérables": {
-    "c": 12721865, "local": "Les_Mise_rables_by_Hugo.jpeg" },
+    "c": 12721865,
+    "local": "Les_Mise_rables_by_Hugo.jpeg"
+  },
   "Light Bringer": {
-    "c": 15157697, "local": "Light_Bringer_by_Brown.jpg" },
+    "c": 15157697,
+    "local": "Light_Bringer_by_Brown.jpg"
+  },
   "Lolita": {
-    "c": 12984540, "local": "Lolita_by_Nabakov.jpg" },
+    "c": 12984540,
+    "local": "Lolita_by_Nabakov.jpg"
+  },
   "Longitude": {
-    "c": 13654, "local": "Longitude_by_Sobel.jpg" },
+    "c": 13654,
+    "local": "Longitude_by_Sobel.jpg"
+  },
   "Lord of the Flies": {
-    "c": 8684447, "local": "Lord_of_the_Flies_by_Golding.png" },
+    "c": 8684447,
+    "local": "Lord_of_the_Flies_by_Golding.png"
+  },
   "Makers of Modern Strategy": {
-    "c": 440811, "local": "Makers_of_Modern_Strategy_by_Paret.jpg" },
+    "c": 440811,
+    "local": "Makers_of_Modern_Strategy_by_Paret.jpg"
+  },
   "Meditations": {
-    "c": 13202688, "local": "Meditations_by_Aurelius.jpeg" },
+    "c": 13202688,
+    "local": "Meditations_by_Aurelius.jpeg"
+  },
   "Memories of My Melancholy Whores": {
-    "c": 13873128, "local": "Memories_of_My_Melancholy_Whores_by_Marquez.jpeg" },
+    "c": 13873128,
+    "local": "Memories_of_My_Melancholy_Whores_by_Marquez.jpeg"
+  },
   "Missoula": {
-    "c": 9151245, "local": "Missoula_by_Krakauer.jpg" },
+    "c": 9151245,
+    "local": "Missoula_by_Krakauer.jpg"
+  },
   "Mistakes Were Made": {
-    "c": 1119860, "local": "Mistakes_were_Made.jpg" },
+    "c": 1119860,
+    "local": "Mistakes_were_Made.jpg"
+  },
   "Modern Romance": {
-    "c": 7445038, "local": "Modern_Romance_by_Ansari.jpg" },
+    "c": 7445038,
+    "local": "Modern_Romance_by_Ansari.jpg"
+  },
   "Moonwalking With Einstein": {
-    "c": 14426425, "local": "Moonwalking_With_Einstein_by_Foer.jpg" },
+    "c": 14426425,
+    "local": "Moonwalking_With_Einstein_by_Foer.jpg"
+  },
   "Morning Star": {
-    "c": 8566174, "local": "Morning_Star_by_Brown.jpeg" },
+    "c": 8566174,
+    "local": "Morning_Star_by_Brown.jpeg"
+  },
   "Mountains Beyond Mountains": {
-    "c": 606360, "local": "Mountains_Beyond_Mountains_by_Tracy_Kidder.jpg" },
+    "c": 606360,
+    "local": "Mountains_Beyond_Mountains_by_Tracy_Kidder.jpg"
+  },
   "Mythos": {
-    "c": 8238803, "local": "Mythos.jpg" },
+    "c": 8238803,
+    "local": "Mythos.jpg"
+  },
   "Natural Capital": {
-    "c": 12599983, "local": "Natural_Capital_by_Helm.jpeg" },
+    "c": 12599983,
+    "local": "Natural_Capital_by_Helm.jpeg"
+  },
   "No Is Not Enough": {
-    "c": 10447110, "local": "No_Is_Not_Enough_by_Klein.jpg" },
+    "c": 10447110,
+    "local": "No_Is_Not_Enough_by_Klein.jpg"
+  },
   "Nudge": {
-    "c": 6402116, "local": "Nudge_by_Thaler.jpg" },
+    "c": 6402116,
+    "local": "Nudge_by_Thaler.jpg"
+  },
   "Origin": {
-    "c": 11013590, "local": "Origin_by_Brown.jpg" },
+    "c": 11013590,
+    "local": "Origin_by_Brown.jpg"
+  },
   "Peak": {
-    "c": 10467082, "local": "Peak_by_Ericsson.jpg" },
+    "c": 10467082,
+    "local": "Peak_by_Ericsson.jpg"
+  },
   "Physics of Nuclear Explosives": {
-    "local": "physics-of-nuclear-explosives.jpg" },
+    "local": "physics-of-nuclear-explosives.jpg"
+  },
   "Physics of the Future": {
-    "c": 6712851, "local": "Physics_of_the_Future_by_Kaku.jpg" },
+    "c": 6712851,
+    "local": "Physics_of_the_Future_by_Kaku.jpg"
+  },
   "Plan Your Estate": {
-    "c": 2771715, "local": "Plan_your_Estate_by_NOLO.png" },
+    "c": 2771715,
+    "local": "Plan_your_Estate_by_NOLO.png"
+  },
   "Poor Economics": {
-    "c": 6765497, "local": "Poor_Economics_by_Banerjee.jpg" },
+    "c": 6765497,
+    "local": "Poor_Economics_by_Banerjee.jpg"
+  },
   "Quantum Supremacy": {
-    "c": 14248071, "local": "Quantum_Supremacy_by_Kaku.jpeg" },
+    "c": 14248071,
+    "local": "Quantum_Supremacy_by_Kaku.jpeg"
+  },
   "Reading Lolita In Tehran": {
-    "c": 227873, "local": "Reading_Lolita_in_Tehran_by_Nafisi.jpg" },
+    "c": 227873,
+    "local": "Reading_Lolita_in_Tehran_by_Nafisi.jpg"
+  },
   "Real Estate Advantages": {
-    "c": 288566, "local": "Real_Estate_Advantages_by_Lechter.jpg" },
+    "c": 288566,
+    "local": "Real_Estate_Advantages_by_Lechter.jpg"
+  },
   "Red Rising": {
-    "c": 7316188, "local": "Red_Rising_by_Brown.jpg" },
+    "c": 7316188,
+    "local": "Red_Rising_by_Brown.jpg"
+  },
   "Remarkably Bright Creatures": {
-    "c": 12019989, "local": "Remarkably_Bright_Creatures_by_Van_Pelt.jpg" },
+    "c": 12019989,
+    "local": "Remarkably_Bright_Creatures_by_Van_Pelt.jpg"
+  },
   "Remote Sensing and Gis For Ecologists": {
-    "c": 13741081, "local": "Remote_Sensing_and_GIS_for_Ecologists_by_Wegmann.jpg" },
+    "c": 13741081,
+    "local": "Remote_Sensing_and_GIS_for_Ecologists_by_Wegmann.jpg"
+  },
   "Rich Dad Poor Dad": {
-    "c": 8315603, "local": "Rich_Dad_Poor_Dad_by_Kiyosaki.jpg" },
+    "c": 8315603,
+    "local": "Rich_Dad_Poor_Dad_by_Kiyosaki.jpg"
+  },
   "Rip Van Winkle": {
-    "c": 8241453, "local": "Rip_Van_Winkle_by_Irving.png" },
+    "c": 8241453,
+    "local": "Rip_Van_Winkle_by_Irving.png"
+  },
   "Rise To Globalism": {
-    "c": 10165104, "local": "Rise_to_Globalism_by_Ambrose.jpg" },
+    "c": 10165104,
+    "local": "Rise_to_Globalism_by_Ambrose.jpg"
+  },
   "Sapiens": {
-    "c": 8634250, "local": "Sapiens_by_Harari_.jpg" },
+    "c": 8634250,
+    "local": "Sapiens_by_Harari_.jpg"
+  },
   "Shadow Divers": {
-    "c": 8335490, "local": "Shadow_Divers_by_Kurson.jpg" },
+    "c": 8335490,
+    "local": "Shadow_Divers_by_Kurson.jpg"
+  },
   "Shattered Sword": {
-    "c": 827761, "local": "Shattered_Sword_by_Parshall.jpg" },
+    "c": 827761,
+    "local": "Shattered_Sword_by_Parshall.jpg"
+  },
   "Six Easy Pieces Feynman": {
-    "c": 134755, "local": "Six_Easy_Pieces_by_Feynman.jpeg" },
+    "c": 134755,
+    "local": "Six_Easy_Pieces_by_Feynman.jpeg"
+  },
   "Six Frigates": {
-    "c": 456636, "local": "Six_Frigates_by_Toll.jpeg" },
+    "c": 456636,
+    "local": "Six_Frigates_by_Toll.jpeg"
+  },
   "Skinny Bitch": {
-    "c": 6797200, "local": "Skinny_Bitch_by_Freedman.jpg" },
+    "c": 6797200,
+    "local": "Skinny_Bitch_by_Freedman.jpg"
+  },
   "Small Great Things": {
-    "c": 8842269, "local": "Small_Great_Things_by_Picoult.jpg" },
+    "c": 8842269,
+    "local": "Small_Great_Things_by_Picoult.jpg"
+  },
   "Small Unit Leadership": {
-    "c": 689071, "local": "Small_Unit_Leadership_by_Malone.jpg" },
+    "c": 689071,
+    "local": "Small_Unit_Leadership_by_Malone.jpg"
+  },
   "Statistics 101": {
-    "c": 10393988, "local": "Statistics_101_by_Borman.jpg" },
+    "c": 10393988,
+    "local": "Statistics_101_by_Borman.jpg"
+  },
   "Stealing Fire": {
-    "c": 8869810, "local": "Stealing_Fire_by_Kotler.jpg" },
+    "c": 8869810,
+    "local": "Stealing_Fire_by_Kotler.jpg"
+  },
   "Success Principles": {
-    "c": 31560, "local": "The_Success_Principles_by_Canfield.jpeg" },
+    "c": 31560,
+    "local": "The_Success_Principles_by_Canfield.jpeg"
+  },
   "Superforecasting": {
-    "c": 9142114, "local": "Superforecasting_by_Tetlock.jpeg" },
+    "c": 9142114,
+    "local": "Superforecasting_by_Tetlock.jpeg"
+  },
   "Superintelligence": {
-    "c": 8039542, "local": "Superintelligence_by_Bostrom.jpg" },
+    "c": 8039542,
+    "local": "Superintelligence_by_Bostrom.jpg"
+  },
   "Surely You're Joking Mr Feynman": {
-    "c": 9274698, "local": "Surely_You_re_Joking_Mr._Feynman_by_Feynman.jpeg" },
+    "c": 9274698,
+    "local": "Surely_You_re_Joking_Mr._Feynman_by_Feynman.jpeg"
+  },
   "Surrender Or Starve": {
-    "c": 13853433, "local": "Surrender_or_Starve_by_Kaplan.jpeg" },
+    "c": 13853433,
+    "local": "Surrender_or_Starve_by_Kaplan.jpeg"
+  },
   "The 4 Hour Body": {
-    "c": 6673523, "local": "The_4-Hour_Body_by_Ferriss.jpg" },
+    "c": 6673523,
+    "local": "The_4-Hour_Body_by_Ferriss.jpg"
+  },
   "The 4 Hour Workweek": {
-    "c": 539652, "local": "The_4-Hour_Workweek_by_Ferriss.jpg" },
+    "c": 539652,
+    "local": "The_4-Hour_Workweek_by_Ferriss.jpg"
+  },
   "The American Way of War": {
-    "c": 148636, "local": "American_Way_of_War_by_Weigley.jpg" },
+    "c": 148636,
+    "local": "American_Way_of_War_by_Weigley.jpg"
+  },
   "The Anxious Generation": {
-    "c": 15104803, "local": "_2024__The_Anxious_Generation_by_Haidt.jpeg" },
+    "c": 15104803,
+    "local": "_2024__The_Anxious_Generation_by_Haidt.jpeg"
+  },
   "The Battery": {
-    "c": 8318742, "local": "The_Battery_by_Schlesinger.jpeg" },
+    "c": 8318742,
+    "local": "The_Battery_by_Schlesinger.jpeg"
+  },
   "The Behavior Gap": {
-    "c": 7981496, "local": "Behavior_Gap_by_Richards.jpg" },
+    "c": 7981496,
+    "local": "Behavior_Gap_by_Richards.jpg"
+  },
   "The Bfg": {
-    "c": 9176033, "local": "BFG_by_Roald_Dahl.jpg" },
+    "c": 9176033,
+    "local": "BFG_by_Roald_Dahl.jpg"
+  },
   "The Botany of Desire": {
-    "c": 3232846, "local": "The_Botany_of_Desire_by_Pollen.jpeg" },
+    "c": 3232846,
+    "local": "The_Botany_of_Desire_by_Pollen.jpeg"
+  },
   "The Boundless Sea": {
-    "c": 9261106, "local": "Boundless_Sea_by_Abulafia.jpeg" },
+    "c": 9261106,
+    "local": "Boundless_Sea_by_Abulafia.jpeg"
+  },
   "The Definitive Book of Body Language": {
-    "c": 499488, "local": "The_Definitive_Book_of_Body_Language_by_Pease.jpeg" },
+    "c": 499488,
+    "local": "The_Definitive_Book_of_Body_Language_by_Pease.jpeg"
+  },
   "The Demon In the Freezer": {
-    "c": 228127, "local": "Demon_in_the_Freezer_by_Preston.jpg" },
+    "c": 228127,
+    "local": "Demon_in_the_Freezer_by_Preston.jpg"
+  },
   "The Fall of Berlin 1945": {
     "c": 4915034
   },
   "The Fall of Hyperion": {
-    "c": 484900, "local": "The_Fall_of_Hyperion_by_Simmons.jpg" },
+    "c": 484900,
+    "local": "The_Fall_of_Hyperion_by_Simmons.jpg"
+  },
   "The Fate of Africa": {
-    "c": 852880, "local": "Fate_of_Africa_by_Meredith.jpg" },
+    "c": 852880,
+    "local": "Fate_of_Africa_by_Meredith.jpg"
+  },
   "The French Revolution": {
-    "c": 9210756, "local": "The_French_Revolution_by_Davidson.jpg" },
+    "c": 9210756,
+    "local": "The_French_Revolution_by_Davidson.jpg"
+  },
   "The Future of the Mind": {
-    "c": 7275468, "local": "The_Future_of_the_Mind_by_Kaku.jpg" },
+    "c": 7275468,
+    "local": "The_Future_of_the_Mind_by_Kaku.jpg"
+  },
   "The God Equation": {
-    "c": 10832321, "local": "God_Equation_by_Michio_Kaku.jpg" },
+    "c": 10832321,
+    "local": "God_Equation_by_Michio_Kaku.jpg"
+  },
   "The Healing of America": {
-    "c": 6462742, "local": "Healing_of_America_by_Reid.jpg" },
+    "c": 6462742,
+    "local": "Healing_of_America_by_Reid.jpg"
+  },
   "The Heart of Money": {
-    "c": 9475971, "local": "Heart_of_Money_by_Price.jpg" },
+    "c": 9475971,
+    "local": "Heart_of_Money_by_Price.jpg"
+  },
   "The Hundred Year Marathon": {
-    "c": 10234261, "local": "The_Hundred_Year_Marathon.jpg" },
+    "c": 10234261,
+    "local": "The_Hundred_Year_Marathon.jpg"
+  },
   "The Influence of Seapower On History": {
     "c": 5855206
   },
   "The Inner Life of Animals": {
-    "c": 8064208, "local": "The_Inner_Life_of_Animals_by_Wohlleben.jpg" },
+    "c": 8064208,
+    "local": "The_Inner_Life_of_Animals_by_Wohlleben.jpg"
+  },
   "The Investment Answer": {
-    "c": 6670744, "local": "The_Investment_Answer_by_Murray.jpg" },
+    "c": 6670744,
+    "local": "The_Investment_Answer_by_Murray.jpg"
+  },
   "The Last Centurion": {
-    "c": 2787312, "local": "Last_Centurion_by_Ringo.jpeg" },
+    "c": 2787312,
+    "local": "Last_Centurion_by_Ringo.jpeg"
+  },
   "The Last Unicorn": {
-    "c": 294651, "local": "The_Last_Unicorn_by_Beagle.jpg" },
+    "c": 294651,
+    "local": "The_Last_Unicorn_by_Beagle.jpg"
+  },
   "The Lean Startup": {
-    "c": 7104760, "local": "The_Lean_Startup_by_Ries.jpg" },
+    "c": 7104760,
+    "local": "The_Lean_Startup_by_Ries.jpg"
+  },
   "The Little Book of Lykke": {
-    "c": 13637665, "local": "The_Little_Book_Lykke_by_Wiking.jpg" },
+    "c": 13637665,
+    "local": "The_Little_Book_Lykke_by_Wiking.jpg"
+  },
   "The Lost Art of Reading Natures Signs": {
-    "c": 12365228, "local": "Lost_Art_of_Reading_Natures_Signs_by_Tristan_Gooley.jpg" },
+    "c": 12365228,
+    "local": "Lost_Art_of_Reading_Natures_Signs_by_Tristan_Gooley.jpg"
+  },
   "The Man Eaters of Tsavo": {
-    "c": 182288, "local": "The_Man-Eaters_of_Tsavo.jpeg" },
+    "c": 182288,
+    "local": "The_Man-Eaters_of_Tsavo.jpeg"
+  },
   "The Man Who Lied To His Laptop": {
-    "c": 7071414, "local": "The_Man_Who_Lied_to_His_Laptop_by_Nass.jpg" },
+    "c": 7071414,
+    "local": "The_Man_Who_Lied_to_His_Laptop_by_Nass.jpg"
+  },
   "The Marriage of Heaven and Hell": {
     "c": 118161
   },
   "The Martian": {
-    "c": 11447888, "local": "The_Martian_by_Weir.jpg" },
+    "c": 11447888,
+    "local": "The_Martian_by_Weir.jpg"
+  },
   "The Millionaire Next Door": {
-    "c": 797467, "local": "The_Millionaire_Next_Door_by_Stanley.jpg" },
+    "c": 797467,
+    "local": "The_Millionaire_Next_Door_by_Stanley.jpg"
+  },
   "The New Climate War": {
-    "c": 10657765, "local": "The_New_Climate_War_by_Mann.jpeg" },
+    "c": 10657765,
+    "local": "The_New_Climate_War_by_Mann.jpeg"
+  },
   "The Obstacle Is the Way": {
-    "c": 14428233, "local": "The_Obstacle_is_the_Way_by_Holiday.jpg" },
+    "c": 14428233,
+    "local": "The_Obstacle_is_the_Way_by_Holiday.jpg"
+  },
   "The Odessa File": {
-    "c": 6630437, "local": "Odessa_File_by_Forsyth.jpg" },
+    "c": 6630437,
+    "local": "Odessa_File_by_Forsyth.jpg"
+  },
   "The Pacific War Companion": {
-    "c": 888033, "local": "Pacific_War_Companion_by_Marston.jpg" },
+    "c": 888033,
+    "local": "Pacific_War_Companion_by_Marston.jpg"
+  },
   "The Planets": {
-    "c": 14854699, "local": "The_Planets_by_Cox_and_Cohen.jpeg" },
+    "c": 14854699,
+    "local": "The_Planets_by_Cox_and_Cohen.jpeg"
+  },
   "The Power of One": {
-    "c": 6459205, "local": "The_Power_of_One_by_Courtenay.jpg" },
+    "c": 6459205,
+    "local": "The_Power_of_One_by_Courtenay.jpg"
+  },
   "The Quiet American": {
-    "c": 6783126, "local": "The_Quiet_American_by_Greene.png" },
+    "c": 6783126,
+    "local": "The_Quiet_American_by_Greene.png"
+  },
   "The Richest Man In Babylon": {
-    "c": 10491331, "local": "Richest_Man_in_Babylon_by_Clason.jpeg" },
+    "c": 10491331,
+    "local": "Richest_Man_in_Babylon_by_Clason.jpeg"
+  },
   "The Righteous Mind": {
-    "c": 7256782, "local": "The_Righteous_Mind_by_Haidt.png" },
+    "c": 7256782,
+    "local": "The_Righteous_Mind_by_Haidt.png"
+  },
   "The Rise and Fall of the Dinosaurs": {
-    "c": 14615391, "local": "The_Rise_and_Fall_of_the_Dinosaurs_by_Brusatte.jpg" },
+    "c": 14615391,
+    "local": "The_Rise_and_Fall_of_the_Dinosaurs_by_Brusatte.jpg"
+  },
   "The Rise and Reign of Mammals": {
-    "c": 13548048, "local": "The_Rise_and_Reign_of_Mammals_by_Brusatte.jpeg" },
+    "c": 13548048,
+    "local": "The_Rise_and_Reign_of_Mammals_by_Brusatte.jpeg"
+  },
   "The Rise of Superman": {
-    "c": 7819294, "local": "The_Rise_of_Superman_by_Kotler.png" },
+    "c": 7819294,
+    "local": "The_Rise_of_Superman_by_Kotler.png"
+  },
   "The Scarlet Letter": {
-    "c": 5654516, "local": "Scarlet_Letter_by_Hawthorne.jpg" },
+    "c": 5654516,
+    "local": "Scarlet_Letter_by_Hawthorne.jpg"
+  },
   "The Secret History of Ninjutsu": {
-    "c": 9134319, "local": "Secret_History_of_Ninjutsu_by_Tuttle.jpeg" },
+    "c": 9134319,
+    "local": "Secret_History_of_Ninjutsu_by_Tuttle.jpeg"
+  },
   "The Secret Wisdom of Nature": {
-    "c": 8802845, "local": "The_Secret_Wisdom_of_Nature_by_Wohlleben.jpg" },
+    "c": 8802845,
+    "local": "The_Secret_Wisdom_of_Nature_by_Wohlleben.jpg"
+  },
   "The Shortest History of China": {
     "c": 13449064
   },
   "The Sixth Extinction": {
-    "c": 7910870, "local": "The_Sixth_Extinction_by_Kolbert.jpg" },
+    "c": 7910870,
+    "local": "The_Sixth_Extinction_by_Kolbert.jpg"
+  },
   "The Smartest Guys In the Room": {
-    "c": 6968592, "local": "Smartest_Guys_in_the_Room_by_McLean.jpeg" },
+    "c": 6968592,
+    "local": "Smartest_Guys_in_the_Room_by_McLean.jpeg"
+  },
   "The Telomere Effect": {
-    "c": 8843567, "local": "Telomere_Effect_by_Blackburn.jpg" },
+    "c": 8843567,
+    "local": "Telomere_Effect_by_Blackburn.jpg"
+  },
   "The Weather Detective": {
-    "c": 10230997, "local": "The_Weather_Detective_by_Wohlleben.jpeg" },
+    "c": 10230997,
+    "local": "The_Weather_Detective_by_Wohlleben.jpeg"
+  },
   "The Weather Experiment": {
     "c": 10407800
   },
   "The Weather Makers": {
-    "c": 660779, "local": "The_Weather_Makers_by_Flannery.jpg" },
+    "c": 660779,
+    "local": "The_Weather_Makers_by_Flannery.jpg"
+  },
   "The World Without Us": {
-    "c": 6981028, "local": "The_World_Without_Us_by_Weisman.jpg" },
+    "c": 6981028,
+    "local": "The_World_Without_Us_by_Weisman.jpg"
+  },
   "These Truths": {
-    "c": 11153287, "local": "These_Truths_by_Lepore.jpeg" },
+    "c": 11153287,
+    "local": "These_Truths_by_Lepore.jpeg"
+  },
   "Things Fall Apart": {
-    "c": 12816943, "local": "Things_Fall_Apart_by_Achebe.jpeg" },
+    "c": 12816943,
+    "local": "Things_Fall_Apart_by_Achebe.jpeg"
+  },
   "Thinking Fast and Slow": {
-    "c": 13290711, "local": "Thinking_Fast_and_Slow_by_Kahneman.jpg" },
+    "c": 13290711,
+    "local": "Thinking_Fast_and_Slow_by_Kahneman.jpg"
+  },
   "Tools of Titans": {
-    "c": 7902475, "local": "Tools_of_Titans_by_Ferriss.jpg" },
+    "c": 7902475,
+    "local": "Tools_of_Titans_by_Ferriss.jpg"
+  },
   "Transforming Leadership": {
-    "c": 6635120, "local": "Transforming_Leadership_by_Burns.jpg" },
+    "c": 6635120,
+    "local": "Transforming_Leadership_by_Burns.jpg"
+  },
   "Treasure Island": {
-    "c": 13859660, "local": "Treasure_Island_by_Stevenson.jpg" },
+    "c": 13859660,
+    "local": "Treasure_Island_by_Stevenson.jpg"
+  },
   "Turn Right At Machu Picchu": {
-    "c": 6784866, "local": "Turn_Right_at_Machu_Picchu_by_Adams.jpg" },
+    "c": 6784866,
+    "local": "Turn_Right_at_Machu_Picchu_by_Adams.jpg"
+  },
   "Ulysses": {
-    "c": 13136548, "local": "Ulysses_by_Joyce.jpeg" },
+    "c": 13136548,
+    "local": "Ulysses_by_Joyce.jpeg"
+  },
   "Undaunted Courage": {
-    "c": 425281, "local": "Undaunted_Courage_by_Ambrose.jpeg" },
+    "c": 425281,
+    "local": "Undaunted_Courage_by_Ambrose.jpeg"
+  },
   "Unnatural Selection": {
-    "c": 636155, "local": "Unnatural_Selection_by_Wingerson.gif" },
+    "c": 636155,
+    "local": "Unnatural_Selection_by_Wingerson.gif"
+  },
   "Unto This Last": {
-    "c": 8244595, "local": "Unto_This_Last_and_Other_Writings_by_Ruskin.jpeg" },
+    "c": 8244595,
+    "local": "Unto_This_Last_and_Other_Writings_by_Ruskin.jpeg"
+  },
   "Valve Handbook": {
     "c": 59854
   },
   "Virus Ground Zero": {
-    "c": 406383, "local": "Virus_Ground_Zero_by_Regis.jpg" },
+    "c": 406383,
+    "local": "Virus_Ground_Zero_by_Regis.jpg"
+  },
   "Volcanoes In the Sea": {
-    "c": 4502323, "local": "Volcanoes_in_the_Sea_by_MacDonald.jpg" },
+    "c": 4502323,
+    "local": "Volcanoes_in_the_Sea_by_MacDonald.jpg"
+  },
   "Weather": {
-    "c": 9268165, "local": "Weather_by_Buckley.jpg" },
+    "c": 9268165,
+    "local": "Weather_by_Buckley.jpg"
+  },
   "When the Rivers Run Dry": {
-    "c": 588519, "local": "When_the_Rivers_Run_Dry_by_Pearce.jpeg" },
+    "c": 588519,
+    "local": "When_the_Rivers_Run_Dry_by_Pearce.jpeg"
+  },
   "Winter of Our Discontent": {
-    "c": 9189467, "local": "The_Winter_of_Our_Discontent_by_Steinbeck.jpg" },
+    "c": 9189467,
+    "local": "The_Winter_of_Our_Discontent_by_Steinbeck.jpg"
+  },
   "Yemen": {
     "c": 850687
+  },
+  "Focus": {
+    "local": "Focus_by_Goleman.jpg"
+  },
+  "Seneca": {
+    "c": 12626851
+  },
+  "Heroes": {
+    "c": 8650334
+  },
+  "The Historical Atlas of the Bible": {
+    "local": "historical-atlas-bible.jpeg"
+  },
+  "Appeal": {
+    "c": 1850281
+  },
+  "Back To Work": {
+    "c": 9942981
+  },
+  "Burj Khalifa At The Top": {
+    "local": "Burj_Khalifa_Museum_Dubai.jpeg"
+  },
+  "Building the Bombs": {
+    "c": 14148666
+  },
+  "Collapse": {
+    "c": 12915198
+  },
+  "Countdown": {
+    "c": 7284869
+  },
+  "Masters of War": {
+    "c": 1351446
+  },
+  "Restoring Paradise": {
+    "c": 13906801
+  },
+  "Think Your Way To Wealth": {
+    "c": 13835922
+  },
+  "Earth": {
+    "c": 5431232
+  },
+  "Gödel, Escher, Bach": {
+    "c": 14368453
+  },
+  "Hiking the Southwests Geology": {
+    "c": 699691
+  },
+  "Hydrology 1": {
+    "c": 10346427
+  },
+  "Numbers Guide": {
+    "c": 302567,
+    "local": "Numbers_Guide_by_the_Economist.png"
+  },
+  "Demon Copperhead": {
+    "local": "Demon_Copperhead_by_Kingsolver.jpg",
+    "c": 13383458
+  },
+  "The Nightingale": {
+    "local": "The_Nightingale_by_Hannah.jpg",
+    "c": 8413101
+  },
+  "Virus": {
+    "c": 5031455
+  },
+  "A City on Mars": {
+    "c": 14095692
+  },
+  "Five Stars": {
+    "c": 10119325
+  },
+  "Killer Germs": {
+    "c": 594074
+  },
+  "Drink": {
+    "c": 10405782
+  },
+  "The Champions Mind": {
+    "c": 14370897
+  },
+  "1984": {
+    "c": 8745958,
+    "local": "1984_by_Orwell.jpg"
+  },
+  "All Quiet on the Western Front": {
+    "c": 10655404
+  },
+  "Paradise Lost": {
+    "c": 5992814
+  },
+  "The Body": {
+    "local": "The_Body_by_Bryson.png",
+    "c": 12722746
+  },
+  "Troy": {
+    "c": 10657530
+  },
+  "Wash Your Hands": {
+    "c": 2116237
+  },
+  "Zorba the Greek": {
+    "c": 13336342
+  },
+  "All the Best": {
+    "c": 480791
+  },
+  "Columbus": {
+    "c": 4029187
+  },
+  "Drone Theory": {
+    "c": 12491864
+  },
+  "Indianapolis": {
+    "c": 9245519
+  },
+  "My Life": {
+    "c": 227454
+  },
+  "SPQR": {
+    "c": 7390155
+  },
+  "The Gamble": {
+    "c": 6409011
+  },
+  "Washingtons Crossing": {
+    "c": 126560
+  },
+  "American Museum Of Natural History": {
+    "local": "museum_american-museum-of-natural-history.png"
+  },
+  "Fort Raleigh Historic Site": {
+    "local": "museum_fort-raleigh.png"
+  },
+  "Mount St. Helens Nat'l Volcanic Monument": {
+    "local": "museum_mount-st-helens-national-volcanic-monument.png"
+  },
+  "Museo Amazónico": {
+    "local": "museum_museo-amazonico.png"
+  },
+  "Museo Larco": {
+    "local": "museum_museo-larco.png"
+  },
+  "Museo de Arqueología, Lima": {
+    "local": "museum_museo-arqueologia-lima.jpg"
+  },
+  "Museum of Indigenous Amazonian Cultures": {
+    "local": "museum_museum-of-indigenous-amazonian-cultures.png"
+  },
+  "National Archives Museum": {
+    "local": "museum_national-archives-museum.png"
+  },
+  "National Gallery of Art": {
+    "local": "museum_us-national-gallery-of-art.png"
+  },
+  "Royal Museum of Fine Arts, Belgium": {
+    "local": "museum_royal-museum-of-fine-arts-of-belgium.png"
+  },
+  "Seattle Art Museum": {
+    "local": "museum_seattle-art-museum.png"
+  },
+  "George Washington Masonic Memorial": {
+    "local": "museum_the-george-washington-masonic-national-memorial.png"
+  },
+  "Wright Brothers National Memorial": {
+    "local": "museum_wright-brothers.png"
+  },
+  "Country Music Museum And Hall Of Fame": {
+    "local": "museum_country-music-museum-and-hall-of-fame.png"
+  },
+  "Gray Fossil Site": {
+    "local": "museum_gray-fossil-site.png"
+  },
+  "Milken Center for the American Dream": {
+    "local": "museum_mcaad-museum.png"
+  },
+  "McClung Museum": {
+    "local": "museum_mcclung-museum.jpg"
+  },
+  "Museum Of The Bible": {
+    "local": "museum_museum-of-the-bible.png"
+  },
+  "Museum of the Future": {
+    "local": "Futures_Museum_Dubai.png"
+  },
+  "Linden Museum": {
+    "local": "Linden_Museum_Stuttgart.png"
+  },
+  "National Air And Space Museum": {
+    "local": "museum_national-air-and-space-museum.png"
+  },
+  "National Museum of the Marine Corps": {
+    "local": "museum_usmc-museum.png"
+  },
+  "Anchorage Museum": {
+    "local": "museum_anchorage-museum.png"
+  },
+  "Art Institute Of Chicago": {
+    "local": "museum_art-institute-of-chicago.png"
+  },
+  "Ball's Bluff Battlefield": {
+    "local": "museum_balls-bluff-battlefield-park.jpg"
+  },
+  "Field Museum": {
+    "local": "museum_field-museum.png"
+  },
+  "The Henry Ford Museum": {
+    "local": "museum_the-henry-ford-museum.jpg"
+  },
+  "Landesmuseum Württemberg": {
+    "local": "museum_landesmuseum-wurttemberg.png"
+  },
+  "National Museum of the American Indian": {
+    "local": "museum_american-indian-museum.png"
+  },
+  "NYPL Rare Books Division": {
+    "local": "museum_nyc-public-library-rare-books-museum.png"
+  },
+  "Namibia Independence Museum": {
+    "local": "museum_namibia-independence-museum.png"
+  },
+  "Asian Art Museum": {
+    "local": "museum_asian-art-museum.jpg"
+  },
+  "Museum Of Nuclear Science": {
+    "local": "museum_museum-of-nuclear-science.png"
+  },
+  "New Mexico Museum of Natural History": {
+    "local": "museum_new-mexico-museum-of-natural-history.jpg"
+  },
+  "Rijksmuseum": {
+    "local": "museum_rijksmuseum.jpg"
+  },
+  "Robben Island Museum": {
+    "local": "museum_robben-island-museum.png"
+  },
+  "Table Mountain National Park": {
+    "local": "museum_table-mountain-national-park.png"
+  },
+  "National Portrait Gallery": {
+    "local": "museum_us-national-portrait-gallery.png"
+  },
+  "100 Years of Sea Power": {
+    "local": "100_Years_of_Sea_Power_by_Baer.jpg"
+  },
+  "Bushido the Soul of Japan": {
+    "local": "Bushido_The_Soul_of_Japan_by_Nitobe.jpg"
+  },
+  "Debating To Win Arguments": {
+    "local": "Debating_to_Win_Arguments_by_Greene.jpg"
+  },
+  "Aftershock Economy": {
+    "local": "Aftershock_Economy_by_Wiedemer.jpg"
+  },
+  "Best Things First": {
+    "local": "Best_Things_First_by_Lomborg.jpeg"
+  },
+  "Man V Markets": {
+    "local": "Man_VS_Markets_by_Hirsch.jpeg"
+  },
+  "Military Strategy": {
+    "local": "Military_Strategy_by_Wylie.jpg"
+  },
+  "On War": {
+    "local": "On_War_by_Clausewitz.jpg"
+  },
+  "The Money Book": {
+    "local": "The_Money_Book_by_Orman.jpg"
+  },
+  "Fighting Disease": {
+    "local": "Fighting_Disease_by_Michaud.jpg"
+  },
+  "Geologic History of the Amazon": {
+    "local": "Geologic_History_of_the_Amazon_by_Val.png"
+  },
+  "Oceans": {
+    "local": "Oceans_by_Hutchinson.jpg"
+  },
+  "Sustainability Science": {
+    "local": "Sustainability_Science_by_de_Vries.png"
+  },
+  "The Essential of Biochemistry": {
+    "local": "The_Essentials_of_Biochemistry_by_REA.jpg"
+  },
+  "The Future of Humanity": {
+    "local": "The_Future_of_Humanity_by_Kaku.jpg"
+  },
+  "The Hidden Life of Trees": {
+    "local": "The_Hidden_Life_of_Trees_by_Wohlleben.jpg"
+  },
+  "Human Resources": {
+    "local": "Human_Resources_with_Carlin.jpg"
+  },
+  "Plant Based Protein": {
+    "local": "Plant_Based_Protein_Cookbook_by_Wilson.jpg"
+  },
+  "The Omnivores Dilemma": {
+    "local": "The_Omnivores_Dilemma_by_Pollan.jpg"
+  },
+  "The Visual Guide To Lockpicking": {
+    "local": "The_Visual_Guide_to_Lockpicking_by_McCloud.jpeg"
+  },
+  "Virus Hunters of the Cdc": {
+    "local": "Virus_Hunters_of_the_CDC_by_McCormick.jpg"
+  },
+  "Anna Karenina": {
+    "local": "Anna_Karenina_by_Tolstoy.jpeg"
+  },
+  "Celestron Nexstar 8 Se": {
+    "local": "Celestron_Telescope.png"
+  },
+  "Deep Time": {
+    "local": "Deep_Time_by_Black.jpg"
+  },
+  "Island Beneath the Sea": {
+    "local": "Island_Beneath_the_Sea_by_Allende.jpg"
+  },
+  "Shadow of the Wind": {
+    "local": "Shadow_of_the_Wind_by_Zafon.jpg"
+  },
+  "Who's Afraid of Carl": {
+    "local": "Whose_Afraid_of_Carl_by_Handel.jpg"
+  },
+  "British Strategic Defeat In the Southern Campaign": {
+    "local": "British_Strategic_Defeat_Southern_Campaign_by_Pearson.jpg"
+  },
+  "Proverbs of the Samburu": {
+    "local": "Proverbs_of_the_Samburu_by_Lesarge.jpeg"
+  },
+  "Punic Nightmares": {
+    "local": "Punic_Nightmares_by_Carlin.jpeg"
+  },
+  "Somalia": {
+    "local": "Somalia_by_Lewis.png"
+  },
+  "There Goes Robert E Lee": {
+    "local": "There_Goes_Robert_E_Lee_by_Caldwell.jpeg"
+  },
+  "To Subdue America": {
+    "local": "To_Subdue_America_by_Conway.png"
+  },
+  "The 2018 Global Risk Report": {
+    "local": "2018_Global_Risk_Report_WEF.png"
+  },
+  "Immune": {
+    "c": 10954401
+  },
+  "Aesir With Carlin": {
+    "local": "Twilight_of_the_Aesir_with_Carlin.jpg"
+  },
+  "Natural Intelligence": {
+    "local": "NI_by_Gorissen.jpg"
+  },
+  "An Inconvenient Truth": {
+    "local": "An Inconvenient Truth by Gore.jpg"
+  },
+  "Bewac": {
+    "local": "BEWAC_by_Hjellstrom.jpg"
+  },
+  "Teotihuacan": {
+    "local": "Teotihuacan.jpeg"
+  },
+  "Museo del Templo Mayor": {
+    "local": "Museo del Templo Mayor.png"
+  },
+  "Virgin Islands National Park": {
+    "local": "Virgin Islands National Park.png"
+  },
+  "Barbados Museum": {
+    "local": "Barbados Museum & Historical Society.png"
+  },
+  "Secret of Secrets": {
+    "local": "Secret of Secrets by Brown.jpg"
+  },
+  "The Go-Giver": {
+    "local": "The Go-Giver by Burg.jpg"
+  },
+  "Speak, Memory": {
+    "local": "speak-memory.jpg"
   }
-,
-  "Focus": { "local": "Focus_by_Goleman.jpg" },
-  "Seneca": { "c": 12626851 },
-  "Heroes": { "c": 8650334 },
-  "The Historical Atlas of the Bible": { "local": "historical-atlas-bible.jpeg" },
-  "Appeal": { "c": 1850281 },
-  "Back To Work": { "c": 9942981 },
-  "Burj Khalifa At The Top": { "local": "Burj_Khalifa_Museum_Dubai.jpeg" },
-  "Building the Bombs": { "c": 14148666 },
-  "Collapse": { "c": 12915198 },
-  "Countdown": { "c": 7284869 },
-  "Masters of War": { "c": 1351446 },
-  "Restoring Paradise": { "c": 13906801 },
-  "Think Your Way To Wealth": { "c": 13835922 },
-  "Earth": { "c": 5431232 },
-  "Gödel, Escher, Bach": { "c": 14368453 },
-  "Hiking the Southwests Geology": { "c": 699691 },
-  "Hydrology 1": { "c": 10346427 },
-  "Numbers Guide": { "c": 302567, "local": "Numbers_Guide_by_the_Economist.png" },
-  "Demon Copperhead": { "local": "Demon_Copperhead_by_Kingsolver.jpg", "c": 13383458 },
-  "The Nightingale": { "local": "The_Nightingale_by_Hannah.jpg", "c": 8413101 },
-  "Virus": { "c": 5031455 },
-  "A City on Mars": { "c": 14095692 },
-  "Five Stars": { "c": 10119325 },
-  "Killer Germs": { "c": 594074 },
-  "Drink": { "c": 10405782 },
-  "The Champions Mind": { "c": 14370897 },
-  "1984": { "c": 8745958, "local": "1984_by_Orwell.jpg" },
-  "All Quiet on the Western Front": { "c": 10655404 },
-  "Paradise Lost": { "c": 5992814 },
-  "The Body": { "local": "The_Body_by_Bryson.png", "c": 12722746 },
-  "Troy": { "c": 10657530 },
-  "Wash Your Hands": { "c": 2116237 },
-  "Zorba the Greek": { "c": 13336342 },
-  "All the Best": { "c": 480791 },
-  "Columbus": { "c": 4029187 },
-  "Drone Theory": { "c": 12491864 },
-  "Indianapolis": { "c": 9245519 },
-  "My Life": { "c": 227454 },
-  "SPQR": { "c": 7390155 },
-  "The Gamble": { "c": 6409011 },
-  "Washingtons Crossing": { "c": 126560 }
-,
-  "American Museum Of Natural History": {"local": "museum_american-museum-of-natural-history.png"},
-  "Fort Raleigh Historic Site": {"local": "museum_fort-raleigh.png"},
-  "Mount St. Helens Nat'l Volcanic Monument": {"local": "museum_mount-st-helens-national-volcanic-monument.png"},
-  "Museo Amaz\u00f3nico": {"local": "museum_museo-amazonico.png"},
-  "Museo Larco": {"local": "museum_museo-larco.png"},
-  "Museo de Arqueolog\u00eda, Lima": {"local": "museum_museo-arqueologia-lima.jpg"},
-  "Museum of Indigenous Amazonian Cultures": {"local": "museum_museum-of-indigenous-amazonian-cultures.png"},
-  "National Archives Museum": {"local": "museum_national-archives-museum.png"},
-  "National Gallery of Art": {"local": "museum_us-national-gallery-of-art.png"},
-  "Royal Museum of Fine Arts, Belgium": {"local": "museum_royal-museum-of-fine-arts-of-belgium.png"},
-  "Seattle Art Museum": {"local": "museum_seattle-art-museum.png"},
-  "George Washington Masonic Memorial": {"local": "museum_the-george-washington-masonic-national-memorial.png"},
-  "Wright Brothers National Memorial": {"local": "museum_wright-brothers.png"},
-  "Country Music Museum And Hall Of Fame": {"local": "museum_country-music-museum-and-hall-of-fame.png"},
-  "Gray Fossil Site": {"local": "museum_gray-fossil-site.png"},
-  "Milken Center for the American Dream": {"local": "museum_mcaad-museum.png"},
-  "McClung Museum": {"local": "museum_mcclung-museum.jpg"},
-  "Museum Of The Bible": {"local": "museum_museum-of-the-bible.png"},
-  "Museum of the Future": {"local": "Futures_Museum_Dubai.png"},
-  "Linden Museum": {"local": "Linden_Museum_Stuttgart.png"},
-  "National Air And Space Museum": {"local": "museum_national-air-and-space-museum.png"},
-  "National Museum of the Marine Corps": {"local": "museum_usmc-museum.png"},
-  "Anchorage Museum": {"local": "museum_anchorage-museum.png"},
-  "Art Institute Of Chicago": {"local": "museum_art-institute-of-chicago.png"},
-  "Ball's Bluff Battlefield": {"local": "museum_balls-bluff-battlefield-park.jpg"},
-  "Field Museum": {"local": "museum_field-museum.png"},
-  "The Henry Ford Museum": {"local": "museum_the-henry-ford-museum.jpg"},
-  "Landesmuseum W\u00fcrttemberg": {"local": "museum_landesmuseum-wurttemberg.png"},
-  "National Museum of the American Indian": {"local": "museum_american-indian-museum.png"},
-  "NYPL Rare Books Division": {"local": "museum_nyc-public-library-rare-books-museum.png"},
-  "Namibia Independence Museum": {"local": "museum_namibia-independence-museum.png"},
-  "Asian Art Museum": {"local": "museum_asian-art-museum.jpg"},
-  "Museum Of Nuclear Science": {"local": "museum_museum-of-nuclear-science.png"},
-  "New Mexico Museum of Natural History": {"local": "museum_new-mexico-museum-of-natural-history.jpg"},
-  "Rijksmuseum": {"local": "museum_rijksmuseum.jpg"},
-  "Robben Island Museum": {"local": "museum_robben-island-museum.png"},
-  "Table Mountain National Park": {"local": "museum_table-mountain-national-park.png"},
-  "National Portrait Gallery": {"local": "museum_us-national-portrait-gallery.png"}
-,
-  "100 Years of Sea Power": {"local": "100_Years_of_Sea_Power_by_Baer.jpg"}
-,
-  "Bushido the Soul of Japan": {"local": "Bushido_The_Soul_of_Japan_by_Nitobe.jpg"},
-  "Debating To Win Arguments": {"local": "Debating_to_Win_Arguments_by_Greene.jpg"},
-  "Aftershock Economy": {"local": "Aftershock_Economy_by_Wiedemer.jpg"},
-  "Best Things First": {"local": "Best_Things_First_by_Lomborg.jpeg"},
-  "Man V Markets": {"local": "Man_VS_Markets_by_Hirsch.jpeg"},
-  "Military Strategy": {"local": "Military_Strategy_by_Wylie.jpg"},
-  "On War": {"local": "On_War_by_Clausewitz.jpg"},
-  "The Money Book": {"local": "The_Money_Book_by_Orman.jpg"},
-  "Fighting Disease": {"local": "Fighting_Disease_by_Michaud.jpg"},
-  "Geologic History of the Amazon": {"local": "Geologic_History_of_the_Amazon_by_Val.png"},
-  "Oceans": {"local": "Oceans_by_Hutchinson.jpg"},
-  "Sustainability Science": {"local": "Sustainability_Science_by_de_Vries.png"},
-  "The Essential of Biochemistry": {"local": "The_Essentials_of_Biochemistry_by_REA.jpg"},
-  "The Future of Humanity": {"local": "The_Future_of_Humanity_by_Kaku.jpg"},
-  "The Hidden Life of Trees": {"local": "The_Hidden_Life_of_Trees_by_Wohlleben.jpg"},
-  "Human Resources": {"local": "Human_Resources_with_Carlin.jpg"},
-  "Plant Based Protein": {"local": "Plant_Based_Protein_Cookbook_by_Wilson.jpg"},
-  "The Omnivores Dilemma": {"local": "The_Omnivores_Dilemma_by_Pollan.jpg"},
-  "The Visual Guide To Lockpicking": {"local": "The_Visual_Guide_to_Lockpicking_by_McCloud.jpeg"},
-  "Virus Hunters of the Cdc": {"local": "Virus_Hunters_of_the_CDC_by_McCormick.jpg"},
-  "Anna Karenina": {"local": "Anna_Karenina_by_Tolstoy.jpeg"},
-  "Celestron Nexstar 8 Se": {"local": "Celestron_Telescope.png"},
-  "Deep Time": {"local": "Deep_Time_by_Black.jpg"},
-  "Island Beneath the Sea": {"local": "Island_Beneath_the_Sea_by_Allende.jpg"},
-  "Shadow of the Wind": {"local": "Shadow_of_the_Wind_by_Zafon.jpg"},
-  "Who's Afraid of Carl": {"local": "Whose_Afraid_of_Carl_by_Handel.jpg"},
-  "British Strategic Defeat In the Southern Campaign": {"local": "British_Strategic_Defeat_Southern_Campaign_by_Pearson.jpg"},
-  "Proverbs of the Samburu": {"local": "Proverbs_of_the_Samburu_by_Lesarge.jpeg"},
-  "Punic Nightmares": {"local": "Punic_Nightmares_by_Carlin.jpeg"},
-  "Somalia": {"local": "Somalia_by_Lewis.png"},
-  "There Goes Robert E Lee": {"local": "There_Goes_Robert_E_Lee_by_Caldwell.jpeg"},
-  "To Subdue America": {"local": "To_Subdue_America_by_Conway.png"},
-  "The 2018 Global Risk Report": {"local": "2018_Global_Risk_Report_WEF.png"},
-  "Immune": {"c": 10954401}
-,
-  "Aesir With Carlin": {"local": "Twilight_of_the_Aesir_with_Carlin.jpg"},
-  "Natural Intelligence": {"local": "NI_by_Gorissen.jpg"},
-  "An Inconvenient Truth": {"local": "An Inconvenient Truth by Gore.jpg"},
-  "Bewac": {"local": "BEWAC_by_Hjellstrom.jpg"},
-  "Teotihuacan": {"local": "Teotihuacan.jpeg"},
-  "Museo del Templo Mayor": {"local": "Museo del Templo Mayor.png"},
-  "Virgin Islands National Park": {"local": "Virgin Islands National Park.png"},
-  "Barbados Museum": {"local": "Barbados Museum & Historical Society.png"},
-  "Secret of Secrets": {"local": "Secret of Secrets by Brown.jpg"},
-  "The Go-Giver": {"local": "The Go-Giver by Burg.jpg"}
 };
 
 /* Open Library work keys — used to fetch descriptions on demand. */
