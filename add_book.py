@@ -73,7 +73,7 @@ def strip_author(name):
 
 def rename_for_web(filename):
     stem, ext = os.path.splitext(filename)
-    stem = stem.replace("'", "").replace(".", "")
+    stem = stem.replace("'", "").replace(".", "").replace(",", "")
     stem = stem.replace(" ", "_")
     return stem + ext
 

@@ -2950,7 +2950,15 @@ const DEWEY = [
         "dewey": "889.3"
       },
       {
-        "t": "Anna Karenina",
+        {
+        "t": "Speak, Memory",
+        "a": "Vladimir Nabokov",
+        "k": "book",
+        "slug": "speak-memory",
+        "galleryEnd": true,
+        "dewey": "891.73"
+      },
+      "t": "Anna Karenina",
         "a": "Leo Tolstoy",
         "k": "book",
         "slug": "anna-karenina",
@@ -4922,6 +4930,7 @@ const DESCRIPTIONS = {
 
 /* Eric's original stekel.org images, per page (ordered: hero first). Local files under assets/stekel/. */
 var PAGE_IMAGES = {
+  "speak-memory": ["1900_Nabokovs_Father_and_Mother.jpeg", "190808_Nabokovs_Family_Photo.jpeg", "1915_Nabokov.jpeg", "191811_Nabokov_and_his_Siblings_in_Yalta.jpeg", "The_Sleep_of_Reason_Produces_Monsters_by_Fracisco_Goya_Spain.jpg"],
   "a-city-on-mars": ["1970_East_and_West_Pakistan.jpeg", "Animal_Launches_in_Space.jpeg", "Biosphere_2_Recipes.jpeg", "Biosphere_2_Schematic.jpeg", "Cost_to_send_stuff_into_orbit_(2021).jpeg", "Earths_tilt_and_seasons.jpeg", "Earth-Mars_Travel.jpeg", "Elements_used_in_Space_Travel.jpeg", "Gemini_Mission.jpeg", "Geosynchronous_Orbit.jpeg", "Lava_Tubes.jpeg", "Legal_Frameworks.jpeg", "Magnetic_Pulse_Launches.jpeg", "Mars_Chemical_Formulas.jpeg", "Moon_station.jpeg", "NASA_proposed_landing_sites_for_Artemis_III.jpeg", "Phobos_and_Deimos.jpeg", "Solar_System_Distances.jpeg", "Space_Objects.jpeg", "Space_Shuttle_v_Mir.jpeg", "Space_Station_Drawings.jpeg", "Spallation.jpeg", "Sputnik_Satellites.jpeg", "Turkish_Rep_of_Northern_Cyprus.jpeg", "V2_Rocket.jpeg"],
   "100-years-of-sea-power": [
     "Pacific_Theater.jpg",
