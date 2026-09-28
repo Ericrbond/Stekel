@@ -520,6 +520,13 @@ const DEWEY = [
         "dewey": "330.1"
       },
       {
+        "t": "Economics in One Lesson",
+        "a": "Henry Hazlitt",
+        "k": "book",
+        "slug": "economics-in-one-lesson",
+        "dewey": "330.1"
+      },
+      {
         "t": "Complete Guide To Money",
         "a": "Dave Ramsey",
         "k": "book",
@@ -5385,6 +5392,9 @@ const COVERS = {
   },
   "Suicidal Empathy": {
     "local": "suicidal-empathy.jpeg"
+  },
+  "Economics in One Lesson": {
+    "local": "economics-in-one-lesson.jpeg"
   }
 };
 
