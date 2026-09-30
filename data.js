@@ -3597,7 +3597,8 @@ const DEWEY = [
         "a": "George H. W. Bush",
         "k": "book",
         "slug": "all-the-best-bush",
-        "dewey": "973.931"
+        "dewey": "973.931",
+        "galleryEnd": true
       },
       {
         "t": "A Promised Land",
