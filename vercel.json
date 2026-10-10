@@ -2,6 +2,9 @@
   "version": 2,
   "framework": null,
   "buildCommand": "npm install",
+  "rewrites": [
+    { "source": "/((?!api|assets|sw.js|data.js|content.js|app.js|styles.css|index.html|manifest.json).*)", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

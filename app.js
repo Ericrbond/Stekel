@@ -45,7 +45,7 @@
       b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
       b.innerHTML = (on ? STAR_F : STAR_O) + (big ? `<span class="star-lbl">${on ? "Saved" : "Save"}</span>` : "");
     });
-    if (location.hash.startsWith("#/saved")) route();
+    if (location.pathname.startsWith("/saved")) route();
   });
 
   /* ---- recently viewed ---- */
@@ -60,7 +60,7 @@
   }
 
   /* ---- random ---- */
-  function goRandom() { const pool = ALL.filter((x) => x.slug); if (!pool.length) return; const x = pool[Math.floor(Math.random() * pool.length)]; location.hash = "#/item/" + encodeURIComponent(x.slug); }
+  function goRandom() { const pool = ALL.filter((x) => x.slug); if (!pool.length) return; const x = pool[Math.floor(Math.random() * pool.length)]; navigate("/" + encodeURIComponent(x.slug)); }
 
   /* ---- keyboard prev/next on detail pages ---- */
   let kbdPrev = null, kbdNext = null;
@@ -222,7 +222,7 @@
   /* ---- card (links to its page) ---- */
   function card(x) {
     const a = el("a", "card reveal");
-    a.href = "#/item/" + encodeURIComponent(x.slug || "");
+    a.href = "/" + encodeURIComponent(x.slug || "");
     const myRating = x.slug ? parseInt(localStorage.getItem('stekel_rating_' + x.slug)) || 0 : 0;
     a.innerHTML = `
       <div class="card-cover">${coverHTML(x, "M")}${x.slug ? starBtn(x.slug) : ""}${myRating ? `<div class="card-rating">★ ${myRating}</div>` : ""}</div>
@@ -256,7 +256,7 @@
           <h1 class="reveal" data-d="1">A library of <em>everything,</em> arranged so you can wander.</h1>
           <p class="lede reveal" data-d="2">Ten classes. A thousand numbered rooms. Philosophy to zoology — and every road between. Wander in any direction. There is no wrong door.</p>
           <div class="hero-cta reveal" data-d="3">
-            <a class="btn btn-primary" href="#/catalog">Browse the catalog <span class="arr">→</span></a>
+            <a class="btn btn-primary" href="/catalog">Browse the catalog <span class="arr">→</span></a>
             <button class="btn btn-ghost" id="homeSearch">Search everything ⌘K</button>
             <button class="btn btn-ghost" id="homeRandom">Surprise me 🎲</button>
           </div>
@@ -294,7 +294,7 @@
       const olSrc = cov.c ? `https://covers.openlibrary.org/b/id/${cov.c}-M.jpg` : "";
       const src = localSrc || olSrc;
       const onerr = localSrc && olSrc ? `this.onerror=null;this.src='${olSrc}';` : `this.closest('.ribbon-item').style.display='none'`;
-      return `<a class="ribbon-item" href="#/item/${encodeURIComponent(x.slug)}" aria-label="${esc(x.t)}"><img loading="lazy" src="${src}" alt="" onerror="${onerr}"></a>`;
+      return `<a class="ribbon-item" href="/${encodeURIComponent(x.slug)}" aria-label="${esc(x.t)}"><img loading="lazy" src="${src}" alt="" onerror="${onerr}"></a>`;
     }).join("");
     track.innerHTML = make() + make();
     // Auto-scrolling ribbon: drifts on load, stays hand-scrollable, seamlessly loops.
@@ -336,7 +336,7 @@
     const spec = $("#spectrum", root);
     DEWEY.forEach((d, i) => {
       const a = el("a", "tile reveal");
-      a.href = "#/class/" + d.code;
+      a.href = "/class/" + d.code;
       a.style.setProperty("--accent", accents[i % accents.length]);
       a.dataset.d = String((i % 4) + 1);
       a.innerHTML = `<div class="code">${d.range}</div><h3>${esc(d.name)}</h3><p>${esc(d.blurb)}</p><span class="count"><b>${d.items.length}</b> in collection</span>`;
@@ -348,7 +348,7 @@
     const max = Math.max(...DEWEY.map((d) => d.items.length), 1);
     DEWEY.forEach((d, i) => {
       const a = el("a", "distro-row reveal");
-      a.href = "#/class/" + d.code;
+      a.href = "/class/" + d.code;
       a.dataset.d = String((i % 4) + 1);
       a.style.setProperty("--accent", accents[i % accents.length]);
       a.innerHTML = `
@@ -370,15 +370,15 @@
     // hub cards
     const hub = $("#hub", root);
     const hubs = [
-      { h: "#/timelines", t: "Timelines", d: "Four windows onto everything that ever happened." },
-      { h: "#/languages", t: "Languages", d: "Two dozen pocket guides for the curious traveler." },
-      { h: "#/documents", t: "Documents", d: "The charters and declarations that drew the lines." },
-      { h: "#/study", t: "Study programs", d: "Structured coursework, for going deeper." },
-      { h: "#/voices", t: "Voices", d: "Interviews and quotes — the people behind the pages." },
-      { h: "#/research", t: "Research", d: "Original scholarly articles on climate, water, and the natural world." },
-      { h: "#/catalog", t: "The full catalog", d: `Every one of ${ALL.length} entries, searchable.` },
-      { h: "#/shelf", t: "The shelves", d: "Browse the collection as a wall of book spines." },
-      { h: "#/saved", t: "★ Saved", d: saved.size ? `${saved.size} item${saved.size === 1 ? "" : "s"} you've starred.` : "Star items to build your own shelf." },
+      { h: "/timelines", t: "Timelines", d: "Four windows onto everything that ever happened." },
+      { h: "/languages", t: "Languages", d: "Two dozen pocket guides for the curious traveler." },
+      { h: "/documents", t: "Documents", d: "The charters and declarations that drew the lines." },
+      { h: "/study", t: "Study programs", d: "Structured coursework, for going deeper." },
+      { h: "/voices", t: "Voices", d: "Interviews and quotes — the people behind the pages." },
+      { h: "/research", t: "Research", d: "Original scholarly articles on climate, water, and the natural world." },
+      { h: "/catalog", t: "The full catalog", d: `Every one of ${ALL.length} entries, searchable.` },
+      { h: "/shelf", t: "The shelves", d: "Browse the collection as a wall of book spines." },
+      { h: "/saved", t: "★ Saved", d: saved.size ? `${saved.size} item${saved.size === 1 ? "" : "s"} you've starred.` : "Star items to build your own shelf." },
     ];
     hubs.forEach((x, i) => {
       const a = el("a", "hub-card reveal"); a.href = x.h; a.dataset.d = String((i % 4) + 1);
@@ -406,7 +406,7 @@
     const cm = code ? classMeta(code) : null;
     const root = el("div", "wrap page");
     root.innerHTML = `
-      ${crumb([["#/", "Home"], [null, code ? `${code} · ${cm.name}` : "Catalog"]])}
+      ${crumb([["/", "Home"], [null, code ? `${code} · ${cm.name}` : "Catalog"]])}
       <div class="section-head">
         <p class="eyebrow">${code ? `Class ${code}` : "Everything, searchable"}</p>
         <h2>${code ? esc(cm.name) : "The catalog."}</h2>
@@ -447,7 +447,7 @@
         : a.t.localeCompare(b.t));
       meta.innerHTML = "";
       meta.append(el("span", "result-count", `${list.length} ${list.length === 1 ? "entry" : "entries"}`));
-      if (cat.code) { const p = el("a", "filter-pill", `Class ${cat.code} · ${classMeta(cat.code).name} <span class="x">✕</span>`); p.href = "#/catalog"; meta.append(p); }
+      if (cat.code) { const p = el("a", "filter-pill", `Class ${cat.code} · ${classMeta(cat.code).name} <span class="x">✕</span>`); p.href = "/catalog"; meta.append(p); }
       grid.innerHTML = "";
       const azEl = $("#az", root);
       if (!list.length) {
@@ -458,8 +458,8 @@
         const filterParts = [termDisplay, kindDisplay, classDisplay].filter(Boolean);
         const filterDesc = filterParts.length ? filterParts.join(" · ") : null;
         emptyEl.innerHTML = filterDesc
-          ? `<p class="empty-msg">No results for <em>${esc(filterDesc)}</em>.</p><p class="empty-hint">Try a broader search or <a href="#/catalog">browse the full catalog</a>.</p>`
-          : `<p class="empty-msg">Nothing here yet.</p><p class="empty-hint"><a href="#/catalog">Browse the full catalog</a>.</p>`;
+          ? `<p class="empty-msg">No results for <em>${esc(filterDesc)}</em>.</p><p class="empty-hint">Try a broader search or <a href="/catalog">browse the full catalog</a>.</p>`
+          : `<p class="empty-msg">Nothing here yet.</p><p class="empty-hint"><a href="/catalog">Browse the full catalog</a>.</p>`;
         grid.append(emptyEl); azEl.hidden = true; return;
       }
       const cardEls = list.map((x) => { const c = card(x); grid.append(c); return c; });
@@ -637,7 +637,7 @@
     const prev = idx > 0 ? sibs[idx - 1] : null, next = idx >= 0 && idx < sibs.length - 1 ? sibs[idx + 1] : null;
     const root = el("div", "wrap page detail");
     root.innerHTML = `
-      ${crumb([["#/", "Home"], ["#/class/" + x.code, `${x.code} · ${dw.name}`], [null, x.t]])}
+      ${crumb([["/", "Home"], ["/class/" + x.code, `${x.code} · ${dw.name}`], [null, x.t]])}
       <div class="detail-top">
         <div class="detail-cover">${coverHTML(x, "L")}</div>
         <div class="detail-meta">
@@ -649,7 +649,7 @@
             <button class="share-btn" onclick="(() => { const url = location.href; const txt = '${esc(x.t)}${x.a ? ' by ' + esc(x.a) : ''}'; if (navigator.share) { navigator.share({title: txt, url}); } else { navigator.clipboard.writeText(url).then(() => { this.textContent = '✓ Copied'; setTimeout(() => this.textContent = '⤴ Share', 1500); }); } })()" title="Share this page">⤴ Share</button>
           </div>
           ${full ? "" : (known ? `<p class="m-desc">${esc(known)}</p>` : (willFetch ? `<p class="m-desc m-desc-loading" id="mDesc"></p>` : ""))}
-          <a class="m-class" href="#/class/${x.code}">
+          <a class="m-class" href="/class/${x.code}">
             <div class="m-class-code">${x.dewey || x.code}</div>
             <div><div class="m-class-name">${esc(dw.name)}</div><div class="m-class-range">Dewey ${dw.range || ""} · browse all →</div></div>
           </a>
@@ -661,8 +661,8 @@
       <div class="comment-link-wrap comment-link-wrap--end" id="commentLinkEnd"></div>
       <section class="comments-section" id="commentsSection"></section>
       <nav class="prevnext">
-        ${prev ? `<a class="pn pn-prev" href="#/item/${encodeURIComponent(prev.slug)}"><span class="pn-dir">← Previous</span><span class="pn-t">${esc(prev.t)}</span></a>` : "<span></span>"}
-        ${next ? `<a class="pn pn-next" href="#/item/${encodeURIComponent(next.slug)}"><span class="pn-dir">Next →</span><span class="pn-t">${esc(next.t)}</span></a>` : "<span></span>"}
+        ${prev ? `<a class="pn pn-prev" href="/${encodeURIComponent(prev.slug)}"><span class="pn-dir">← Previous</span><span class="pn-t">${esc(prev.t)}</span></a>` : "<span></span>"}
+        ${next ? `<a class="pn pn-next" href="/${encodeURIComponent(next.slug)}"><span class="pn-dir">Next →</span><span class="pn-t">${esc(next.t)}</span></a>` : "<span></span>"}
       </nav>`;
     if (x.slug) { initRatings(x.slug, root); initComments(x.slug, root); }
     const readEl = root.querySelector('article.mirror.reading');
@@ -692,7 +692,7 @@
       const pick = scored.filter((s) => s.score > 0).slice(0, 6).map((s) => s.r);
       if (pick.length) {
         const rel = el("section", "related");
-        rel.innerHTML = `<div class="related-head"><h3>More in ${esc(dw.name)}</h3><a href="#/class/${x.code}">See all ${dw.items.length} →</a></div><div class="grid related-grid"></div>`;
+        rel.innerHTML = `<div class="related-head"><h3>More in ${esc(dw.name)}</h3><a href="/class/${x.code}">See all ${dw.items.length} →</a></div><div class="grid related-grid"></div>`;
         const g = $(".related-grid", rel);
         pick.forEach((r) => g.append(card(r)));
         root.append(rel);
@@ -720,7 +720,7 @@
     const floatCover = opts.cover ? `<div class="m-cover-wrap"><img class="m-cover" src="${CDN}${opts.cover}" alt="${esc(opts.title)}"></div>` : "";
     const root = el("div", "wrap page detail narrow");
     root.innerHTML = `
-      ${crumb([["#/", "Home"], [opts.backHref || "#/", opts.backLabel || "Back"], [null, opts.title]])}
+      ${crumb([["/", "Home"], [opts.backHref || "/", opts.backLabel || "Back"], [null, opts.title]])}
       ${headerOrTop}
       ${floatCover}
       ${opts.extra || ""}
@@ -782,7 +782,7 @@
     const root = el("div", "wrap page xref");
     const searchBox = `<form class="xref-search" id="xrefForm"><input id="xrefInput" type="search" placeholder="Cross-reference another term…" value="${esc(rawTerm || "")}" autocomplete="off" spellcheck="false"><button type="submit">Cross-reference</button></form>`;
     if (term.length < 2) {
-      root.innerHTML = crumb([["#/", "Home"], [null, "Cross-reference"]]) +
+      root.innerHTML = crumb([["/", "Home"], [null, "Cross-reference"]]) +
         `<div class="section-head"><p class="eyebrow">Cross-reference</p><h2>Gather every mention of one thing.</h2><p>Type a name, place, or idea and the library assembles every passage that mentions it into a single page.</p></div>${searchBox}`;
       view.append(root); wireXrefForm(root); return;
     }
@@ -813,7 +813,7 @@
     sources.sort((a, b) => b.count - a.count || a.e.title.localeCompare(b.e.title));
 
     if (!direct.length && !sources.length) {
-      root.innerHTML = crumb([["#/", "Home"], ["#/xref", "Cross-reference"], [null, rawTerm]]) +
+      root.innerHTML = crumb([["/", "Home"], ["/xref", "Cross-reference"], [null, rawTerm]]) +
         `<div class="section-head"><p class="eyebrow">Cross-reference</p><h2>Nothing mentions "${esc(rawTerm)}".</h2><p>No title, author, or page in the library refers to that term. Try another spelling or a broader word.</p></div>${searchBox}`;
       view.append(root); wireXrefForm(root); return;
     }
@@ -831,7 +831,7 @@
       lead = `<strong>"${esc(rawTerm)}"</strong> isn't discussed in the page text, but it names ${direct.length} ${direct.length === 1 ? "entry" : "entries"} in the catalog.`;
     }
 
-    let html = crumb([["#/", "Home"], ["#/xref", "Cross-reference"], [null, rawTerm]]);
+    let html = crumb([["/", "Home"], ["/xref", "Cross-reference"], [null, rawTerm]]);
     html += `<header class="xref-head"><p class="eyebrow">Topic overview · synthesized &amp; cited</p><h1>What the library says about "${esc(rawTerm)}"</h1><p class="xref-lead">${lead}</p>${searchBox}</header>`;
 
     // ---- build the corpus for synthesis: best passages from the top sources ----
@@ -854,7 +854,7 @@
 
     if (direct.length) {
       html += `<section class="xref-direct reveal"><div class="related-head"><h3>Entries named for it</h3><span class="xref-mini">${direct.length}</span></div><div class="xref-chips">` +
-        direct.slice(0, 24).map((d) => `<a class="xref-chip" href="#/item/${encodeURIComponent(d.slug)}">${coverMini(d.e)}<span class="xref-chip-t">${esc(d.e.title)}</span><span class="xref-chip-k">${kindLabel[d.e.kind] || d.e.kind}</span></a>`).join("") +
+        direct.slice(0, 24).map((d) => `<a class="xref-chip" href="/${encodeURIComponent(d.slug)}">${coverMini(d.e)}<span class="xref-chip-t">${esc(d.e.title)}</span><span class="xref-chip-k">${kindLabel[d.e.kind] || d.e.kind}</span></a>`).join("") +
         `</div></section>`;
     }
 
@@ -863,13 +863,13 @@
       html += sources.map((s) => {
         const more = s.count - s.snips.length;
         return `<article class="xref-source reveal">
-          <a class="xref-src-head" href="#/item/${encodeURIComponent(s.slug)}">
+          <a class="xref-src-head" href="/${encodeURIComponent(s.slug)}">
             ${coverMini(s.e)}
             <span class="xref-src-meta"><span class="xref-src-t">${esc(s.e.title)}</span><span class="xref-src-s">${esc(s.e.sub || kindLabel[s.e.kind] || "")}</span></span>
             <span class="xref-count">${s.count}×</span>
           </a>
-          <div class="xref-snips">${s.snips.map((sn) => `<a class="xref-snip" href="#/item/${encodeURIComponent(s.slug)}"><span class="xref-q">${sn}</span></a>`).join("")}
-          ${more > 0 ? `<a class="xref-more" href="#/item/${encodeURIComponent(s.slug)}">+${more} more mention${more === 1 ? "" : "s"} on this page →</a>` : ""}</div>
+          <div class="xref-snips">${s.snips.map((sn) => `<a class="xref-snip" href="/${encodeURIComponent(s.slug)}"><span class="xref-q">${sn}</span></a>`).join("")}
+          ${more > 0 ? `<a class="xref-more" href="/${encodeURIComponent(s.slug)}">+${more} more mention${more === 1 ? "" : "s"} on this page →</a>` : ""}</div>
         </article>`;
       }).join("");
       html += `</details></section>`;
@@ -882,7 +882,7 @@
   }
   function wireXrefForm(root) {
     const f = $("#xrefForm", root); if (!f) return;
-    f.addEventListener("submit", (e) => { e.preventDefault(); const v = $("#xrefInput", root).value.trim(); if (v) location.hash = "#/xref/" + encodeURIComponent(v); });
+    f.addEventListener("submit", (e) => { e.preventDefault(); const v = $("#xrefInput", root).value.trim(); if (v) navigate("/xref/" + encodeURIComponent(v)); });
   }
   function plainContext(slug, idx, term) {
     const raw = PLAINRAW[slug] || "", n = term.length;
@@ -910,7 +910,7 @@
   }
   function refList(list) {
     return `<div class="xref-refs"><div class="related-head"><h3>Sources</h3><span class="xref-mini">${list.length} cited</span></div><ol class="xref-ref-list">` +
-      list.map((s) => `<li class="xref-ref"><a href="#/item/${encodeURIComponent(s.slug)}"><span class="xref-ref-n">${s.n}</span><span class="xref-ref-t">${esc(s.title)}</span><span class="xref-ref-k">${kindLabel[s.kind] || s.kind}${s.count ? ` · ${s.count}×` : ""}</span></a></li>`).join("") +
+      list.map((s) => `<li class="xref-ref"><a href="/${encodeURIComponent(s.slug)}"><span class="xref-ref-n">${s.n}</span><span class="xref-ref-t">${esc(s.title)}</span><span class="xref-ref-k">${kindLabel[s.kind] || s.kind}${s.count ? ` · ${s.count}×` : ""}</span></a></li>`).join("") +
       `</ol></div>`;
   }
   function narrativeHTML(text) {
@@ -928,14 +928,14 @@
     const rb = $(".synth-regen", mount); if (rb) rb.addEventListener("click", () => { mount.innerHTML = synthLoadingHTML(corpusSources.length); synthesize(term, corpusSources, mount, true); });
   }
   function renderFallback(mount, corpusSources, term) {
-    const paras = corpusSources.map((s) => `<p class="xref-ov-p">${s.passages.map((p) => markTerm(p, term)).join(" ")} <a class="xref-cite" href="#/item/${encodeURIComponent(s.slug)}" title="${esc(s.title)}">[${s.n}]</a></p>`).join("");
+    const paras = corpusSources.map((s) => `<p class="xref-ov-p">${s.passages.map((p) => markTerm(p, term)).join(" ")} <a class="xref-cite" href="/${encodeURIComponent(s.slug)}" title="${esc(s.title)}">[${s.n}]</a></p>`).join("");
     mount.innerHTML = `<div class="synth-note">Live synthesis isn't available right now. Here's a compiled overview drawn straight from the sources.</div>
       <article class="xref-ov-body">${paras}</article>${refList(corpusSources)}`;
   }
   function fnCard(s, term) {
     return `<div class="fn-card-head"><span class="fn-card-n">${s.n}</span>${coverMini(s.e)}<span class="fn-card-meta"><span class="fn-card-t">${esc(s.title)}</span><span class="fn-card-k">${kindLabel[s.kind] || s.kind}${s.author ? ` · ${esc(s.author)}` : ""}${s.count ? ` · ${s.count} mention${s.count === 1 ? "" : "s"}` : ""}</span></span></div>
       <div class="fn-card-pass">${s.passages.slice(0, 2).map((p) => `<p>"${markTerm(p, term)}"</p>`).join("")}</div>
-      <a class="fn-card-link" href="#/item/${encodeURIComponent(s.slug)}">Open this source →</a>`;
+      <a class="fn-card-link" href="/${encodeURIComponent(s.slug)}">Open this source →</a>`;
   }
   function wireFootnotes(scope, srcByN, term) {
     const oldPop = document.getElementById("fnPop");
@@ -968,20 +968,20 @@
   /* --- SECTION INDEX PAGES --- */
   function viewTimelines() {
     const root = el("div", "wrap page");
-    root.innerHTML = `${crumb([["#/", "Home"], [null, "Timelines"]])}
+    root.innerHTML = `${crumb([["/", "Home"], [null, "Timelines"]])}
       <div class="section-head"><p class="eyebrow">A sense of when</p><h2>Four windows onto everything that ever happened.</h2></div>
       <div class="timeline" id="timeline"></div>`;
     view.append(root);
     const tl = $("#timeline", root);
     TIMELINES.forEach((t) => {
-      const a = el("a", "tl-row"); a.href = "#/item/" + encodeURIComponent(t.slug || "");
+      const a = el("a", "tl-row"); a.href = "/" + encodeURIComponent(t.slug || "");
       a.innerHTML = `<div class="tl-span">${esc(t.span)}</div><div><h4 class="tl-era">${esc(t.era)}</h4><p class="tl-note">${esc(t.note)}</p><span class="tl-more">${(t.events || []).length} key events <span class="arr">→</span></span></div>`;
       tl.append(a);
     });
   }
   function viewLanguages() {
     const root = el("div", "wrap page");
-    root.innerHTML = `${crumb([["#/", "Home"], [null, "Languages"]])}
+    root.innerHTML = `${crumb([["/", "Home"], [null, "Languages"]])}
       <div class="section-head"><p class="eyebrow">The language atlas</p><h2>Two dozen ways to say hello.</h2><p>Pocket guides for the curious traveler. Open one for the full phrase list.</p></div>
       <div class="atlas" id="atlas"></div>`;
     view.append(root);
@@ -990,7 +990,7 @@
     LANGUAGES.forEach((l) => {
       const has = content(l.slug);
       const n = has ? el("a", "lang clickable") : el("span", "lang");
-      if (has) n.href = "#/item/" + encodeURIComponent(l.slug);
+      if (has) n.href = "/" + encodeURIComponent(l.slug);
       const flagSrc = l.flag ? CDN + l.flag : "";
       const speakBtn = `<button class="lang-listen" aria-label="Listen to ${esc(l.name)}" onclick="event.preventDefault();event.stopPropagation();const u=new SpeechSynthesisUtterance('${esc(l.hello).replace(/'/g,"\\'")}');speechSynthesis.speak(u);" title="Hear pronunciation">&#128266;</button>`;
       n.innerHTML = flagSrc
@@ -1001,21 +1001,21 @@
   }
   function viewDocuments() {
     const root = el("div", "wrap page");
-    root.innerHTML = `${crumb([["#/", "Home"], [null, "Documents"]])}
+    root.innerHTML = `${crumb([["/", "Home"], [null, "Documents"]])}
       <div class="section-head"><p class="eyebrow">The rules of life</p><h2>The documents that drew the lines.</h2></div>
       <div class="docs" id="docs"></div>`;
     view.append(root);
     const docs = $("#docs", root);
     DOCUMENTS.forEach((d) => {
       const a = d.slug ? el("a", "doc") : el("div", "doc");
-      if (d.slug) a.href = "#/item/" + encodeURIComponent(d.slug);
+      if (d.slug) a.href = "/" + encodeURIComponent(d.slug);
       a.innerHTML = `<div class="y">${esc(d.y)}</div><h4>${esc(d.t)}</h4><div class="p">${esc(d.p)}</div>`;
       docs.append(a);
     });
   }
   function viewStudy() {
     const root = el("div", "wrap page");
-    root.innerHTML = `${crumb([["#/", "Home"], [null, "Study"]])}
+    root.innerHTML = `${crumb([["/", "Home"], [null, "Study"]])}
       <div class="section-head"><p class="eyebrow">Go deeper</p><h2>Study programs.</h2></div><div id="programs"></div>`;
     view.append(root);
     const HRS_PER_COURSE = 8;
@@ -1030,7 +1030,7 @@
         const itemsHTML = p.courses.map((course, i) => {
           const name = course.name || course;
           const slug = course.slug || null;
-          const href = slug ? `#/item/${encodeURIComponent(slug)}` : null;
+          const href = slug ? `/${encodeURIComponent(slug)}` : null;
           const fc = slug ? content(slug) : null;
           let timeLabel;
           if (fc) { const words = plainFromHTML(fc).split(" ").filter(Boolean).length; const mins = Math.max(1, Math.round(words / 200)); timeLabel = mins < 60 ? `${mins} min` : `~${Math.round(mins / 60)} hr`; }
@@ -1041,7 +1041,7 @@
         }).join("");
         coursesHTML = `<ol class="reading-order">${itemsHTML}</ol><div class="ro-total">Total estimated time: <strong>~${totalHrs} hours</strong></div>`;
       } else {
-        coursesHTML = `<div class="course-list">${p.courses.map((course) => { const name = course.name || course; const slug = course.slug; return slug ? `<a class="course" href="#/item/${encodeURIComponent(slug)}">${esc(name)}</a>` : `<span class="course">${esc(name)}</span>`; }).join("")}</div>`;
+        coursesHTML = `<div class="course-list">${p.courses.map((course) => { const name = course.name || course; const slug = course.slug; return slug ? `<a class="course" href="/${encodeURIComponent(slug)}">${esc(name)}</a>` : `<span class="course">${esc(name)}</span>`; }).join("")}</div>`;
       }
       c.innerHTML = `<div class="prog-head"><h3>${esc(p.org)}</h3><span class="tag">${esc(p.tag)}</span></div>${coursesHTML}`;
       prog.append(c);
@@ -1049,13 +1049,13 @@
   }
   function viewResearch() {
     const root = el("div", "wrap page");
-    root.innerHTML = `${crumb([["#/", "Home"], [null, "Research"]])}
+    root.innerHTML = `${crumb([["/", "Home"], [null, "Research"]])}
       <div class="section-head"><p class="eyebrow">Scholarship</p><h2>Research &amp; Writing.</h2><p>Original scholarly articles and literature reviews by Eric Bond — covering climate adaptation, water resources, marine biology, and earth science.</p></div>
       <div class="grid" id="researchGrid"></div>`;
     view.append(root);
     const grid = $("#researchGrid", root);
     if (typeof RESEARCH !== "undefined") RESEARCH.forEach((r) => {
-      const card = el("a", "card reveal"); card.href = "#/item/" + encodeURIComponent(r.slug);
+      const card = el("a", "card reveal"); card.href = "/" + encodeURIComponent(r.slug);
       card.innerHTML = `<div class="card-body"><p class="eyebrow">${esc(r.topic)} · ${esc(r.year)}</p><h3>${esc(r.title)}</h3><p class="card-blurb">${esc(r.blurb)}</p></div>`;
       grid.append(card);
     });
@@ -1064,7 +1064,7 @@
   function viewVoices() {
     const CDN = window.STEKEL_CDN || "assets/stekel/";
     const root = el("div", "wrap page");
-    root.innerHTML = `${crumb([["#/", "Home"], [null, "Voices"]])}
+    root.innerHTML = `${crumb([["/", "Home"], [null, "Voices"]])}
       <div class="section-head"><p class="eyebrow">Voices</p><h2>The people behind the pages.</h2><p>${esc(INTERVIEWS.blurb)}</p></div>
       <div class="iv-grid" id="interviews"></div>
       <div class="section-head" style="margin-top:4rem"><p class="eyebrow">Worth keeping</p><h2>From the conversations.</h2></div>
@@ -1086,7 +1086,7 @@
     const iv = $("#interviews", root);
     people.forEach(({ name, slug, photo }) => {
       const card = slug ? el("a", "iv-card") : el("div", "iv-card iv-card--no-link");
-      if (slug) card.href = "#/item/" + encodeURIComponent(slug);
+      if (slug) card.href = "/" + encodeURIComponent(slug);
       const imgWrap = el("div", "iv-photo");
       if (photo) imgWrap.innerHTML = `<img src="${CDN}${photo}" alt="${esc(name)}" loading="lazy" onerror="this.parentElement.classList.add('iv-photo--fallback')">`;
       else imgWrap.classList.add("iv-photo--fallback");
@@ -1129,7 +1129,7 @@
   function viewSaved() {
     const items = ALL.filter((x) => x.slug && saved.has(x.slug));
     const root = el("div", "wrap page");
-    root.innerHTML = `${crumb([["#/", "Home"], [null, "Saved"]])}
+    root.innerHTML = `${crumb([["/", "Home"], [null, "Saved"]])}
       <div class="section-head"><p class="eyebrow">Your shelf</p><h2>Saved.</h2><p>${items.length ? "Items you've starred — kept here for you, in this browser." : "You haven't starred anything yet."}</p></div>
       <div class="grid" id="savedGrid"></div>`;
     view.append(root);
@@ -1145,7 +1145,7 @@
     const grid = $("#savedGrid", root);
     if (!items.length) {
       grid.append(el("div", "empty", "Tap the ★ on any book or page to save it here."));
-      const cta = el("a", "btn btn-primary", "Browse the catalog →"); cta.href = "#/catalog"; cta.style.marginTop = "1rem";
+      const cta = el("a", "btn btn-primary", "Browse the catalog →"); cta.href = "/catalog"; cta.style.marginTop = "1rem";
       root.append(cta);
     } else { items.sort((a, b) => a.t.localeCompare(b.t)); items.forEach((x) => grid.append(card(x))); revealIn(grid); }
   }
@@ -1154,7 +1154,7 @@
   function hashStr(s) { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return h; }
   function spine(it, classIdx) {
     const a = el("a", "spine");
-    a.href = "#/item/" + encodeURIComponent(it.slug);
+    a.href = "/" + encodeURIComponent(it.slug);
     const h = hashStr(it.t);
     const w = 30 + (h % 16);               // 30–45px wide
     const ht = 158 + (h % 54);             // 158–212px tall
@@ -1169,7 +1169,7 @@
   function viewShelf() {
     const root = el("div", "wrap page");
     const totalItems = ALL.filter((x) => x.slug).length;
-    root.innerHTML = `${crumb([["#/", "Home"], [null, "The shelves"]])}
+    root.innerHTML = `${crumb([["/", "Home"], [null, "The shelves"]])}
       <div class="section-head"><p class="eyebrow">Browse like a bookcase</p><h2>The shelves. <span style="font-family:var(--mono);font-size:.6em;font-weight:400;color:var(--muted);letter-spacing:.03em">${totalItems}</span></h2>
       <p>The whole collection as it might sit on a wall — one shelf per Dewey class. Pull any spine to read it.</p></div>
       <div id="shelfRecent"></div>
@@ -1206,7 +1206,7 @@
       if (!items.length) return;
       const sec = el("section", "shelf-sec reveal");
       sec.dataset.d = String((i % 4) + 1);
-      sec.innerHTML = `<div class="shelf-label"><span class="shelf-code">${d.code}</span><span>${esc(d.name)}</span><span style="font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:.3rem">${items.length}</span><a href="#/class/${d.code}" class="shelf-all">${d.items.length} →</a></div><div class="shelf"><div class="shelf-row"></div></div>`;
+      sec.innerHTML = `<div class="shelf-label"><span class="shelf-code">${d.code}</span><span>${esc(d.name)}</span><span style="font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:.3rem">${items.length}</span><a href="/class/${d.code}" class="shelf-all">${d.items.length} →</a></div><div class="shelf"><div class="shelf-row"></div></div>`;
       const row = $(".shelf-row", sec);
       items.forEach((it) => row.append(spine(it, i)));
       wrap.append(sec);
@@ -1226,22 +1226,22 @@
   const REGISTRY = new Map();
   function reg(slug, e) { if (slug && !REGISTRY.has(slug)) REGISTRY.set(slug, e); }
   ALL.forEach((x) => reg(x.slug, { title: x.t, sub: x.a || x.section, kind: x.k, cover: (x.k === "book" && typeof COVERS !== "undefined" && COVERS[x.t]) || null, render: () => viewItem(x) }));
-  LANGUAGES.forEach((l) => content(l.slug) && reg(l.slug, { title: l.name, sub: "Language guide", kind: "language", render: () => viewContentPage({ label: "Language", kind: "guide", title: l.name, sub: `"${esc(l.hello)}" — hello`, slug: l.slug, backHref: "#/languages", backLabel: "Languages" }) }));
-  DOCUMENTS.forEach((d) => d.slug && reg(d.slug, { title: d.t, sub: `Document · ${d.y}`, kind: "document", render: () => viewContentPage({ label: "Document", kind: "document", title: d.t, sub: `${esc(d.p)} · ${d.y}`, slug: d.slug, backHref: "#/documents", backLabel: "Documents", fallback: d.d }) }));
+  LANGUAGES.forEach((l) => content(l.slug) && reg(l.slug, { title: l.name, sub: "Language guide", kind: "language", render: () => viewContentPage({ label: "Language", kind: "guide", title: l.name, sub: `"${esc(l.hello)}" — hello`, slug: l.slug, backHref: "/languages", backLabel: "Languages" }) }));
+  DOCUMENTS.forEach((d) => d.slug && reg(d.slug, { title: d.t, sub: `Document · ${d.y}`, kind: "document", render: () => viewContentPage({ label: "Document", kind: "document", title: d.t, sub: `${esc(d.p)} · ${d.y}`, slug: d.slug, backHref: "/documents", backLabel: "Documents", fallback: d.d }) }));
   TIMELINES.forEach((t) => t.slug && reg(t.slug, {
     title: t.era, sub: `Timeline · ${t.span}`, kind: "timeline", render: () => viewContentPage({
-      label: "Timeline", kind: "guide", title: t.era, sub: t.span, slug: t.slug, backHref: "#/timelines", backLabel: "Timelines", fallback: t.note,
+      label: "Timeline", kind: "guide", title: t.era, sub: t.span, slug: t.slug, backHref: "/timelines", backLabel: "Timelines", fallback: t.note,
       extra: `<p class="detail-by" style="margin-top:-.6rem">${esc(t.note)}</p><div class="m-events">${(t.events || []).map((e) => `<div class="m-event"><span class="m-event-y">${esc(e[0])}</span><span class="m-event-t">${esc(e[1])}</span></div>`).join("")}</div>`,
     })
   }));
   INTERVIEWS.rounds.forEach((r) => r.people.forEach((p) => {
     const s = [`${p.toLowerCase()}-interview-${r.year}`, `${p.toLowerCase()}-${r.year}-interview`].find((x) => content(x));
     const portrait = (INTERVIEWS.photos || {})[p];
-    if (s) reg(s, { title: p, sub: `Interview · ${r.year}`, kind: "interview", render: () => viewContentPage({ label: `Interview · ${r.year}`, kind: "guide", title: p, sub: `Interview, ${r.year}`, slug: s, backHref: "#/voices", backLabel: "Voices", portrait }) });
+    if (s) reg(s, { title: p, sub: `Interview · ${r.year}`, kind: "interview", render: () => viewContentPage({ label: `Interview · ${r.year}`, kind: "guide", title: p, sub: `Interview, ${r.year}`, slug: s, backHref: "/voices", backLabel: "Voices", portrait }) });
   }));
-  if (typeof RESEARCH !== "undefined") RESEARCH.forEach((r) => reg(r.slug, { title: r.title, sub: `Research · ${r.year}`, kind: "research", render: () => viewContentPage({ label: "Research", kind: "guide", title: r.title, sub: `${esc(r.topic)} · ${r.year}`, slug: r.slug, backHref: "#/research", backLabel: "Research", fallback: r.blurb }) }));
+  if (typeof RESEARCH !== "undefined") RESEARCH.forEach((r) => reg(r.slug, { title: r.title, sub: `Research · ${r.year}`, kind: "research", render: () => viewContentPage({ label: "Research", kind: "guide", title: r.title, sub: `${esc(r.topic)} · ${r.year}`, slug: r.slug, backHref: "/research", backLabel: "Research", fallback: r.blurb }) }));
   if (typeof PROGRAMS !== "undefined") PROGRAMS.forEach((p) => p.courses.forEach((course) => {
-    if (course.slug) reg(course.slug, { title: course.name, sub: p.tag, kind: "guide", cover: course.cover ? { local: course.cover } : null, render: () => viewContentPage({ label: p.org, kind: "guide", title: course.name, sub: p.tag, slug: course.slug, backHref: "#/study", backLabel: "Study", cover: course.cover }) });
+    if (course.slug) reg(course.slug, { title: course.name, sub: p.tag, kind: "guide", cover: course.cover ? { local: course.cover } : null, render: () => viewContentPage({ label: p.org, kind: "guide", title: course.name, sub: p.tag, slug: course.slug, backHref: "/study", backLabel: "Study", cover: course.cover }) });
   }));
 
   /* ===================== ROUTER ===================== */
@@ -1249,8 +1249,9 @@
   function setActiveNav(seg) {
     $$("#navLinks a").forEach((a) => a.classList.toggle("active", a.dataset.nav === navOf[seg]));
   }
+  function navigate(path) { history.pushState(null, "", path); route(); }
   function route() {
-    const h = location.hash.replace(/^#\/?/, "");
+    const h = location.pathname.replace(/^\//, "");
     const parts = h.split("/").filter(Boolean).map(s => { try { return decodeURIComponent(s); } catch(e) { return s; } });
     if (activeRafId) { cancelAnimationFrame(activeRafId); activeRafId = null; }
     view.innerHTML = "";
@@ -1265,7 +1266,6 @@
     if (!parts.length) viewHome();
     else if (seg === "catalog") viewCatalog(null);
     else if (seg === "class") viewCatalog(parts[1]);
-    else if (seg === "item") { const e = REGISTRY.get(parts[1]); if (e) e.render(); else notFound(parts[1]); }
     else if (seg === "saved") viewSaved();
     else if (seg === "shelf") viewShelf();
     else if (seg === "timelines") viewTimelines();
@@ -1274,7 +1274,7 @@
     else if (seg === "study") viewStudy();
     else if (seg === "voices") viewVoices();
     else if (seg === "research") viewResearch();
-    else viewHome();
+    else { const e = REGISTRY.get(seg); if (e) e.render(); else notFound(seg); }
     setActiveNav(seg);
     revealIn(view);
     requestAnimationFrame(() => window.scrollTo(0, 0));
@@ -1286,15 +1286,15 @@
     const safeslug = esc(slug || "unknown");
     const root = el("div", "wrap page");
     root.innerHTML = `
-      ${crumb([["#/", "Home"], [null, "Page not found"]])}
+      ${crumb([["/", "Home"], [null, "Page not found"]])}
       <div class="section-head" style="padding-top:4rem">
         <p class="eyebrow">404 · Not found</p>
         <h2>That page isn't here.</h2>
         <p>No entry found for <code style="font-family:var(--mono);background:var(--paper);padding:.1em .4em;border-radius:5px">${safeslug}</code>. It may have been moved or the link is incorrect.</p>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem">
-        <a class="btn btn-primary" href="#/">Go home →</a>
-        <a class="btn btn-ghost" href="#/catalog">Browse the catalog</a>
+        <a class="btn btn-primary" href="/">Go home →</a>
+        <a class="btn btn-ghost" href="/catalog">Browse the catalog</a>
       </div>
       <div style="margin-top:3rem;max-width:480px">
         <p style="font-size:.9rem;color:var(--muted);margin-bottom:.75rem">Or search for something:</p>
@@ -1311,8 +1311,8 @@
     const inp = $("#nf404Input", root);
     if (f) f.addEventListener("submit", (e) => { e.preventDefault(); const v = (inp && inp.value.trim()) || ""; if (v) { openPalette(); setTimeout(() => { pInput.value = v; runSearch(v); }, 80); } });
   }
-  function navigateTo(slug) { if (slug && REGISTRY.has(slug)) location.hash = "#/item/" + encodeURIComponent(slug); }
-  window.addEventListener("hashchange", route);
+  function navigateTo(slug) { if (slug && REGISTRY.has(slug)) navigate("/" + encodeURIComponent(slug)); }
+  window.addEventListener("popstate", route);
 
   /* ===================== REVEAL ===================== */
   let io;
@@ -1341,12 +1341,12 @@
   const toggle = $("#navToggle"), links = $("#navLinks");
   toggle.setAttribute("aria-expanded", "false");
   // dynamic "Saved" nav link
-  const savedLink = el("a", "nav-saved"); savedLink.href = "#/saved"; savedLink.dataset.nav = "saved";
+  const savedLink = el("a", "nav-saved"); savedLink.href = "/saved"; savedLink.dataset.nav = "saved";
   links.append(savedLink);
   function updateSavedNav() {
     savedLink.innerHTML = `★ Saved${saved.size ? ` <span class="nav-count">${saved.size}</span>` : ""}`;
     savedLink.classList.toggle("has", saved.size > 0);
-    $$(".hub-card[href='#/saved'] p").forEach((p) => { p.textContent = saved.size ? `${saved.size} item${saved.size === 1 ? "" : "s"} you've starred.` : "Star items to build your own shelf."; });
+    $$(".hub-card[href='/saved'] p").forEach((p) => { p.textContent = saved.size ? `${saved.size} item${saved.size === 1 ? "" : "s"} you've starred.` : "Star items to build your own shelf."; });
   }
   updateSavedNav();
   toggle.addEventListener("click", (e) => { e.stopPropagation(); links.classList.toggle("open"); document.body.classList.toggle("nav-open"); toggle.setAttribute("aria-expanded", links.classList.contains("open")); });
@@ -1362,8 +1362,8 @@
   document.addEventListener("keydown", (e) => {
     if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) return;
     if (!palette.hidden) return;
-    if (e.key === "ArrowLeft" && kbdPrev) { e.preventDefault(); location.hash = "#/item/" + encodeURIComponent(kbdPrev); }
-    else if (e.key === "ArrowRight" && kbdNext) { e.preventDefault(); location.hash = "#/item/" + encodeURIComponent(kbdNext); }
+    if (e.key === "ArrowLeft" && kbdPrev) { e.preventDefault(); navigate("/" + encodeURIComponent(kbdPrev)); }
+    else if (e.key === "ArrowRight" && kbdNext) { e.preventDefault(); navigate("/" + encodeURIComponent(kbdNext)); }
     else if (e.key === "r" && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); goRandom(); }
   });
 
@@ -1448,7 +1448,7 @@
     return `<div class="p-result" data-i="${i}">${coverMini(m.e)}<div class="p-main"><div class="p-title">${esc(m.e.title)}</div><div class="p-sub">${esc(m.e.sub || "")}</div>${snip ? `<div class="p-snip">${snip}</div>` : ""}</div><span class="p-kind">${kindLabel[m.e.kind] || m.e.kind}</span></div>`;
   }
   function highlight() { $$(".p-result", pResults).forEach((n, i) => { n.setAttribute("aria-selected", i === pSel ? "true" : "false"); if (i === pSel) n.scrollIntoView({ block: "nearest" }); }); }
-  function openSelected() { const it = pItems[pSel]; if (!it) return; closePalette(); if (it.type === "xref") location.hash = "#/xref/" + encodeURIComponent(it.term); else navigateTo(it.slug); }
+  function openSelected() { const it = pItems[pSel]; if (!it) return; closePalette(); if (it.type === "xref") navigate("/xref/" + encodeURIComponent(it.term)); else navigateTo(it.slug); }
   let paletteSearchT;
   pInput.addEventListener("input", (e) => { clearTimeout(paletteSearchT); paletteSearchT = setTimeout(() => runSearch(e.target.value), 120); });
   pInput.addEventListener("keydown", (e) => {
