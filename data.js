@@ -89,6 +89,14 @@ const DEWEY = [
         "dewey": "031"
       },
       {
+        "t": "Royal Ontario Museum",
+        "a": "ROM",
+        "k": "museum",
+        "slug": "royal-ontario-museum",
+        "dewey": "069",
+        "galleryEnd": true
+      },
+      {
         "t": "Documents That Changed the World",
         "a": "Scott Christianson",
         "k": "book",
@@ -5407,6 +5415,9 @@ const COVERS = {
   },
   "Basin and Range": {
     "local": "basin-and-range.jpeg"
+  },
+  "Royal Ontario Museum": {
+    "local": "royal-ontario-museum.png"
   }
 };
 
@@ -5662,6 +5673,7 @@ const DESCRIPTIONS = {
 
 /* Eric's original stekel.org images, per page (ordered: hero first). Local files under assets/stekel/. */
 var PAGE_IMAGES = {
+  "royal-ontario-museum": ["100-200_Marble_Head_of_Zeus_ROM.jpeg", "11c_Luohan_ROM.jpeg", "1204-1261_Constantinople_Rule_by_the_Latins_ROM.jpeg", "1300_Homage_to_the_Highest_Power_Yuan_Dynasty_ROM.jpeg", "148_Ma_Pterosaur_ROM.jpeg", "150_Ma_Allosaurus_fragilis_ROM.jpeg", "1592_German_Wheellock_Pistol_ROM.jpeg", "161-169_Co-Emperor_Lucius_Verus_ROM.jpeg", "1610_Oil_Painting_of_Marie_de_Medici_Queen_of_France_ROM.jpeg", "1630_English_Matchlock_Musket_ROM.jpeg", "16c_Hells_Judges_from_Ming_Dynasty_ROM.jpeg", "1815_A_Delineation_of_the_Strate_of_England_and_Wales_with_part_of_Scotland_by_William_Smith_ROM.jpeg", "193-211_Roman_Emperor_Septimius_Severus_ROM.jpeg", "200-145_Ma_Jurassic_Period_ROM.jpeg", "300_Roman_Legion_Laydown_ROM.jpeg", "319_Ma_Tetrapod-_Dendrerpeton_acadianum_ROM.jpeg", "330-1453_Byzantine_Empire_ROM.jpeg", "340_BCE_Young_Herakles_Statue_ROM.jpeg", "375_Ma_Elpistostege_Hands_ROM.jpeg", "375_Ma_Tiktaalik_roseae_ROM.jpeg", "4c_BCE_Thucydides_ROM.jpeg", "896_Carat_Cerussite_ROM.jpeg", "Alexander_the_Greats_Conquests_ROM.jpeg", "Ancient_Egypt_and_Nubia_ROM.jpeg", "Burgess_Shale_ROM.jpeg", "Coal_Formation_ROM.jpeg", "Coral_Polyp_Cross_Section_ROM.jpeg", "Cyanobacteria_ROM.jpeg", "Egyptian_Gods_1_ROM.jpeg", "Egyptian_Gods_2_ROM.jpeg", "Egyptian_Pharoah_Thutmose_III_ROM.jpeg", "Eukaryotic_Cell_ROM.jpeg", "Eukaryotic_Cell_1_ROM.jpeg", "Evolutions_of_Fins_to_Hands_ROM.jpeg", "Greek_Alphabet_ROM.jpeg", "Herakles_Killing_the_Nemean_Lion_ROM.jpeg", "Herakles_and_the_Erymanthian_Boar_Amphora_ROM.jpeg", "Herakles_versus_the_Three_Amazon_ROM.jpeg", "LUCA_ROM.jpeg", "LUCA_and_Evolution_ROM.jpeg", "Meroitic_Writing_ROM.jpeg", "Minoan_Civilization_ROM.jpeg", "Opal_ROM.jpeg", "Permian_Era_Carnivoran_Synapsid_ROM.jpeg", "Stromatolites_ROM.jpeg", "T-Rex_ROM.jpeg", "The_Kingdoms_of_Alexander_the_Great_ROM.jpeg", "Trilobite_ROM.jpeg", "~520_BCE_Admission_of_Heracles_to_Olympus_Amphora_ROM.jpeg"],
   "basin-and-range": ["Basin_and_Range_Province.png", "Basin_and_Range_and_CO_Plateau_Provinces.jpg", "Basin_and_Range.jpg", "Great_Basin_Map.png", "Great_Basin.jpg", "Jedburgh_Uncomformity.jpeg"],"all-the-best-bush":["19890120_George_HW_Bush_Inauguration.jpeg", "19910821_Bush_learning_about_the_coup_against_Gorbachev.jpeg", "199703_George_HW_Bush_Skydive.jpeg", "20010914_Bush_Family_together_post_9-11.jpeg", "200502_George_HW_Bush_and_Clinton_in_Sri_Lanka.jpeg", "20110215_HW_Bush_receives_medal_of_freedom_from_Obama.jpeg", "USS_George_HW_Bush.jpeg"],
   "barbados-museum": ["18c_Charaibes_Indians_Barbados_Museum.jpeg", "1914_Colonial_Africa_Barbados_Museum.jpeg", "African_Empires_Barbados_Museum.jpeg", "Axum_and_Ethiopian_Kingdoms_Barbados_Museum.jpeg", "Barbados_Coral_Types_Barbados_Museum.jpeg", "Dripstones_Barbados_Museum.jpeg", "Egypt_and_Nubian_Kingdoms_Barbados_Museum.jpeg", "Home_Insulation_Barbados_Museum.jpeg", "Homo_Evolution_Barbados_Museum.jpeg", "Traditional_Barbados_Town_1_Barbados_Museum.jpeg", "Traditional_Barbados_Town_Barbados_Museum.jpeg", "West_African_Kingdoms-_Ghana_Mali_Songhai_Barbados_Museum.jpeg", "zooxanthellae_Barbados_Museum.jpeg"],
   "speak-memory": ["1900_Nabokovs_Father_and_Mother.jpeg", "190808_Nabokovs_Family_Photo.jpeg", "1915_Nabokov.jpeg", "191811_Nabokov_and_his_Siblings_in_Yalta.jpeg", "The_Sleep_of_Reason_Produces_Monsters_by_Fracisco_Goya_Spain.jpg"],
