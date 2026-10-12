@@ -61,7 +61,7 @@ module.exports = async (req, res) => {
       if (gmailPass) {
         const transporter = nodemailer.createTransport({
           service: 'gmail',
-          auth: { user: 'ericrbond@gmail.com', pass: gmailPass },
+          auth: { user: 'ericrbond@gmail.com', pass: gmailPass.replace(/\s/g, '') },
         });
         transporter.sendMail({
           from: 'stekel.org <ericrbond@gmail.com>',
