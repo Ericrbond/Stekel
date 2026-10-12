@@ -54,6 +54,22 @@ module.exports = async (req, res) => {
       });
       if (!r.ok) return res.status(500).json({ error: 'failed to save' });
       const [comment] = await r.json();
+
+      // Email notification — fire and forget, never block the response
+      const resendKey = process.env.RESEND_API_KEY;
+      if (resendKey) {
+        fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            from: 'stekel.org <notifications@stekel.org>',
+            to: 'ericrbond@gmail.com',
+            subject: `New comment on ${slug}`,
+            text: `${comment.author} left a note on stekel.org/${slug}:\n\n"${comment.body}"\n\nView: https://stekel.org/${slug}`,
+          }),
+        }).catch(() => {});
+      }
+
       return res.status(201).json(comment);
     }
   } catch (err) {
