@@ -1,6 +1,7 @@
 /* Vercel serverless — GET /api/comments?slug=xxx  →  [{ id, author, body, created_at }]
                        POST /api/comments          ← { slug, author?, body }  →  comment */
 const SUPABASE_URL = 'https://zinyklmxvptuvbhfnklf.supabase.co';
+const nodemailer = require('nodemailer');
 
 function headers() {
   const key = process.env.SUPABASE_SECRET;
@@ -56,17 +57,17 @@ module.exports = async (req, res) => {
       const [comment] = await r.json();
 
       // Email notification — fire and forget, never block the response
-      const resendKey = process.env.RESEND_API_KEY;
-      if (resendKey) {
-        fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: { 'Authorization': `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            from: 'stekel.org <notifications@stekel.org>',
-            to: 'ericrbond@gmail.com',
-            subject: `New comment on ${slug}`,
-            text: `${comment.author} left a note on stekel.org/${slug}:\n\n"${comment.body}"\n\nView: https://stekel.org/${slug}`,
-          }),
+      const gmailPass = process.env.GMAIL_APP_PASSWORD;
+      if (gmailPass) {
+        const transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: { user: 'ericrbond@gmail.com', pass: gmailPass },
+        });
+        transporter.sendMail({
+          from: 'stekel.org <ericrbond@gmail.com>',
+          to: 'ericrbond@gmail.com',
+          subject: `New comment on ${slug}`,
+          text: `${comment.author} left a note on stekel.org/${slug}:\n\n"${comment.body}"\n\nView: https://stekel.org/${slug}`,
         }).catch(() => {});
       }
 
