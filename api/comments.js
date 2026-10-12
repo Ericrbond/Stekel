@@ -56,19 +56,20 @@ module.exports = async (req, res) => {
       if (!r.ok) return res.status(500).json({ error: 'failed to save' });
       const [comment] = await r.json();
 
-      // Email notification — fire and forget, never block the response
       const gmailPass = process.env.GMAIL_APP_PASSWORD;
       if (gmailPass) {
-        const transporter = nodemailer.createTransport({
-          service: 'gmail',
-          auth: { user: 'ericrbond@gmail.com', pass: gmailPass.replace(/\s/g, '') },
-        });
-        transporter.sendMail({
-          from: 'stekel.org <ericrbond@gmail.com>',
-          to: 'ericrbond@gmail.com',
-          subject: `New comment on ${slug}`,
-          text: `${comment.author} left a note on stekel.org/${slug}:\n\n"${comment.body}"\n\nView: https://stekel.org/${slug}`,
-        }).catch(() => {});
+        try {
+          const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: { user: 'ericrbond@gmail.com', pass: gmailPass.replace(/\s/g, '') },
+          });
+          await transporter.sendMail({
+            from: 'ericrbond@gmail.com',
+            to: 'ericrbond@gmail.com',
+            subject: `New comment on ${slug}`,
+            text: `${comment.author} left a note on stekel.org/${slug}:\n\n"${comment.body}"\n\nView: https://stekel.org/${slug}`,
+          });
+        } catch (_) {}
       }
 
       return res.status(201).json(comment);
