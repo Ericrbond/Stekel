@@ -95,10 +95,13 @@ header.nav {
   transition: border-color .4s var(--ease), background .4s var(--ease), padding .4s var(--ease);
 }
 header.nav.scrolled { border-bottom-color: var(--hair); padding-top: .6rem; padding-bottom: .6rem; }
-.brand { display: flex; align-items: baseline; gap: .5rem; text-decoration: none; color: var(--ink); }
+.brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--ink); }
 .brand .mark { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; letter-spacing: -.01em; }
 .brand .dot { color: var(--clay); }
 .brand .sub { font-size: .72rem; color: var(--muted); letter-spacing: .14em; text-transform: uppercase; }
+.brand-logo { height: 30px; width: auto; display: block; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand-logo { filter: invert(1); } }
+:root[data-theme="dark"] .brand-logo { filter: invert(1); }
 .nav-links { display: flex; gap: .35rem; align-items: center; }
 .nav-links a {
   text-decoration: none; color: var(--ink-soft); font-size: .86rem; font-weight: 500;
