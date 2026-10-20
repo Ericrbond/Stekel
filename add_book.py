@@ -8,6 +8,7 @@ Run:
 
 import zipfile, re, json, shutil, os, subprocess, sys
 from lxml import etree
+from urllib.parse import quote as url_quote
 
 # ─── Fixed paths ──────────────────────────────────────────────
 STEKEL_DIR    = "/Users/eric/Desktop/Stekel"
@@ -84,6 +85,12 @@ def get_ilvl(p):
     il = p.find(f'.//{W}ilvl')
     return int(il.get(f'{W}val', 0)) if il is not None else 0
 
+def is_list_item(p):
+    ppr   = p.find(f'{W}pPr')
+    numpr = ppr.find(f'{W}numPr') if ppr is not None else None
+    numid = numpr.find(f'{W}numId') if numpr is not None else None
+    return numid is not None and numid.get(f'{W}val') not in (None, '0')
+
 def plain(p):
     return ''.join((n.text or '') for n in p.findall(f'.//{W}t'))
 
@@ -154,7 +161,7 @@ def parse_docx(docx_path, title_display, ref_html):
             inner = runs_html(p)
             inner = re.sub(r'^---(.+?)---\s*$', lambda m: m.group(1).strip(), inner)
             items.append(('heading', 0, f'<h1><u><strong>{inner}</strong></u></h1>'))
-        elif style == 'ListParagraph':
+        elif is_list_item(p):
             items.append(('list', ilvl, runs_html(p)))
         elif tx:
             items.append(('para', 0, f'<p>{runs_html(p)}</p>'))
@@ -330,7 +337,7 @@ def upload_to_r2(web_names):
     failed = []
     for name in web_names:
         local = os.path.join(STEKEL_ASSETS, name)
-        url   = f"https://api.cloudflare.com/client/v4/accounts/{CF_ACCOUNT_ID}/r2/buckets/{CF_BUCKET}/objects/{name}"
+        url   = f"https://api.cloudflare.com/client/v4/accounts/{CF_ACCOUNT_ID}/r2/buckets/{CF_BUCKET}/objects/{url_quote(name, safe='')}"
         res   = subprocess.run([
             "curl", "-s", "-o", "/dev/null", "-w", "%{http_code}",
             "-X", "PUT", url,
