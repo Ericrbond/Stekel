@@ -271,6 +271,10 @@
         <div class="section-head reveal" style="margin-bottom:1.5rem"><p class="eyebrow">Pick up where you left off</p><h2>Recently viewed.</h2></div>
         <div class="grid" id="recentGrid"></div>
       </section>
+      <section class="wrap" id="newSec" style="padding-bottom:0">
+        <div class="section-head reveal" style="margin-bottom:1.5rem"><p class="eyebrow">Just added</p><h2>Recently added.</h2></div>
+        <div class="grid" id="newGrid"></div>
+      </section>
       <section class="wrap" style="padding-top:2rem">
         <div class="section-head reveal"><p class="eyebrow">The ten classes</p><h2>Ten doors into the whole of human knowledge.</h2></div>
         <div class="spectrum" id="spectrum"></div>
@@ -365,6 +369,12 @@
       $("#recentSec", root).hidden = false;
       const rg = $("#recentGrid", root);
       recItems.forEach((x) => rg.append(card(x)));
+    }
+
+    // recently added
+    if (typeof RECENTLY_ADDED !== "undefined" && RECENTLY_ADDED.length) {
+      const ng = $("#newGrid", root);
+      RECENTLY_ADDED.map((s) => ALL.find((x) => x.slug === s)).filter(Boolean).forEach((x) => ng.append(card(x)));
     }
 
     // hub cards
